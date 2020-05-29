@@ -1,3 +1,4 @@
+
 .bcg-parallax {
     padding: 40px 0;
     color: #fff;
@@ -35,6 +36,8 @@
     top: 20px;
     background-color: #e5e5e5;
     z-index: 6;
+    background-image: url(../img/rpngo/1.png);
+    background-size: cover;
 }
 .product-device-bg-2-green {
     position: absolute;
@@ -45,6 +48,8 @@
     top: 20px;
     background-color: green;
     z-index: 6;
+    background-image: url(../img/rpngo/2.png);
+    background-size: cover;
 }
 .product-device-bg-2-blue {
     position: absolute;
@@ -55,6 +60,8 @@
     top: 20px;
     background-color: blue;
     z-index: 6;
+    background-image: url(../img/rpngo/3.png);
+    background-size: cover;
 }
 
 #intro .content {
@@ -96,11 +103,17 @@
 
 
 .parallax-parent {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.parallax-parent-2 {
     height: 95vh;
     width: 100vw;
     overflow: hidden;
-  }
-  
+}
+
   
   .parallax-parent > * {
     background-size: cover;
@@ -108,6 +121,7 @@
     height: 200%;
     position: relative;
     top: -100%;
+    z-index: -1;
   }
     
   
@@ -213,7 +227,7 @@
   }
   
   .black-part .color-titles .black-title {
-    color: #f5f5f7;
+    color: #333;
   }
   
   .white-part {
@@ -283,3 +297,128 @@
       width: 34rem;
     }
   }
+
+.sec-example {
+    background-color: #ffffff;
+}
+
+.sec-example .sec-ct {
+    width: 1206px;
+    margin: 0 auto;
+    padding: 110px 0;
+}
+
+.sec-example .sec-ct .sec-title {
+    line-height: 47px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.sec-example .sec-ct .video-group {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-example .sec-ct .video-group .item {
+    position: relative;
+    width: 384px;
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sec-example .sec-ct .video-group .item .zhezhao {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-example .sec-ct .video-group .item .zhezhao .player {
+    width: 56px;
+    height: 56px;
+}
+
+.sec-example .sec-ct .video-group .item .zhezhao .title {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.drone-image {
+    margin: 100px auto;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.drone-layer {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* background-size: cover; */
+    height: 100%;
+    width: 100%;
+  }
+
+.drone-bg-img {
+    background-image: url("../img/service/drone-roof.jpg");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    opacity: 1;
+}
+  
+.app-bg-img {
+    background-image: url("../img/mobile-application.jpg");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    opacity: 1;
+}
+  
+.map-bg-img {
+    background-image: url("../img/map.png");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    opacity: 1;
+}
+  
+.site-tech-bg-img {
+    background-image: url("../img/index_our_goal.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    height: calc(95vh);
+    min-height: 700px;
+    opacity: 1.4;
+    background-attachment: fixed;
+    background-repeat:no-repeat;  
+}
+
+#text-360 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width:100%;
+    z-index: 3;
+}

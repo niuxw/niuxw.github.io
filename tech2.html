@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Product example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+    <script>
+      // init controller
+      var controller = new ScrollMagic.Controller();
+    </script>
+
+    <script src="./js/bootstrap.js"></script>
+  
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <link href="product.css" rel="stylesheet">
+    <link href="./css/tech.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="index.html" aria-label="Product" style="left: 10%;">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
+          <img src="logo.png" alt="RPN" width="20" height="20">
+          REPAIR AND PERSERVATION NETWORK
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="carousel.html">About</a>
+        <a class="py-2 d-none d-md-inline-block" href="tech-index.html">Technology</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Blogs</a>
+        <a class="py-2 d-none d-md-inline-block" href="service.html">Services</a>
+        <a class="py-2 d-none d-md-inline-block" href="contact.html">Contact</a>
+        <a class="py-2 d-none d-md-inline-block" href="https://rpngo.com/">Login</a> 
+        <!-- need employee equality system -->
+        <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
+        <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
+      </div>
+    </nav>
+
+    <section id="inside">
+      <div class="site-tech-bg-img">
+        <div class="layer">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-lg-7 text-left col-sm-12" style="margin-top: 20vh;">
+              <h1 style="color: white;">TECHNOLOGY</h1>
+              <p class="lead text-white">
+                ...
+              </p>      
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span id="trigger0"></span>
+    <div  id="container0" class="container123">
+      <div id="p99" class="svg-container app-bg-img">
+        <div id="app-img-layer" class="layer">
+          <div class="text-center" style="flex-direction: row;">
+            <div id="app-text" class="text-center">
+              <h1 class="mb-4 section1-text2">Mobile Applications</h1>
+              <p class="section1-text3">...;</p>
+            </div>  
+          </div>
+        </div>
+      </div>      
+    </div>
+
+    <script >
+      const height2 = document.documentElement.clientHeight / 2;
+      const height = document.documentElement.clientHeight;
+
+      var tl0 = new TimelineMax();
+      tl0.add(
+          TweenMax.fromTo("#container0", 1, {autoAlpha: 1, scale: 0.8}, {autoAlpha: 1, scale: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
+      )
+      tl0.add(
+          TweenMax.fromTo('#app-img-layer', 1, {scale: 1, autoAlpha: 0}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+          "-=1"
+      )
+      tl0.add(
+          TweenMax.fromTo('#app-text', 1, { yPercent:250 , opacity: 0 , ease:Power1.easeInOut }, { yPercent:0 , opacity:1 , ease:Power1.easeInOut }),
+          "-=1"
+      )
+
+      var startpin = new ScrollMagic.Scene({
+        triggerElement: '#trigger0',
+        triggerHook: 0,
+        duration: 500
+      })
+      .setPin("#container0")
+      .addIndicators({name: "pin" })
+      .addTo(controller);
+
+      // tween
+      new ScrollMagic.Scene({
+        triggerElement: '#trigger0',
+        triggerHook: 0,
+        duration: 500
+      })
+      .setTween(tl0)
+      .addIndicators({name: "fade" }) 
+      .addTo(controller);
+
+    </script>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light site-section1" style="flex-direction: row;">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+          <h1 class="display-4 font-weight-normal">RPN GO&reg;</h1>
+          <a class="btn btn-outline-secondary" href="tech-rpngo.html">Read More </a>
+        </div>
+      </div>
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light site-section1" style="flex-direction: row;">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+          <h1 class="display-4 font-weight-normal">RPN Connection</h1>
+          <a class="btn btn-outline-secondary" href="tech-connection.html">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <span id="trigger"></span>
+    <div  id="container1" class="container123">
+      <div id="p100" class="svg-container drone-bg-img">
+        <div id="drone-img-layer" class="layer">
+          <div class="text-center" style="flex-direction: row;">
+            <div id="drone-text" class="text-center">
+              <h1 class="mb-4 section1-text2">Drone-based Inspections</h1>
+              <p class="section1-text3">...;</p>
+            </div>  
+          </div>
+        </div>
+      </div>      
+    </div>
+
+    <script >
+      var tl = new TimelineMax();
+      tl.add(
+          TweenMax.fromTo("#container1", 1, {autoAlpha: 1, scale: 0.8}, {autoAlpha: 1, scale: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
+      )
+      tl.add(
+          TweenMax.fromTo('#drone-img-layer', 1, {scale: 1, autoAlpha: 0}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+          "-=1"
+      )
+      tl.add(
+          TweenMax.fromTo('#drone-text', 1, { yPercent:250 , opacity: 0 , ease:Power1.easeInOut }, { yPercent:0 , opacity:1 , ease:Power1.easeInOut }),
+          "-=1"
+      )
+
+      var startpin = new ScrollMagic.Scene({
+        triggerElement: '#trigger',
+        triggerHook: 0,
+        duration: 500
+      })
+      .setPin("#container1")
+      .addIndicators({name: "pin" })
+      .addTo(controller);
+
+      // tween
+      new ScrollMagic.Scene({
+        triggerElement: '#trigger',
+        triggerHook: 0,
+        duration: 500
+      })
+      .setTween(tl)
+      .addIndicators({name: "fade" }) 
+      .addTo(controller);
+
+    </script>
+    <div class="sec-example">
+      <div class="sec-ct">
+          <div class="sec-title">We use the latest technology </div>
+          <div class="drone-image">
+              <img src="https://image.ibb.co/nFfzRK/phantom_3_standard.png" alt="">
+          </div>
+      </div>
+    </div>
+
+    <span id="trigger2"></span>
+    <div id="container2" class="container123">
+      <div id="p101" class="svg-container">
+        <div id="pano" style="width: 100%; height: 100%;">
+        </div>
+        <div id="panorama-img-layer" class="layer">
+        </div>
+        <div id="text-360" class="text-center">
+          <h1 class="mb-4 section1-text2">Panorama</h1>
+          <p class="section1-text3">...;</p>
+        </div>  
+      </div>      
+    </div>
+
+    <script src="https://www.marzipano.net/demos/common/es5-shim.js"></script>
+    <script src="https://www.marzipano.net/demos/common/eventShim.js"></script>
+    <script src="https://www.marzipano.net/demos/common/requestAnimationFrame.js" ></script>
+    <script src="js/marzipano.js" ></script>
+    <script>
+      var viewer = new Marzipano.Viewer(document.getElementById('pano'), { controls: { scrollZoom: false } });
+
+      // Create source.
+      var source = Marzipano.ImageUrlSource.fromString(
+        "https://www.marzipano.net/media/cubemap/{f}.jpg"
+      );
+
+      // Create geometry.
+      var geometry = new Marzipano.CubeGeometry([{ tileSize: 1024, size: 1024 }]);
+
+      // Create view.
+      var limiter = Marzipano.RectilinearView.limit.traditional(4096, 100*Math.PI/180);
+      var view = new Marzipano.RectilinearView(null, limiter);
+      var autorotate = Marzipano.autorotate({
+        yawSpeed: 0.1,         // Yaw rotation speed
+        targetPitch: 0,        // Pitch value to converge to
+        targetFov: Math.PI/2   // Fov value to converge to
+      });
+
+      // Create scene.
+      var scene = viewer.createScene({
+        source: source,
+        geometry: geometry,
+        view: view,
+        pinFirstLevel: true
+      });
+
+      // Display scene.
+      scene.switchTo();
+      // Start autorotation immediately
+      viewer.startMovement(autorotate); 
+
+    </script>
+    <script >
+      var tl2 = new TimelineMax();
+      tl2.add(
+          TweenMax.fromTo("#container2", 1, {autoAlpha: 1, scale: 0.8}, {autoAlpha: 1, scale: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
+      )
+      tl2.add(
+          TweenMax.fromTo('#panorama-img-layer', 1, {scale: 1, autoAlpha: 0}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+          "-=1"
+      )
+      tl2.add(
+          TweenMax.fromTo('#text-360', 1, { yPercent:250 , opacity: 0 , ease:Power1.easeInOut }, { yPercent:0 , opacity:1 , ease:Power1.easeInOut }),
+          "-=1"
+      )
+
+      var startpin = new ScrollMagic.Scene({
+        triggerElement: '#trigger2',
+        triggerHook: 0,
+        duration: 500
+      })
+      .setPin("#container2")
+      .addIndicators({name: "pin2" })
+      .addTo(controller);
+
+      // tween
+      new ScrollMagic.Scene({
+        triggerElement: '#trigger2',
+        triggerHook: 0,
+        duration: 500
+      })
+      .setTween(tl2)
+      .addIndicators({name: "fade2" }) 
+      .addTo(controller);
+    </script>
+
+    <div class="sec-example">
+      <div class="sec-ct">
+          <div class="sec-title">Virtual Tour Examples</div>
+          <div class="video-group">
+          <a href="panorama-example1.html" target="_blank">
+              <div class="item">
+              <img class="img" src="https://static.insta360.com/assets/storage/20190126/35b1178bcb1d23123923f716aeae0b8c/CrestaModelHome.jpg" alt="">
+              <div class="zhezhao">
+                  <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png" alt="">
+                  <div class="title">House 1 Tour</div>
+              </div>
+              </div>
+          </a>
+          
+          <a href="panorama-example2.html" target="_blank">
+              <div class="item">
+              <img class="img" src="https://static.insta360.com/assets/storage/20191220/91cc1117882a720d4150e6e1cf3455ea/Holiday_House_Tour_.png" alt="">
+              <div class="zhezhao">
+                  <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png" alt="">
+                  <div class="title">House 2 Tour</div>
+              </div>
+              </div>
+          </a>
+          
+          <a href="panorama-example3.html" target="_blank">
+              <div class="item">
+              <img class="img" src="https://static.insta360.com/assets/storage/20190126/a4df8771ee9db86829d695d9b481c74d/Luxury hotel@2x-jpg.jpg" alt="">
+              <div class="zhezhao">
+                  <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png" alt="">
+                  <div class="title">Hotel Tour</div>
+              </div>
+              </div>
+          </a>
+          </div>
+      </div>
+    </div>
+
+    <span id="trigger3"></span>
+    <div  id="container3" class="container123">
+      <div id="p103" class="svg-container map-bg-img">
+        <div id="map-img-layer" class="layer">
+          <div class="text-center" style="flex-direction: row;">
+            <div id="map-text" class="text-center">
+              <h1 class="mb-4 section1-text2">Interactive Map</h1>
+              <p class="section1-text3">...;</p>
+            </div>  
+          </div>
+        </div>
+      </div>      
+    </div>
+
+    <script >
+      var tl3 = new TimelineMax();
+      tl3.add(
+          TweenMax.fromTo("#container3", 1, {autoAlpha: 1, scale: 0.8}, {autoAlpha: 1, scale: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
+      )
+      tl3.add(
+          TweenMax.fromTo('#map-img-layer', 1, {scale: 1, autoAlpha: 0}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+          "-=1"
+      )
+      tl3.add(
+          TweenMax.fromTo('#map-text', 1, { yPercent:250 , opacity: 0 , ease:Power1.easeInOut }, { yPercent:0 , opacity:1 , ease:Power1.easeInOut }),
+          "-=1"
+      )
+
+      var startpin = new ScrollMagic.Scene({
+        triggerElement: '#trigger3',
+        triggerHook: 0,
+        duration: 500
+      })
+      .setPin("#container3")
+      .addIndicators({name: "pin" })
+      .addTo(controller);
+
+      // tween
+      new ScrollMagic.Scene({
+        triggerElement: '#trigger3',
+        triggerHook: 0,
+        duration: 500
+      })
+      .setTween(tl3)
+      .addIndicators({name: "fade" }) 
+      .addTo(controller);
+
+    </script>
+    <div class="sec-example">
+      <div class="sec-ct">
+          <div class="sec-title">We use the latest technology </div>
+          <div class="drone-image">
+              <img src="https://image.ibb.co/nFfzRK/phantom_3_standard.png" alt="">
+          </div>
+      </div>
+    </div>
+
+
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5>Coroprate Address</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">10 Old Mamaroneck Road, Unit 1A, White Plains, NY, 10605</a></li>
+            <li><a href="https://goo.gl/maps/t9XUT7PdgdzjYhBQ8">Show In Map</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Regional Address</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">1820 Northwest 118th Street #220, Clive, IA, 50325</a></li>
+            <li><a href="https://goo.gl/maps/4YRaBR8D7sshQATVA">Show In Map</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Contact</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Tel: (866)776-8880</a></li>
+            <li><a class="text-muted" href="#">Fax: (866)968-6156</a></li>
+            <li><a href="mailto: info@rpncompany.com">Email to us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Follow us</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <img src="img/iconfinder_201_Linkedin_logo_logos_4373199.png" width="20" height="20">
+              <a class="text-muted" href="#">LinkedIn</a></li>
+            <li>
+              <img src="img/iconfinder_twitter_173834.png" width="25" height="25">
+              <a class="text-muted" href="#">Twitter</a></li>
+            <li>
+              <img src="img/iconfinder_facebook_317746.png" width="20" height="20">
+              <a class="text-muted" href="#">Facebook</a></li>
+            <li>
+              <img src="img/iconfinder_Instagram_1298747.png" width="20" height="20">
+              <a class="text-muted" href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row " style="margin-left: 0; margin-right: 20vw;">
+        <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110" height="100"></a>
+        <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120" height="70"></a>
+      </div>
+    </footer>
+    <hr
+      -moz-border-bottom-colors: none;
+      -moz-border-image: none;
+      -moz-border-left-colors: none;
+      -moz-border-right-colors: none;
+      -moz-border-top-colors: none;
+      border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+      border-style: solid none;
+      border-width: 1px 0;
+      margin: 18px 0;
+    >
+    
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">Copyright &copy; 2020 All rights reserved</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  </body>
+</html>
