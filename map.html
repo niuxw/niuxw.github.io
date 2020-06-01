@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Map</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+        <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>        
+        <link href="./css/map.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="pannel">
+            <p>Input the addresses </p>
+            <input type="text" class="form-control" placeholder="Your Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <button type="button" class="btn btn-signup">Search</button>
+            <!-- <br/> -->
+            <p>OR</p>
+            <!-- <br/> -->
+            <button type="button" class="btn btn-signup">update csv</button>
+            <p>Select services</p>
+            
+            <p>Order services</p>
+        </div>
+        <div id="mapid" class="map"></div>
+        <script>
+
+            var alerts;
+            fetch('http://localhost:8080/api/rpncompany/alerts')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (json) {
+                console.log(json);
+                console.log(json.alerts.length);
+                var i;
+                for (i = 0; i < json.alerts.length; i++){
+                    const popup = '<b>' + json.alerts[i].headline + '</b><br />' + json.alerts[i].description;
+                    if (json.alerts[i].geometry) {
+                        L.polygon(json.alerts[i].geometry,{color: 'white',fillColor: '#f03',fillOpacity: 0.5, weight: 1}).addTo(mymap).bindPopup(popup);
+                    } else {
+                        L.polygon(json.alerts[i].zones,{color: 'white',fillColor: '#0000ff',fillOpacity: 0.5, weight: 1}).addTo(mymap).bindPopup(popup);
+                        console.log(json.alerts[i].zones);
+                    }
+                }
+            });
+
+            var mymap = L.map('mapid').setView([39.5868, -93.6250], 5);
+
+            L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(mymap);
+            L.Control.geocoder({
+                collapsed: false,
+                placeholder : "Search your address...",
+                defaultMarkGeocode: false,
+            })
+            .on('markgeocode', function(e) {
+                console.log(e.geocode);
+                var bbox = e.geocode.bbox;
+                var poly = L.polygon([
+                    bbox.getSouthEast(),
+                    bbox.getNorthEast(),
+                    bbox.getNorthWest(),
+                    bbox.getSouthWest()
+                ],{color: 'white',fillColor: '#F7DC6F',fillOpacity: 0.5, weight: 1}).addTo(mymap);
+                L.marker([e.geocode.center.lat, e.geocode.center.lng]).addTo(mymap)
+                    .bindPopup(e.geocode.name).openPopup();
+                mymap.fitBounds(poly.getBounds());
+            })
+            .addTo(mymap);
+            // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            //     maxZoom: 18,
+            //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            //         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            //         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            //     id: 'mapbox/streets-v11',
+            //     tileSize: 512,
+            //     zoomOffset: -1
+            // }).addTo(mymap);
+
+            // L.marker([41.878113, -87.629799]).addTo(mymap)
+            //     .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+
+            // L.circle([41.878113, -87.629799], 500, {
+            //     color: 'red',
+            //     fillColor: '#f03',
+            //     fillOpacity: 0.5
+            // }).addTo(mymap).bindPopup("I am a circle.");
+            var popup = L.popup();
+
+            // function onMapClick(e) {
+            //     popup
+            //         .setLatLng(e.latlng)
+            //         .setContent("You clicked the map at " + e.latlng.toString())
+            //         .openOn(mymap);
+            // }
+
+            // mymap.on('click', onMapClick);
+
+        </script>
+
+
+
+    </body>
+</html>
