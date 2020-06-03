@@ -390,6 +390,16 @@
     min-height: 700px;
     opacity: 1;
 }
+.cloud-bg-img {
+    background-image: url("../img/cross-plat.jpg");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    opacity: 1;
+}
   
 .map-bg-img {
     background-image: url("../img/map.png");

@@ -29,3 +29,53 @@
     height: 100vh;
     width: 80vw;
 }
+
+.modal{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+    bottom: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+.modal-bg {
+    background-color: transparent;
+}
+
+.modal-dialog {
+    top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.modal-content {
+    position: relative;
+    /* box-shadow: 0 12px 15px 0 rgba(black, 0.25); */
+}
+.modal-close {
+    cursor: pointer;
+}
+
+.demo-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 20;
+	padding: 10;
+	background-color: rgba(black, 0.3);
+    border-radius: 50%;
+}
+
+.svg-style {
+    width: 24px;
+    /* fill: white; */
+    pointer-events: none;
+    vertical-align: top;
+}
