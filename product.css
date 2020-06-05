@@ -290,12 +290,24 @@ video{
 
 #all {
   position: relative;
+  /* background-image: url(img/service/index-inspection.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  width: 88vw;
+  height: 80vh;
+}
+.bg-img {
+  position: absolute;
   background-image: url(img/service/index-inspection.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 88vw;
   height: 80vh;
+  left: 0;
+  top: 0;
+  z-index: -5;
 }
+
 .view {
   margin: 1px;
   float: left;
@@ -413,6 +425,19 @@ video{
 .mask a.info {
   opacity: 0;
   transition: all 0.2s ease-in-out;
+}
+
+.view-first:hover ~ #bg { 
+  background-image: url(img/service/index-inspection.jpg);
+}
+.view-2:hover ~ #bg { 
+  background-image: url(img/service/index-repair.jpg);
+}
+.view-3:hover ~ #bg { 
+  background-image: url(img/service/index-preservation.jpg);
+}
+.view-4:hover ~ #bg { 
+  background-image: url(img/service/index-reo.jpeg);
 }
 
 .view-first:hover .mask,
