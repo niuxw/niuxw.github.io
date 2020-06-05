@@ -54,7 +54,7 @@
         <a class="py-2 d-none d-md-inline-block" href="carousel.html">About</a>
         <a class="py-2 d-none d-md-inline-block" href="tech2.html">Technology</a>
         <a class="py-2 d-none d-md-inline-block" href="#">Blogs</a>
-        <a class="py-2 d-none d-md-inline-block" href="service.html">Services</a>
+        <a class="py-2 d-none d-md-inline-block" href="service2.html">Services</a>
         <a class="py-2 d-none d-md-inline-block" href="contact.html">Contact</a>
         <a class="py-2 d-none d-md-inline-block" href="https://rpngo.com/">Login</a> 
         <!-- need employee equality system -->
@@ -89,18 +89,17 @@
 
     <section id="sevice-header2" class="jumbotron text-center">
       <div class="container">
-        <h1 style="color: white;">OUR SERVICES</h1>
-        <div class="large-12 medium-12 small-12 column">
+        <h1 style="color: white;">We offer the full range of preserve, maintain, repair and restore services</h1>
+        <!-- <div class="large-12 medium-12 small-12 column">
             <p class="para-space2 text-center" style="color: white;">
               RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals.
             </p>
-        </div>
+        </div> -->
         <div style="margin-top: 7%;">
           <a href="pricing.html" class="btn btn-warning" target="_blank">See All Pricing</a>
         </p>
       </div>
     </section>
-    <div class="spacer s0"></div>
 
     <!-- <div class="row2">
 
@@ -110,6 +109,114 @@
             </video>  
         </div>  
     </div> -->
+
+    <div class="silder">
+      <div class="silder-text">
+        <div class="text">
+          <div class="text-center">
+            <h1 style="margin-bottom: 7vh;">Our Services</h1>
+            <p>At Repair and Preservation Network, we are dedicated to helping our clients preserve, maintain, repair and restore properties. We provide a complete range of services for properties from vacant to sales phases, including inspection, preservation, maintenance, repair, restoration and compliance services on foreclosed properties or insurance claims.
+
+            <p>Our goal is to help properties remain in the condition that comply with regulatory requirements or in the best possible condition that would preserve or increase our clients' investments.
+
+            <p>Repair and Preservation Network is proud to be a service provider to government agencies, insurance corporations, national lender servicers and mortgage lenders. Our professional staff works proactively with clients and vendors. We conduct effective and efficient communications, utilizing our technologies to ensure that the highest quality of service is provided.
+          </div>
+        </div>
+      </div>
+
+      <div class="ba-slider">
+        <img src="img/index_background.jpg" alt="">       
+        <div class="resize">
+          <img src="img/index_our_goal.jpg" alt="">
+        </div>
+        <span class="handle"></span>
+      </div>     
+    </div>
+
+    <script>
+      // Call & init
+        $(document).ready(function(){
+          $('.ba-slider').each(function(){
+            var cur = $(this);
+            // Adjust the slider
+            var width = cur.width()+'px';
+            cur.find('.resize img').css('width', width);
+            // Bind dragging events
+            drags(cur.find('.handle'), cur.find('.resize'), cur);
+          });
+        });
+  
+        // Update sliders on resize. 
+        // Because we all do this: i.imgur.com/YkbaV.gif
+        $(window).resize(function(){
+          $('.ba-slider').each(function(){
+            var cur = $(this);
+            var width = cur.width()+'px';
+            cur.find('.resize img').css('width', width);
+          });
+        });
+  
+        function drags(dragElement, resizeElement, container) {
+          
+          // Initialize the dragging event on mousedown.
+          dragElement.on('mousedown touchstart', function(e) {
+            
+            dragElement.addClass('draggable');
+            resizeElement.addClass('resizable');
+            
+            // Check if it's a mouse or touch event and pass along the correct value
+            var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+            
+            // Get the initial position
+            var dragWidth = dragElement.outerWidth(),
+                posX = dragElement.offset().left + dragWidth - startX,
+                containerOffset = container.offset().left,
+                containerWidth = container.outerWidth();
+        
+            // Set limits
+            minLeft = containerOffset + 10;
+            maxLeft = containerOffset + containerWidth - dragWidth - 10;
+            
+            // Calculate the dragging distance on mousemove.
+            dragElement.parents().on("mousemove touchmove", function(e) {
+              
+              // Check if it's a mouse or touch event and pass along the correct value
+              var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+              
+              leftValue = moveX + posX - dragWidth;
+              
+              // Prevent going off limits
+              if ( leftValue < minLeft) {
+                leftValue = minLeft;
+              } else if (leftValue > maxLeft) {
+                leftValue = maxLeft;
+              }
+              
+              // Translate the handle's left value to masked divs width.
+              widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+              
+              // Set the new values for the slider and the handle. 
+              // Bind mouseup events to stop dragging.
+              $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+                $(this).removeClass('draggable');
+                resizeElement.removeClass('resizable');
+              });
+              $('.resizable').css('width', widthValue);
+            }).on('mouseup touchend touchcancel', function(){
+              dragElement.removeClass('draggable');
+              resizeElement.removeClass('resizable');
+            });
+            e.preventDefault();
+          }).on('mouseup touchend touchcancel', function(e){
+            dragElement.removeClass('draggable');
+            resizeElement.removeClass('resizable');
+          });
+        }
+    </script>
+  
+    <section class="row2">
+      <div class="separator columns 2"><h2>All features </h2></div>
+    </section>
 
     <div class="icon-list">
       <div class="container">
@@ -480,6 +587,43 @@
       .addTo(controller);
 
     </script>
+
+    <div class="sec-example">
+      <div class="sec-ct">
+          <div class="position-relative overflow-hidden p-3 m-md-3 text-center site-section1" style="background-color: #0c3f72">
+            <div class="col-md-8 p-lg-4 mx-auto">
+              <h1 class="display-4 font-weight-normal" style="margin-top: 20px;color: white;">Ask Our Expert</h1>
+              <!-- <input type="email" class="form-control my-5" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+              <form style="margin-top: 50px">
+                  <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
+              </form>
+              <form style="margin-top: 20px">
+                  <div class="row">
+                    <div class="col">
+                      <input type="email" class="form-control" placeholder="Enter Email">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Phone Number">
+                    </div>
+                  </div>
+              </form>
+              <button type="button" class="btn btn-warning" style="margin-top: 50px;">Ask Us</button>
+              <div>
+                  <p style="color: white;">
+                      Your personal information will be kept confidential according to our <a href="#">Privacy Policy</a>.
+                  </p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
 
     <footer class="container py-5">
       <div class="row">
