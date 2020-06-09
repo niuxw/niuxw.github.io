@@ -5,7 +5,15 @@
 /*
  * Custom translucent site header
  */
-
+ .container-nav {
+   position: relative;
+   min-width: 700px;
+   left: 10px;
+   margin-right: 10px;
+ }
+ .nav-item {
+  font-size: 1.1rem;
+ }
 .site-header {
   background-color: rgba(0, 0, 0, 0.67);
   -webkit-backdrop-filter: saturate(180%) blur(20px);

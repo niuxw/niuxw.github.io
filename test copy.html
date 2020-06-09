@@ -62,219 +62,56 @@
       </div>
     </nav>
 
-    <div class="carousel_container">
-
-      <div class="carousel_items">        
-        <ul>
-          <li class="carousel_item" id="item_0"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_1.jpg" /></li>
-          <li class="carousel_item" id="item_1"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_2.jpg" /></li>
-          <li class="carousel_item" id="item_2"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_3.jpg" /></li>  
-          <li class="carousel_item" id="item_3"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_4.jpg" /></li>    
-          <li class="carousel_item" id="item_4"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_5.jpg" /></li>      
-          <li class="carousel_item" id="item_5"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_6.jpg" /></li>
-          <li class="carousel_item" id="item_6"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_7.jpg" /></li>
-          <li class="carousel_item" id="item_7"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_8.jpg" /></li>  
-          <li class="carousel_item" id="item_8"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_9.jpg" /></li>    
-          <li class="carousel_item" id="item_9"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/MB_CLA_10.jpg" /></li>
-        </ul>
-      </div>
-      
-      <div class="item_arrows"> 
-        <div class="item_arrow item_prev">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
-            <defs>
-              <style>
-                .cls-1 {
-                  fill: none;
-                }
-          
-                .cls-2 {
-                  fill: white;
-                }
-              </style>
-            </defs>
-            <g id="Group_1" data-name="Group 1" transform="translate(-253 -244)">
-              <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-1" width="21" height="21" transform="translate(253 244)"/>
-              <g id="angle-left" transform="translate(366.54 264.5) rotate(180)">
-                <path id="Path_1" data-name="Path 1" class="cls-2" d="M108.129,10.99l-8.6,8.6a1.4,1.4,0,1,1-1.981-1.98l7.61-7.61L97.549,2.391A1.4,1.4,0,0,1,99.53.41l8.6,8.6a1.4,1.4,0,0,1,0,1.98Z"/>
-              </g>
-            </g>
-          </svg>          
-        </div>  
-        <div class="item_arrow item_next">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
-            <defs>
-              <style>
-                .cls-1 {
-                  fill: none;
-                }
-
-                .cls-2 {
-                  fill: white;
-                }
-              </style>
-            </defs>
-            <g id="Group_1" data-name="Group 1" transform="translate(274 265) rotate(180)">
-              <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-1" width="21" height="21" transform="translate(253 244)"/>
-              <g id="angle-left" transform="translate(366.54 264.5) rotate(180)">
-                <path id="Path_1" data-name="Path 1" class="cls-2" d="M108.129,10.99l-8.6,8.6a1.4,1.4,0,1,1-1.981-1.98l7.61-7.61L97.549,2.391A1.4,1.4,0,0,1,99.53.41l8.6,8.6a1.4,1.4,0,0,1,0,1.98Z"/>
-              </g>
-            </g>
-          </svg>
-        </div>        
-      </div>
-      
-      <div class="nav_dots"></div>
-      
+    <div id="container">
+      <div class="box-1"></div>
+      <div class="box-2"></div>
+      <div class="box-3"></div>
+      <div class="box-4"></div>
+      <div class="box-5"></div>
     </div>
+
     <script>
-      var carousel = (function () {
- 
-      //
-      var activeID = 0,
-        itemW = 940,
-        carousel_count = $('.carousel_item').length,
-        $carouselItems = $('.carousel_items'),
-        $carouselItem = $('.carousel_item'),
-        $arrowPrev = $('.item_prev'),
-        $arrowNext = $('.item_next'),
-        $itemArrow = $('.item_arrow'),
-        $navDot,
-        $navDots = $('.nav_dots'),
-        swipeDir,
-        slideSpeed = .45,
-        slideMeth = Power2.EaseInOut;
+      const tween = new TimelineMax();
+      tween
+          .to(".box-1", 1, {
+              opacity: 0.8
+          }, '-=1')
+          .to(".box-2", 1, {
+              marginTop: 20,
+              opacity: 0.9
+          }, '-=1')
+          .to(".box-3", 1, {
+              marginTop: -12
+          }, '-=1')
+          .to(".box-4", 1, {
+              marginTop: -45
+          }, '-=1')
+          .to(".box-5", 1, {
+              marginTop: -75
+          }, '-=1')
 
-      //
-      function init() {
-        
-        $carouselItems.css({'width': (itemW * carousel_count) + 'px'});
-        $navDots.css({'width': (30 * carousel_count) + 'px'});
-        $itemArrow.css({'opacity': .8});
-        
-        setupDraggable();
-        setupDots();
-        navigateSlide();
-      }
-      init();
-        
-      //
-      function setupDraggable() { 
-          
-        Draggable.create($carouselItems, {
-                type:'x',
-                edgeResistance: 0.90,
-                dragResistance: 0.0,
-                bounds:'.carousel_container',
-                onDrag:updateDirections,
-                onThrowUpdate:updateDirections,
-                throwProps:true,
-                onDragStart:function(evt) {},
-                onDragEnd :function() {
+      const scene = new ScrollMagic.Scene ({
+          triggerElement: '#container',
+          duration: 2000,
+          triggerHook: 0
+      })
+      .setTween(tween)
+      .setPin('#container')
+      .addIndicators({name: "pin1" })
+      .addTo(controller);
 
-                  if(swipeDir == 'left') {activeID++}
-                  else if(swipeDir == 'right') {activeID--};
-                  
-                  navigateSlide();
-                }
-          });    
-      };
-                    
-      // set up dots
-      function setupDots() {    
-        for(var i = 0; i < carousel_count; i++) {
-          $navDots.append('<div class="nav_dot" id="dot_' + i + '"></div>');
-        }    
-        $navDot = $('.nav_dot');
-      }  
+      const tl2 = new TimelineMax();
+      tl2.to(".box-5", 1, {css:{transform:"skewX(0deg) skewY(0deg)", width: "800px", height: "500px"}})
+      const scene2 = new ScrollMagic.Scene ({
+          triggerElement: '#container',
+          // offset: 500,
+          duration: 2000,
+          triggerHook: 0
+      })
+      .setTween(tl2)
+      .addIndicators({name: "n1" })
+      .addTo(controller);
 
-      // navigate slide
-      function navigateSlide() {
-        
-        if(activeID >= carousel_count-1) activeID = carousel_count-1;
-        if(activeID <= 0) activeID = 0;		
-                
-        var xTarget = ((activeID * itemW) * -1);
-        
-        TweenMax.to($carouselItems, slideSpeed, {x: xTarget, ease: slideMeth, onComplete: slideDone});
-      }
-
-      function slideDone() {
-        
-        $navDot.css({backgroundColor: '#fff'});
-        
-        //
-        TweenMax.to($navDot, .35, {scale: 1, color: 0xFFFFFF});
-        TweenMax.to($('#dot_' + activeID), .35, {scale: 1.5, backgroundColor: 'transparent',color: 0xCC0000});
-        
-        //
-        if(activeID == 0) {$arrowPrev.fadeOut()} 
-        else {$arrowPrev.fadeIn()}
-        
-        if(activeID + 1 == carousel_count) {$arrowNext.fadeOut()}
-        else {$arrowNext.fadeIn()}
-      }
-
-      //
-      function updateDirections() {
-        swipeDir = this.getDirection("start");
-      }
-        
-      //$itemArrow.click(function() {
-      $itemArrow.on('click', function() {
-        
-        if(Modernizr.touch) return;
-        
-        if($(this).hasClass('item_next')) {activeID++}
-        else {activeID--};
-        
-        navigateSlide();
-      });
-
-      $itemArrow.on('touchstart', function() {
-        if($(this).hasClass('item_next')) {activeID++}
-        else {activeID--};
-        
-        navigateSlide();
-      });
-
-      $navDot.hover(		
-        function() {			
-            TweenMax.to($(this), .35, {scale: 1.5});
-        }, function() {
-          if($(this).attr('id').split('_')[1] == activeID) return;
-          TweenMax.to($(this), .35, {scale: 1.0});
-        }  
-      );
-
-      $navDot.click(function() {		
-        var dotID = $(this).attr('id').split('_')[1];
-        activeID = dotID;
-          
-        navigateSlide();		
-      });
-
-      //
-      $carouselItem.mousedown(function() {		
-        activeID = $(this).attr('id').split('_')[1];
-        
-        $(this).removeClass('grab');
-        $(this).addClass('grabbing');
-        
-      });
-
-      //   
-      $carouselItem.mouseenter(function() {        
-        $(this).removeClass('grabbing');
-        $(this).addClass('grab');
-      });
-
-      $carouselItem.mouseup(function() {        
-        $(this).removeClass('grabbing');
-        $(this).addClass('grab');
-      });  
-
-      })();
     </script>
     <footer class="container py-5">
       <div class="row">
