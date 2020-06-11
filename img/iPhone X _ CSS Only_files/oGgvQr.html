@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://cdpn.io/mohamedabusrea/fullpage/oGgvQr -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - iPhone X | CSS Only</title>
+<style>
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: lightgray;
+  font-size: 1.4rem;
+}
+
+.workspace {
+  display: -webkit-box;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: white;
+}
+.workspace.active .gallery-content {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.workspace.active .mobile-body {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.bg-content {
+  position: absolute;
+  left: -1rem;
+  right: -1rem;
+  top: -1rem;
+  bottom: -1rem;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/830072/bg-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.gallery-content {
+  position: fixed;
+  bottom: 0;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background-color: black;
+  height: 7.5rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 0 3rem;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  -webkit-transform: translateY(7.5rem);
+          transform: translateY(7.5rem);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  overflow: auto;
+}
+.gallery-content__img {
+  width: 4.5rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  margin-right: 2rem;
+  border: .1rem solid white;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+.gallery-content__img.active {
+  border-width: .2rem;
+  border-color: purple;
+}
+.gallery-content__img:last-child {
+  margin-right: 0;
+}
+.gallery-content__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mobile-body {
+  position: relative;
+  flex-shrink: 0;
+  width: 35.6rem;
+  height: 72.2rem;
+  border-radius: 6rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/830072/bg-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0;
+  box-shadow: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin-bottom: 7.5rem;
+}
+.mobile-body:hover {
+  box-shadow: none !important;
+  -webkit-transform: scale(0.95) !important;
+          transform: scale(0.95) !important;
+}
+.mobile-body .layer-1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: .4rem solid #484848;
+  border-radius: 6rem;
+}
+.mobile-body .layer-2 {
+  position: absolute;
+  left: 0.3rem;
+  right: 0.3rem;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  border: 1.6rem solid #000000;
+  border-radius: 5.6rem;
+}
+.mobile-body .layer-gradient-1 {
+  position: absolute;
+  left: 1.1rem;
+  right: 1.1rem;
+  top: 1.1rem;
+  bottom: 1.1rem;
+  border: .3rem solid #484848;
+  border-radius: 5rem;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  opacity: .5;
+}
+.mobile-body .layer-gradient-2 {
+  position: absolute;
+  left: 0.7rem;
+  right: 0.7rem;
+  top: 0.7rem;
+  bottom: 0.7rem;
+  border: .4rem solid #bcbcbc;
+  border-radius: 5.6rem;
+  opacity: .5;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+.mobile-body .top-bar {
+  width: 17.3rem;
+  height: 2.8rem;
+  background-color: #000000;
+  position: absolute;
+  top: 1.7rem;
+  left: 9.1rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+.mobile-body .top-bar:before {
+  content: "";
+  position: absolute;
+  bottom: 1.25rem;
+  left: -0.9rem;
+  width: .8rem;
+  height: .8rem;
+  border: .4rem solid transparent;
+  border-top: .4rem solid black;
+  border-right: .4rem solid black;
+  border-top-right-radius: .6rem;
+  -webkit-transform: rotate(28deg);
+          transform: rotate(28deg);
+}
+.mobile-body .top-bar:after {
+  content: "";
+  position: absolute;
+  bottom: 1.25rem;
+  right: -0.9rem;
+  width: .8rem;
+  height: .8rem;
+  border: .4rem solid transparent;
+  border-top: .4rem solid black;
+  border-left: .4rem solid black;
+  border-top-right-radius: .6rem;
+  -webkit-transform: rotate(-28deg);
+          transform: rotate(-28deg);
+}
+.mobile-body .camera {
+  position: absolute;
+  bottom: 1.1rem;
+  right: 4.5rem;
+  right: 4.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+  border-radius: 50%;
+  border: .2rem solid #1e1f22;
+  background-image: -webkit-gradient(linear, right top, left top, from(#091528), to(#2363a6));
+  background-image: linear-gradient(right, #091528, #2363a6);
+}
+.mobile-body .speaker {
+  position: absolute;
+  bottom: 1.3rem;
+  right: 6.5rem;
+  width: 4rem;
+  height: .6rem;
+  background-color: #161616;
+  border-radius: .2rem;
+}
+.mobile-body .button {
+  width: .3rem;
+  height: 2.5rem;
+  background-color: #484848;
+  position: absolute;
+  left: -.2rem;
+  border-top-left-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-right: none;
+}
+.mobile-body .button.silent {
+  top: 9.8rem;
+}
+.mobile-body .button.volume-up {
+  top: 15rem;
+  height: 5rem;
+}
+.mobile-body .button.volume-down {
+  top: 21.6rem;
+  height: 5rem;
+}
+.mobile-body .button.power {
+  top: 16.9rem;
+  height: 5rem;
+  right: -.3rem;
+  left: auto;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+  .gallery-content {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .mobile-body {
+    -webkit-transform: scale(0.65) !important;
+            transform: scale(0.65) !important;
+  }
+  .mobile-body:hover {
+    -webkit-transform: scale(0.6) !important;
+            transform: scale(0.6) !important;
+  }
+
+  .gallery-content__img:last-child {
+    margin-right: 2rem !important;
+  }
+}
+@media (max-height: 800px) {
+  .mobile-body {
+    -webkit-transform: scale(0.77) !important;
+            transform: scale(0.77) !important;
+  }
+  .mobile-body:hover {
+    -webkit-transform: scale(0.68) !important;
+            transform: scale(0.68) !important;
+  }
+}
+@media (max-height: 630px) {
+  .mobile-body {
+    -webkit-transform: scale(0.53) !important;
+            transform: scale(0.53) !important;
+  }
+  .mobile-body:hover {
+    -webkit-transform: scale(0.48) !important;
+            transform: scale(0.48) !important;
+  }
+}
+.note {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding: 5px 10px;
+  background: white;
+  border-radius: 4px;
+  font-size: 12px;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="workspace active">
+<div class="note">The iphone is created using HTML and CSS</div>
+<div class="bg-content"></div>
+<div class="mobile-body">
+<div class="top-bar">
+<div class="camera"></div>
+<div class="speaker"></div>
+</div>
+<div class="button volume-up"></div>
+<div class="button volume-down"></div>
+<div class="button silent"></div>
+<div class="button power"></div>
+<div class="layer-2"></div>
+<div class="layer-1"></div>
+<div class="layer-gradient-1"></div>
+<div class="layer-gradient-2"></div>
+</div>
+<div class="gallery-content">
+<div class="gallery-content__img active" data-img="https://s3-us-west-2.amazonaws.com/s.cdpn.io/830072/bg-1.jpg">
+<img src="./bg-1.jpg" rel="preload">
+</div>
+<div class="gallery-content__img" data-img="https://s3-us-west-2.amazonaws.com/s.cdpn.io/830072/bg-2.jpg">
+<img src="./bg-2.jpg" rel="preload">
+</div>
+<div class="gallery-content__img" data-img="https://s3-us-west-2.amazonaws.com/s.cdpn.io/830072/bg-3.jpg">
+<img src="./bg-3.jpg" rel="preload">
+</div>
+<div class="gallery-content__img" data-img="https://s3-us-west-2.amazonaws.com/s.cdpn.io/830072/bg-4.jpg">
+<img src="./bg-4.jpg" rel="preload">
+</div>
+<div class="gallery-content__img" data-img="https://s3-us-west-2.amazonaws.com/s.cdpn.io/830072/bg-5.jpg">
+<img src="./bg-5.jpg" rel="preload">
+</div>
+</div>
+</div>
+<script src="./stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script id="rendered-js">
+window.onload = function () {
+  document.querySelector('.workspace').classList.add('active');
+};
+
+const gallery = document.querySelectorAll('.gallery-content__img'),
+mobileBody = document.querySelector('.mobile-body'),
+bg = document.querySelector('.bg-content');
+
+gallery.forEach(g => {
+  g.addEventListener('click', function () {
+    const imgSrc = this.dataset.img,
+    activeGallery = document.querySelector('.gallery-content__img.active');
+
+    activeGallery.classList.remove('active');
+    this.classList.add('active');
+    bg.style.backgroundImage = `url('${imgSrc}')`;
+    mobileBody.style.backgroundImage = `url('${imgSrc}')`;
+  });
+});
+//# sourceURL=pen.js
+    </script>
+
+
+</body></html>

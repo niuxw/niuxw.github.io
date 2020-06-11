@@ -73,6 +73,7 @@
         <div class="box-3"></div>
         <div class="box-4"></div>
         <div class="box-5"></div> 
+        <div class="box-6"></div> 
       </div>
       <!-- macbook -->
       <div class="laptop">
@@ -83,7 +84,7 @@
                 <div class="mb-screen">
                 
                   <!-- Image (aspect 16:10 recommended, but not required). You might also want to change or remove the background color, in case the picture is not big enough, or rendering is off  -->
-                  <img src="https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?fit=crop&fm=jpg&h=500&q=75&w=800" alt="example image" />              
+                  <!-- <img src="https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?fit=crop&fm=jpg&h=500&q=75&w=800" alt="example image" />               -->
                 </div>
               </div>
             </div>
@@ -111,7 +112,7 @@
             <div class="inner-btn mx-auto">
               <div class="row">
                 <div class="col">
-                  <a href="property-preservation.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+                  <a href="./rpnweb/rpnweb-1.html" class="btn btn-outline-info" target="_blank">Learn More</a>
                 </div>
                 <div class="col">
                   <a href="https://rpngo.com/" class="btn btn-outline-light" target="_blank">Get Started</a>
@@ -172,7 +173,7 @@
           </div>
           <div class="cont text-center  mx-lg-3" style="color: white;">
             <div>
-              Comprehensive ReportingComprehensive ReportingComprehensive Reporting History
+              Vendors can communicate with us easily through RPN Vendor. Also, all the payments can be finish online via eCheck quickly. 
             </div>
             <div class="inner-btn mx-auto">
               <div class="row">
@@ -194,7 +195,7 @@
           </div>
           <div class="cont text-center  mx-lg-3" style="color: white;">
             <div>
-              Interactive MapInteractive MapInteractive MapInteractive MapInteractive Map          
+              Real-Time, Customizable Reporting for How You Do Business. from(https://www.appfolio.com/features/accounting-and-reporting)
             </div>
             <div class="inner-btn mx-auto">
               <div class="row">
@@ -209,14 +210,14 @@
           </div>
         </div>
       </div>
-      <div id="t5" class="title1">
+      <div id="t6" class="title1">
         <div class="left-side">
           <div class="head mx-auto">
-            <h1 style="color: white;">Comprehensive Reporting</h1>
+            <h1 style="color: white;">Intelligent Forecast</h1>
           </div>
           <div class="cont text-center  mx-lg-3" style="color: white;">
             <div>
-              Interactive MapInteractive MapInteractive MapInteractive MapInteractive Map          
+              Eliminate time compiling data, and gain valuable daily insights into performance across your portfolio with precision multifamily intelligence.
             </div>
             <div class="inner-btn mx-auto">
               <div class="row">
@@ -263,6 +264,9 @@
               marginTop: 50
           }, '-=1')
           .to(".box-5", 1, {
+              marginTop: 50
+          }, '-=1')
+          .to(".box-6", 1, {
               marginTop: 50
           }, '-=1')
 
@@ -327,35 +331,54 @@
         TweenMax.fromTo('#t5', 1, {yPercent: 50, autoAlpha: 0, ease:Power1.easeInOut }, { yPercent:0, autoAlpha:1, ease:Power1.easeInOut  }),
         '-=1'
       )
-
       tl2.add(
-          TweenMax.to(".box-5", 1, {css:{transform:"translate(-20vw, -15vh) skewX(0deg) skewY(0deg)", width: "800px", height: "500px"}}),
+          TweenMax.fromTo('.box-6', 2, { xPercent:400, yPercent:750 , opacity: 0, ease:Power1.easeInOut }, { xPercent:0, yPercent:0 , opacity:1 , ease:Power1.easeInOut  }),
       )
-      tl2.add(
-          TweenMax.to(".box-4", 1, {css:{transform:"translate(-20vw, -15vh) skewX(0deg) skewY(0deg)", width: "800px", height: "500px"}}),
-          "-=1"
-      )
-      tl2.add(
-          TweenMax.to(".box-3", 1, {css:{transform:"translate(-20vw, -15vh) skewX(0deg) skewY(0deg)", width: "800px", height: "500px"}}),
-          "-=1"
-      )
-      tl2.add(
-          TweenMax.to(".box-2", 1, {css:{transform:"translate(-20vw, -15vh) skewX(0deg) skewY(0deg)", width: "800px", height: "500px"}}),
-          "-=1"
-      )
-      tl2.add(
-          TweenMax.to(".box-1", 1, {css:{transform:"translate(-20vw, -15vh) skewX(0deg) skewY(0deg)", width: "800px", height: "500px"}}),
-          "-=1"
-      )
-
       tl2.add(
           TweenMax.fromTo('#t5', 0.5, { opacity: 1, ease:Power1.easeInOut }, { autoAlpha:0, ease:Power1.easeInOut  }),
+          '-=1'
+      )
+      tl2.add(
+        TweenMax.fromTo('#t6', 1, {yPercent: 50, autoAlpha: 0, ease:Power1.easeInOut }, { yPercent:0, autoAlpha:1, ease:Power1.easeInOut  }),
+        '-=1'
+      )
+
+      tl2.add(
+          TweenMax.to(".box-6", 1, {css:{transform:"translate(25vw, -15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200"}}),
+      )
+      tl2.add(
+          TweenMax.to(".box-5", 1, {css:{transform:"translate(0vw, -15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200"}}),
+          '-=1'
+      )
+      tl2.add(
+          TweenMax.to(".box-4", 1, {css:{transform:"translate(-25vw, -15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200"}}),
+          "-=1"
+      )
+      tl2.add(
+          TweenMax.to(".box-3", 1, {css:{transform:"translate(25vw, 15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200px"}}),
+          "-=1"
+      )
+      tl2.add(
+          TweenMax.to(".box-2", 1, {css:{transform:"translate(0vw, 15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200px"}}),
+          "-=1"
+      )
+      tl2.add(
+          TweenMax.to(".box-1", 1, {css:{transform:"translate(-25vw, 15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200px"}}),
           "-=1"
       )
 
       tl2.add(
-        TweenMax.to(".box-5", 1, {autoAlpha: 0}),
+          TweenMax.fromTo('#t6', 0.5, { opacity: 1, ease:Power1.easeInOut }, { autoAlpha:0, ease:Power1.easeInOut  }),
+          "-=1"
+      )
+
+      tl2.add(
+        TweenMax.to(".box-6", 1, {autoAlpha: 0}),
           // "-=1"
+      )
+      tl2.add(
+        TweenMax.to(".box-5", 1, {autoAlpha: 0}),
+          "-=1"
       )
       tl2.add(
         TweenMax.to(".box-4", 1, {autoAlpha: 0}),
@@ -363,15 +386,15 @@
       )
       tl2.add(
         TweenMax.to(".box-3", 1, {autoAlpha: 0}),
-          "-=2"
+          "-=1"
       )
       tl2.add(
         TweenMax.to(".box-2", 1, {autoAlpha: 0}),
-          "-=3"
+          "-=1"
       )
       tl2.add(
         TweenMax.to(".box-1", 1, {autoAlpha: 0}),
-          "-=4"
+          "-=1"
       )
 
       const scene2 = new ScrollMagic.Scene ({
