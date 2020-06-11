@@ -77,14 +77,14 @@
       </div>
       <!-- macbook -->
       <div class="laptop">
-        <div class="css-mb with-glare">
+        <div class="css-mb with-glare size1">
           <div class="mb-display-position">
             <div class="mb-display">
               <div class="mb-screen-position">
                 <div class="mb-screen">
                 
                   <!-- Image (aspect 16:10 recommended, but not required). You might also want to change or remove the background color, in case the picture is not big enough, or rendering is off  -->
-                  <!-- <img src="https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?fit=crop&fm=jpg&h=500&q=75&w=800" alt="example image" />               -->
+                  <img src="img/rpngo/web1.png" alt="example image" />              
                 </div>
               </div>
             </div>
@@ -98,6 +98,16 @@
       </div>
       <div class="pad">
         <figure class='ipad'></figure>
+      </div>
+      <div class="footer-text">
+        <div class="ft-text text-center">
+          <div id="go-to-web" style="color: white;">
+            <a href="https://rpngo.com/" class="btn btn-light" target="_blank">Get Started</a>
+          </div>
+          <div id="go-to-app" style="color: white;">
+            <a href="./tech-rpngo.html" class="btn btn-outline-light" target="_blank">Learn More About Mobile App</a>
+          </div>
+        </div>
       </div>
       <div id="t1" class="title1">
         <div class="left-side">
@@ -134,7 +144,7 @@
             <div class="inner-btn mx-auto">
               <div class="row">
                 <div class="col">
-                  <a href="property-preservation.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+                  <a href="./rpnweb/rpnweb-2.html" class="btn btn-outline-info" target="_blank">Learn More</a>
                 </div>
                 <div class="col">
                   <a href="https://rpngo.com/" class="btn btn-outline-light" target="_blank">Get Started</a>
@@ -156,7 +166,7 @@
             <div class="inner-btn mx-auto">
               <div class="row">
                 <div class="col">
-                  <a href="property-preservation.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+                  <a href="./rpnweb/rpnweb-3.html" class="btn btn-outline-info" target="_blank">Learn More</a>
                 </div>
                 <div class="col">
                   <a href="https://rpngo.com/" class="btn btn-outline-light" target="_blank">Get Started</a>
@@ -178,7 +188,7 @@
             <div class="inner-btn mx-auto">
               <div class="row">
                 <div class="col">
-                  <a href="property-preservation.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+                  <a href="./rpnweb/rpnweb-4.html" class="btn btn-outline-info" target="_blank">Learn More</a>
                 </div>
                 <div class="col">
                   <a href="https://rpngo.com/" class="btn btn-outline-light" target="_blank">Get Started</a>
@@ -200,7 +210,7 @@
             <div class="inner-btn mx-auto">
               <div class="row">
                 <div class="col">
-                  <a href="property-preservation.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+                  <a href="./rpnweb/rpnweb-5.html" class="btn btn-outline-info" target="_blank">Learn More</a>
                 </div>
                 <div class="col">
                   <a href="https://rpngo.com/" class="btn btn-outline-light" target="_blank">Get Started</a>
@@ -222,7 +232,7 @@
             <div class="inner-btn mx-auto">
               <div class="row">
                 <div class="col">
-                  <a href="property-preservation.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+                  <a href="./rpnweb/rpnweb-6.html" class="btn btn-outline-info" target="_blank">Learn More</a>
                 </div>
                 <div class="col">
                   <a href="https://rpngo.com/" class="btn btn-outline-light" target="_blank">Get Started</a>
@@ -462,31 +472,40 @@
         // "-=1"
       )
       tl3.add(
-        TweenMax.to('.laptop', 1, {yPercent: -20, ease:Power1.easeInOut  }),
+        TweenMax.to('.laptop', 1, {yPercent: -23, ease:Power1.easeInOut  }),
         // TweenMax.to(".laptop", 1, {autoAlpha: 1}),
         // "-=1"
       )
       tl3.add(
-        TweenMax.to('.phone', 0.5, {xPercent: 27, autoAlpha: 1, ease:Power1.easeInOut  }),
+        TweenMax.to('.phone', 0.5, {xPercent: 24, autoAlpha: 1, ease:Power1.easeInOut  }),
         // TweenMax.to(".laptop", 1, {autoAlpha: 1}),
         "-=1"
       )
       tl3.add(
-        TweenMax.to('.pad', 0.5, {xPercent: -31, autoAlpha: 1, ease:Power1.easeInOut  }),
+        TweenMax.to('.pad', 0.5, {xPercent: -29, autoAlpha: 1, ease:Power1.easeInOut  }),
         // TweenMax.to(".laptop", 1, {autoAlpha: 1}),
         "-=1"
       )
       tl3.add(
-        TweenMax.to('.phone', 1, {yPercent: -10, ease:Power1.easeInOut  }),
+        TweenMax.to('.phone', 1, {yPercent: -12, ease:Power1.easeInOut  }),
         // TweenMax.to(".laptop", 1, {autoAlpha: 1}),
         "-=1"
       )
       tl3.add(
-        TweenMax.to('.pad', 1, {yPercent: -10, ease:Power1.easeInOut  }),
+        TweenMax.to('.pad', 1, {yPercent: -12, ease:Power1.easeInOut  }),
         // TweenMax.to(".laptop", 1, {autoAlpha: 1}),
         "-=1"
       )
 
+      tl3.add(
+        TweenMax.to('#go-to-web', 0.5, {y: -100, autoAlpha: 1, ease:Power1.easeInOut}),
+        "-=1"
+      )
+
+      tl3.add(
+        TweenMax.to('#go-to-app', 0.5, {y: -80, autoAlpha: 1, ease:Power1.easeInOut}),
+        "-=1"
+      )
 
       const scene3 = new ScrollMagic.Scene ({
           triggerElement: '#container',

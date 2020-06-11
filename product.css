@@ -513,6 +513,10 @@ video{
   grid-row-gap: 10px;
 }
 
+.icon-container {
+  grid-row: 1;
+}
+
 .phone-title1 {
   position: absolute;
   margin-top: 10%;

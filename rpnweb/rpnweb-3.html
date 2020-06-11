@@ -19,7 +19,7 @@
     </script>
 
     <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -38,34 +38,39 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="./css/about.css" rel="stylesheet">
-    <link href="./css/service.css" rel="stylesheet">
-    <link href="product.css" rel="stylesheet">
+    <link href="../css/about.css" rel="stylesheet">
+    <link href="../css/service.css" rel="stylesheet">
+    <link href="../product.css" rel="stylesheet">
+    <link href="../tech-rpnweb.css" rel="stylesheet">
+    <link href="../rpnweb.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="site-header sticky-top py-1">
-      <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2" href="index.html" aria-label="Product">
+    <nav class="site-header sticky-top py-1 navbar">
+        <a class="py-2 navbar-brand" href="../index.html" aria-label="Product" style="left: 10%; color: white;">
           <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
-          <img src="logo.png" alt="RPN" width="20" height="20">
+          <img src="../logo.png" alt="RPN" width="25" height="25">
           REPAIR AND PERSERVATION NETWORK
         </a>
-        <a class="py-2 d-none d-md-inline-block" href="carousel.html">About</a>
-        <a class="py-2 d-none d-md-inline-block" href="tech2.html">Technology</a>
-        <a class="py-2 d-none d-md-inline-block" href="service2.html">Services</a>
-        <a class="py-2 d-none d-md-inline-block" href="contact.html">Contact</a>
-        <a class="py-2 d-none d-md-inline-block" href="https://rpngo.com/">Login</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">SignUp</a>
-      </div>
-    </nav>
-
+        <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
+          <a class="py-2 d-none d-md-inline-block nav-item" href="../service2.html">Services</a>
+          <a class="py-2 d-none d-md-inline-block nav-item" href="../pricing.html">Pricing</a>
+          <a class="py-2 d-none d-md-inline-block nav-item" href="../tech2.html">Technology</a>
+          <a class="py-2 d-none d-md-inline-block nav-item" href="../resources.html">Resourses</a>
+          <a class="py-2 d-none d-md-inline-block nav-item" href="../carousel.html">About</a>
+          <a class="py-2 d-none d-md-inline-block nav-item" href="../contact.html">Contact</a>
+          <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a> 
+          <!-- need employee equality system -->
+          <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
+          <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
+        </div>
+      </nav>
+  
     <section id="property-inspection-header" class="jumbotron text-center">
       <div class="container">
-        <h1 style="color: white;">Property Inspections</h1>
-        <div style="margin-top: 7%;">
+        <h1 style="color: white;">Roles & Markets</h1>
+        <!-- <div style="margin-top: 7%;">
             <a href="pricing.html#p-inspection" class="btn btn-warning" target="_blank">Comparsion & Pricing</a>
-        </p>
-      </div>
+        </div> -->
     </section>
     <div class="spacer s0"></div>
   
@@ -76,12 +81,6 @@
                 ...
             </p>
         </div>
-
-        <!-- <div class="video-wrapper-1 mx-auto">
-            <video class="video-1" autoplay muted="muted" preload="auto" loop="loop">
-                <source src="img/video.mp4" type="video/mp4">
-            </video>  
-        </div>   -->
     </div>
 
     <section class="section">
@@ -142,161 +141,124 @@
         </div>
     </section>
 
-    <section class="section">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-4 element-animate mb-4">
-                    <div class="media block-6 d-block text-center">
-                        <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
-                        <svg class="bi bi-cloud-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M3.5 13a3.5 3.5 0 1 1 .59-6.95 5.002 5.002 0 1 1 9.804 1.98A2.5 2.5 0 0 1 13.5 13h-10z"/>
-                        </svg>              
-                        </div>
-                        <a href="#p4" style="text-decoration: none; color: black;">
-                            <div class="media-body">
-                                <h4>Insurance loss inspection</h4>
-                                <p>Example Description</p>
-                            </div>
-                        </a>
-                    </div>  
-                </div>
-                
-                <div class="col-md-6 col-lg-4 element-animate mb-4">
-                    <div class="media block-6 d-block text-center">
-                        <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
-                        <svg class="bi bi-map" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M15.817.613A.5.5 0 0 1 16 1v13a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 14.51l-4.902.98A.5.5 0 0 1 0 15V2a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0l4.902.98 4.902-.98a.5.5 0 0 1 .415.103zM10 2.41l-4-.8v11.98l4 .8V2.41zm1 11.98l4-.8V1.61l-4 .8v11.98zm-6-.8V1.61l-4 .8v11.98l4-.8z"/>
-                        </svg>              
-                        </div>
-                        <a href="#p5" style="text-decoration: none; color: black;">
-                            <div class="media-body">
-                                <h4>FEMA disaster</h4>
-                                <p>Example Description</p>
-                            </div>
-                        </a>
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- <section class="row2">
         <div class="separator columns 2"><h2>Our Inspections Support </h2></div>
     </section> -->
-    <div class="large-12 medium-12 small-12 columns" style="margin-top: 5vh; margin-bottom: 15vh;">
+    <div class="large-12 medium-12 small-12 columns" style="margin-top: 5vh; margin-bottom: 5vh;">
         <hr/>
     </div>
   
-    <div id="p1" class="container container1">
-        <div class="story-1">
-            <div class="video-wrapper">
-                <video poster="img/service-details/1.gif" name="media" muted="">
-                    <source src="img/video.mp4" type="video/mp4">
-                </video>
-                <div class="replay-button J_replay" style="display: block;">
+    <div id="p1" class="">
+        <div class="rpn-story-1">
+          <div class="text-center">
+            <h1>All Roles in One Tool</h1>
+          </div>
+          <div class="laptop-wrapper-1">
+            <div class="laptop2">
+              <div class="css-mb with-glare size1">
+                <div class="mb-display-position">
+                  <div class="mb-display">
+                    <div class="mb-screen-position">
+                      <div class="mb-screen">
+                        <img src="../img/rpngo/web1.png" alt="example image" />              
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="mb-body"></div>
+                <div class="mb-bottom-cover"></div>
+              </div>  
             </div>
-            <div class="text">
-                <h2 class="title">Exterior inspection</h2>
-                <div class="description">
-                    Exterior inspection, Exterior inspection, Exterior inspection, Exterior inspection, Exterior inspection, Exterior inspection, 
-                </div>
-                <div>
-                    $50 per Hour
-                </div>
-                <button type="button" class="btn btn-warning">Order Service</button>
-            </div>
+          </div>
         </div>
     </div>
 
-    <div id="p2" class="container container1">
-        <div class="story-1">
-            <div class="video-wrapper2">
-                <video poster="img/service-details/1.gif" name="media" muted="">
-                    <source src="img/video.mp4" type="video/mp4">
-                </video>
-                <div class="replay-button J_replay" style="display: block;">
-                </div>
-            </div>
-            <div class="text2">
-                <h2 class="title">Interior inspection</h2>
-                <div class="description">
-                    Interior inspection, ....
-                </div>
-                <div>
-                    $55 per Hour
-                </div>
-                <button type="button" class="btn btn-warning">Order Service</button>
-            </div>
-        </div>
+    <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh; margin-bottom: 5vh;">
+      <hr/>
     </div>
 
-    <div id="p3" class="container container1">
-        <div class="story-1">
-            <div class="video-wrapper">
-                <video poster="img/service-details/1.gif" name="media" muted="">
-                    <source src="img/video.mp4" type="video/mp4">
-                </video>
-                <div class="replay-button J_replay" style="display: block;">
-                </div>
-            </div>
-            <div class="text">
-                <h2 class="title">Code compliance</h2>
-                <div class="description">
-                    Code compliance, ...
-                </div>
-                <div>
-                    $59 per Hour
-                </div>
-                <button type="button" class="btn btn-warning">Order Service</button>
-            </div>
+    <div id="p2" class="">
+      <div class="rpn-story-1">
+        <div class="text-center">
+          <h1>....</h1>
         </div>
+        <div class="laptop-wrapper-1">
+          <div class="laptop2">
+            <div class="css-mb with-glare size1">
+              <div class="mb-display-position">
+                <div class="mb-display">
+                  <div class="mb-screen-position">
+                    <div class="mb-screen">
+                      <img src="img/rpngo/web1.png" alt="example image" />              
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-body"></div>
+              <div class="mb-bottom-cover"></div>
+            </div>  
+          </div>
+        </div>
+      </div>
+  </div>
+
+    <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh; margin-bottom: 5vh;">
+      <hr/>
     </div>
 
-    <div id="p4" class="container container1">
-        <div class="story-1">
-            <div class="video-wrapper2">
-                <video poster="img/service-details/1.gif" name="media" muted="">
-                    <source src="img/video.mp4" type="video/mp4">
-                </video>
-                <div class="replay-button J_replay" style="display: block;">
-                </div>
-            </div>
-            <div class="text2">
-                <h2 class="title">Insurance loss inspection</h2>
-                <div class="description">
-                    Insurance loss inspection, ....
-                </div>
-                <div>
-                    $50 per Hour
-                </div>
-                <button type="button" class="btn btn-warning">Order Service</button>
-            </div>
+    <div id="p3" class="">
+      <div class="rpn-story-1">
+        <div class="text-center">
+          <h1>...</h1>
         </div>
+        <div class="laptop-wrapper-1">
+          <div class="laptop2">
+            <div class="css-mb with-glare size1">
+              <div class="mb-display-position">
+                <div class="mb-display">
+                  <div class="mb-screen-position">
+                    <div class="mb-screen">
+                      <img src="img/rpngo/web1.png" alt="example image" />              
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-body"></div>
+              <div class="mb-bottom-cover"></div>
+            </div>  
+          </div>
+        </div>
+      </div>
+  </div>
+
+    <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh; margin-bottom: 5vh;">
+      <hr/>
     </div>
 
-    <div id="p5" class="container container1">
-        <div class="story-1">
-            <div class="video-wrapper">
-                <video poster="img/service-details/1.gif" name="media" muted="">
-                    <source src="img/video.mp4" type="video/mp4">
-                </video>
-                <div class="replay-button J_replay" style="display: block;">
-                </div>
-            </div>
-            <div class="text">
-                <h2 class="title">FEMA disaster</h2>
-                <div class="description">
-                    FEMA disaster, ...
-                </div>
-                <div>
-                    $55 per Hour
-                </div>
-                <button type="button" class="btn btn-warning">Order Service</button>
-            </div>
+    <div id="p4" class="">
+      <div class="rpn-story-1">
+        <div class="text-center">
+          <h1>...</h1>
         </div>
-    </div>
+        <div class="laptop-wrapper-1">
+          <div class="laptop2">
+            <div class="css-mb with-glare size1">
+              <div class="mb-display-position">
+                <div class="mb-display">
+                  <div class="mb-screen-position">
+                    <div class="mb-screen">
+                      <img src="img/rpngo/web1.png" alt="example image" />              
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-body"></div>
+              <div class="mb-bottom-cover"></div>
+            </div>  
+          </div>
+        </div>
+      </div>
+  </div>
 
     <div class="sec-example">
         <div class="sec-ct">
