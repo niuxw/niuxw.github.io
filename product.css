@@ -486,3 +486,37 @@ video{
 .view-4:hover a.info {
   transition-delay: 0.2s;
 }
+
+.leftpart-app{
+  position: absolute;
+  left: 18%;
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rightpart-app{
+  position: absolute;
+  left: 45%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+  grid-row-gap: 10px;
+}
+
+.phone-title1 {
+  position: absolute;
+  margin-top: 10%;
+  width: 34vh;
+  height: 66vh;
+  z-index: 3;
+}
