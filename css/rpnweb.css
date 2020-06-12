@@ -12,4 +12,12 @@
     /* margin-bottom: 56px; */
   }
 
-  
+  .other {
+      position: relative;
+      width: 100vw;
+      height: 50vh;
+  }
+
+  .header {
+      position: relative;
+    }

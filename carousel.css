@@ -1,3 +1,11 @@
+#abnout-header {
+  background-image: url(img/index_our_goal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100vw;
+}
+
 .jumbotron {
   /* padding-top: 3rem;
   padding-bottom: 3rem; */

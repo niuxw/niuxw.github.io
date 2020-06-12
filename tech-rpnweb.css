@@ -6,7 +6,7 @@
     display: flex;
     /* justify-content: center;
     align-items: center; */
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background-image: linear-gradient(to right, #ffffff 0%, #f6f5f5 0%);
   }
   
   .content {
@@ -110,8 +110,8 @@
     width: 40vw;
   }
   .size2 {
-    height: 30vh;
-    width: 30vw;
+    height: 40vh;
+    width: 45vw;
   }
   .css-mb div {
     box-sizing: border-box !important; /* Just in case */
@@ -206,8 +206,8 @@
   
   /* Image on the screen */
   .css-mb .mb-screen img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
   }
   
   /* Iframe on the screen */
@@ -350,13 +350,14 @@
 }
 .title-1 {
   position: absolute;
+  width: 100%;
   top: 40%;
+  text-align: center;
 }
-.title-2-left {
+.title-2 {
   position: absolute;
-  width: 50%;
-  top: 50%;
-  left: 10%;
+  width: 100%;
+  top: 60%;
   text-align: center;
 }
 
@@ -367,10 +368,7 @@
   right: 10%;
   text-align: center;
 }
-.title-1 {
-  position: relative;
-  top: 40%;
-}
+
 .title1 {
   width: 100vw;
   height: 95vh;
