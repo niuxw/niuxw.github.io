@@ -72,7 +72,7 @@
         <div class="box-1"></div>
         <div id="box2" class="box-2">
           <div class="phone-animation">
-            <div class="phone-display">
+            <div class="phone-display phone-pos1 phone-dis-color1">
               <div class="display-content">
                 <div class="notifications-bar">
                   <div class="time">9:41</div>
@@ -86,10 +86,10 @@
                   <div class="menu"></div>
                 </div>
                 <div id="text1" class="plan-box1">
-                  <div class="plan-text">Help! Login doesn't work for,me!</div>
+                  <div class="plan-text">Help! Login doesn't work for me!</div>
                 </div>
                 <div id="text2" class="plan-box">
-                  <div class="plan-text"> Hi there, we are sorry about,that. There was an,unscheduled problem that,affected login temporally. We,are currently working on it.</div>
+                  <div class="plan-text"> Hi there, we are sorry about that. There was an unscheduled problem that affected login temporally. We are currently working on it.</div>
                 </div>
                 <div id="text3" class="plan-box2">
                   <div class="plan-text"> Got it! Thanks.</div>
@@ -102,7 +102,58 @@
                 <div class="home-button"></div>
               </div>
             </div>
-            <div class="phone-reflections">
+            <div class="phone-reflections phone-refl-pos1">
+              <div class="reflection-1"></div>
+            </div>
+          </div>      
+          <div class="phone-animation">
+            <div class="phone-display phone-pos2 phone-dis-color2">
+              <div class="display-content2">
+                <div class="search-title">
+                  <div class="text">Welcome to the Help Center</div>
+                </div>
+                <div id="search-bar" class="search-box">
+                  <div class="text-holder">
+                    <div>
+                      <div>Find help and services</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="help-list">
+                  <div class="plan-limit">
+                    <div class="limit-text">
+                      <div><strong>Get IT help</strong></div>
+                      <div class="limit-subtext">Get assiance for general IT problems and questions</div>
+                    </div>
+                  </div>
+                  <div class="plan-limit">
+                    <div class="limit-text">
+                      <div><strong>Request a new account</strong></div>
+                      <div class="limit-subtext">Request a new account for a system</div>
+                    </div>
+                  </div>
+                  <div class="plan-limit">
+                    <div class="limit-text">
+                      <div><strong>Report a system problem</strong></div>
+                      <div class="limit-subtext">Having trouble with system?</div>
+                    </div>
+                  </div>
+                  <div class="plan-limit">
+                    <div class="limit-text">
+                      <div><strong>Fix an account problem</strong></div>
+                      <div class="limit-subtext">Having trouble accessing certain websites or systems?</div>
+                    </div>
+                  </div>
+                  <div class="plan-limit">
+                    <div class="limit-text">
+                      <div><strong>Onboard new employees</strong></div>
+                      <div class="limit-subtext">Request a new access for new employee</div>
+                    </div>
+                  </div>
+                </div>      
+              </div>
+            </div>
+            <div class="phone-reflections phone-refl-pos2">
               <div class="reflection-1"></div>
             </div>
           </div>      
@@ -348,7 +399,10 @@
       tl2.add(
           TweenMax.fromTo('#text3', 0.5, { xPercent: 100, yPercent: -50, opacity: 0 }, { xPercent: 0, yPercent: 0, opacity: 1  }),
       )
-
+      tl2.add(
+          TweenMax.fromTo('#search-bar', 0.5, { xPercent: 100, yPercent: -50, opacity: 0 }, { xPercent: 0, yPercent: 0, opacity: 1  }),
+      )
+      // end text in
       tl2.add(
           TweenMax.fromTo('#t2', 1, {yPercent: 50, autoAlpha: 0, ease:Power1.easeInOut }, {yPercent: 0, autoAlpha:1, ease:Power1.easeInOut  }),
           '-=1'

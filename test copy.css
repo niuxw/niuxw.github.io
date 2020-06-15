@@ -94,7 +94,7 @@ body {
   transform: translate(-50%, -50%);
   height: 690px;
   width: 378px;
-  background-color: #cccccc; /* p1: screen background color*/
+  background-color: #eeeeee; /* p1: screen background color*/
   border-radius: 45px 37px 41px 41px;
 }
 .phone-notch {
@@ -549,10 +549,10 @@ body {
   content: "";
   display: block;
   position: absolute;
-  height: 15%;
+  height: 35%;
   width: 100%;
   top: 0%;
-  background-color: #eeeeee; /* p2: screen frontground color*/
+  background-color: #2b74e0; /* p2: screen frontground color*/
   /* background-image: linear-gradient(to top, #50d2f4, #3660f2); */
   /* transform: skewY(-15deg); */
 }
@@ -874,6 +874,47 @@ body {
   font-size: 0.8em;
   opacity: 0.6;
   font-weight: 400;
+}
+
+.search-title {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.search-title .text {
+  color: #ffffff;
+  font-size: 16px;
+  flex: 1;
+  text-align: center;
+}
+
+.search-box {
+  position: absolute;
+  top: 150px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  transform: translate3d(-50%, 0, 0);
+  width: 85%;
+  box-sizing: border-box;
+  color: #17222d;
+  box-shadow: 0px 30px 10px -5px rgba(0,0,0,0.5);
+}
+
+.search-box .text-holder {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.search-box .text-holder > div div {
+  font-size: 13px;
+  opacity: 0.8;
+  padding-left: 10px;
 }
 .plan-text {
   font-size: 13px;
