@@ -489,7 +489,7 @@ video{
 
 .leftpart-app{
   position: absolute;
-  left: 18%;
+  left: 10%;
   width: 33%;
   height: 100%;
   display: flex;
@@ -499,6 +499,15 @@ video{
 .rightpart-app{
   position: absolute;
   left: 45%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rightpart-app2{
+  position: absolute;
+  left: 47%;
   width: 40%;
   height: 100%;
   display: flex;
@@ -524,7 +533,6 @@ video{
   height: 66vh;
   z-index: 3;
 }
-
 
 .container-fluid {
   background-color: #fff;

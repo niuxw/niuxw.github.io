@@ -39,6 +39,7 @@
         }
       }
     </style>
+      
     <!-- Custom styles for this template -->
     <link href="./css/about.css" rel="stylesheet">
     <link href="./css/service.css" rel="stylesheet">
@@ -69,14 +70,50 @@
     <div id="container">
       <div class="content">
         <div class="box-1"></div>
-        <div class="box-2"></div>
+        <div id="box2" class="box-2">
+          <div class="phone-animation">
+            <div class="phone-display">
+              <div class="display-content">
+                <div class="notifications-bar">
+                  <div class="time">9:41</div>
+                  <div class="range"></div>
+                  <div class="wifi"></div>
+                  <div class="battery"></div>
+                </div>
+                <div class="nav">
+                  <div class="messages"></div>
+                  <div class="phone-number">RPN Tech</div>
+                  <div class="menu"></div>
+                </div>
+                <div id="text1" class="plan-box1">
+                  <div class="plan-text">Help! Login doesn't work for,me!</div>
+                </div>
+                <div id="text2" class="plan-box">
+                  <div class="plan-text"> Hi there, we are sorry about,that. There was an,unscheduled problem that,affected login temporally. We,are currently working on it.</div>
+                </div>
+                <div id="text3" class="plan-box2">
+                  <div class="plan-text"> Got it! Thanks.</div>
+                </div>
+                <div class="bottom-icons">
+                  <div class="chart"><div></div></div>
+                  <div class="eye"><div></div></div>
+                  <div class="equalizer"><div></div><div></div><div></div></div>
+                </div>
+                <div class="home-button"></div>
+              </div>
+            </div>
+            <div class="phone-reflections">
+              <div class="reflection-1"></div>
+            </div>
+          </div>      
+        </div>
         <div class="box-3"></div>
         <div class="box-4"></div>
         <div class="box-5"></div> 
         <div class="box-6"></div> 
       </div>
       <!-- macbook -->
-      <div class="laptop">
+      <div id="laptop" class="laptop">
         <div class="css-mb with-glare size1">
           <div class="mb-display-position">
             <div class="mb-display">
@@ -94,10 +131,10 @@
         </div>  
       </div>
       <div class="phone">
-        <figure class='iphone'></figure>
+        <figure id="iphone" class='iphone'></figure>
       </div>
       <div class="pad">
-        <figure class='ipad'></figure>
+        <figure id="ipad" class='ipad'></figure>
       </div>
       <div class="footer-text">
         <div class="ft-text text-center">
@@ -288,25 +325,36 @@
 
       const tl2 = new TimelineMax();
       tl2.add(
-          TweenMax.fromTo('.box-1', 2, { xPercent: 400, yPercent: 750, opacity: 0, ease:Power1.easeInOut }, { xPercent: 0, yPercent: 0, opacity: 1, ease:Power1.easeInOut  }),
+          TweenMax.fromTo('.box-1', 2, { xPercent: 450, yPercent: 150, opacity: 0, ease:Power1.easeInOut }, { xPercent: 0, yPercent: 0, opacity: 1, ease:Power1.easeInOut  }),
       )
       tl2.add(
           TweenMax.fromTo('#t1', 1, {yPercent: 50, autoAlpha:0, ease:Power1.easeInOut}, {yPercent: 0, autoAlpha:1, ease:Power1.easeInOut}),
           '-=1'
       )
       tl2.add(
-          TweenMax.fromTo('.box-2', 2, { xPercent: 400, yPercent: 750, opacity: 0 }, { xPercent: 0, yPercent: 0, opacity: 1  }),
+          TweenMax.fromTo('.box-2', 2, { xPercent: 450, yPercent: 150, opacity: 0 }, { xPercent: 0, yPercent: 0, opacity: 1  }),
       )
       tl2.add(
           TweenMax.fromTo('#t1', 0.5,  { opacity:1, ease:Power1.easeInOut}, {autoAlpha:0, ease:Power1.easeInOut}),
           '-=1'
       )
+      // text in
+      tl2.add(
+          TweenMax.fromTo('#text1', 0.5, { xPercent: 100, yPercent: -50, opacity: 0 }, { xPercent: 0, yPercent: 0, opacity: 1  }),
+      )
+      tl2.add(
+          TweenMax.fromTo('#text2', 0.5, { xPercent: -100, yPercent: 50, opacity: 0 }, { xPercent: 0, yPercent: 0, opacity: 1  }),
+      )
+      tl2.add(
+          TweenMax.fromTo('#text3', 0.5, { xPercent: 100, yPercent: -50, opacity: 0 }, { xPercent: 0, yPercent: 0, opacity: 1  }),
+      )
+
       tl2.add(
           TweenMax.fromTo('#t2', 1, {yPercent: 50, autoAlpha: 0, ease:Power1.easeInOut }, {yPercent: 0, autoAlpha:1, ease:Power1.easeInOut  }),
           '-=1'
       )
       tl2.add(
-          TweenMax.fromTo('.box-3', 2, { xPercent:400, yPercent:750 , opacity: 0, ease:Power1.easeInOut }, { xPercent:0, yPercent:0 , opacity:1 , ease:Power1.easeInOut  }),
+          TweenMax.fromTo('.box-3', 2, { xPercent:450, yPercent:150 , opacity: 0, ease:Power1.easeInOut }, { xPercent:0, yPercent:0 , opacity:1 , ease:Power1.easeInOut  }),
       )
       tl2.add(
           TweenMax.fromTo('#t2', 0.5, { opacity: 1, ease:Power1.easeInOut }, { autoAlpha:0, ease:Power1.easeInOut  }),
@@ -317,7 +365,7 @@
         '-=1'
       )
       tl2.add(
-          TweenMax.fromTo('.box-4', 2, { xPercent:400, yPercent:750 , opacity: 0, ease:Power1.easeInOut }, { xPercent:0, yPercent:0 , opacity:1 , ease:Power1.easeInOut  }),
+          TweenMax.fromTo('.box-4', 2, { xPercent:450, yPercent:150 , opacity: 0, ease:Power1.easeInOut }, { xPercent:0, yPercent:0 , opacity:1 , ease:Power1.easeInOut  }),
       )
       tl2.add(
           TweenMax.fromTo('#t3', 0.5, { opacity: 1, ease:Power1.easeInOut }, { autoAlpha:0, ease:Power1.easeInOut  }),
@@ -328,7 +376,7 @@
         '-=1'
       )
       tl2.add(
-          TweenMax.fromTo('.box-5', 2, { xPercent:400, yPercent:750 , opacity: 0, ease:Power1.easeInOut }, { xPercent:0, yPercent:0 , opacity:1 , ease:Power1.easeInOut  }),
+          TweenMax.fromTo('.box-5', 2, { xPercent:450, yPercent:150 , opacity: 0, ease:Power1.easeInOut }, { xPercent:0, yPercent:0 , opacity:1 , ease:Power1.easeInOut  }),
       )
       tl2.add(
           TweenMax.fromTo('#t4', 0.5, { opacity: 1, ease:Power1.easeInOut }, { autoAlpha:0, ease:Power1.easeInOut  }),
@@ -339,7 +387,7 @@
         '-=1'
       )
       tl2.add(
-          TweenMax.fromTo('.box-6', 2, { xPercent:400, yPercent:750 , opacity: 0, ease:Power1.easeInOut }, { xPercent:0, yPercent:0 , opacity:1 , ease:Power1.easeInOut  }),
+          TweenMax.fromTo('.box-6', 2, { xPercent:450, yPercent:150 , opacity: 0, ease:Power1.easeInOut }, { xPercent:0, yPercent:0 , opacity:1 , ease:Power1.easeInOut  }),
       )
       tl2.add(
           TweenMax.fromTo('#t5', 0.5, { opacity: 1, ease:Power1.easeInOut }, { autoAlpha:0, ease:Power1.easeInOut  }),
@@ -463,6 +511,10 @@
       // .addIndicators({name: "text1" })
       // .addTo(controller);
 
+      const laptopH = document.getElementById('iphone').getBoundingClientRect().offsetHeight ;
+      console.log("aaaa");
+      console.log(laptopH);
+
       const tl3 = new TimelineMax();
       tl3.add(
         TweenMax.to(".laptop", 0.2, {autoAlpha: 1}),
@@ -484,13 +536,13 @@
         "-=1"
       )
       tl3.add(
-        TweenMax.to('.phone', 1, {yPercent: -12, ease:Power1.easeInOut  }),
-        // TweenMax.to(".laptop", 1, {autoAlpha: 1}),
+        // TweenMax.to('.phone', 1, {yPercent: -12, ease:Power1.easeInOut  }),
+        TweenMax.fromTo('.phone', 1, {y: laptopH, ease:Power1.easeInOut}, {y: laptopH, ease:Power1.easeInOut  }),
         "-=1"
       )
       tl3.add(
-        TweenMax.to('.pad', 1, {yPercent: -12, ease:Power1.easeInOut  }),
-        // TweenMax.to(".laptop", 1, {autoAlpha: 1}),
+        // TweenMax.to('.pad', 1, {yPercent: -12, ease:Power1.easeInOut  }),
+        TweenMax.fromTo('.pad', 1, {y: laptopH, ease:Power1.easeInOut}, {y: laptopH, ease:Power1.easeInOut  }),
         "-=1"
       )
 
@@ -591,7 +643,7 @@
                         </a>
                       </div>
                       <div class="fa fa-sm">
-                        <a class="text-muted" href="#">
+                        <a class="text-muted" href="https://www.linkedin.com/company/repair-and-preservation-network/">
                           <img src="img/social-media/linkedin1.svg" width="25" height="25">
                         </a>
                       </div>
@@ -632,11 +684,6 @@
         </div>
     </div>
 </div>
-</div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        
-    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
-    
+</div>    
   </body>
 </html>

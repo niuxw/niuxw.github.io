@@ -18,53 +18,70 @@
   .box-1 {
     margin-top: 50px;
     position: absolute;
-    width: 1100px;
-    height: 300px;
-    transform:  skewX(-47deg) skewY(18deg);
+    /* width: 1100px;
+    height: 300px; */
+    width: 380px;
+    height: 700px;
+    /* transform:  skewX(-47deg) skewY(18deg); */
+    transform: translate(80% ) rotate(-30deg) skewX(30deg);
     background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
   }
   
   .box-2 {
     margin-top: 10px;
     position: absolute;
-    width: 1100px;
-    height: 300px;
-    transform: skewX(-47deg) skewY(18deg);
-    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    width: 380px;
+    height: 700px;
+    /* transform: skewX(-47deg) skewY(18deg); */
+    transform: translate(80% ) rotate(-30deg) skewX(30deg);
+    /* background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%); */
+    background-color: transparent;
   }
   
   .box-3 {
     margin-top: -30px;
     position: absolute;
-    width: 1100px;
-    height: 300px;
-    transform: skewX(-47deg) skewY(18deg);
+    /* width: 1100px;
+    height: 300px; */
+    width: 380px;
+    height: 700px;
+    /* transform: skewX(-47deg) skewY(18deg); */
+    transform: translate(80% ) rotate(-30deg) skewX(30deg);
     background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
   }
   
   .box-4 {
     margin-top: -70px;
     position: absolute;
-    width: 1100px;
-    height: 300px;
-    transform: skewX(-47deg) skewY(18deg);
+    /* width: 1100px;
+    height: 300px; */
+    width: 380px;
+    height: 700px;
+    /* transform: skewX(-47deg) skewY(18deg); */
+    transform: translate(80% ) rotate(-30deg) skewX(30deg);
     background-image: linear-gradient(to top, #50cc7f 0%, #f5d100 100%);
   }
   
   .box-5 {
     margin-top: -110px;
     position: absolute;
-    width: 1100px;
-    height: 300px;
-    transform: skewX(-47deg) skewY(18deg);
+    /* width: 1100px;
+    height: 300px; */
+    width: 380px;
+    height: 700px;
+    /* transform: skewX(-47deg) skewY(18deg); */
+    transform: translate(80% ) rotate(-30deg) skewX(30deg);
     background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   }
   .box-6 {
     margin-top: -150px;
     position: absolute;
-    width: 1100px;
-    height: 300px;
-    transform: skewX(-47deg) skewY(18deg);
+    /* width: 1100px;
+    height: 300px; */
+    width: 380px;
+    height: 700px;
+    /* transform: skewX(-47deg) skewY(18deg); */
+    transform: translate(80% ) rotate(-30deg) skewX(30deg);
     background-image: linear-gradient(to right, #b60698 0%, #f53575 100%);
   }
   
@@ -104,28 +121,40 @@
     min-width: 400px; /* Set the desired minimum width of the macbook */
     margin: 25vh auto 0; /* Align mockup to center */
   }
+  .css-mb2 {
+    /* max-width: 700px; */
+    min-width: 200px; /* Set the desired minimum width of the macbook */
+    margin: 5vh auto 0; /* Align mockup to center */
+  }
   
   .size1 {
     height: 40vh;
     width: 40vw;
   }
   .size2 {
-    height: 40vh;
+    height: 45vh;
     width: 45vw;
   }
-  .css-mb div {
+  .size3 {
+    height: 28vh;
+    width: 28vw;
+  }
+  .css-mb div,
+  .css-mb2 div {
     box-sizing: border-box !important; /* Just in case */
   }
   
   /* Center the display */
-  .css-mb .mb-display-position {
+  .css-mb .mb-display-position,
+  .css-mb2 .mb-display-position {
     width: 88%;
     margin: 0 auto;
     
   }
   
   /* The display */
-  .css-mb .mb-display {
+  .css-mb .mb-display,
+  .css-mb2 .mb-display {
     position: relative;
     width: 100%;
     height: 0;
@@ -143,7 +172,8 @@
   
   /* Webcam */
   /* Browser may not render a perfect circle */
-  .css-mb .mb-display:before {
+  .css-mb .mb-display:before,
+  .css-mb2 .mb-display:before {
     content: '';
     display: block;
     position: absolute;
@@ -158,7 +188,8 @@
   
   /* Glare */
   /* Browser may not render the top and right offset evenly */
-  .css-mb .mb-display:after {
+  .css-mb .mb-display:after,
+  .css-mb2 .mb-display:after {
     content: '';
     display: none;
     position: absolute;
@@ -180,10 +211,14 @@
   }
   
   /* Only show glare, if the class is applied */
-  .css-mb.with-glare .mb-display:after { display: block; }
+  .css-mb.with-glare .mb-display:after,
+  .css-mb2.with-glare .mb-display:after { 
+    display: block; 
+  }
   
   /* Position the screen and give make it the right size, ratio 16:10 */
-  .css-mb .mb-screen-position {
+  .css-mb .mb-screen-position,
+  .css-mb2 .mb-screen-position {
     position: absolute;
     top: 4.5%;
     width: 97%;
@@ -194,7 +229,8 @@
   }
   
   /* Give parent (this element) a "height", so that child elements can use height: 100%;*/
-  .css-mb .mb-screen {
+  .css-mb .mb-screen,
+  .css-mb2 .mb-screen {
     position: absolute;
     top: 0;
     left: 0;
@@ -205,20 +241,23 @@
   }
   
   /* Image on the screen */
-  .css-mb .mb-screen img {
+  .css-mb .mb-screen img,
+  .css-mb2 .mb-screen img {
     width: 100%;
     height: 100%;
   }
   
   /* Iframe on the screen */
-  .css-mb .mb-screen iframe {
+  .css-mb .mb-screen iframe,
+  .css-mb2 .mb-screen iframe {
     width: 100%;
     height: 100%;
     border: 0;
   }
   
   /* Macbook body */
-  .css-mb .mb-body {
+  .css-mb .mb-body,
+  .css-mb2 .mb-body {
     position: relative;
     width: 100%;
     height: 0;
@@ -227,7 +266,8 @@
   }
   
   /* The groove */
-  .css-mb .mb-body:before {
+  .css-mb .mb-body:before,
+  .css-mb2 .mb-body:before {
     content: '';
     display: block;
     position: absolute;
@@ -249,7 +289,8 @@
   }
   
   /* Macbook bottom */
-  .css-mb .mb-bottom-cover {
+  .css-mb .mb-bottom-cover,
+  .css-mb2 .mb-bottom-cover {
     width: 100%;
     height: 0;
     padding-bottom: 0.7407%;
@@ -276,9 +317,32 @@
     position: absolute;
     left: 0;
     /* top: 25vh; */
-    margin-top: 30vh;
+    /* margin-top: 30vh; */
+}
+.phone {
+  top: 35vh;
+}
+.pad{
+  top: 32vh;
 }
 
+.phone2
+.pad2{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 0;
+}
+
+.phone2 {
+  margin-top: 15vh;
+}
+.pad2{
+  margin-top: 18vh;
+}
 .iphone, .ipad {
     display: block;
     /* color: #fff;
@@ -298,16 +362,29 @@
     background-position: 50% 100%, center;
     transform-origin: bottom center;
 }
-/* .iphone:hover, .ipad:hover {
+.iphone2, .ipad2 {
+    display: block;
+    background-color: #000;
+    background-size: auto 200%, cover;
+    background-repeat: no-repeat, no-repeat;
+    border: solid #111;
+    margin-bottom: 2em;
+    position: relative;
+    box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
+    transition: all 0.1s linear, line-height 0s linear;
+    background-position: 50% 100%, center;
+    transform-origin: bottom center;
+}
+.iphone:hover, .ipad:hover {
     color: transparent;
     text-shadow: 0 0 0em transparent;
     background-position: 50% -100%, center center;
     transition: all 0.15s linear, line-height 5s linear;
     line-height: 0vmin;
-} */
+}
 .iphone {
-    width: 15vh;
-    height: 32vh;
+    width: 14vh;
+    height: 30vh;
     /* width: 230px;
     height: 510px; */
     /* line-height: 51.4455445545vmin; */
@@ -322,8 +399,8 @@
 }
 .ipad {
     margin-left: 2em;
-    width: 29vh;
-    height: 38vh;
+    width: 25vh;
+    height: 32vh;
     /* height: 85.8vmin;
     width: 60vmin; */
     line-height: 85.8vmin;
@@ -331,6 +408,28 @@
     border-radius: 4.2857142857vmin;
     background-image: url(https://www.apple.com/v/ipad-pro/s/images/overview/retina_screen_1__csuokryyjb42_large.jpg);
     z-index: 3;
+}
+.iphone2 {
+    width: 15vh;
+    height: 32vh;
+    margin-top: 3vh;
+    border-width: 0.7vmin;
+    border-radius: 4.0550130098vmin;
+    background-image: url(img/rpngo/s0.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 9;
+}
+.ipad2 {
+    margin-left: 2em;
+    width: 25vh;
+    height: 33vh;
+    line-height: 85.8vmin;
+    border-width: 0.7vmin;
+    border-radius: 4.2857142857vmin;
+    background-image: url(https://www.apple.com/v/ipad-pro/s/images/overview/retina_screen_1__csuokryyjb42_large.jpg);
+    z-index: 9;
 }
 
 /* text */
@@ -435,3 +534,454 @@
   opacity: 0;
 }
 
+/* iphone-animation */
+.phone-animation {
+  position: absolute;
+  left: calc(50% - 8px);
+  top: calc(50% - 2px);
+  /* transform: translate(-50%, -50%) rotate(-30deg) skewX(30deg); */
+  /* transform: rotate(-90deg); */
+}
+/* @media screen and (max-width: 1400px) {
+  .phone-animation {
+    transform: translate(-50%, -50%) rotate(-30deg) skewX(30deg) scale(0.8);
+  }
+} */
+.phone-display {
+  position: absolute;
+  z-index: 1;
+  top: -23px;
+  left: 20px;
+  transform: translate(-50%, -50%);
+  /* height: 1100px;
+  width: 238px; */
+  height: 690px;
+  width: 378px;
+  background-color: #cccccc; /* p1: screen background color*/
+  border-radius: 45px 37px 41px 41px;
+}
+.display-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 690px;
+  width: 378px;
+  border-radius: 45px 37px 41px 41px;
+  overflow: hidden;
+}
+
+.phone-reflections {
+  position: absolute;
+  top: -17px;
+  left: 15px;
+  transform: translate(-50%, -50%);
+  height: 709px;
+  width: 399px;
+  border-radius: 48px 40px 52px 45px;
+  background-color: transparent;
+  z-index: 4;
+  overflow: hidden;
+}
+.phone-reflections .reflection-1 {
+  position: absolute;
+  height: 200%;
+  width: 120%;
+  background-color: #fff;
+  opacity: 0.1;
+  left: -320px;
+  top: -200px;
+  transform: rotate(32deg);
+  z-index: 10;
+}
+.display-content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  top: 0%;
+  background-color: #eeeeee; /* p2: screen frontground color*/
+  /* background-image: linear-gradient(to top, #50d2f4, #3660f2); */
+  /* transform: skewY(-15deg); */
+}
+.notifications-bar .time {
+  color: #000;
+  font-size: 11px;
+  position: absolute;
+  left: 40px;
+  top: 10px;
+}
+.notifications-bar .range {
+  position: absolute;
+  height: 4px;
+  width: 2px;
+  background-color: #000;
+  right: 70px;
+  top: 14px;
+}
+.notifications-bar .range:after,
+.notifications-bar .range:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 2px;
+  background-color: #000;
+  bottom: 0;
+  left: 4px;
+}
+.notifications-bar .range:before {
+  height: 8px;
+  left: 8px;
+}
+.notifications-bar .wifi {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+}
+.notifications-bar .wifi,
+.notifications-bar .wifi:before {
+  display: inline-block;
+  border: 4px double transparent;
+  border-top-color: #000;
+  border-radius: 50%;
+}
+.wifi:before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: relative;
+  top: -5px;
+}
+.battery {
+  height: 5px;
+  width: 12px;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  border-radius: 1px;
+  border: 1px solid #000;
+}
+.battery:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 1px;
+  background-color: #000;
+  right: -3px;
+  top: 1px;
+}
+.nav {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.nav .phone-number {
+  color: #000;
+  font-size: 16px;
+  flex: 1;
+  text-align: center;
+}
+.nav .messages {
+  margin: 0 10px;
+  width: 21px;
+  height: 15px;
+  /* width: 16px; */
+  border: 1px solid #000;
+  border-radius: 3px;
+  position: relative;
+}
+.nav .messages:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #eeeeee;
+  width: 3px;
+  height: 4px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  bottom: -3px;
+  left: 4px;
+  transform: rotate(35deg);
+}
+.nav .messages:after {
+  content: "3";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #000;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+}
+.nav .menu {
+  height: 1px;
+  width: 10px;
+  background-color: #000;
+  margin: 0 10px;
+  position: relative;
+  top: 7px;
+  transform: scale(1.4);
+}
+.nav .menu:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 14px;
+  top: -4px;
+  height: 1px;
+  left: -4px;
+  background-color: #000;
+}
+.nav .menu:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 6px;
+  height: 1px;
+  top: 3px;
+  background-color: #000;
+  left: 4px;
+}
+.plan-box1 {
+  position: absolute;
+  top: 120px;
+  background-color: #147EFB;
+  padding: 20px;
+  border-radius: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  box-sizing: border-box;
+  color: #ffffff;
+  box-shadow: 0px 30px 10px -5px rgba(0,0,0,0.5);
+}
+
+.plan-box1:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+	border-left-color: #147EFB;
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -12.5px;
+  margin-right: -25px;
+}
+.plan-box2 {
+  position: absolute;
+  top: 340px;
+  background-color: #147EFB;
+  padding: 20px;
+  border-radius: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  box-sizing: border-box;
+  color: #ffffff;
+  box-shadow: 0px 30px 10px -5px rgba(0,0,0,0.5);
+}
+
+.plan-box2:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+	border-left-color: #147EFB;
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -12.5px;
+  margin-right: -25px;
+}
+.plan-box {
+  position: absolute;
+  top: 210px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  transform: translate3d(-50%, 0, 0);
+  width: 85%;
+  box-sizing: border-box;
+  color: #17222d;
+  box-shadow: 0px 30px 10px -5px rgba(0,0,0,0.5);
+}
+
+.plan-box:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+	border-right-color: #fff;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -12.5px;
+	margin-left: -25px;
+}
+
+.plan-box1 .plan-options {
+  display: flex;
+  margin-bottom: 20px;
+}
+.plan-box .plan-options {
+  display: flex;
+  margin-bottom: 20px;
+}
+.plan-box1 .plan-options > div,
+.plan-box .plan-options > div {
+  flex: 1;
+}
+.plan-box1 .plan-options > div:first-of-type,
+.plan-box .plan-options > div:first-of-type {
+  border-right: 1px solid rgba(0,0,0,0.2);
+}
+.plan-box1 .plan-options > div div,
+.plan-box .plan-options > div div {
+  font-size: 11px;
+  opacity: 0.6;
+  padding-left: 30px;
+}
+.plan-box1 .plan-options > div div:first-of-type,
+.plan-box .plan-options > div div:first-of-type {
+  font-weight: 700;
+  font-size: 16px;
+  opacity: 1;
+}
+.plan-box1 .plan-options > div div:first-of-type span,
+.plan-box .plan-options > div div:first-of-type span {
+  font-size: 0.8em;
+  opacity: 0.6;
+  font-weight: 400;
+}
+.plan-text {
+  font-size: 13px;
+  text-align: center;
+  /* margin-bottom: 20px; */
+}
+.bottom-icons {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+.bottom-icons > div {
+  flex: 1;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-icons .equalizer div {
+  height: 18px;
+  width: 1px;
+  position: relative;
+  background-color: #708dbf;
+}
+.bottom-icons .equalizer div:nth-child(2) {
+  left: 5px;
+}
+.bottom-icons .equalizer div:nth-child(2):after {
+  top: 11px;
+}
+.bottom-icons .equalizer div:nth-child(3) {
+  left: 10px;
+}
+.bottom-icons .equalizer div:nth-child(3):after {
+  top: 4px;
+}
+.bottom-icons .equalizer div:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 4px;
+  background-color: #708dbf;
+  border: 1px solid #fff;
+  border-radius: 5 0%;
+  position: relative;
+  left: -2px;
+  top: 2px;
+}
+.bottom-icons .eye {
+  border-left: 1px solid rgba(0,0,0,0.2);
+  border-right: 1px solid rgba(0,0,0,0.2);
+}
+.bottom-icons .eye div {
+  height: 6px;
+  width: 6px;
+  border: 2px solid #708dbf;
+  border-radius: 50%;
+  position: relative;
+}
+.bottom-icons .eye div:after,
+.bottom-icons .eye div:before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 28px;
+  border-top: 2px solid #708dbf;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: -12px;
+}
+.bottom-icons .eye div:before {
+  border-top: none;
+  border-bottom: 2px solid #708dbf;
+  top: -18px;
+}
+.bottom-icons .chart div {
+  height: 6px;
+  width: 1px;
+  background-color: #708dbf;
+  position: relative;
+  top: 5px;
+  transform: scale(1.4);
+}
+.bottom-icons .chart div:after {
+  content: "";
+  display: block;
+  height: 14px;
+  width: 1px;
+  background-color: #708dbf;
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+}
+.bottom-icons .chart div:before {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 1px;
+  background-color: #708dbf;
+  position: absolute;
+  left: 8px;
+  bottom: 0;
+}
+.home-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background-color: rgba(0,0,0,0.35);
+  bottom: 12px;
+  border-radius: 4px;
+}
