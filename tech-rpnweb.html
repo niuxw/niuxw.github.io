@@ -160,7 +160,104 @@
         </div>
         <div class="box-3"></div>
         <div class="box-4"></div>
-        <div class="box-5"></div> 
+        <div class="box-5">
+          <div class="web-animation">
+            <div class="web-display web-pos1 web-dis-color1">
+              <div class="web-content">
+                <div class="notifications-bar">
+                  <div class="btn"></div>
+                  <div class="btn2"></div>
+                  <div class="btn3"></div>
+                </div>
+                <div class="nav nav-pos2">
+                  <div class="phone-number"> <strong>Reports</strong></div>
+                  <div class="menu"></div>
+                </div>
+                <div class="web-title">
+                  <div class="title">Real-Time Reports</div>
+                </div>
+                <div id="report1" class="report-box report-pos1">
+                  <div class="plan-options">
+                    <div>
+                      <div>Pending Payment</div>
+                    </div>
+                  </div>
+                  <div class="plan-text">
+                    Generate a report that contains all tasks that at Billing, Record Keeping or Payment stage.
+                  </div>
+                  <a class="generate" href="">Generate</a>
+                </div>
+                <div id="report2" class="report-box report-pos2">
+                  <div class="plan-options">
+                    <div>
+                      <div>Advanced Pending Payment</div>
+                    </div>
+                  </div>
+                  <div class="plan-text">
+                    This Report also includes Vendor Total and Work Order Amount.
+                  </div>
+                  <a class="generate" href="">Generate</a>
+                </div>
+
+                <div class="web-title web-title-pos2">
+                  <div class="title">Daily Reports</div>
+                </div>
+                <div class="report-box2">
+                  <div class="plan-text">
+                    <strong>Showing 10 latest</strong>
+                  </div>
+                  <div class="plan-text">
+                    &cir;&nbsp; Download 6/14/2020, 8:15:21PM
+                  </div>
+                  <div class="plan-text">
+                    &cir;&nbsp; Download 6/13/2020, 8:15:24PM
+                  </div>
+                  <div class="plan-text">
+                    &cir;&nbsp;  Download 6/12/2020, 8:15:28PM
+                  </div>
+                  <div class="plan-text">
+                    &cir;&nbsp;  Download 6/11/2020, 8:15:22PM
+                  </div>
+                  <div class="plan-text">
+                    &cir;&nbsp;  Download 6/10/2020, 8:15:26PM
+                  </div>
+                  <div class="plan-text">
+                    &cir;&nbsp;  Download 6/09/2020, 8:15:21PM
+                  </div>
+                  <div class="plan-text">
+                    &cir;&nbsp;  Download 6/08/2020, 8:15:23PM
+                  </div>
+                  <div class="plan-text">
+                    &cir;&nbsp;  Download 6/07/2020, 8:15:26PM
+                  </div>
+                  <div class="plan-text">
+                    &cir;&nbsp;  Download 6/06/2020, 8:15:23PM
+                  </div>
+                  <div class="plan-text">
+                    &cir;&nbsp;  Download 6/05/2020, 8:15:26PM
+                  </div>
+                </div>
+                <div class="report-box3">
+                  <pie class="fifty"></pie>
+                </div>
+              </div>
+              <div id="report3" class="report-box report-pos3">
+                <div class="plan-options">
+                  <div>
+                    <div>Unassigned</div>
+                  </div>
+                </div>
+                <div class="plan-text">
+                  Generate a report that contains all tasks that at Billing, Record Keeping or Payment stage.
+                </div>
+                <a class="generate" href="">Generate</a>
+              </div>
+            </div>
+            <div class="phone-reflections phone-refl-pos1">
+              <div class="reflection-1"></div>
+            </div>
+          </div> 
+        </div> 
         <div class="box-6"></div> 
       </div>
       <!-- macbook -->
@@ -432,6 +529,19 @@
       tl2.add(
           TweenMax.fromTo('.box-5', 2, { xPercent:450, yPercent:150 , opacity: 0, ease:Power1.easeInOut }, { xPercent:0, yPercent:0 , opacity:1 , ease:Power1.easeInOut  }),
       )
+
+      // report in
+      tl2.add(
+          TweenMax.fromTo('#report1', 0.5, { xPercent: 800, yPercent: -50, opacity: 0 }, { xPercent: 0, yPercent: 0, opacity: 1  }),
+      )
+      tl2.add(
+          TweenMax.fromTo('#report2', 0.5, { xPercent: 800, yPercent: -50, opacity: 0 }, { xPercent: 0, yPercent: 0, opacity: 1  }),
+      )
+      tl2.add(
+          TweenMax.fromTo('#report3', 0.5, { xPercent: 800, yPercent: -50, opacity: 0 }, { xPercent: 0, yPercent: 0, opacity: 1  }),
+      )
+      // report text in
+
       tl2.add(
           TweenMax.fromTo('#t4', 0.5, { opacity: 1, ease:Power1.easeInOut }, { autoAlpha:0, ease:Power1.easeInOut  }),
           '-=1'
