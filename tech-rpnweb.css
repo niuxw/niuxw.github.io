@@ -339,7 +339,7 @@
 }
 
 .phone2 {
-  margin-top: 15vh;
+  margin-top: -10vh;
 }
 .pad2{
   margin-top: 18vh;
@@ -412,10 +412,10 @@
 }
 .iphone2 {
     width: 15vh;
-    height: 32vh;
-    margin-top: 3vh;
+    height: 30vh;
+    margin-top: 2vh;
     border-width: 0.7vmin;
-    border-radius: 4.0550130098vmin;
+    border-radius: 3vmin;
     background-image: url(img/rpngo/s0.png);
     background-size: cover;
     background-position: center;

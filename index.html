@@ -8,8 +8,10 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" rel="stylesheet" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
@@ -197,50 +199,93 @@
         </div>
       </div>
       
-      <div class="video-container">
+      <!-- <div class="video-container">
         <video id="video" autoplay muted="muted" preload="auto" loop="loop">
           <source src="img/video.mp4" type="video/mp4">
         </video>
-        <!-- <div id="inside2" class="text-center">
-          <h1 class="mb-4 section1-text2">We strive to provide industry leading and innovative solutions</h1>
-          <p class="section1-text3">Nationwide;
-          <p class="section1-text4">End to End Mortgage Field Services;
-          <p class="section1-text5">Inspections, Preservation, Maintenance and Repairs.</p>
-        </div> -->
-      </div>
+      </div> -->
       
     </div>
 
     <script >
-      var tl = new TimelineMax();
-      tl.add(
-          TweenMax.fromTo('.video-container', 1, {scale: 0.5, autoAlpha: 0.5}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
-      )
-      tl.add(
-          TweenMax.to(".svg-container", 1, {autoAlpha: 0, scale: 10, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-          "-=1"
-      )
+      // var tl = new TimelineMax();
+      // tl.add(
+      //     TweenMax.fromTo('.video-container', 1, {scale: 0.5, autoAlpha: 0.5}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
+      // )
+      // tl.add(
+      //     TweenMax.to(".svg-container", 1, {autoAlpha: 0, scale: 10, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+      //     "-=1"
+      // )
 
-      // var controller = new ScrollMagic.Controller();
-      var startpin = new ScrollMagic.Scene({
-          duration: 800
-      })
-      .setPin(".container123")
-      .addIndicators({name: "v-pin" })
-      .addTo(controller);
+      // // var controller = new ScrollMagic.Controller();
+      // var startpin = new ScrollMagic.Scene({
+      //     duration: 800
+      // })
+      // .setPin(".container123")
+      // .addIndicators({name: "v-pin" })
+      // .addTo(controller);
 
-      // tween
-      new ScrollMagic.Scene({
-          duration: 500
-      })
-      .setTween(tl)
-      .addIndicators({name: "video-play" }) 
-      .addTo(controller);
+      // // tween
+      // new ScrollMagic.Scene({
+      //     duration: 500
+      // })
+      // .setTween(tl)
+      // .addIndicators({name: "video-play" }) 
+      // .addTo(controller);
 
-      $('video').get(0).play();
+      // $('video').get(0).play();
     </script>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+  <div class="blog-slider-container">
+    <div class="blog-slider">
+      <div class="blog-slider__wrp swiper-wrapper">
+        <div class="blog-slider__item swiper-slide">
+          <div class="blog-slider__img">
+            
+            <img src="./img/client.jpg" alt="">
+          </div>
+          <div class="blog-slider__content">
+            <!-- <span class="blog-slider__code">Client</span> -->
+            <div class="blog-slider__title">Client</div>
+            <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
+            <a href="#" class="blog-slider__button">Become Our Client</a>
+          </div>
+        </div>
+        <div class="blog-slider__item swiper-slide">
+          <div class="blog-slider__img">
+            <img src="./img/vendor.jpg" alt="">
+          </div>
+          <div class="blog-slider__content">
+            <!-- <span class="blog-slider__code">26 December 2019</span> -->
+            <div class="blog-slider__title">Vendor</div>
+            <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+            <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+            <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+            <a href="#" class="blog-slider__button">Become Our Vendor</a>
+          </div>
+        </div>
+                
+      </div>
+      <div class="blog-slider__pagination"></div>
+    </div>
+  </div>
+    <script>
+    var swiper = new Swiper('.blog-slider', {
+      spaceBetween: 30,
+      effect: 'fade',
+      loop: true,
+      mousewheel: {
+        invert: false,
+      },
+      // autoHeight: true,
+      pagination: {
+        el: '.blog-slider__pagination',
+        clickable: true,
+      }
+    });
+    </script>
+  
+    <!-- <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
 
         <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light site-section1" style="flex-direction: row;">
           <div class="col-md-10 p-lg-5 mx-auto my-5">
@@ -254,7 +299,7 @@
             <a class="btn btn-outline-secondary" href="#">Apply Now</a>
           </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="text-center">
       <h1>Our Services</h1>
@@ -262,33 +307,33 @@
     <div id="all" class="mx-auto">
       <div class="view view-first">
         <div class="mask mask1">
-          <h2>Property Inspections</h2>
-          <p>A cool description of some sort between these tags. I am so cool and awesomely awesome.</p>
-          <p><a href="./property-inspections.html" class="info">Read More</a></p>
+          <h2 style="font-weight: bold;">Property Inspections</h2>
+          <p style="font-size: 18px;">Timely and accurate reporting of the condition and occupancy status of a property.</p>
+          <p><a href="./property-inspections.html" class="info btn btn-secondary">Read More</a></p>
         </div>
       </div>
       <div class="view view-2">
         <!-- <img src="img/service/index-inspection.jpg" /> -->
         <div class="mask mask2">
-          <h2>Property Repairs</h2>
-          <p>A cool description of some sort between these tags. I am so cool and awesomely awesome.</p>
-          <p><a href="./property-repairs.html" class="info">Read More</a></p>
+          <h2 style="font-weight: bold;">Property Repairs</h2>
+          <p style="font-size: 18px;">Stepping in when the worst-case scenario of damage to a property becomes a reality.</p>
+          <p><a href="./property-repairs.html" class="info btn btn-secondary">Read More</a></p>
         </div>
       </div>
       <div class="view view-3">
         <!-- <img src="img/service/index-inspection.jpg" /> -->
         <div class="mask mask3">
-          <h2>Property Preservation</h2>
-          <p>A cool description of some sort between these tags. I am so cool and awesomely awesome.</p>
-          <p><a href="./property-preservation.html" class="info">Read More</a></p>
+          <h2 style="font-weight: bold;">Property Preservation</h2>
+          <p style="font-size: 18px;">Keeping vacant properties secure, safe, and well-maintained.</p>
+          <p><a href="./property-preservation.html" class="info btn btn-secondary">Read More</a></p>
         </div>
       </div>
       <div class="view view-4">
         <!-- <img src="img/service/index-inspection.jpg" /> -->
         <div class="mask mask4">
-          <h2>REO & Insurance Services</h2>
-          <p>A cool description of some sort between these tags. I am so cool and awesomely awesome.</p>
-          <p><a href="./property-reo.html" class="info">Read More</a></p>
+          <h2 style="font-weight: bold;">REO & Insurance Services</h2>
+          <p style="font-size: 18px;">Services for REO properties</p>
+          <p><a href="./property-reo.html" class="info btn btn-secondary">Read More</a></p>
         </div>
       </div>
       <div id="bg" class="bg-img"></div>
@@ -348,22 +393,24 @@
       <div class="leftpart-app">
         <div class="title-container">
           <h1 class="display-4 font-weight-normal">RPN GO&reg;</h1>
-          <p class="lead font-weight-normal">Complete, Cloud-Based Management Platform</p>
-          <p class="lead font-weight-normal">Try our app on Browser and App For Free</p>
+          <p class="lead font-weight-normal">Comprehensive, Cloud-Based Management Platform</p>
+          <p class="lead font-weight-normal">Try our system on Website and App For Free</p>
           <div>
             <a class="btn btn-secondary mx-auto" href="https://rpngo.com/">Get Started</a>
-            <a class="btn btn-outline-secondary mx-auto" href="tech-rpngo.html">Read More</a>
+            <a class="btn btn-outline-secondary mx-auto" href="tech-rpnweb.html">Read More</a>
           </div>
-          <p>
-            <img src="google-play-badge.png" width="190" height="75">
-            <img src="download-on-the-app-store.png" width="170" height="50">
-          </p>
+          <div>
+            <p>
+              <img src="google-play-badge.png" width="190" height="75">
+              <img src="download-on-the-app-store.png" width="170" height="50">
+            </p>
+          </div>
         </div>
       </div>
       <div class="rightpart-app2">
-        <div class="pad2">
+        <!-- <div class="pad2">
           <figure class='ipad2'></figure>
-        </div>  
+        </div>   -->
         <div class="laptop2">
           <div class="css-mb2 with-glare size3">
             <div class="mb-display-position">
@@ -387,7 +434,7 @@
     </div>
 
     <!-- Start of rpndevl Zendesk Widget script -->
-    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ee2deab5-2eeb-48ae-b95c-bfd05c97a16f"> </script>
+    <!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ee2deab5-2eeb-48ae-b95c-bfd05c97a16f"> </script> -->
     <!-- End of rpndevl Zendesk Widget script -->
 
     <div class="container-fluid mx-auto">
