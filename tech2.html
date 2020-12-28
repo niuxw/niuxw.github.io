@@ -17,10 +17,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
-    <script>
+    <!-- <script>
       // init controller
       var controller = new ScrollMagic.Controller();
-    </script>
+    </script> -->
+
 
     <script src="./js/bootstrap.js"></script>
   
@@ -71,7 +72,7 @@
         <div id="cloud-img-layer" class="layer">
           <div class="text-center" style="flex-direction: row;">
             <div id="cloud-text" class="text-center">
-              <h1 class="mb-4 section1-text2">Complete, Cloud-Based Management Platform</h1>
+              <h1 class="mb-4 section1-text2">RPN GO&reg; Platform</h1>
               <p class="section1-text3">...;</p>
             </div>  
           </div>
@@ -79,50 +80,19 @@
       </div>      
     </div>
 
-    <script >
-      const height2 = document.documentElement.clientHeight / 2;
-      const height = document.documentElement.clientHeight;
-
-      var tl4 = new TimelineMax();
-      tl4.add(
-          TweenMax.fromTo("#container4", 1, {autoAlpha: 1, scale: 0.8}, {autoAlpha: 1, scale: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
-      )
-      tl4.add(
-          TweenMax.fromTo('#cloud-img-layer', 1, {scale: 1, autoAlpha: 0}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-          "-=1"
-      )
-      tl4.add(
-          TweenMax.fromTo('#cloud-text', 1, { yPercent:250 , opacity: 0 , ease:Power1.easeInOut }, { yPercent:0 , opacity:1 , ease:Power1.easeInOut }),
-          "-=1"
-      )
-
-      var startpin = new ScrollMagic.Scene({
-        triggerElement: '#trigger4',
-        triggerHook: 0,
-        duration: 500
-      })
-      .setPin("#container4")
-      .addIndicators({name: "pin" })
-      .addTo(controller);
-
-      // tween
-      new ScrollMagic.Scene({
-        triggerElement: '#trigger4',
-        triggerHook: 0,
-        duration: 500
-      })
-      .setTween(tl4)
-      .addIndicators({name: "fade" }) 
-      .addTo(controller);
-
-    </script>
-
   <div class="sec-example">
     <div class="sec-ct">
-        <div class="sec-title">Run Your Entire Business with One Product
-          From marketing and leasing to maintenance and reporting, you can do everything from our all-in-one solution.
+        <div class="sec-title">
+          Comprehensive & Cloud-Based Management Platform
         </div>
-        <a class="btn btn-outline-secondary" href="tech-rpnweb.html">Read More </a>
+        <div class="sec-word">
+          Run Your Entire Business with One Product
+          From marketing and leasing to maintenance and reporting, 
+          you can do everything from our all-in-one solution. ........
+        </div>
+        <div class="sec-btn">
+          <a class="btn btn-outline-secondary" href="tech-rpnweb.html">Read More </a>
+        </div>
         <!-- <div class="drone-image">
             <img src="img/drone6.jpg" style="width: 50vw; height: 60vh;">
         </div> -->
@@ -144,42 +114,6 @@
       </div>      
     </div>
 
-    <script >
-
-      var tl0 = new TimelineMax();
-      tl0.add(
-          TweenMax.fromTo("#container0", 1, {autoAlpha: 1, scale: 0.8}, {autoAlpha: 1, scale: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
-      )
-      tl0.add(
-          TweenMax.fromTo('#app-img-layer', 1, {scale: 1, autoAlpha: 0}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-          "-=1"
-      )
-      tl0.add(
-          TweenMax.fromTo('#app-text', 1, { yPercent:250 , opacity: 0 , ease:Power1.easeInOut }, { yPercent:0 , opacity:1 , ease:Power1.easeInOut }),
-          "-=1"
-      )
-
-      var startpin = new ScrollMagic.Scene({
-        triggerElement: '#trigger0',
-        triggerHook: 0,
-        duration: 500
-      })
-      .setPin("#container0")
-      .addIndicators({name: "pin" })
-      .addTo(controller);
-
-      // tween
-      new ScrollMagic.Scene({
-        triggerElement: '#trigger0',
-        triggerHook: 0,
-        duration: 500
-      })
-      .setTween(tl0)
-      .addIndicators({name: "fade" }) 
-      .addTo(controller);
-
-    </script>
-
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
 
       <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light site-section1" style="flex-direction: row;">
@@ -191,68 +125,12 @@
       <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light site-section1" style="flex-direction: row;">
         <div class="col-md-10 p-lg-5 mx-auto my-5">
           <h1 class="display-4 font-weight-normal">RPN Connection</h1>
-          <a class="btn btn-outline-secondary" href="tech-connection.html">Read More</a>
+          <a class="btn btn-outline-secondary" >Coming Soon</a>
+          <!-- <a class="btn btn-outline-secondary" href="tech-connection.html">Read More</a> -->
         </div>
       </div>
     </div>
 
-    <span id="trigger"></span>
-    <div  id="container1" class="container123">
-      <div id="p100" class="svg-container drone-bg-img">
-        <div id="drone-img-layer" class="layer">
-          <div class="text-center" style="flex-direction: row;">
-            <div id="drone-text" class="text-center">
-              <h1 class="mb-4 section1-text2">Drone-based Inspections</h1>
-              <p class="section1-text3">...;</p>
-            </div>  
-          </div>
-        </div>
-      </div>      
-    </div>
-
-    <script >
-      var tl = new TimelineMax();
-      tl.add(
-          TweenMax.fromTo("#container1", 1, {autoAlpha: 1, scale: 0.8}, {autoAlpha: 1, scale: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
-      )
-      tl.add(
-          TweenMax.fromTo('#drone-img-layer', 1, {scale: 1, autoAlpha: 0}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-          "-=1"
-      )
-      tl.add(
-          TweenMax.fromTo('#drone-text', 1, { yPercent:250 , opacity: 0 , ease:Power1.easeInOut }, { yPercent:0 , opacity:1 , ease:Power1.easeInOut }),
-          "-=1"
-      )
-
-      var startpin = new ScrollMagic.Scene({
-        triggerElement: '#trigger',
-        triggerHook: 0,
-        duration: 500
-      })
-      .setPin("#container1")
-      .addIndicators({name: "pin" })
-      .addTo(controller);
-
-      // tween
-      new ScrollMagic.Scene({
-        triggerElement: '#trigger',
-        triggerHook: 0,
-        duration: 500
-      })
-      .setTween(tl)
-      .addIndicators({name: "fade" }) 
-      .addTo(controller);
-
-    </script>
-    <div class="sec-example">
-      <div class="sec-ct">
-          <div class="sec-title">We use the latest technology </div>
-          <div class="drone-image">
-              <img src="img/drone6.jpg" style="width: 50vw; height: 60vh;">
-              <!-- <img src="https://image.ibb.co/nFfzRK/phantom_3_standard.png" alt=""> -->
-          </div>
-      </div>
-    </div>
 
     <span id="trigger2"></span>
     <div id="container2" class="container123">
@@ -272,84 +150,17 @@
     <script src="https://www.marzipano.net/demos/common/eventShim.js"></script>
     <script src="https://www.marzipano.net/demos/common/requestAnimationFrame.js" ></script>
     <script src="js/marzipano.js" ></script>
-    <script>
-      var viewer = new Marzipano.Viewer(document.getElementById('pano'), { controls: { scrollZoom: false } });
-
-      // Create source.
-      var source = Marzipano.ImageUrlSource.fromString(
-        "https://www.marzipano.net/media/cubemap/{f}.jpg"
-      );
-
-      // Create geometry.
-      var geometry = new Marzipano.CubeGeometry([{ tileSize: 1024, size: 1024 }]);
-
-      // Create view.
-      var limiter = Marzipano.RectilinearView.limit.traditional(4096, 100*Math.PI/180);
-      var view = new Marzipano.RectilinearView(null, limiter);
-      var autorotate = Marzipano.autorotate({
-        yawSpeed: 0.1,         // Yaw rotation speed
-        targetPitch: 0,        // Pitch value to converge to
-        targetFov: Math.PI/2   // Fov value to converge to
-      });
-
-      // Create scene.
-      var scene = viewer.createScene({
-        source: source,
-        geometry: geometry,
-        view: view,
-        pinFirstLevel: true
-      });
-
-      // Display scene.
-      scene.switchTo();
-      // Start autorotation immediately
-      viewer.startMovement(autorotate); 
-
-    </script>
-    <script >
-      var tl2 = new TimelineMax();
-      tl2.add(
-          TweenMax.fromTo("#container2", 1, {autoAlpha: 1, scale: 0.8}, {autoAlpha: 1, scale: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
-      )
-      tl2.add(
-          TweenMax.fromTo('#panorama-img-layer', 1, {scale: 1, autoAlpha: 0}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-          "-=1"
-      )
-      tl2.add(
-          TweenMax.fromTo('#text-360', 1, { yPercent:250 , opacity: 0 , ease:Power1.easeInOut }, { yPercent:0 , opacity:1 , ease:Power1.easeInOut }),
-          "-=1"
-      )
-
-      var startpin = new ScrollMagic.Scene({
-        triggerElement: '#trigger2',
-        triggerHook: 0,
-        duration: 500
-      })
-      .setPin("#container2")
-      .addIndicators({name: "pin2" })
-      .addTo(controller);
-
-      // tween
-      new ScrollMagic.Scene({
-        triggerElement: '#trigger2',
-        triggerHook: 0,
-        duration: 500
-      })
-      .setTween(tl2)
-      .addIndicators({name: "fade2" }) 
-      .addTo(controller);
-    </script>
 
     <div class="sec-example">
       <div class="sec-ct">
-          <div class="sec-title">Virtual Tour Examples</div>
+          <div class="sec-title">Panorama For Our Clients</div>
           <div class="video-group">
           <a href="https://api.go.rpngo.com/preview/public/task/5e8fe81b040ac60c7133bfdb/panorama/5e92b1981c12915631270eb9" target="_blank">
               <div class="item">
               <img class="img" src="https://static.insta360.com/assets/storage/20190126/35b1178bcb1d23123923f716aeae0b8c/CrestaModelHome.jpg" alt="">
               <div class="zhezhao">
                   <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png" alt="">
-                  <div class="title">House 1 Tour</div>
+                  <div class="title">Panorama 1</div>
               </div>
               </div>
           </a>
@@ -359,7 +170,7 @@
               <img class="img" src="https://static.insta360.com/assets/storage/20191220/91cc1117882a720d4150e6e1cf3455ea/Holiday_House_Tour_.png" alt="">
               <div class="zhezhao">
                   <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png" alt="">
-                  <div class="title">House 2 Tour</div>
+                  <div class="title">Panorama 2</div>
               </div>
               </div>
           </a>
@@ -369,7 +180,7 @@
               <img class="img" src="https://static.insta360.com/assets/storage/20190126/a4df8771ee9db86829d695d9b481c74d/Luxury hotel@2x-jpg.jpg" alt="">
               <div class="zhezhao">
                   <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png" alt="">
-                  <div class="title">Hotel Tour</div>
+                  <div class="title">Panorama 3</div>
               </div>
               </div>
           </a>
@@ -391,52 +202,42 @@
       </div>      
     </div>
 
-    <script >
-      var tl3 = new TimelineMax();
-      tl3.add(
-          TweenMax.fromTo("#container3", 1, {autoAlpha: 1, scale: 0.8}, {autoAlpha: 1, scale: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
-      )
-      tl3.add(
-          TweenMax.fromTo('#map-img-layer', 1, {scale: 1, autoAlpha: 0}, {scale: 1, autoAlpha: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-          "-=1"
-      )
-      tl3.add(
-          TweenMax.fromTo('#map-text', 1, { yPercent:250 , opacity: 0 , ease:Power1.easeInOut }, { yPercent:0 , opacity:1 , ease:Power1.easeInOut }),
-          "-=1"
-      )
-
-      var startpin = new ScrollMagic.Scene({
-        triggerElement: '#trigger3',
-        triggerHook: 0,
-        duration: 500
-      })
-      .setPin("#container3")
-      .addIndicators({name: "pin" })
-      .addTo(controller);
-
-      // tween
-      new ScrollMagic.Scene({
-        triggerElement: '#trigger3',
-        triggerHook: 0,
-        duration: 500
-      })
-      .setTween(tl3)
-      .addIndicators({name: "fade" }) 
-      .addTo(controller);
-
-    </script>
     <div class="sec-example">
       <div class="sec-ct">
-          <div class="sec-title">Try it Free </div>
           <div class="position-relative overflow-hidden p-3 m-md-3 text-center bg-light site-section1">
             <div class="col-md-8 p-lg-4 mx-auto">
-              <h1 class="display-4 font-weight-normal" style="margin-top: 30px;">Try Our Interactive Map</h1>
-              <input type="email" class="form-control my-5" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
-              <a class="btn btn-outline-secondary" href="map.html" target="_blank">Try it Now</a>
+              <h1 class="display-5 font-weight-normal" style="margin-top: 30px;">Try It in RPN GO&reg;</h1>
+              <div style="font-size: 20px;">We provide national weather alert information on the map to... </div>
+              <!-- <input type="email" class="form-control my-5" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+              <a class="btn btn-outline-secondary" href="" target="_blank" style="margin-top: 20px;">Get Started</a>
             </div>
           </div>
       </div>
     </div>
+
+    <span id="trigger"></span>
+    <div  id="container1" class="container123">
+      <div id="p100" class="svg-container drone-bg-img">
+        <div id="drone-img-layer" class="layer">
+          <div class="text-center" style="flex-direction: row;">
+            <div id="drone-text" class="text-center">
+              <h1 class="mb-4 section1-text2">Drone-based Inspections</h1>
+              <p class="section1-text3">...;</p>
+            </div>  
+          </div>
+        </div>
+      </div>      
+    </div>
+
+    <div class="sec-example">
+      <div class="sec-ct">
+          <div class="sec-title">We use drones to inspect roofs. </div>
+          <!-- <div class="drone-image">
+              <img src="img/drone6.jpg" style="width: 50vw; height: 60vh;">
+          </div> -->
+      </div>
+    </div>
+
     <div class="container-fluid mx-auto">
       <div class="row d-flex pb- px-4">
           <div class="col-md-8">
@@ -554,6 +355,8 @@
     </div>
     </div>
   
+    <script src="./js/tech.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         
     <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>

@@ -402,6 +402,19 @@
     text-align: center;
 }
 
+.sec-example .sec-ct .sec-word {
+    margin-top: 20px;
+    line-height: 30px;
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.sec-example .sec-ct .sec-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
 .sec-example .sec-ct .video-group {
     margin-top: 40px;
     display: flex;
@@ -488,7 +501,7 @@
 }
   
 .map-bg-img {
-    background-image: url("../img/map.png");
+    background-image: url("../img/map2.png");
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
