@@ -281,7 +281,13 @@
       pagination: {
         el: '.blog-slider__pagination',
         clickable: true,
-      }
+        renderBullet: function (index, className) {
+          if (index === 0) {
+            return '<span class="' + className + '">' + 'Client' + '</span>';
+          }
+          return '<span class="' + className + '">' + 'Vendor' + '</span>';
+        },
+      },
     });
     </script>
   
