@@ -1,10 +1,10 @@
 #tech-bg-img {
-  width: 100vw;
-  height: 95vh;
-  background-image: url("../img/mobile-application.jpg");
-  background-size: cover; 
+  background-image: url("../img/technology.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
+  height: 40vh;
+  width: 100vw;
 }
 .layer {
   position: relative;
@@ -469,7 +469,8 @@
   }
 
 .drone-bg-img {
-    background-image: url("../img/service/drone-roof.jpg");
+    background-image: url("../img/drone.jpg");
+    /* background-image: url("../img/service/drone-roof.jpg"); */
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;

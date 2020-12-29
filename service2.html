@@ -91,25 +91,11 @@
     <section id="sevice-header2" class="jumbotron text-center">
       <div class="container">
         <h1 style="color: white;">We offer the full range of preserve, maintain, repair and restore services</h1>
-        <!-- <div class="large-12 medium-12 small-12 column">
-            <p class="para-space2 text-center" style="color: white;">
-              RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals.
-            </p>
-        </div> -->
         <div style="margin-top: 7%;">
           <a href="pricing.html" class="btn btn-warning" target="_blank">See All Pricing</a>
         </p>
       </div>
     </section>
-
-    <!-- <div class="row2">
-
-        <div class="video-wrapper-1 mx-auto">
-            <video class="video-1" autoplay muted="muted" preload="auto" loop="loop">
-                <source src="img/video.mp4" type="video/mp4">
-            </video>  
-        </div>  
-    </div> -->
 
     <div class="silder">
       <div class="silder-text">
@@ -281,22 +267,21 @@
     </div>
     <div id="p1" class="container1">
       <div class="story-2">
-          <div id='img1' class="img-wrapper">
-            <img src="img/service-details/1.gif" ></img>
+          <div id='img1' class="img-wrapper property-inspection">
+            <!-- <img src="img/service-details/property-inspection.jpg" ></img> -->
           </div>
           <div class="service-text text-center">
               <h2 class="title">Property Inspections</h2>
-              <div class="description" style="margin-bottom: 10px;">
+              <!-- <div class="description" style="margin-bottom: 10px;">
                 RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals. Our nationwide network of professional...
-              </div>
-              <div style="margin-bottom: 50px;">
-                <h4>Our inspections support:</h4>
-                Exterior inspection
-                <br/>Interior inspection
-                <br/>Code compliance
-                <br/>Insurance loss inspection
-                <br/>FEMA disaster              
-              </div>
+              </div> -->
+              <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 50px;">
+                <li>Interior inspections</li>
+                <li>Exterior inspections</li>
+                <li>Code compliance</li>
+                <li>Insurance loss inspection</li>
+                <li>FEMA disaster</li>
+              </ul>
               <div class="row">
                 <div class="col">
                   <a href="property-inspections.html" class="btn btn-primary" target="_blank">Read More</a>
@@ -309,72 +294,20 @@
       </div>
     </div>
 
-    <script>
-      const height1 = document.getElementById('img1').getBoundingClientRect().height;
-      const width1 = document.getElementById('img1').getBoundingClientRect().width;
-      const fadeout1 = 0.95 * height1;
-      const pin1 = 1.05 * height1;
-      const left1 = document.documentElement.clientWidth * 0.1 + width1;
-
-      var tl = new TimelineMax();
-      tl.add(
-          TweenMax.fromTo("#img1", 1, {x: -left1}, {x: 0})
-      )
-      var ds1 = new TimelineMax();
-      ds1.add(
-          TweenMax.to('#img1', 1, {autoAlpha: 0, ease:Power2.easeInOut})
-      )
-
-      // tween
-      new ScrollMagic.Scene({
-        triggerElement: '#p1',
-        triggerHook: 0.8,
-        duration: 200
-      })
-      .setTween(tl)
-      .addIndicators({name: "come1" }) 
-      .addTo(controller);
-
-      new ScrollMagic.Scene({
-        triggerElement: '#p1',
-        offset: fadeout1,
-        triggerHook: 0.8,
-        duration: 300
-      })
-      .setTween(ds1)
-      .addIndicators({name: "ds1" }) 
-      .addTo(controller);
-
-      var startpin = new ScrollMagic.Scene({
-        triggerElement: '#p1',
-        offset: pin1,
-        triggerHook: 0.8,
-        duration: 150
-      })
-      .setPin("#img1")
-      .addIndicators({name: "pin1" })
-      .addTo(controller);
-
-    </script>
-
     <div id="p2" class="container1">
         <div class="story-2">
-            <div id='img2' class="img-wrapper2">
-              <img src="img/service-details/1.gif" ></img>
+            <div id='img2' class="img-wrapper2 property-repair">
+              <!-- <img src="img/service-details/1.gif" ></img> -->
             </div>
             <div class="service-text2 text-center">
               <h2 class="title">Property Repairs</h2>
-              <div class="description" style="margin-bottom: 10px;">
-                RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals. Our nationwide network of professional...
-              </div>
-              <div style="margin-bottom: 50px;">
-                <h4>Our inspections support:</h4>
-                Exterior inspection
-                <br/>Interior inspection
-                <br/>Code compliance
-                <br/>Insurance loss inspection
-                <br/>FEMA disaster              
-              </div>
+              <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 50px;">
+                <li>Bio-hazard remediation</li>
+                <li>Safety hazard repair</li>
+                <li>Demolition</li>
+                <li>Interior & exterior repairs and rehabilitation</li>
+                <li>Landscaping</li>
+              </ul>
               <div class="row">
                 <div class="col">
                   <a href="property-repairs.html" class="btn btn-primary" target="_blank">Read More</a>
@@ -387,72 +320,20 @@
         </div>
     </div>
 
-    <script>
-      const height2 = document.getElementById('img2').getBoundingClientRect().height;
-      const width2 = document.getElementById('img2').getBoundingClientRect().width;
-      const fadeout2 = 0.95 * height2;
-      const pin2 = 1.05 * height2;
-      const right2 = document.documentElement.clientWidth + width2;
-
-      var tl2 = new TimelineMax();
-      tl2.add(
-          TweenMax.fromTo("#img2", 1, {x: right2}, {x: 0})
-      )
-      var ds2 = new TimelineMax();
-      ds2.add(
-          TweenMax.to('#img2', 1, {autoAlpha: 0, ease:Power2.easeInOut})
-      )
-
-      // tween
-      new ScrollMagic.Scene({
-        triggerElement: '#p2',
-        triggerHook: 0.8,
-        duration: 200
-      })
-      .setTween(tl2)
-      .addIndicators({name: "come2" }) 
-      .addTo(controller);
-
-      new ScrollMagic.Scene({
-        triggerElement: '#p2',
-        offset: fadeout2,
-        triggerHook: 0.8,
-        duration: 300
-      })
-      .setTween(ds2)
-      .addIndicators({name: "ds2" }) 
-      .addTo(controller);
-
-      var startpin = new ScrollMagic.Scene({
-        triggerElement: '#p2',
-        offset: pin2,
-        triggerHook: 0.8,
-        duration: 150
-      })
-      .setPin("#img2")
-      .addIndicators({name: "pin2" })
-      .addTo(controller);
-
-    </script>
-
     <div id="p3" class="container1">
         <div class="story-2">
-            <div id='img3' class="img-wrapper">
-                <img src="img/service-details/1.gif" ></img>
+            <div id='img3' class="img-wrapper property-preservation">
             </div>
             <div class="service-text text-center">
               <h2 class="title">Property Preservation</h2>
-              <div class="description" style="margin-bottom: 10px;">
-                RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals. Our nationwide network of professional...
-              </div>
-              <div style="margin-bottom: 50px;">
-                <h4>Our inspections support:</h4>
-                Exterior inspection
-                <br/>Interior inspection
-                <br/>Code compliance
-                <br/>Insurance loss inspection
-                <br/>FEMA disaster              
-              </div>
+              <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 50px;">
+                <li>Property securing</li>
+                <li>Winterization</li>
+                <li>Lawn & yard maintenance</li>
+                <li>Snow and ice removal services</li>
+                <li>Hazardous material and debris removal</li>
+                <li>Convey maintenance</li>
+              </ul>
               <div class="row">
                 <div class="col">
                   <a href="property-preservation.html" class="btn btn-primary" target="_blank">Read More</a>
@@ -465,72 +346,19 @@
         </div>
     </div>
 
-    <script>
-      const height3 = document.getElementById('img3').getBoundingClientRect().height;
-      const width3 = document.getElementById('img3').getBoundingClientRect().width;
-      const fadeout3 = 0.95 * height3;
-      const pin3 = 1.05 * height3;
-      const left3 = document.documentElement.clientWidth * 0.1 + width3;
-
-      var tl3 = new TimelineMax();
-      tl3.add(
-          TweenMax.fromTo("#img3", 1, {x: -left3}, {x: 0})
-      )
-      var ds3 = new TimelineMax();
-      ds3.add(
-          TweenMax.to('#img3', 1, {autoAlpha: 0, ease:Power2.easeInOut})
-      )
-
-      // tween
-      new ScrollMagic.Scene({
-        triggerElement: '#p3',
-        triggerHook: 0.8,
-        duration: 200
-      })
-      .setTween(tl3)
-      .addIndicators({name: "come3" }) 
-      .addTo(controller);
-
-      new ScrollMagic.Scene({
-        triggerElement: '#p3',
-        offset: fadeout3,
-        triggerHook: 0.8,
-        duration: 300
-      })
-      .setTween(ds3)
-      .addIndicators({name: "ds3" }) 
-      .addTo(controller);
-
-      var startpin = new ScrollMagic.Scene({
-        triggerElement: '#p3',
-        offset: pin3,
-        triggerHook: 0.8,
-        duration: 150
-      })
-      .setPin("#img3")
-      .addIndicators({name: "pin3" })
-      .addTo(controller);
-
-    </script>
-
-    <div id="p4" class=" container1">
+    <div id="p4" class="container1">
         <div class="story-2">
-            <div id='img4' class="img-wrapper2">
-              <img src="img/service-details/1.gif"></img>
+            <div id='img4' class="img-wrapper2 property-reo">
             </div>
             <div class="service-text2 text-center">
               <h2 class="title">REO & Insurance Services</h2>
-              <div class="description" style="margin-bottom: 10px;">
-                RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals. Our nationwide network of professional...
-              </div>
-              <div style="margin-bottom: 50px;">
-                <h4>Our inspections support:</h4>
-                Exterior inspection
-                <br/>Interior inspection
-                <br/>Code compliance
-                <br/>Insurance loss inspection
-                <br/>FEMA disaster              
-              </div>
+              <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 50px;">
+                <li>REO Maintenance</li>
+                <li>REO Repairs</li>
+                <li>Sales clean</li>
+                <li>Hazard claims</li>
+                <li>Property restoration</li>
+              </ul>
               <div class="row">
                 <div class="col">
                   <a href="property-reo.html" class="btn btn-primary" target="_blank">Read More</a>
@@ -542,54 +370,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-      const height4 = document.getElementById('img4').getBoundingClientRect().height;
-      const width4 = document.getElementById('img4').getBoundingClientRect().width;
-      const fadeout4 = 0.95 * height4;
-      const pin4 = 1.05 * height4;
-      const right4 = document.documentElement.clientWidth + width4;
-
-      var tl4 = new TimelineMax();
-      tl4.add(
-          TweenMax.fromTo("#img4", 1, {x: right4}, {x: 0})
-      )
-      var ds4 = new TimelineMax();
-      ds4.add(
-          TweenMax.to('#img4', 1, {autoAlpha: 0, ease:Power2.easeInOut})
-      )
-
-      // tween
-      new ScrollMagic.Scene({
-        triggerElement: '#p4',
-        triggerHook: 0.8,
-        duration: 200
-      })
-      .setTween(tl4)
-      .addIndicators({name: "come4" }) 
-      .addTo(controller);
-
-      new ScrollMagic.Scene({
-        triggerElement: '#p4',
-        offset: fadeout4,
-        triggerHook: 0.8,
-        duration: 300
-      })
-      .setTween(ds4)
-      .addIndicators({name: "ds4" }) 
-      .addTo(controller);
-
-      var startpin = new ScrollMagic.Scene({
-        triggerElement: '#p4',
-        offset: pin4,
-        triggerHook: 0.8,
-        duration: 150
-      })
-      .setPin("#img4")
-      .addIndicators({name: "pin4" })
-      .addTo(controller);
-
-    </script>
 
     <div class="sec-example">
       <div class="sec-ct">
@@ -745,6 +525,7 @@
     </div>
     </div>
   
+    <script src="js/service.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         
     <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>

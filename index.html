@@ -272,10 +272,14 @@
     <script>
     var swiper = new Swiper('.blog-slider', {
       spaceBetween: 30,
+      autoplay: {
+        delay: 3000,
+      },
       effect: 'fade',
       loop: true,
       mousewheel: {
         invert: false,
+        forceToAxis: true,
       },
       // autoHeight: true,
       pagination: {
@@ -283,9 +287,9 @@
         clickable: true,
         renderBullet: function (index, className) {
           if (index === 0) {
-            return '<span class="' + className + '">' + 'Client' + '</span>';
+            return '<div class="' + className + '">' + '<div>Client</div>' + '</div>';
           }
-          return '<span class="' + className + '">' + 'Vendor' + '</span>';
+          return '<span class="' + className + '">' + '<div>Vendor</div>' + '</span>';
         },
       },
     });

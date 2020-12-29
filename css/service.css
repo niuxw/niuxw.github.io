@@ -203,7 +203,7 @@
 }
 .story-2 {
     position: relative;
-    height: 95vh;
+    height: 75vh;
     width: 100vw;
     left: 0;
     /* margin-bottom: 56px; */
@@ -212,26 +212,31 @@
 .video-wrapper {
     position: absolute;
     display: inline-block;
-    position: relative;
-    width: 35%;
-    height: 65%;
+    width: 35vw;
+    min-width: 450px;
+    height: 55vh;
+    left: 0vw;
+    border-radius: 10px;
 }
 
 .video-wrapper2 {
     position: absolute;
     display: inline-block;
     position: relative;
-    width: 35%;
-    height: 65%;
-    left: 68%;
+    width: 35vw;
+    min-width: 450px;
+    height: 55vh;
+    left: 35vw;
+    border-radius: 10px;
 }
 .img-wrapper {
     position: absolute;
     display: inline-block;
-    width: 30vw;
+    width: 35vw;
     min-width: 450px;
-    height: 75vh;
-    left: 10%;
+    height: 55vh;
+    left: 10vw;
+    border-radius: 10px;
 }
 .img-wrapper img {
     width: 100%;
@@ -241,14 +246,64 @@
 .img-wrapper2 {
     position: absolute;
     display: inline-block;
-    width: 30vw;
-    min-width: 400px;
-    height: 75vh;
-    left: 60%;
+    width: 35vw;
+    min-width: 450px;
+    height: 55vh;
+    left: 55vw;
+    border-radius: 10px;
 }
 .img-wrapper2 img {
     width: 100%;
     height: 100%;
+}
+
+.property-inspection {
+    background-image: url("../img/service-details/inspection.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.property-repair {
+    background-image: url("../img/service-details/repair.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.property-preservation {
+    background-image: url("../img/service-details/lawn.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.property-reo {
+    background-image: url("../img/service-details/property-reo.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.exterior {
+    background-image: url("../img/service-details/exterior.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.interior {
+    background-image: url("../img/service-details/interior.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.code {
+    background-image: url("../img/service-details/code.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.insurance {
+    background-image: url("../img/service-details/insurance.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .story-1 video {
@@ -328,5 +383,5 @@
 }
 
 .container1 {
-    margin-bottom: 5vh;
+    margin-bottom: 0vh;
 }
