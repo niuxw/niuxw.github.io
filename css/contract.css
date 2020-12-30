@@ -1,44 +1,45 @@
-.map {
-    height: 50vh;
+
+#contact-header {
+    background-image: url(../img/contact-us-3.jpg);
+    height: 40vh;
     width: 100vw;
-    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
-#contact-form {
-    box-sizing: border-box;
-    padding: 0 16.666666vw;
-}
-
-.input-area {
-    border: 0;
-    outline: 0;
-    background: transparent;
-    border-bottom: 1px solid black;
-}
-
-.custom-select {
-    /* border: none;
-    margin-right: 10px; */
-    background-color: transparent;
-}
-
-#exampleFormControlSelect1 option {
-    margin-bottom: 10em;
+.all-container {
+    width: 85vw;
+    height: 500px;
+    left: 7vw;
+    margin: 50px 0;
+    position: relative;
 }
 
 .contact-text {
-    height: calc(100vh - 5em - 12em);
+    /* height: calc(100vh - 5em - 12em); */
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     padding: 0 1.625em;
+    width: 30vw;
+    left: 57vw;
+    position: absolute;
+    margin-top: 25px;
 }
 
 .contact-font {
-    font-size: 1.5em;
-    letter-spacing: 0.11em;
+    font-size: 1em;
+    /* letter-spacing: 0.09em; */
     line-height: 1.4;
+}
+
+.contact-font h2 {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.11em;
+    line-height: 1;
 }
 
 .follow-us {
@@ -50,9 +51,138 @@
     height: 3em;
 }
 
+.divider {
+    border-top: 1px solid #d2d2d2;
+    /* border-bottom: 1px solid #d2d2d2; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 1em;
+}
+
 .follow-us-font-size {
     font-size: 18px;
 }
 #ul_top_hypers li{
     display: inline;
+}
+
+.contact-container {
+    width: 55vw;
+    position: absolute;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 16px/20px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  /* background: #F9F9F9; */
+  padding: 25px;
+  /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
+}
+
+#contact h2 {
+  display: block;
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 1.25px;
+}
+
+#contact p {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 20px;
+  letter-spacing: .5px;
+  font-weight: 400 !important;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 20px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+}
+
+#contact input {
+    height: 40px;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: white;
+  /* margin: 0 0 5px; */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: vertical;
+  overflow: auto;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 150px;
+  border: none;
+  background: rgba(220,20,60,0.9);
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #9B0533;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#right-section button[type="submit"] {
+    cursor: pointer;
+    width: 20vw;
+    border: none;
+    background: rgba(220,20,60,0.9);
+    color: #FFF;
+    margin: 0 0 20px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+#right-section button[type="submit"]:hover {
+    background: #9B0533;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+  
+.button-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
