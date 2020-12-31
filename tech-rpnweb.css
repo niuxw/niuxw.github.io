@@ -59,7 +59,8 @@
     height: 550px;
     /* transform: skewX(-47deg) skewY(18deg); */
     transform: translate(40% ) rotate(-30deg) skewX(30deg);
-    background-image: linear-gradient(to top, #50cc7f 0%, #f5d100 100%);
+    /* background-image: linear-gradient(to top, #50cc7f 0%, #f5d100 100%); */
+    background-color: transparent;
   }
   
   .box-5 {
@@ -1279,6 +1280,7 @@
 
 .web-title {
   position: absolute;
+  z-index: 10;
   top: 50px;
   width: 100%;
   display: flex;
@@ -1359,77 +1361,36 @@ pie {
   top: 10%;
 }
 
-
-.circleOut {
-  position: absolute;
-  margin: 0 auto;
-  padding: 0;
-  width: 0;
-  height: 0;
-  top: 20%;
-  left: 30%;
+.position1 {
+  top: 60%;
+  left: 40%;
 }
-.circleOut:before {
-  position: relative;
-  top: -0.8em;
-  left: -1em;
-  display: block;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 2em;
-  height: 2em;
-  border: 0.5em solid;
-  border-radius: 100%;
-  content: "";
-  transform-origin: center;
-  animation-name: fadeOut;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-delay: -1s;
-  animation-iteration-count: infinite;
-  animation-direction: forwards;
+.position2 {
+  top: 25%;
+  left: 25%;
 }
-.circleOut:after {
-  position: absolute;
-  top: -0.8em;
-  left: -1em;
-  display: block;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 2em;
-  height: 2em;
-  border: 0.2em solid;
-  border-radius: 100%;
-  content: "";
-  transform-origin: center;
-  animation-name: fadeOut;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-delay: -0.5s;
-  animation-iteration-count: infinite;
-  animation-direction: forwards;
+.position3 {
+  top: 33%;
+  left: 64%;
 }
-@keyframes fadeOut {
-  0% {
-    transform: scale(0);
- }
-  50% {
-    opacity: 1;
- }
-  100% {
-    transform: scale(1);
-    opacity: 0;
- }
+.position4 {
+  top: 37%;
+  left: 89%;
 }
-
+.position5 {
+  top: 37%;
+  left: 55%;
+}
+.position6 {
+  top: 60%;
+  left: 80%;
+}
 .circlePulse {
   position: absolute;
   margin: 0 auto;
   padding: 0;
   width: 0;
   height: 0;
-  top: 50%;
-  left: 30%;
 }
 .circlePulse:before {
   position: relative;
@@ -1470,6 +1431,101 @@ pie {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+.circlePulse-green {
+  position: absolute;
+  margin: 0 auto;
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+.circlePulse-green:before {
+  position: relative;
+  top: -0.8em;
+  left: -1em;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 2em;
+  height: 2em;
+  border: 0.5em solid green;
+  border-radius: 100%;
+  content: "";
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.circlePulse-green:after {
+  position: absolute;
+  top: -0.8em;
+  left: -1em;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 2em;
+  height: 2em;
+  border: 0.2em solid green;
+  border-radius: 100%;
+  content: "";
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: -0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.circlePulse-red {
+  position: absolute;
+  margin: 0 auto;
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+.circlePulse-red:before {
+  position: relative;
+  top: -0.8em;
+  left: -1em;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 2em;
+  height: 2em;
+  border: 0.5em solid orange;
+  border-radius: 100%;
+  content: "";
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.circlePulse-red:after {
+  position: absolute;
+  top: -0.8em;
+  left: -1em;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 2em;
+  height: 2em;
+  border: 0.2em solid orange;
+  border-radius: 100%;
+  content: "";
+  transform-origin: center;
+  animation-name: inOut;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: -0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 @keyframes inOut {
   from {
     transform: scale(0);
@@ -1487,8 +1543,6 @@ pie {
   border-radius: 100%;
   border-bottom-left-radius: 0;
   background-color: transparent;
-  top: 50%;
-  left: 30%;
 }
 .bounceDrop:before {
   position: relative;
@@ -1498,12 +1552,14 @@ pie {
   box-sizing: border-box;
   margin: 0 auto;
   width: 2em;
-  height: 2em;
+  height: 1.3em;
   border: 0.2em solid white;
   border-radius: 100%;
   border-bottom-left-radius: 0;
   content: "";
-  transform: rotate(-45deg) translate3d(0, 1em, 0);
+  /* transform: rotate(-45deg) translate3d(0, 1em, 0); */
+  transform: translate(100%) skewX(-30deg) skewY(-30deg);
+
   animation-name: bounce;
   animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
@@ -1525,15 +1581,113 @@ pie {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+.bounceDrop-red {
+  position: absolute;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+}
+.bounceDrop-red:before {
+  position: relative;
+  top: -2.5em;
+  left: -1em;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 2em;
+  height: 1.3em;
+  border: 0.2em solid orange;
+  border-radius: 100%;
+  border-bottom-left-radius: 0;
+  content: "";
+  /* transform: rotate(-45deg) translate3d(0, 1em, 0); */
+  transform: translate(100%) skewX(-30deg) skewY(-30deg);
+
+  animation-name: bounce;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.bounceDrop-red:after {
+  position: relative;
+  top: -2.5em;
+  left: -0.75em;
+  display: block;
+  width: 1.5em;
+  height: 1em;
+  border-radius: 100%;
+  content: "";
+  animation-name: bounceShadow;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.bounceDrop-green {
+  position: absolute;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+}
+.bounceDrop-green:before {
+  position: relative;
+  top: -2.5em;
+  left: -1em;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 2em;
+  height: 1.3em;
+  border: 0.2em solid green;
+  border-radius: 100%;
+  border-bottom-left-radius: 0;
+  content: "";
+  /* transform: rotate(-45deg) translate3d(0, 1em, 0); */
+  transform: translate(100%) skewX(-30deg) skewY(-30deg);
+
+  animation-name: bounce;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.bounceDrop-green:after {
+  position: relative;
+  top: -2.5em;
+  left: -0.75em;
+  display: block;
+  width: 1.5em;
+  height: 1em;
+  border-radius: 100%;
+  content: "";
+  animation-name: bounceShadow;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 @keyframes bounce {
   0% {
-    transform: translateY(-0.25em) rotate(-45deg);
+    transform: translateY(-0.25em) translateX(0.25em) skewX(-30deg) skewY(-30deg) translate(100%, 170%);
+    /* transform: translateY(-0.25em) rotate(-45deg); */
  }
   50% {
-    transform: translateY(-0.5em) rotate(-45deg);
+    transform: translateY(-0.5em) translateX(0.5em) skewX(-30deg) skewY(-30deg) translate(100%, 170%);
+    /* transform: translateY(-0.5em) rotate(-45deg); */
  }
   100% {
-    transform: translateY(0) rotate(-45deg);
+    transform: translateY(0) translateX(0) skewX(-30deg) skewY(-30deg) translate(100%, 170%);
+    /* transform: translateY(0) rotate(-45deg); */
  }
 }
 @keyframes bounceShadow {
@@ -1549,4 +1703,100 @@ pie {
     opacity: 1;
     transform: scale(0.8);
  }
+}
+
+.divider {
+  border-top: 1px solid #d2d2d2;
+  /* border-bottom: 1px solid #d2d2d2; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 1em;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+
+.divider-vertical {
+  border-left: 1px solid #d2d2d2;
+  /* border-bottom: 1px solid #d2d2d2; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 1em;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+}
+
+.vendor-company-title {
+  position: relative;
+  z-index: 10;
+  top: 40px;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+  display: flex;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  /* background-color: green; */
+  /* left: 10%; */
+}
+
+.vendor-box1 {
+  position: absolute;
+  top: 8%; 
+  left: 0px;
+  background-color: #eeeeee;
+  /* padding: 5%; */
+  height: 42%;
+  width: 50%;
+  /* box-sizing: border-box; */
+  color: #17222d;
+  z-index: -1;
+  /* box-shadow: 0px 30px 10px -5px rgba(0,0,0,0.5); */
+}
+.vendor-box2 {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  background-color: #eeeeee;
+  /* padding: 5%; */
+  height: 42%;
+  /* border-radius: 20px; */
+  /* transform: translateX(-50%); */
+  /* transform: translate3d(-50%, 0, 0); */
+  width: 50%;
+  /* box-sizing: border-box; */
+  color: #17222d;
+  /* box-shadow: 0px 30px 10px -5px rgba(0,0,0,0.5); */
+}
+
+.check {
+  color: #52c41a;
+  width: 8%;
+  height: 8%;
+  z-index: 10;
+  position: relative;
+  left: 21%;
+  top: 6%;
+}
+.small-check {
+  color: #52c41a;
+  /* width: 100%; */
+  height: 100%;
+  z-index: 10;
+  position: relative;
+  /* left: 21%;
+  top: 6%; */
+}
+.vendor-info {
+  position: relative;
+  top: 7%;
+  left: 5%;
+  width: 40%;
 }
