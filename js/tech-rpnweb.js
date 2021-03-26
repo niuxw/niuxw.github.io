@@ -122,26 +122,26 @@ tl2.add(
 )
 
 tl2.add(
-    TweenMax.to(".box-6", 1, {css:{transform:"translate(25vw, -15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200"}}),
+    TweenMax.to(".box-6", 1, {css:{transform:"translate(25vw, -15vh) skewX(0deg) skewY(0deg) scale(0.4, 0.35)", width: "320px", height: "200px"}}),
 )
 tl2.add(
-    TweenMax.to(".box-5", 1, {css:{transform:"translate(0vw, -15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200"}}),
+    TweenMax.to(".box-5", 1, {css:{transform:"translate(0vw, -15vh) skewX(0deg) skewY(0deg) scale(0.4, 0.35)", width: "320px", height: "200px"}}),
     '-=1'
 )
 tl2.add(
-    TweenMax.to(".box-4", 1, {css:{transform:"translate(-25vw, -15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200"}}),
+    TweenMax.to(".box-4", 1, {css:{transform:"translate(-25vw, -15vh) skewX(0deg) skewY(0deg) scale(0.4, 0.35)", width: "320px", height: "200px"}}),
     "-=1"
 )
 tl2.add(
-    TweenMax.to(".box-3", 1, {css:{transform:"translate(25vw, 15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200px"}}),
+    TweenMax.to(".box-3", 1, {css:{transform:"translate(25vw, 15vh) skewX(0deg) skewY(0deg) scale(1, 1)", width: "320px", height: "200px"}}),
     "-=1"
 )
 tl2.add(
-    TweenMax.to(".box-2", 1, {css:{transform:"translate(0vw, 15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200px"}}),
+    TweenMax.to(".box-2", 1, {css:{transform:"translate(0vw, 15vh) skewX(0deg) skewY(0deg) scale(0.4, 0.35)", width: "320px", height: "200px"}}),
     "-=1"
 )
 tl2.add(
-    TweenMax.to(".box-1", 1, {css:{transform:"translate(-25vw, 15vh) skewX(0deg) skewY(0deg)", width: "320px", height: "200px"}}),
+    TweenMax.to(".box-1", 1, {css:{transform:"translate(-25vw, 15vh) skewX(0deg) skewY(0deg) scale(1, 1)", width: "320px", height: "200px"}}),
     "-=1"
 )
 
@@ -149,6 +149,33 @@ tl2.add(
     TweenMax.fromTo('#t6', 0.5, { opacity: 1, ease:Power1.easeInOut }, { autoAlpha:0, ease:Power1.easeInOut  }),
     "-=1"
 )
+
+// shrink 6 boxes
+tl2.add(
+    TweenMax.to(".box-6", 1, {css:{transform:"translate(10vw, -8vh) scale(0.3, 0.25)", width: "320px", height: "200px"}}),
+)
+tl2.add(
+    TweenMax.to(".box-5", 1, {css:{transform:"translate(0vw, -8vh) scale(0.3, 0.25)", width: "320px", height: "200px"}}),
+    '-=1'
+)
+tl2.add(
+    TweenMax.to(".box-4", 1, {css:{transform:"translate(-10vw, -8vh) scale(0.3, 0.25)", width: "320px", height: "200px"}}),
+    "-=1"
+)
+tl2.add(
+    TweenMax.to(".box-3", 1, {css:{transform:"translate(10vw, 8vh) scale(0.8, 0.75)", width: "320px", height: "200px"}}),
+    "-=1"
+)
+tl2.add(
+    TweenMax.to(".box-2", 1, {css:{transform:"translate(0vw, 8vh) scale(0.3, 0.25)", width: "320px", height: "200px"}}),
+    "-=1"
+)
+tl2.add(
+    TweenMax.to(".box-1", 1, {css:{transform:"translate(-10vw, 8vh) scale(0.8, 0.75)", width: "320px", height: "200px"}}),
+    "-=1"
+)
+
+// end of shrink
 
 tl2.add(
   TweenMax.to(".box-6", 1, {autoAlpha: 0}),
@@ -178,7 +205,7 @@ tl2.add(
 const scene2 = new ScrollMagic.Scene ({
     triggerElement: '#container',
     // offset: 500,
-    duration: 2300,
+    duration: 2500,
     triggerHook: 0
 })
 .setTween(tl2)
@@ -287,5 +314,5 @@ const scene3 = new ScrollMagic.Scene ({
 })
 .setTween(tl3)
 .setPin('#container')
-.addIndicators({name: "laptop" })
+.addIndicators({name: "laptop1" })
 .addTo(controller);
