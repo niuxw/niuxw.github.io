@@ -24,7 +24,8 @@
     height: 550px;
     /* transform:  skewX(-47deg) skewY(18deg); */
     transform: translate(40% ) rotate(-30deg) skewX(30deg);
-    background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+    /* background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%); */
+    background-color: transparent;
   }
   
   .svg-defs {
@@ -420,7 +421,7 @@
     /* margin-top: 30vh; */
 }
 .phone {
-  top: 35vh;
+  top: 32vh;
 }
 .pad{
   top: 32vh;
@@ -483,14 +484,15 @@
     line-height: 0vmin;
 }
 .iphone {
+    margin-right: 2em;
     width: 14vh;
     height: 30vh;
     /* width: 230px;
     height: 510px; */
     /* line-height: 51.4455445545vmin; */
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
     border-width: 1vmin;
-    border-radius: 4.0550130098vmin;
+    border-radius: 3vmin;
     background-image: url(img/rpngo/s0.png);
     background-size: cover;
     background-position: center;
@@ -499,14 +501,17 @@
 }
 .ipad {
     margin-left: 2em;
-    width: 25vh;
-    height: 32vh;
+    width: 14vh;
+    height: 30vh;
     /* height: 85.8vmin;
     width: 60vmin; */
     line-height: 85.8vmin;
     border-width: 1vmin;
-    border-radius: 4.2857142857vmin;
+    border-radius: 3vmin;
     background-image: url(https://www.apple.com/v/ipad-pro/s/images/overview/retina_screen_1__csuokryyjb42_large.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: 3;
 }
 .iphone2 {
@@ -624,7 +629,7 @@
   height: 20vh;
   width: 100%;
   /* margin: 60vh auto 0;  */
-  top: 80vh;
+  top: 100vh;
 }
 
 #go-to-web {
