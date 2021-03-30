@@ -491,7 +491,8 @@
     opacity: 1;
 }
 .cloud-bg-img {
-    background-image: url("../img/cross-plat.jpg");
+    background-image: url("../img/tech/cross-device.png");
+    /* background-image: url("../img/cross-plat.jpg"); */
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;

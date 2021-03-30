@@ -93,10 +93,10 @@
 
   .ecosystem-infographic__payment {
     position: absolute;
-    top: -7%;
-    left: 31%;
-    height: 35%;
-    width: 23%;
+    top: -10%;
+    left: 32%;
+    height: 40%;
+    width: 25%;
     /* transform: skewX(-30deg) rotate(30deg) translate(1%, -7%) rotate(-30deg) skewX(-30deg) scaleY(0.86); */
   }
   .ecosystem-infographic__payment-card {
@@ -120,7 +120,14 @@
     color: #1c4561;
     transform-origin: 100% 50%;
   }  
-  
+
+  .ecosystem-infographic__accounting-screen {
+    position: absolute;
+    top: 99%;
+    left: 34%;
+    width: 75%;
+  }
+
   .ecosystem-infographic__transform--iso {
     transform: skewX(-30deg) rotate(30deg) translate(1%, -7%) rotate(-30deg) skewX(-30deg) scaleY(0.86);
   }
