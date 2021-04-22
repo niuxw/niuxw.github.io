@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>services</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+    <script>
+      // init controller
+      var controller = new ScrollMagic.Controller();
+    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="./css/about.css" rel="stylesheet">
+    <link href="./css/service.css" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+    <link href="test.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="index.html" aria-label="Product">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
+          <img src="logo.png" alt="RPN" width="20" height="20">
+          REPAIR AND PERSERVATION NETWORK
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="about.html">About</a>
+        <a class="py-2 d-none d-md-inline-block" href="technologies.html">Technology</a>
+        <a class="py-2 d-none d-md-inline-block" href="services.html">Services</a>
+        <a class="py-2 d-none d-md-inline-block" href="contact.html">Contact</a>
+        <a class="py-2 d-none d-md-inline-block" href="https://rpngo.com/">Login</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">SignUp</a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="inner">
+        
+        <h1>Image Comparison Slider</h1>
+     
+        <h3>A cool way to show diferences between two image, using CSS3 and jQuery.</h3>
+        
+        <!-- COMPARISON SLIDER CODE START -->
+        
+        <div class="comparison-slider-wrapper">
+         <!-- Comparison Slider - this div contain the slider with the individual images captions -->
+          <div class="comparison-slider">
+           <div class="overlay">And I am the <strong>after</strong> image.</div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/marioPhoto-2.jpg" alt="marioPhoto 2">
+          <!-- Div containing the image layed out on top from the left -->
+          <div class="resize">
+            <div class="overlay">I am the <strong>before</strong> image.</div>
+           <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/marioPhoto-1.jpg" alt="marioPhoto 1">
+          </div>
+          <!-- Divider where user will interact with the slider -->
+          <div class="divider"></div>
+         </div>
+         <!-- All global captions if exist can go on the div bellow -->
+          <div class="caption">I am the caption for the comparison slider and i can give in more detail a context off what you looking at, in this case we are looking at a demo of the comparison slider :)</div>
+        </div>     
+      </div>
+     </div>
+     <script>
+       $(document).ready(function() {
+          if ($(".comparison-slider")[0]) {
+            let compSlider = $(".comparison-slider");
+          
+            //let's loop through the sliders and initialise each of them
+            compSlider.each(function() {
+              let compSliderWidth = $(this).width() + "px";
+              $(this).find(".resize img").css({ width: compSliderWidth });
+              drags($(this).find(".divider"), $(this).find(".resize"), $(this));
+            });
+
+            //if the user resizes the windows lets update our variables and resize our images
+            $(window).on("resize", function() {
+              let compSliderWidth = compSlider.width() + "px";
+              compSlider.find(".resize img").css({ width: compSliderWidth });
+            });
+          }
+        });
+
+      function drags(dragElement, resizeElement, container) {
+	
+        // This creates a variable that detects if the user is using touch input insted of the mouse.
+        let touched = false;
+        window.addEventListener('touchstart', function() {
+          touched = true;
+        });
+        window.addEventListener('touchend', function() {
+          touched = false;
+        });
+        
+        // clicp the image and move the slider on interaction with the mouse or the touch input
+        dragElement.on("mousedown touchstart", function(e) {
+            
+            //add classes to the emelents - good for css animations if you need it to
+            dragElement.addClass("draggable");
+            resizeElement.addClass("resizable");
+            //create vars
+            let startX = e.pageX ? e.pageX : e.originalEvent.touches[0].pageX;
+            let dragWidth = dragElement.outerWidth();
+            let posX = dragElement.offset().left + dragWidth - startX;
+            let containerOffset = container.offset().left;
+            let containerWidth = container.outerWidth();
+            let minLeft = containerOffset + 10;
+            let maxLeft = containerOffset + containerWidth - dragWidth - 10;
+            
+            //add event listner on the divider emelent
+            dragElement.parents().on("mousemove touchmove", function(e) {
+              
+              // if the user is not using touch input let do preventDefault to prevent the user from slecting the images as he moves the silder arround.
+              if ( touched === false ) {
+                e.preventDefault();
+              }
+              
+              let moveX = e.pageX ? e.pageX : e.originalEvent.touches[0].pageX;
+              let leftValue = moveX + posX - dragWidth;
+
+              // stop the divider from going over the limits of the container
+              if (leftValue < minLeft) {
+                leftValue = minLeft;
+              } else if (leftValue > maxLeft) {
+                leftValue = maxLeft;
+              }
+
+              let widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + "%";
+
+              $(".draggable").css("left", widthValue).on("mouseup touchend touchcancel", function() {
+                $(this).removeClass("draggable");
+                resizeElement.removeClass("resizable");
+              });
+              
+              $(".resizable").css("width", widthValue);
+              
+            }).on("mouseup touchend touchcancel", function() {
+              dragElement.removeClass("draggable");
+              resizeElement.removeClass("resizable");
+              
+            });
+          
+          }).on("mouseup touchend touchcancel", function(e) {
+            // stop clicping the image and move the slider
+            dragElement.removeClass("draggable");
+            resizeElement.removeClass("resizable");
+          
+          });
+        
+      }     
+      </script>
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5>Address</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">10 Old Mamaroneck Road, Unit 1A White Plains, NY, 10605</a></li>
+            <li><a href="https://goo.gl/maps/t9XUT7PdgdzjYhBQ8">Show In Map</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Regional Address</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">1820 Northwest 118th Street #220, Clive, IA, 50325</a></li>
+            <li><a href="https://goo.gl/maps/4YRaBR8D7sshQATVA">Show In Map</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Contact</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Tel: (866)776-8880</a></li>
+            <li><a class="text-muted" href="#">Fax: (866)968-6156</a></li>
+            <li><a href="mailto: info@rpncompany.com">Email to us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Follow us</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <img src="img/iconfinder_201_Linkedin_logo_logos_4373199.png" width="20" height="20">
+              <a class="text-muted" href="#">LinkedIn</a></li>
+            <li>
+              <img src="img/iconfinder_twitter_173834.png" width="25" height="25">
+              <a class="text-muted" href="#">Twitter</a></li>
+            <li>
+              <img src="img/iconfinder_facebook_317746.png" width="20" height="20">
+              <a class="text-muted" href="#">Facebook</a></li>
+            <li>
+              <img src="img/iconfinder_Instagram_1298747.png" width="20" height="20">
+              <a class="text-muted" href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row " style="margin-left: 0; margin-right: 20vw;">
+        <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110" height="100"></a>
+        <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120" height="70"></a>
+      </div>
+    </footer>
+    <hr
+      -moz-border-bottom-colors: none;
+      -moz-border-image: none;
+      -moz-border-left-colors: none;
+      -moz-border-right-colors: none;
+      -moz-border-top-colors: none;
+      border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+      border-style: solid none;
+      border-width: 1px 0;
+      margin: 18px 0;
+    >
+    
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">Copyright &copy; 2021 All rights reserved</p>
+      <p class="mb-1">10 Old Mamaroneck Road, Unit 1A White Plains, NY, 10605 (<a href="https://goo.gl/maps/t9XUT7PdgdzjYhBQ8">Show In Map</a>)</p>
+      <p class="mb-1">Tel: +1 (866) 776-8880 &#9900; Fax: +1 (866) 968-6156 &#9900; <a href="mailto: info@rpncompany.com">Email to us</a></p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+    
+  </body>
+</html>
