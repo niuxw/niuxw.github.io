@@ -66,6 +66,18 @@
 .news2 {
   background-image: url("https://dsnews.com/wp-content/uploads/2017/12/shutterstock_674105980-300x200.jpg");
 }
+.news3 {
+  background-image: url("https://dsnews.com/wp-content/uploads/2020/12/houses4.jpg");
+}
+.news4 {
+  background-image: url("https://dsnews.com/wp-content/uploads/2018/03/Gavel-Three-BH-300x198.jpg");
+}
+.news5 {
+  background-image: url("https://dsnews.com/wp-content/uploads/2020/12/rowan-heuvel-bjej8BY1JYQ-unsplash-768x512.jpg");
+}
+.news6 {
+  background-image: url("https://dsnews.com/wp-content/uploads/2020/10/chuttersnap-awL_YCtPGv4-unsplash-768x576.jpg");
+}
 .card__image {
   position: absolute;
   top: 0;
