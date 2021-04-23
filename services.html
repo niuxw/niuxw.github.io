@@ -1,70 +1,73 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
-    <title>Product example · Bootstrap</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
-    <script>
-      // init controller
-      var controller = new ScrollMagic.Controller();
-    </script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <title>Product example · Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+  <script>
+    // init controller
+    var controller = new ScrollMagic.Controller();
+  </script>
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+  <!-- Bootstrap core CSS -->
+  <link href="./css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="./css/service.css" rel="stylesheet">
+  <link href="product.css" rel="stylesheet">
+</head>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="./css/service.css" rel="stylesheet">
-    <link href="product.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="site-header sticky-top py-1 navbar">
-      <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%; color: white;">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
-        <img src="logo.png" alt="RPN" width="25" height="25">
-        REPAIR AND PERSERVATION NETWORK
-      </a>
-      <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block nav-item" style="color: white;" href="services.html">Services</a>
-        <!-- <a class="py-2 d-none d-md-inline-block nav-item" href="pricing.html">Pricing</a> -->
-        <a class="py-2 d-none d-md-inline-block nav-item" href="technologies.html">Technology</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="resources.html">Resources</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="about.html">About</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="contact.html">Contact</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a> 
-        <!-- need employee equality system -->
-        <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
-        <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
-      </div>
-    </nav>
+<body>
+  <nav class="site-header sticky-top py-1 navbar">
+    <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%; color: white;">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
+      <img src="logo.png" alt="RPN" width="25" height="25">
+      REPAIR AND PERSERVATION NETWORK
+    </a>
+    <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block nav-item" style="color: white;" href="services.html">Services</a>
+      <!-- <a class="py-2 d-none d-md-inline-block nav-item" href="pricing.html">Pricing</a> -->
+      <a class="py-2 d-none d-md-inline-block nav-item" href="technologies.html">Technology</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="resources.html">Resources</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="about.html">About</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="contact.html">Contact</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a>
+      <!-- need employee equality system -->
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
+      <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign
+        up</button>
+    </div>
+  </nav>
 
-    <!-- <section>
+  <!-- <section>
         <div class="alert-solid alert-primary" role="alert">
           <center>Read our response to COVID-19</center>
         </div>
@@ -72,477 +75,526 @@
           <center>Other FEMA alert</center>
         </div>        
       </section> -->
-      <!-- Modal -->
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-            <div class="box-singup">
-              <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to vendor</a></h2>
-            </div>
-            <div class="box-singup">
-              <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to client</a></h2>
-            </div>
+  <!-- Modal -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+          <div class="box-singup">
+            <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to vendor</a></h2>
+          </div>
+          <div class="box-singup">
+            <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to client</a></h2>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <section id="sevice-header2" class="jumbotron text-center">
-      <div class="container">
-        <h1 style="color: white;">We offer the full range of preserve, maintain, repair and restore services</h1>
-        <!-- <div style="margin-top: 7%;">
+  <section id="sevice-header2" class="jumbotron text-center">
+    <div class="container">
+      <h1 style="color: white;">We offer the full range of preserve, maintain, repair and restore services</h1>
+      <!-- <div style="margin-top: 7%;">
           <a href="pricing.html" class="btn btn-warning" target="_blank">See All Pricing</a>
         </div> -->
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="silder">
-      <div class="silder-text">
-        <div class="text">
-          <div class="text-center">
-            <h1 style="margin-bottom: 4vh;">Our Services</h1>
-            <p>At Repair and Preservation Network, we are dedicated to helping our clients preserve, maintain, repair and restore properties. We provide a complete range of services for properties from vacant to sales phases, including inspection, preservation, maintenance, repair, restoration and compliance services on foreclosed properties or insurance claims.
+  <div class="silder">
+    <div class="silder-text">
+      <div class="text">
+        <div class="text-center">
+          <h1 style="margin-bottom: 4vh;">Our Services</h1>
+          <p>At Repair and Preservation Network, we are dedicated to helping our clients preserve, maintain, repair and
+            restore properties. We provide a complete range of services for properties from vacant to sales phases,
+            including inspection, preservation, maintenance, repair, restoration and compliance services on foreclosed
+            properties or insurance claims.
 
-            <p>Our goal is to help properties remain in the condition that comply with regulatory requirements or in the best possible condition that would preserve or increase our clients' investments.
+          <p>Our goal is to help properties remain in the condition that comply with regulatory requirements or in the
+            best possible condition that would preserve or increase our clients' investments.
 
-            <p>Repair and Preservation Network is proud to be a service provider to government agencies, insurance corporations, national lender servicers and mortgage lenders. Our professional staff works proactively with clients and vendors. We conduct effective and efficient communications, utilizing our technologies to ensure that the highest quality of service is provided.
-          </div>
+          <p>Repair and Preservation Network is proud to be a service provider to government agencies, insurance
+            corporations, national lender servicers and mortgage lenders. Our professional staff works proactively with
+            clients and vendors. We conduct effective and efficient communications, utilizing our technologies to ensure
+            that the highest quality of service is provided.
         </div>
       </div>
-
-      <div class="ba-slider">
-        <img src="img/index_background.jpg" alt="">       
-        <div class="resize">
-          <img src="img/index_our_goal.jpg" alt="">
-        </div>
-        <span class="handle"></span>
-      </div>     
     </div>
 
-    <script>
-      // Call & init
-        $(document).ready(function(){
-          $('.ba-slider').each(function(){
-            var cur = $(this);
-            // Adjust the slider
-            var width = cur.width()+'px';
-            cur.find('.resize img').css('width', width);
-            // Bind dragging events
-            drags(cur.find('.handle'), cur.find('.resize'), cur);
-          });
-        });
-  
-        // Update sliders on resize. 
-        // Because we all do this: i.imgur.com/YkbaV.gif
-        $(window).resize(function(){
-          $('.ba-slider').each(function(){
-            var cur = $(this);
-            var width = cur.width()+'px';
-            cur.find('.resize img').css('width', width);
-          });
-        });
-  
-        function drags(dragElement, resizeElement, container) {
-          
-          // Initialize the dragging event on mousedown.
-          dragElement.on('mousedown touchstart', function(e) {
-            
-            dragElement.addClass('draggable');
-            resizeElement.addClass('resizable');
-            
-            // Check if it's a mouse or touch event and pass along the correct value
-            var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
-            
-            // Get the initial position
-            var dragWidth = dragElement.outerWidth(),
-                posX = dragElement.offset().left + dragWidth - startX,
-                containerOffset = container.offset().left,
-                containerWidth = container.outerWidth();
-        
-            // Set limits
-            minLeft = containerOffset + 10;
-            maxLeft = containerOffset + containerWidth - dragWidth - 10;
-            
-            // Calculate the dragging distance on mousemove.
-            dragElement.parents().on("mousemove touchmove", function(e) {
-              
-              // Check if it's a mouse or touch event and pass along the correct value
-              var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
-              
-              leftValue = moveX + posX - dragWidth;
-              
-              // Prevent going off limits
-              if ( leftValue < minLeft) {
-                leftValue = minLeft;
-              } else if (leftValue > maxLeft) {
-                leftValue = maxLeft;
-              }
-              
-              // Translate the handle's left value to masked divs width.
-              widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
-              
-              // Set the new values for the slider and the handle. 
-              // Bind mouseup events to stop dragging.
-              $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
-                $(this).removeClass('draggable');
-                resizeElement.removeClass('resizable');
-              });
-              $('.resizable').css('width', widthValue);
-            }).on('mouseup touchend touchcancel', function(){
-              dragElement.removeClass('draggable');
-              resizeElement.removeClass('resizable');
-            });
-            e.preventDefault();
-          }).on('mouseup touchend touchcancel', function(e){
-            dragElement.removeClass('draggable');
+    <div class="ba-slider">
+      <img src="img/index_background.jpg" alt="">
+      <div class="resize">
+        <img src="img/index_our_goal.jpg" alt="">
+      </div>
+      <span class="handle"></span>
+    </div>
+  </div>
+
+  <script>
+    // Call & init
+    $(document).ready(function () {
+      $('.ba-slider').each(function () {
+        var cur = $(this);
+        // Adjust the slider
+        var width = cur.width() + 'px';
+        cur.find('.resize img').css('width', width);
+        // Bind dragging events
+        drags(cur.find('.handle'), cur.find('.resize'), cur);
+      });
+    });
+
+    // Update sliders on resize. 
+    // Because we all do this: i.imgur.com/YkbaV.gif
+    $(window).resize(function () {
+      $('.ba-slider').each(function () {
+        var cur = $(this);
+        var width = cur.width() + 'px';
+        cur.find('.resize img').css('width', width);
+      });
+    });
+
+    function drags(dragElement, resizeElement, container) {
+
+      // Initialize the dragging event on mousedown.
+      dragElement.on('mousedown touchstart', function (e) {
+
+        dragElement.addClass('draggable');
+        resizeElement.addClass('resizable');
+
+        // Check if it's a mouse or touch event and pass along the correct value
+        var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+        // Get the initial position
+        var dragWidth = dragElement.outerWidth(),
+          posX = dragElement.offset().left + dragWidth - startX,
+          containerOffset = container.offset().left,
+          containerWidth = container.outerWidth();
+
+        // Set limits
+        minLeft = containerOffset + 10;
+        maxLeft = containerOffset + containerWidth - dragWidth - 10;
+
+        // Calculate the dragging distance on mousemove.
+        dragElement.parents().on("mousemove touchmove", function (e) {
+
+          // Check if it's a mouse or touch event and pass along the correct value
+          var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+          leftValue = moveX + posX - dragWidth;
+
+          // Prevent going off limits
+          if (leftValue < minLeft) {
+            leftValue = minLeft;
+          } else if (leftValue > maxLeft) {
+            leftValue = maxLeft;
+          }
+
+          // Translate the handle's left value to masked divs width.
+          widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + '%';
+
+          // Set the new values for the slider and the handle. 
+          // Bind mouseup events to stop dragging.
+          $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+            $(this).removeClass('draggable');
             resizeElement.removeClass('resizable');
           });
-        }
-    </script>
-  
-    <section class="row2">
-      <div class="separator columns 2"><h2>All features </h2></div>
-    </section>
+          $('.resizable').css('width', widthValue);
+        }).on('mouseup touchend touchcancel', function () {
+          dragElement.removeClass('draggable');
+          resizeElement.removeClass('resizable');
+        });
+        e.preventDefault();
+      }).on('mouseup touchend touchcancel', function (e) {
+        dragElement.removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+    }
+  </script>
 
-    <div class="icon-list">
-      <div class="container">
+  <section class="row2">
+    <div class="separator columns 2">
+      <h2>All features </h2>
+    </div>
+  </section>
+
+  <div class="icon-list">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a href="#p1" style="text-decoration: none; color: black;">
+            <div class="media block-6 d-block text-center">
+              <div class="icon mb-3 mx-auto" style="width: 6v60pxw; height: 60px;">
+                <img src="./img/icons/Magnifying_glass_icon.svg" alt="" width="60" height="60">
+              </div>
+              <div class="media-body">
+                <h4>Property Inspections</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#p2" style="text-decoration: none; color: black;">
+            <div class="media block-6 d-block text-center">
+              <div class="icon mb-3 mx-auto" style="width: 60px; height: 60px;">
+                <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z" />
+                  <path fill-rule="evenodd"
+                    d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+                </svg>
+              </div>
+              <div class="media-body">
+                <h4>Property Repairs</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#p3" style="text-decoration: none; color: black;">
+            <div class="media block-6 d-block text-center">
+              <div class="icon mb-3 mx-auto" style="width: 60px; height: 60px;">
+                <img src="img/icons/Preserved.svg" alt="" width="60" height="60">
+              </div>
+              <div class="media-body">
+                <h4>Property Preservation</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#p4" style="text-decoration: none; color: black;">
+            <div class="media block-6 d-block text-center">
+              <div class="icon mb-3 mx-auto" style="width: 60px; height: 60px;">
+                <svg class="bi bi-house-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                  <path fill-rule="evenodd"
+                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                </svg>
+              </div>
+              <div class="media-body">
+                <h4>REO & Insurance Services</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="p1" class="container1">
+    <div class="story-2">
+      <div id='img1' class="img-wrapper property-inspection">
+        <!-- <img src="img/service-details/property-inspection.jpg" ></img> -->
+      </div>
+      <div class="service-text text-center">
+        <h2 class="title">Property Inspections</h2>
+        <div class="description" style="margin-bottom: 10px;">
+          RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each
+          client’s operating needs and business goals. Our nationwide network of professional...
+        </div>
+        <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 10px;">
+          <li>Interior inspections</li>
+          <li>Exterior inspections</li>
+          <li>Code compliance</li>
+          <li>Insurance loss inspection</li>
+          <li>FEMA disaster</li>
+        </ul>
+        <h2 class="card-title pricing-card-title" style="text-align: center;">Start At: $50 <small class="text-muted">/
+            hr</small></h2>
+
         <div class="row">
           <div class="col">
-            <a href="#p1" style="text-decoration: none; color: black;">
-              <div class="media block-6 d-block text-center">
-                <div class="icon mb-3 mx-auto" style="width: 6v60pxw; height: 60px;">
-                  <img src="./img/icons/Magnifying_glass_icon.svg" alt="" width="60" height="60">
-                </div>
-                <div class="media-body">
-                <h4>Property Inspections</h4>
-                </div>
-              </div> 
-            </a>
+            <a href="contact.html" class="btn btn-primary" target="_blank">Contact Us</a>
           </div>
           <div class="col">
-            <a href="#p2" style="text-decoration: none; color: black;">
-              <div class="media block-6 d-block text-center">
-                <div class="icon mb-3 mx-auto" style="width: 60px; height: 60px;">
-                  <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z"/>
-                    <path fill-rule="evenodd" d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
-                  </svg>
-                </div>
-                <div class="media-body">
-                <h4>Property Repairs</h4>
-                </div>
-              </div> 
-            </a>
+            <a href="pricing.html#p-inspection" class="btn btn-warning" target="_blank">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="p2" class="container1">
+    <div class="story-2">
+      <div id='img2' class="img-wrapper2 property-repair">
+        <!-- <img src="img/service-details/1.gif" ></img> -->
+      </div>
+      <div class="service-text2 text-center">
+        <h2 class="title">Property Repairs</h2>
+        <div class="description" style="margin-bottom: 10px;">
+          RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each
+          client’s operating needs and business goals. Our nationwide network of professional...
+        </div>
+        <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 10px;">
+          <li>Bio-hazard remediation</li>
+          <li>Safety hazard repair</li>
+          <li>Demolition</li>
+          <li>Interior & exterior repairs and rehabilitation</li>
+          <li>Landscaping</li>
+        </ul>
+        <h2 class="card-title pricing-card-title" style="text-align: center;">Start At: $50 <small class="text-muted">/
+            hr</small></h2>
+        <div class="row">
+          <div class="col">
+            <a href="contact.html" class="btn btn-primary" target="_blank">Contact Us</a>
           </div>
           <div class="col">
-            <a href="#p3" style="text-decoration: none; color: black;">
-              <div class="media block-6 d-block text-center">
-                <div class="icon mb-3 mx-auto" style="width: 60px; height: 60px;">
-                  <img src="img/icons/Preserved.svg" alt="" width="60" height="60">
-                </div>
-                <div class="media-body">
-                <h4>Property Preservation</h4>
-                </div>
-              </div> 
-            </a>
+            <a href="pricing.html#p-repair" class="btn btn-warning" target="_blank">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="p3" class="container1">
+    <div class="story-2">
+      <div id='img3' class="img-wrapper property-preservation">
+      </div>
+      <div class="service-text text-center">
+        <h2 class="title">Property Preservation</h2>
+        <div class="description" style="margin-bottom: 10px;">
+          RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each
+          client’s operating needs and business goals. Our nationwide network of professional...
+        </div>
+        <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 10px;">
+          <li>Property securing</li>
+          <li>Winterization</li>
+          <li>Lawn & yard maintenance</li>
+          <li>Snow and ice removal services</li>
+          <li>Hazardous material and debris removal</li>
+          <li>Convey maintenance</li>
+        </ul>
+        <h2 class="card-title pricing-card-title" style="text-align: center;">Start At: $50 <small class="text-muted">/
+            hr</small></h2>
+        <div class="row">
+          <div class="col">
+            <a href="contact.html" class="btn btn-primary" target="_blank">Contact Us</a>
           </div>
           <div class="col">
-            <a href="#p4" style="text-decoration: none; color: black;">
-              <div class="media block-6 d-block text-center">
-                <div class="icon mb-3 mx-auto" style="width: 60px; height: 60px;">
-                  <svg class="bi bi-house-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-                  </svg>
-                </div>
-                <div class="media-body">
-                <h4>REO & Insurance Services</h4>
-                </div>
-              </div> 
+            <a href="pricing.html#p-preservation" class="btn btn-warning" target="_blank">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="p4" class="container1">
+    <div class="story-2">
+      <div id='img4' class="img-wrapper2 property-reo">
+      </div>
+      <div class="service-text2 text-center">
+        <h2 class="title">REO & Insurance Services</h2>
+        <div class="description" style="margin-bottom: 10px;">
+          RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each
+          client’s operating needs and business goals. Our nationwide network of professional...
+        </div>
+        <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 10px;">
+          <li>REO Maintenance</li>
+          <li>REO Repairs</li>
+          <li>Sales clean</li>
+          <li>Hazard claims</li>
+          <li>Property restoration</li>
+        </ul>
+        <h2 class="card-title pricing-card-title" style="text-align: center;">Start At: $50 <small class="text-muted">/
+            hr</small></h2>
+        <div class="row">
+          <div class="col">
+            <a href="contact.html" class="btn btn-primary" target="_blank">Contact Us</a>
+          </div>
+          <div class="col">
+            <a href="pricing.html#p-reo" class="btn btn-warning" target="_blank">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-example">
+    <div class="sec-ct">
+      <div class="position-relative overflow-hidden p-3 m-md-3 text-center site-section1"
+        style="background-color: #0c3f72">
+        <div class="col-md-8 p-lg-4 mx-auto">
+          <h1 class="display-4 font-weight-normal" style="margin-top: 20px;color: white;">Ask Our Expert</h1>
+          <!-- <input type="email" class="form-control my-5" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+          <form style="margin-top: 50px">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+          </form>
+          <form style="margin-top: 20px">
+            <div class="row">
+              <div class="col">
+                <input type="email" class="form-control" placeholder="Enter Email">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+            </div>
+          </form>
+          <button type="button" class="btn btn-warning" style="margin-top: 50px;">Ask Us</button>
+          <div>
+            <p style="color: white;">
+              Your personal information will be kept confidential according to our <a href="#">Privacy Policy</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mx-auto">
+    <div class="row d-flex pb- px-4">
+      <div class="col-md-8">
+        <div class="row d-flex justify-content-between">
+          <div class="d-flex flex-column block-footer text-center">
+            <h5 class="footer-headings">
+              <img src="logo.png" alt="RPN" width="90" height="90">
+            </h5>
+            <p class="list-items">Copyright &copy; 2021 </p>
+            <p class="list-items">REPAIR AND </p>
+            <p class="list-items">PRESERVATION </p>
+            <p class="list-items">NETWORK</p>
+            <p class="list-items"> All rights reserved.</p>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Site Map</h5>
+            <a href="services.html">
+              <p class="list-items">Services</p>
+            </a>
+            <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
+            <a href="technologies.html">
+              <p class="list-items">Technology</p>
+            </a>
+            <a href="resources.html">
+              <p class="list-items">Resources</p>
+            </a>
+            <a href="about.html">
+              <p class="list-items">About</p>
+            </a>
+            <a href="contact.html">
+              <p class="list-items">Contact</p>
+            </a>
+            <a href="tech-rpnweb.html">
+              <p class="list-items">RPN GO&reg;</p>
+            </a>
+            <a href="tech-rpngo.html">
+              <p class="list-items">RPN GO&reg; Mobile App</p>
             </a>
           </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Coroprate Address</h5>
+            <p class="list-items">10 Old Mamaroneck Road</p>
+            <p class="list-items">Unit 1A</p>
+            <p class="list-items">White Plains, NY, 10605</p>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Regional Address</h5>
+            <p class="list-items">1820 NW 118th Street #220</p>
+            <p class="list-items">Clive, IA, 50325</p>
+            <p class="list-items"></p>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Contact</h5>
+            <p class="list-items">Tel: (866)776-8880</p>
+            <p class="list-items">Fax: (866)968-6156</p>
+            <a href="mailto: info@rpncompany.com">
+              <p class="list-items">Email: info@rpncompany.com</p>
+            </a>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Legal</h5>
+            <p class="list-items">Terms of Use</p>
+            <p class="list-items">Privacy Policy</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="d-flex flex-column pl-md-5 px-4">
+          <h5 class="footer-headings pl-md-2">Download App</h5>
+          <div class="g-play pb-5 border-left">
+            <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img
+                src="google-play-badge.png" width="125" height="52"></a>
+            <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png"
+                width="110" height="35"></a>
+          </div>
+          <div class="d-flex flex-column pl-md-2 border-left pb-3">
+            <h5 class="footer-headings mb-3">Follow Us</h5>
+            <div class="row d-flex pl-2">
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/facebook1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/twitter1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/ins1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/linkedin1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/YouTube.svg" width="25" height="25">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div id="p1" class="container1">
-      <div class="story-2">
-          <div id='img1' class="img-wrapper property-inspection">
-            <!-- <img src="img/service-details/property-inspection.jpg" ></img> -->
-          </div>
-          <div class="service-text text-center">
-              <h2 class="title">Property Inspections</h2>
-              <div class="description" style="margin-bottom: 10px;">
-                RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals. Our nationwide network of professional...
-              </div>
-              <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 10px;">
-                <li>Interior inspections</li>
-                <li>Exterior inspections</li>
-                <li>Code compliance</li>
-                <li>Insurance loss inspection</li>
-                <li>FEMA disaster</li>
-              </ul>
-              <h2 class="card-title pricing-card-title" style="text-align: center;">Start At: $50 <small class="text-muted">/ hr</small></h2>
+    <div class="row d-flex justify-content-between row-2">
+      <div class="block-item">
+        <div class="fa fa-fire">
+          <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110"
+              height="100"></a>
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-eye">
+          <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120"
+              height="70"></a>
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-fire">
 
-              <div class="row">
-                <div class="col">
-                  <a href="contact.html" class="btn btn-primary" target="_blank">Contact Us</a>
-                </div>
-                <div class="col">
-                  <a href="pricing.html#p-inspection" class="btn btn-warning" target="_blank">Order Now</a>
-                </div>
-              </div>
-          </div>
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-home">
+
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-facebook">
+
+        </div>
       </div>
     </div>
+  </div>
 
-    <div id="p2" class="container1">
-        <div class="story-2">
-            <div id='img2' class="img-wrapper2 property-repair">
-              <!-- <img src="img/service-details/1.gif" ></img> -->
-            </div>
-            <div class="service-text2 text-center">
-              <h2 class="title">Property Repairs</h2>
-              <div class="description" style="margin-bottom: 10px;">
-                RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals. Our nationwide network of professional...
-              </div>
-              <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 10px;">
-                <li>Bio-hazard remediation</li>
-                <li>Safety hazard repair</li>
-                <li>Demolition</li>
-                <li>Interior & exterior repairs and rehabilitation</li>
-                <li>Landscaping</li>
-              </ul>
-              <h2 class="card-title pricing-card-title" style="text-align: center;">Start At: $50 <small class="text-muted">/ hr</small></h2>
-              <div class="row">
-                <div class="col">
-                  <a href="contact.html" class="btn btn-primary" target="_blank">Contact Us</a>
-                </div>
-                <div class="col">
-                  <a href="pricing.html#p-repair" class="btn btn-warning" target="_blank">Order Now</a>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
+  <script src="js/service.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
 
-    <div id="p3" class="container1">
-        <div class="story-2">
-            <div id='img3' class="img-wrapper property-preservation">
-            </div>
-            <div class="service-text text-center">
-              <h2 class="title">Property Preservation</h2>
-              <div class="description" style="margin-bottom: 10px;">
-                RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals. Our nationwide network of professional...
-              </div>
-              <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 10px;">
-                <li>Property securing</li>
-                <li>Winterization</li>
-                <li>Lawn & yard maintenance</li>
-                <li>Snow and ice removal services</li>
-                <li>Hazardous material and debris removal</li>
-                <li>Convey maintenance</li>
-              </ul>
-              <h2 class="card-title pricing-card-title" style="text-align: center;">Start At: $50 <small class="text-muted">/ hr</small></h2>
-              <div class="row">
-                <div class="col">
-                  <a href="contact.html" class="btn btn-primary" target="_blank">Contact Us</a>
-                </div>
-                <div class="col">
-                  <a href="pricing.html#p-preservation" class="btn btn-warning" target="_blank">Order Now</a>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../assets/dist/js/bootstrap.bundle.js"></script>
 
-    <div id="p4" class="container1">
-        <div class="story-2">
-            <div id='img4' class="img-wrapper2 property-reo">
-            </div>
-            <div class="service-text2 text-center">
-              <h2 class="title">REO & Insurance Services</h2>
-              <div class="description" style="margin-bottom: 10px;">
-                RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals. Our nationwide network of professional...
-              </div>
-              <ul style="list-style-type: circle; font-size: 20px; margin-bottom: 10px;">
-                <li>REO Maintenance</li>
-                <li>REO Repairs</li>
-                <li>Sales clean</li>
-                <li>Hazard claims</li>
-                <li>Property restoration</li>
-              </ul>
-              <h2 class="card-title pricing-card-title" style="text-align: center;">Start At: $50 <small class="text-muted">/ hr</small></h2>
-              <div class="row">
-                <div class="col">
-                  <a href="contact.html" class="btn btn-primary" target="_blank">Contact Us</a>
-                </div>
-                <div class="col">
-                  <a href="pricing.html#p-reo" class="btn btn-warning" target="_blank">Order Now</a>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
+</body>
 
-    <div class="sec-example">
-      <div class="sec-ct">
-          <div class="position-relative overflow-hidden p-3 m-md-3 text-center site-section1" style="background-color: #0c3f72">
-            <div class="col-md-8 p-lg-4 mx-auto">
-              <h1 class="display-4 font-weight-normal" style="margin-top: 20px;color: white;">Ask Our Expert</h1>
-              <!-- <input type="email" class="form-control my-5" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
-              <form style="margin-top: 50px">
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="First name">
-                    </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Last name">
-                    </div>
-                  </div>
-              </form>
-              <form style="margin-top: 20px">
-                  <div class="row">
-                    <div class="col">
-                      <input type="email" class="form-control" placeholder="Enter Email">
-                    </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Phone Number">
-                    </div>
-                  </div>
-              </form>
-              <button type="button" class="btn btn-warning" style="margin-top: 50px;">Ask Us</button>
-              <div>
-                  <p style="color: white;">
-                      Your personal information will be kept confidential according to our <a href="#">Privacy Policy</a>.
-                  </p>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="container-fluid mx-auto">
-      <div class="row d-flex pb- px-4">
-          <div class="col-md-8">
-              <div class="row d-flex justify-content-between">
-                  <div class="d-flex flex-column block-footer text-center">
-                      <h5 class="footer-headings">
-                        <img src="logo.png" alt="RPN" width="90" height="90">
-                      </h5>
-                      <p class="list-items">Copyright &copy; 2021  </p>
-                      <p class="list-items">REPAIR AND  </p>
-                      <p class="list-items">PRESERVATION </p>
-                      <p class="list-items">NETWORK</p>
-                      <p class="list-items"> All rights reserved.</p>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                    <h5 class="footer-headings">Site Map</h5>          
-                    <a href="services.html"><p class="list-items">Services</p></a>
-                    <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
-                    <a href="technologies.html"><p class="list-items">Technology</p></a>
-                    <a href="resources.html"><p class="list-items">Resources</p></a>
-                    <a href="about.html"><p class="list-items">About</p></a>
-                    <a href="contact.html"><p class="list-items">Contact</p></a>
-                    <a href="tech-rpnweb.html"><p class="list-items">RPN GO&reg;</p></a>
-                    <a href="tech-rpngo.html"><p class="list-items">RPN GO&reg; Mobile App</p></a>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                      <h5 class="footer-headings">Coroprate Address</h5>
-                      <p class="list-items">10 Old Mamaroneck Road</p>
-                      <p class="list-items">Unit 1A</p>
-                      <p class="list-items">White Plains, NY, 10605</p>
-                      <p class="list-items"><br/></p>
-                      <h5 class="footer-headings">Regional Address</h5>
-                      <p class="list-items">1820 NW 118th Street #220</p>
-                      <p class="list-items">Clive, IA, 50325</p>
-                      <p class="list-items"></p>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                      <h5 class="footer-headings">Contact</h5>          
-                      <p class="list-items">Tel: (866)776-8880</p>
-                      <p class="list-items">Fax: (866)968-6156</p>
-                      <a href="mailto: info@rpncompany.com"><p class="list-items">Email: info@rpncompany.com</p></a>
-                      <p class="list-items"><br/></p>
-                      <h5 class="footer-headings">Legal</h5>
-                      <p class="list-items">Terms of Use</p>
-                      <p class="list-items">Privacy Policy</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="d-flex flex-column pl-md-5 px-4">
-                  <h5 class="footer-headings pl-md-2">Download App</h5>
-                  <div class="g-play pb-5 border-left">
-                    <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img src="google-play-badge.png" width="125" height="52"></a>
-                    <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png" width="110" height="35"></a>
-                  </div>
-                  <div class="d-flex flex-column pl-md-2 border-left pb-3">
-                      <h5 class="footer-headings mb-3">Follow Us</h5>
-                      <div class="row d-flex pl-2">
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/facebook1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/twitter1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/ins1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/linkedin1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/YouTube.svg" width="25" height="25">
-                            </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="row d-flex justify-content-between row-2">
-        <div class="block-item">
-            <div class="fa fa-fire">
-              <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110" height="100"></a>      
-            </div>
-        </div>
-        <div class="block-item">
-            <div class="fa fa-eye">
-              <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120" height="70"></a>
-            </div>
-        </div>
-        <div class="block-item">
-            <div class="fa fa-fire">
-
-            </div>
-        </div>
-        <div class="block-item">
-            <div class="fa fa-home">
-
-            </div>
-        </div>
-        <div class="block-item">
-            <div class="fa fa-facebook">
-
-            </div>
-        </div>
-    </div>
-    </div>
-  
-    <script src="js/service.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        
-    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
-    
-  </body>
 </html>

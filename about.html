@@ -1,278 +1,346 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
-    <title>Product example · Bootstrap</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/utils/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script>
-      // init controller
-      var controller = new ScrollMagic.Controller();
-    </script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <title>Product example · Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/utils/Draggable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script>
+    // init controller
+    var controller = new ScrollMagic.Controller();
+  </script>
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      #pinContainer {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-      }
-      .panel {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: 1;
-      }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
+  <!-- Bootstrap core CSS -->
+  <link href="./css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="product.css" rel="stylesheet">
-    <link href="carousel.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="site-header sticky-top py-1 navbar">
-      <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%; color: white;">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
-        <img src="logo.png" alt="RPN" width="25" height="25">
-        REPAIR AND PERSERVATION NETWORK
-      </a>
-      <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block nav-item" href="services.html">Services</a>
-        <!-- <a class="py-2 d-none d-md-inline-block nav-item" href="pricing.html">Pricing</a> -->
-        <a class="py-2 d-none d-md-inline-block nav-item" href="technologies.html">Technology</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="resources.html">Resources</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" style="color: white;" href="about.html">About</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="contact.html">Contact</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a> 
-        <!-- need employee equality system -->
-        <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
-        <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    #pinContainer {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .panel {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="product.css" rel="stylesheet">
+  <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="site-header sticky-top py-1 navbar">
+    <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%; color: white;">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
+      <img src="logo.png" alt="RPN" width="25" height="25">
+      REPAIR AND PERSERVATION NETWORK
+    </a>
+    <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block nav-item" href="services.html">Services</a>
+      <!-- <a class="py-2 d-none d-md-inline-block nav-item" href="pricing.html">Pricing</a> -->
+      <a class="py-2 d-none d-md-inline-block nav-item" href="technologies.html">Technology</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="resources.html">Resources</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" style="color: white;" href="about.html">About</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="contact.html">Contact</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a>
+      <!-- need employee equality system -->
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
+      <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign
+        up</button>
+    </div>
+  </nav>
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+          <div class="box-singup">
+            <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to vendor</a></h2>
+          </div>
+          <div class="box-singup">
+            <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to client</a></h2>
+          </div>
+        </div>
       </div>
-    </nav>
+    </div>
+  </div>
 
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-            <div class="box-singup">
-              <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to vendor</a></h2>
+  <section id="abnout-header" class="jumbotron text-center">
+    <div class="container">
+      <h1 style="color: white;">About Us</h1>
+  </section>
+  <div class="x-content">
+    <!-- <h1 class="mb-4 display-4 font-weight-normal mt-5">About Us</h1> -->
+    <div class="large-12 medium-12 small-12 columns">
+      <h2 class="text-center" style="margin-bottom: 40px; margin-top: 10vh;">(need change) Our talented and agile team
+        provides best solutions to meet and anticipate their needs.</h2>
+    </div>
+    <div class="large-10 large-offset-1 medium-10 medium-offset-1 small-12 columns" style="padding: 0 20px;">
+      <p>
+        Repair and Preservation Network is a leader in repair, preservation and restoration services industry. At Repair
+        and Preservation Network, we work every day to uphold our fundamental mission of helping our clients to achieve
+        their strategic goals and better servicing their business needs. We are committed to consistently delivering
+        high quality services and continuously seeking innovative solutions to surpass clients' demands.
+      </p>
+      <p>
+        Our best-in-class services and reputation rely upon our core corporate values of quality, commitment and
+        integrity. These values are thoroughly integrated in our day-to-day work with our clients, our vendor partners
+        and our employees.
+      </p>
+      <p>
+        Repair and Preservation Network is headquartered in White Plains, New York. Our other operation facilities are
+        located in Des Moines, Iowa and Chicago, Illinois. We provide nationwide coverage of our services.
+      </p>
+    </div>
+  </div>
+
+  <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh;">
+    <hr />
+  </div>
+
+  <div class="album py-5" style="position: relative;">
+    <h1 class="text-center mb-5">Meet the Team</h1>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
             </div>
-            <div class="box-singup">
-              <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to client</a></h2>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <!-- <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div> -->
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-      <section id="abnout-header" class="jumbotron text-center">
-        <div class="container">
-          <h1 style="color: white;">About Us</h1>
-      </section>
-    <div class="x-content">
-      <!-- <h1 class="mb-4 display-4 font-weight-normal mt-5">About Us</h1> -->
-      <div class="large-12 medium-12 small-12 columns">
-				<h2 class="text-center" style="margin-bottom: 40px; margin-top: 10vh;">(need change) Our talented and agile team provides best solutions to meet and anticipate their needs.</h2>
-      </div>
-      <div class="large-10 large-offset-1 medium-10 medium-offset-1 small-12 columns" style="padding: 0 20px;">
-        <p >
-          Repair and Preservation Network is a leader in repair, preservation and restoration services industry. At Repair and Preservation Network, we work every day to uphold our fundamental mission of helping our clients to achieve their strategic goals and better servicing their business needs. We are committed to consistently delivering high quality services and continuously seeking innovative solutions to surpass clients' demands.
-        </p>
-        <p >
-          Our best-in-class services and reputation rely upon our core corporate values of quality, commitment and integrity. These values are thoroughly integrated in our day-to-day work with our clients, our vendor partners and our employees.
-        </p>
-        <p>
-          Repair and Preservation Network is headquartered in White Plains, New York. Our other operation facilities are located in Des Moines, Iowa and Chicago, Illinois. We provide nationwide coverage of our services.
-        </p>
-      </div>
-    </div>
+  <div class="large-12 medium-12 small-12 columns" style="margin-top: 10vh;margin-bottom: 10vh;">
+    <hr />
+  </div>
 
-    <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh;">
-      <hr/>
-    </div>
+  <div>
+    <h1 class="text-center mb-5">Mission Statement</h1>
+  </div>
 
-    <div class="album py-5" style="position: relative;">
-      <h1 class="text-center mb-5">Meet the Team</h1>
-      <div class="container">
-  
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <!-- <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <!-- <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <!-- <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div> -->
-              </div>
-            </div>
-          </div>
-  
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <!-- <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <!-- <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <!-- <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div> -->
-              </div>
-            </div>
-          </div>
-  
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <!-- <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <!-- <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <!-- <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="large-12 medium-12 small-12 columns" style="margin-top: 10vh;margin-bottom: 10vh;">
-      <hr/>
-    </div>
-
-    <div>
-      <h1 class="text-center mb-5">Mission Statement</h1>
-    </div>
-
-    <!-- <div class="carousel_container">
+  <!-- <div class="carousel_container">
       <div class="carousel_items">        
         <ul>
           <li class="carousel_item" id="item_0"><img src="img/about-company-2.jpg" /></li>
@@ -336,9 +404,9 @@
       <div class="nav_dots"></div>
       
     </div> -->
-    <script>
-      var carousel = (function () {
- 
+  <script>
+    var carousel = (function () {
+
       //
       var activeID = 0,
         itemW = 940,
@@ -356,256 +424,280 @@
 
       //
       function init() {
-        
-        $carouselItems.css({'width': (itemW * carousel_count) + 'px'});
-        $navDots.css({'width': (30 * carousel_count) + 'px'});
-        $itemArrow.css({'opacity': .8});
-        
+
+        $carouselItems.css({ 'width': (itemW * carousel_count) + 'px' });
+        $navDots.css({ 'width': (30 * carousel_count) + 'px' });
+        $itemArrow.css({ 'opacity': .8 });
+
         setupDraggable();
         setupDots();
         navigateSlide();
       }
       init();
-        
-      //
-      function setupDraggable() { 
-          
-        Draggable.create($carouselItems, {
-                type:'x',
-                edgeResistance: 0.90,
-                dragResistance: 0.0,
-                bounds:'.carousel_container',
-                onDrag:updateDirections,
-                onThrowUpdate:updateDirections,
-                throwProps:true,
-                onDragStart:function(evt) {},
-                onDragEnd :function() {
 
-                  if(swipeDir == 'left') {activeID++}
-                  else if(swipeDir == 'right') {activeID--};
-                  
-                  navigateSlide();
-                }
-          });    
+      //
+      function setupDraggable() {
+
+        Draggable.create($carouselItems, {
+          type: 'x',
+          edgeResistance: 0.90,
+          dragResistance: 0.0,
+          bounds: '.carousel_container',
+          onDrag: updateDirections,
+          onThrowUpdate: updateDirections,
+          throwProps: true,
+          onDragStart: function (evt) { },
+          onDragEnd: function () {
+
+            if (swipeDir == 'left') { activeID++ }
+            else if (swipeDir == 'right') { activeID-- };
+
+            navigateSlide();
+          }
+        });
       };
-                    
+
       // set up dots
-      function setupDots() {    
-        for(var i = 0; i < carousel_count; i++) {
+      function setupDots() {
+        for (var i = 0; i < carousel_count; i++) {
           $navDots.append('<div class="nav_dot" id="dot_' + i + '"></div>');
-        }    
+        }
         $navDot = $('.nav_dot');
-      }  
+      }
 
       // navigate slide
       function navigateSlide() {
-        
-        if(activeID >= carousel_count-1) activeID = carousel_count-1;
-        if(activeID <= 0) activeID = 0;		
-                
+
+        if (activeID >= carousel_count - 1) activeID = carousel_count - 1;
+        if (activeID <= 0) activeID = 0;
+
         var xTarget = ((activeID * itemW) * -1);
-        
-        TweenMax.to($carouselItems, slideSpeed, {x: xTarget, ease: slideMeth, onComplete: slideDone});
+
+        TweenMax.to($carouselItems, slideSpeed, { x: xTarget, ease: slideMeth, onComplete: slideDone });
       }
 
       function slideDone() {
-        
-        $navDot.css({backgroundColor: '#fff'});
-        
+
+        $navDot.css({ backgroundColor: '#fff' });
+
         //
-        TweenMax.to($navDot, .35, {scale: 1, color: 0xFFFFFF});
-        TweenMax.to($('#dot_' + activeID), .35, {scale: 1.5, backgroundColor: 'transparent',color: 0xCC0000});
-        
+        TweenMax.to($navDot, .35, { scale: 1, color: 0xFFFFFF });
+        TweenMax.to($('#dot_' + activeID), .35, { scale: 1.5, backgroundColor: 'transparent', color: 0xCC0000 });
+
         //
-        if(activeID == 0) {$arrowPrev.fadeOut()} 
-        else {$arrowPrev.fadeIn()}
-        
-        if(activeID + 1 == carousel_count) {$arrowNext.fadeOut()}
-        else {$arrowNext.fadeIn()}
+        if (activeID == 0) { $arrowPrev.fadeOut() }
+        else { $arrowPrev.fadeIn() }
+
+        if (activeID + 1 == carousel_count) { $arrowNext.fadeOut() }
+        else { $arrowNext.fadeIn() }
       }
 
       //
       function updateDirections() {
         swipeDir = this.getDirection("start");
       }
-        
+
       //$itemArrow.click(function() {
-      $itemArrow.on('click', function() {
-        
-        if(Modernizr.touch) return;
-        
-        if($(this).hasClass('item_next')) {activeID++}
-        else {activeID--};
-        
+      $itemArrow.on('click', function () {
+
+        if (Modernizr.touch) return;
+
+        if ($(this).hasClass('item_next')) { activeID++ }
+        else { activeID-- };
+
         navigateSlide();
       });
 
-      $itemArrow.on('touchstart', function() {
-        if($(this).hasClass('item_next')) {activeID++}
-        else {activeID--};
-        
+      $itemArrow.on('touchstart', function () {
+        if ($(this).hasClass('item_next')) { activeID++ }
+        else { activeID-- };
+
         navigateSlide();
       });
 
-      $navDot.hover(		
-        function() {			
-            TweenMax.to($(this), .35, {scale: 1.5});
-        }, function() {
-          if($(this).attr('id').split('_')[1] == activeID) return;
-          TweenMax.to($(this), .35, {scale: 1.0});
-        }  
+      $navDot.hover(
+        function () {
+          TweenMax.to($(this), .35, { scale: 1.5 });
+        }, function () {
+          if ($(this).attr('id').split('_')[1] == activeID) return;
+          TweenMax.to($(this), .35, { scale: 1.0 });
+        }
       );
 
-      $navDot.click(function() {		
+      $navDot.click(function () {
         var dotID = $(this).attr('id').split('_')[1];
         activeID = dotID;
-          
-        navigateSlide();		
+
+        navigateSlide();
       });
 
       //
-      $carouselItem.mousedown(function() {		
+      $carouselItem.mousedown(function () {
         activeID = $(this).attr('id').split('_')[1];
-        
+
         $(this).removeClass('grab');
         $(this).addClass('grabbing');
-        
+
       });
 
       //   
-      $carouselItem.mouseenter(function() {        
+      $carouselItem.mouseenter(function () {
         $(this).removeClass('grabbing');
         $(this).addClass('grab');
       });
 
-      $carouselItem.mouseup(function() {        
+      $carouselItem.mouseup(function () {
         $(this).removeClass('grabbing');
         $(this).addClass('grab');
-      });  
+      });
 
-      })();
-    </script>
+    })();
+  </script>
 
-<div class="container-fluid mx-auto">
-  <div class="row d-flex pb- px-4">
+  <div class="container-fluid mx-auto">
+    <div class="row d-flex pb- px-4">
       <div class="col-md-8">
-          <div class="row d-flex justify-content-between">
-              <div class="d-flex flex-column block-footer text-center">
-                  <h5 class="footer-headings">
-                    <img src="logo.png" alt="RPN" width="90" height="90">
-                  </h5>
-                  <p class="list-items">Copyright &copy; 2021  </p>
-                  <p class="list-items">REPAIR AND  </p>
-                  <p class="list-items">PRESERVATION </p>
-                  <p class="list-items">NETWORK</p>
-                  <p class="list-items"> All rights reserved.</p>
-              </div>
-              <div class="d-flex flex-column block-footer">
-                <h5 class="footer-headings">Site Map</h5>          
-                <a href="services.html"><p class="list-items">Services</p></a>
-                <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
-                <a href="technologies.html"><p class="list-items">Technology</p></a>
-                <a href="resources.html"><p class="list-items">Resources</p></a>
-                <a href="about.html"><p class="list-items">About</p></a>
-                <a href="contact.html"><p class="list-items">Contact</p></a>
-                <a href="tech-rpnweb.html"><p class="list-items">RPN GO&reg;</p></a>
-                <a href="tech-rpngo.html"><p class="list-items">RPN GO&reg; Mobile App</p></a>
-              </div>
-              <div class="d-flex flex-column block-footer">
-                  <h5 class="footer-headings">Coroprate Address</h5>
-                  <p class="list-items">10 Old Mamaroneck Road</p>
-                  <p class="list-items">Unit 1A</p>
-                  <p class="list-items">White Plains, NY, 10605</p>
-                  <p class="list-items"><br/></p>
-                  <h5 class="footer-headings">Regional Address</h5>
-                  <p class="list-items">1820 NW 118th Street #220</p>
-                  <p class="list-items">Clive, IA, 50325</p>
-                  <p class="list-items"></p>
-              </div>
-              <div class="d-flex flex-column block-footer">
-                  <h5 class="footer-headings">Contact</h5>          
-                  <p class="list-items">Tel: (866)776-8880</p>
-                  <p class="list-items">Fax: (866)968-6156</p>
-                  <a href="mailto: info@rpncompany.com"><p class="list-items">Email: info@rpncompany.com</p></a>
-                  <p class="list-items"><br/></p>
-                  <h5 class="footer-headings">Legal</h5>
-                  <p class="list-items">Terms of Use</p>
-                  <p class="list-items">Privacy Policy</p>
-              </div>
+        <div class="row d-flex justify-content-between">
+          <div class="d-flex flex-column block-footer text-center">
+            <h5 class="footer-headings">
+              <img src="logo.png" alt="RPN" width="90" height="90">
+            </h5>
+            <p class="list-items">Copyright &copy; 2021 </p>
+            <p class="list-items">REPAIR AND </p>
+            <p class="list-items">PRESERVATION </p>
+            <p class="list-items">NETWORK</p>
+            <p class="list-items"> All rights reserved.</p>
           </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Site Map</h5>
+            <a href="services.html">
+              <p class="list-items">Services</p>
+            </a>
+            <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
+            <a href="technologies.html">
+              <p class="list-items">Technology</p>
+            </a>
+            <a href="resources.html">
+              <p class="list-items">Resources</p>
+            </a>
+            <a href="about.html">
+              <p class="list-items">About</p>
+            </a>
+            <a href="contact.html">
+              <p class="list-items">Contact</p>
+            </a>
+            <a href="tech-rpnweb.html">
+              <p class="list-items">RPN GO&reg;</p>
+            </a>
+            <a href="tech-rpngo.html">
+              <p class="list-items">RPN GO&reg; Mobile App</p>
+            </a>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Coroprate Address</h5>
+            <p class="list-items">10 Old Mamaroneck Road</p>
+            <p class="list-items">Unit 1A</p>
+            <p class="list-items">White Plains, NY, 10605</p>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Regional Address</h5>
+            <p class="list-items">1820 NW 118th Street #220</p>
+            <p class="list-items">Clive, IA, 50325</p>
+            <p class="list-items"></p>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Contact</h5>
+            <p class="list-items">Tel: (866)776-8880</p>
+            <p class="list-items">Fax: (866)968-6156</p>
+            <a href="mailto: info@rpncompany.com">
+              <p class="list-items">Email: info@rpncompany.com</p>
+            </a>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Legal</h5>
+            <p class="list-items">Terms of Use</p>
+            <p class="list-items">Privacy Policy</p>
+          </div>
+        </div>
       </div>
       <div class="col-md-4">
-          <div class="d-flex flex-column pl-md-5 px-4">
-              <h5 class="footer-headings pl-md-2">Download App</h5>
-              <div class="g-play pb-5 border-left">
-                <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img src="google-play-badge.png" width="125" height="52"></a>
-                <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png" width="110" height="35"></a>
-              </div>
-              <div class="d-flex flex-column pl-md-2 border-left pb-3">
-                  <h5 class="footer-headings mb-3">Follow Us</h5>
-                  <div class="row d-flex pl-2">
-                      <div class="fa fa-sm">
-                        <a class="text-muted" href="#">
-                          <img src="img/social-media/facebook1.svg" width="25" height="25">
-                        </a>
-                      </div>
-                      <div class="fa fa-sm">
-                        <a class="text-muted" href="#">
-                          <img src="img/social-media/twitter1.svg" width="25" height="25">
-                        </a>
-                      </div>
-                      <div class="fa fa-sm">
-                        <a class="text-muted" href="#">
-                          <img src="img/social-media/ins1.svg" width="25" height="25">
-                        </a>
-                      </div>
-                      <div class="fa fa-sm">
-                        <a class="text-muted" href="#">
-                          <img src="img/social-media/linkedin1.svg" width="25" height="25">
-                        </a>
-                      </div>
-                      <div class="fa fa-sm">
-                        <a class="text-muted" href="#">
-                          <img src="img/social-media/YouTube.svg" width="25" height="25">
-                        </a>
-                      </div>
-                  </div>
-              </div>
+        <div class="d-flex flex-column pl-md-5 px-4">
+          <h5 class="footer-headings pl-md-2">Download App</h5>
+          <div class="g-play pb-5 border-left">
+            <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img
+                src="google-play-badge.png" width="125" height="52"></a>
+            <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png"
+                width="110" height="35"></a>
           </div>
+          <div class="d-flex flex-column pl-md-2 border-left pb-3">
+            <h5 class="footer-headings mb-3">Follow Us</h5>
+            <div class="row d-flex pl-2">
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/facebook1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/twitter1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/ins1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/linkedin1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/YouTube.svg" width="25" height="25">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
-  <div class="row d-flex justify-content-between row-2">
-    <div class="block-item">
+    </div>
+    <div class="row d-flex justify-content-between row-2">
+      <div class="block-item">
         <div class="fa fa-fire">
-          <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110" height="100"></a>      
+          <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110"
+              height="100"></a>
         </div>
-    </div>
-    <div class="block-item">
+      </div>
+      <div class="block-item">
         <div class="fa fa-eye">
-          <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120" height="70"></a>
+          <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120"
+              height="70"></a>
         </div>
-    </div>
-    <div class="block-item">
+      </div>
+      <div class="block-item">
         <div class="fa fa-fire">
 
         </div>
-    </div>
-    <div class="block-item">
+      </div>
+      <div class="block-item">
         <div class="fa fa-home">
 
         </div>
-    </div>
-    <div class="block-item">
+      </div>
+      <div class="block-item">
         <div class="fa fa-facebook">
 
         </div>
+      </div>
     </div>
   </div>
-  </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        
-    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>  
-  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+</body>
+
 </html>
