@@ -1,356 +1,395 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
-    <title>Product example · Bootstrap</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <title>Product example · Bootstrap</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
-    <!-- <script>
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+  <!-- <script>
       // init controller
       var controller = new ScrollMagic.Controller();
     </script> -->
 
 
-    <script src="./js/bootstrap.js"></script>
-  
-    <link href="./css/bootstrap.css" rel="stylesheet">
+  <script src="./js/bootstrap.js"></script>
 
-    <link href="product.css" rel="stylesheet">
-    <link href="./css/tech.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="site-header sticky-top py-1 navbar">
-      <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%; color: white;">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
-        <img src="logo.png" alt="RPN" width="25" height="25">
-        REPAIR AND PERSERVATION NETWORK
-      </a>
-      <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block nav-item" href="services.html">Services</a>
-        <!-- <a class="py-2 d-none d-md-inline-block nav-item" href="pricing.html">Pricing</a> -->
-        <a class="py-2 d-none d-md-inline-block nav-item" style="color: white;" href="technologies.html">Technology</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="resources.html">Resources</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="about.html">About</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="contact.html">Contact</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a> 
-        <!-- need employee equality system -->
-        <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
-        <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
-      </div>
-    </nav>
+  <link href="./css/bootstrap.css" rel="stylesheet">
 
-    <section id="tech-bg-img" class="jumbotron text-center">
-      <div class="container">
-        <h1 style="color: white;">Our Technology</h1>
-      </div>
-    </section>
+  <link href="product.css" rel="stylesheet">
+  <link href="./css/tech.css" rel="stylesheet">
+</head>
 
-    <span id="trigger4"></span>
-    <div  id="container4" class="container123">
-      <div id="p104" class="svg-container cloud-bg-img">
-        <div id="cloud-img-layer" class="layer">
-          <div class="text-center" style="flex-direction: row;">
-            <div id="cloud-text" class="text-center">
-              <h1 class="mb-4 section1-text2">RPN GO&reg; Platform</h1>
-              <p class="section1-text3">...;</p>
-            </div>  
+<body>
+  <nav class="site-header sticky-top py-1 navbar">
+    <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%; color: white;">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
+      <img src="logo.png" alt="RPN" width="25" height="25">
+      REPAIR AND PERSERVATION NETWORK
+    </a>
+    <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block nav-item" href="services.html">Services</a>
+      <!-- <a class="py-2 d-none d-md-inline-block nav-item" href="pricing.html">Pricing</a> -->
+      <a class="py-2 d-none d-md-inline-block nav-item" style="color: white;" href="technology.html">Technology</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="resources.html">Resources</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="about.html">About</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="contact.html">Contact</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a>
+      <!-- need employee equality system -->
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
+      <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign
+        up</button>
+    </div>
+  </nav>
+
+  <section id="tech-bg-img" class="jumbotron text-center">
+    <div class="container">
+      <h1 style="color: white;">Our Technology</h1>
+    </div>
+  </section>
+
+  <span id="trigger4"></span>
+  <div id="container4" class="container123">
+    <div id="p104" class="svg-container cloud-bg-img">
+      <div id="cloud-img-layer" class="layer">
+        <div class="text-center" style="flex-direction: row;">
+          <div id="cloud-text" class="text-center">
+            <h1 class="mb-4 section1-text2">RPN GO&reg; Platform</h1>
+            <p class="section1-text3">...;</p>
           </div>
         </div>
-      </div>      
+      </div>
     </div>
+  </div>
 
   <div class="sec-example">
     <div class="sec-ct">
-        <div class="sec-title">
-          Comprehensive & Cloud-Based Management Platform
-        </div>
-        <div class="sec-word">
-          Run Your Entire Business with One Product
-          From marketing and leasing to maintenance and reporting, 
-          you can do everything from our all-in-one solution. ........
-        </div>
-        <div class="sec-btn">
-          <a class="btn btn-outline-secondary" href="tech-rpnweb.html">Read More </a>
-        </div>
-        <!-- <div class="drone-image">
+      <div class="sec-title">
+        Comprehensive & Cloud-Based Management Platform
+      </div>
+      <div class="sec-word">
+        Run Your Entire Business with One Product
+        From marketing and leasing to maintenance and reporting,
+        you can do everything from our all-in-one solution. ........
+      </div>
+      <div class="sec-btn">
+        <a class="btn btn-outline-secondary" href="technology.html">Read More </a>
+      </div>
+      <!-- <div class="drone-image">
             <img src="img/drone6.jpg" style="width: 50vw; height: 60vh;">
         </div> -->
     </div>
   </div>
 
 
-    <span id="trigger0"></span>
-    <div  id="container0" class="container123">
-      <div id="p99" class="svg-container app-bg-img">
-        <div id="app-img-layer" class="layer">
-          <div class="text-center" style="flex-direction: row;">
-            <div id="app-text" class="text-center">
-              <h1 class="mb-4 section1-text2">Mobile Applications</h1>
-              <p class="section1-text3">...;</p>
-            </div>  
+  <span id="trigger0"></span>
+  <div id="container0" class="container123">
+    <div id="p99" class="svg-container app-bg-img">
+      <div id="app-img-layer" class="layer">
+        <div class="text-center" style="flex-direction: row;">
+          <div id="app-text" class="text-center">
+            <h1 class="mb-4 section1-text2">Mobile Applications</h1>
+            <p class="section1-text3">...;</p>
           </div>
         </div>
-      </div>      
-    </div>
-
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-
-      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light site-section1" style="flex-direction: row;">
-        <div class="col-md-10 p-lg-5 mx-auto my-5">
-          <h1 class="display-4 font-weight-normal">RPN GO&reg;</h1>
-          <a class="btn btn-outline-secondary" href="tech-rpngo.html">Read More </a>
-        </div>
-      </div>
-      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light site-section1" style="flex-direction: row;">
-        <div class="col-md-10 p-lg-5 mx-auto my-5">
-          <h1 class="display-4 font-weight-normal">RPN Connection</h1>
-          <a class="btn btn-outline-secondary" >Coming Soon</a>
-          <!-- <a class="btn btn-outline-secondary" href="tech-connection.html">Read More</a> -->
-        </div>
       </div>
     </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light site-section1"
+      style="flex-direction: row;">
+      <div class="col-md-10 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">RPN GO&reg;</h1>
+        <a class="btn btn-outline-secondary" href="tech-rpngo.html">Read More </a>
+      </div>
+    </div>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light site-section1"
+      style="flex-direction: row;">
+      <div class="col-md-10 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">RPN Connection</h1>
+        <a class="btn btn-outline-secondary">Coming Soon</a>
+        <!-- <a class="btn btn-outline-secondary" href="tech-connection.html">Read More</a> -->
+      </div>
+    </div>
+  </div>
 
 
-    <span id="trigger2"></span>
-    <div id="container2" class="container123">
-      <div id="p101" class="svg-container">
-        <div id="pano" style="width: 100%; height: 100%;">
-        </div>
-        <!-- <div id="panorama-img-layer" class="layer">
+  <span id="trigger2"></span>
+  <div id="container2" class="container123">
+    <div id="p101" class="svg-container">
+      <div id="pano" style="width: 100%; height: 100%;">
+      </div>
+      <!-- <div id="panorama-img-layer" class="layer">
         </div> -->
-        <div id="text-360" class="text-center">
-          <h1 class="mb-4 section1-text2">Panorama</h1>
-          <p class="section1-text3">...;</p>
-        </div>  
-      </div>      
-    </div>
-
-    <script src="https://www.marzipano.net/demos/common/es5-shim.js"></script>
-    <script src="https://www.marzipano.net/demos/common/eventShim.js"></script>
-    <script src="https://www.marzipano.net/demos/common/requestAnimationFrame.js" ></script>
-    <script src="js/marzipano.js" ></script>
-
-    <div class="sec-example">
-      <div class="sec-ct">
-          <div class="sec-title">Panorama For Our Clients</div>
-          <div class="video-group">
-          <a href="https://api.go.rpngo.com/preview/public/task/5e8fe81b040ac60c7133bfdb/panorama/5e92b1981c12915631270eb9" target="_blank">
-              <div class="item">
-              <img class="img" src="https://static.insta360.com/assets/storage/20190126/35b1178bcb1d23123923f716aeae0b8c/CrestaModelHome.jpg" alt="">
-              <div class="zhezhao">
-                  <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png" alt="">
-                  <div class="title">Panorama 1</div>
-              </div>
-              </div>
-          </a>
-          
-          <a href="panorama-example2.html" target="_blank">
-              <div class="item">
-              <img class="img" src="https://static.insta360.com/assets/storage/20191220/91cc1117882a720d4150e6e1cf3455ea/Holiday_House_Tour_.png" alt="">
-              <div class="zhezhao">
-                  <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png" alt="">
-                  <div class="title">Panorama 2</div>
-              </div>
-              </div>
-          </a>
-          
-          <a href="panorama-example3.html" target="_blank">
-              <div class="item">
-              <img class="img" src="https://static.insta360.com/assets/storage/20190126/a4df8771ee9db86829d695d9b481c74d/Luxury hotel@2x-jpg.jpg" alt="">
-              <div class="zhezhao">
-                  <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png" alt="">
-                  <div class="title">Panorama 3</div>
-              </div>
-              </div>
-          </a>
-          </div>
+      <div id="text-360" class="text-center">
+        <h1 class="mb-4 section1-text2">Panorama</h1>
+        <p class="section1-text3">...;</p>
       </div>
     </div>
+  </div>
 
-    <span id="trigger3"></span>
-    <div  id="container3" class="container123">
-      <div id="p103" class="svg-container map-bg-img">
-        <div id="map-img-layer" class="layer">
-          <div class="text-center" style="flex-direction: row;">
-            <div id="map-text" class="text-center">
-              <h1 class="mb-4 section1-text2">Interactive Map</h1>
-              <p class="section1-text3">...;</p>
-            </div>  
-          </div>
-        </div>
-      </div>      
-    </div>
+  <script src="https://www.marzipano.net/demos/common/es5-shim.js"></script>
+  <script src="https://www.marzipano.net/demos/common/eventShim.js"></script>
+  <script src="https://www.marzipano.net/demos/common/requestAnimationFrame.js"></script>
+  <script src="js/marzipano.js"></script>
 
-    <div class="sec-example">
-      <div class="sec-ct">
-          <div class="position-relative overflow-hidden p-3 m-md-3 text-center bg-light site-section1">
-            <div class="col-md-8 p-lg-4 mx-auto">
-              <h1 class="display-5 font-weight-normal" style="margin-top: 30px;">Try It in RPN GO&reg;</h1>
-              <div style="font-size: 20px;">We provide national weather alert information on the map to... </div>
-              <!-- <input type="email" class="form-control my-5" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
-              <a class="btn btn-outline-secondary" href="" target="_blank" style="margin-top: 20px;">Get Started</a>
+  <div class="sec-example">
+    <div class="sec-ct">
+      <div class="sec-title">Panorama For Our Clients</div>
+      <div class="video-group">
+        <a href="https://api.go.rpngo.com/preview/public/task/5e8fe81b040ac60c7133bfdb/panorama/5e92b1981c12915631270eb9"
+          target="_blank">
+          <div class="item">
+            <img class="img"
+              src="https://static.insta360.com/assets/storage/20190126/35b1178bcb1d23123923f716aeae0b8c/CrestaModelHome.jpg"
+              alt="">
+            <div class="zhezhao">
+              <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png"
+                alt="">
+              <div class="title">Panorama 1</div>
             </div>
           </div>
+        </a>
+
+        <a href="panorama-example2.html" target="_blank">
+          <div class="item">
+            <img class="img"
+              src="https://static.insta360.com/assets/storage/20191220/91cc1117882a720d4150e6e1cf3455ea/Holiday_House_Tour_.png"
+              alt="">
+            <div class="zhezhao">
+              <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png"
+                alt="">
+              <div class="title">Panorama 2</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="panorama-example3.html" target="_blank">
+          <div class="item">
+            <img class="img"
+              src="https://static.insta360.com/assets/storage/20190126/a4df8771ee9db86829d695d9b481c74d/Luxury hotel@2x-jpg.jpg"
+              alt="">
+            <div class="zhezhao">
+              <img class="player" src="https://static.insta360.com/assets/www/project/official/enterprise/player.png"
+                alt="">
+              <div class="title">Panorama 3</div>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
+  </div>
 
-    <span id="trigger"></span>
-    <div  id="container1" class="container123">
-      <div id="p100" class="svg-container drone-bg-img">
-        <div id="drone-img-layer" class="layer">
-          <div class="text-center" style="flex-direction: row;">
-            <div id="drone-text" class="text-center">
-              <h1 class="mb-4 section1-text2">Drone-based Inspections</h1>
-              <p class="section1-text3">...;</p>
-            </div>  
+  <span id="trigger3"></span>
+  <div id="container3" class="container123">
+    <div id="p103" class="svg-container map-bg-img">
+      <div id="map-img-layer" class="layer">
+        <div class="text-center" style="flex-direction: row;">
+          <div id="map-text" class="text-center">
+            <h1 class="mb-4 section1-text2">Interactive Map</h1>
+            <p class="section1-text3">...;</p>
           </div>
         </div>
-      </div>      
+      </div>
     </div>
+  </div>
 
-    <div class="sec-example">
-      <div class="sec-ct">
-          <div class="sec-title">We use drones to inspect roofs. </div>
-          <!-- <div class="drone-image">
+  <div class="sec-example">
+    <div class="sec-ct">
+      <div class="position-relative overflow-hidden p-3 m-md-3 text-center bg-light site-section1">
+        <div class="col-md-8 p-lg-4 mx-auto">
+          <h1 class="display-5 font-weight-normal" style="margin-top: 30px;">Try It in RPN GO&reg;</h1>
+          <div style="font-size: 20px;">We provide national weather alert information on the map to... </div>
+          <!-- <input type="email" class="form-control my-5" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+          <a class="btn btn-outline-secondary" href="" target="_blank" style="margin-top: 20px;">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <span id="trigger"></span>
+  <div id="container1" class="container123">
+    <div id="p100" class="svg-container drone-bg-img">
+      <div id="drone-img-layer" class="layer">
+        <div class="text-center" style="flex-direction: row;">
+          <div id="drone-text" class="text-center">
+            <h1 class="mb-4 section1-text2">Drone-based Inspections</h1>
+            <p class="section1-text3">...;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-example">
+    <div class="sec-ct">
+      <div class="sec-title">We use drones to inspect roofs. </div>
+      <!-- <div class="drone-image">
               <img src="img/drone6.jpg" style="width: 50vw; height: 60vh;">
           </div> -->
+    </div>
+  </div>
+
+  <div class="container-fluid mx-auto">
+    <div class="row d-flex pb- px-4">
+      <div class="col-md-8">
+        <div class="row d-flex justify-content-between">
+          <div class="d-flex flex-column block-footer text-center">
+            <h5 class="footer-headings">
+              <img src="logo.png" alt="RPN" width="90" height="90">
+            </h5>
+            <p class="list-items">Copyright &copy; 2021 </p>
+            <p class="list-items">REPAIR AND </p>
+            <p class="list-items">PRESERVATION </p>
+            <p class="list-items">NETWORK</p>
+            <p class="list-items"> All rights reserved.</p>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Site Map</h5>
+            <a href="services.html">
+              <p class="list-items">Services</p>
+            </a>
+            <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
+            <a href="technology.html">
+              <p class="list-items">Technology</p>
+            </a>
+            <a href="resources.html">
+              <p class="list-items">Resources</p>
+            </a>
+            <a href="about.html">
+              <p class="list-items">About</p>
+            </a>
+            <a href="contact.html">
+              <p class="list-items">Contact</p>
+            </a>
+            <!-- <a href="technology.html">
+              <p class="list-items">RPN GO&reg;</p>
+            </a> -->
+            <!-- <a href="tech-rpngo.html">
+              <p class="list-items">RPN GO&reg; Mobile App</p>
+            </a> -->
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Coroprate Address</h5>
+            <p class="list-items">10 Old Mamaroneck Road</p>
+            <p class="list-items">Unit 1A</p>
+            <p class="list-items">White Plains, NY, 10605</p>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Regional Address</h5>
+            <p class="list-items">1820 NW 118th Street #220</p>
+            <p class="list-items">Clive, IA, 50325</p>
+            <p class="list-items"></p>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Contact</h5>
+            <p class="list-items">Tel: (866)776-8880</p>
+            <p class="list-items">Fax: (866)968-6156</p>
+            <a href="mailto: info@rpncompany.com">
+              <p class="list-items">Email: info@rpncompany.com</p>
+            </a>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Legal</h5>
+            <p class="list-items">Terms of Use</p>
+            <p class="list-items">Privacy Policy</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="d-flex flex-column pl-md-5 px-4">
+          <h5 class="footer-headings pl-md-2">Download App</h5>
+          <div class="g-play pb-5 border-left">
+            <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img
+                src="google-play-badge.png" width="125" height="52"></a>
+            <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png"
+                width="110" height="35"></a>
+          </div>
+          <div class="d-flex flex-column pl-md-2 border-left pb-3">
+            <h5 class="footer-headings mb-3">Follow Us</h5>
+            <div class="row d-flex pl-2">
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/facebook1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/twitter1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/ins1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/linkedin1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/YouTube.svg" width="25" height="25">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="container-fluid mx-auto">
-      <div class="row d-flex pb- px-4">
-          <div class="col-md-8">
-              <div class="row d-flex justify-content-between">
-                  <div class="d-flex flex-column block-footer text-center">
-                      <h5 class="footer-headings">
-                        <img src="logo.png" alt="RPN" width="90" height="90">
-                      </h5>
-                      <p class="list-items">Copyright &copy; 2021  </p>
-                      <p class="list-items">REPAIR AND  </p>
-                      <p class="list-items">PRESERVATION </p>
-                      <p class="list-items">NETWORK</p>
-                      <p class="list-items"> All rights reserved.</p>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                    <h5 class="footer-headings">Site Map</h5>          
-                    <a href="services.html"><p class="list-items">Services</p></a>
-                    <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
-                    <a href="technologies.html"><p class="list-items">Technology</p></a>
-                    <a href="resources.html"><p class="list-items">Resources</p></a>
-                    <a href="about.html"><p class="list-items">About</p></a>
-                    <a href="contact.html"><p class="list-items">Contact</p></a>
-                    <a href="tech-rpnweb.html"><p class="list-items">RPN GO&reg;</p></a>
-                    <a href="tech-rpngo.html"><p class="list-items">RPN GO&reg; Mobile App</p></a>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                      <h5 class="footer-headings">Coroprate Address</h5>
-                      <p class="list-items">10 Old Mamaroneck Road</p>
-                      <p class="list-items">Unit 1A</p>
-                      <p class="list-items">White Plains, NY, 10605</p>
-                      <p class="list-items"><br/></p>
-                      <h5 class="footer-headings">Regional Address</h5>
-                      <p class="list-items">1820 NW 118th Street #220</p>
-                      <p class="list-items">Clive, IA, 50325</p>
-                      <p class="list-items"></p>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                      <h5 class="footer-headings">Contact</h5>          
-                      <p class="list-items">Tel: (866)776-8880</p>
-                      <p class="list-items">Fax: (866)968-6156</p>
-                      <a href="mailto: info@rpncompany.com"><p class="list-items">Email: info@rpncompany.com</p></a>
-                      <p class="list-items"><br/></p>
-                      <h5 class="footer-headings">Legal</h5>
-                      <p class="list-items">Terms of Use</p>
-                      <p class="list-items">Privacy Policy</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="d-flex flex-column pl-md-5 px-4">
-                  <h5 class="footer-headings pl-md-2">Download App</h5>
-                  <div class="g-play pb-5 border-left">
-                    <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img src="google-play-badge.png" width="125" height="52"></a>
-                    <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png" width="110" height="35"></a>
-                  </div>
-                  <div class="d-flex flex-column pl-md-2 border-left pb-3">
-                      <h5 class="footer-headings mb-3">Follow Us</h5>
-                      <div class="row d-flex pl-2">
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/facebook1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/twitter1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/ins1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/linkedin1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/YouTube.svg" width="25" height="25">
-                            </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+    <div class="row d-flex justify-content-between row-2">
+      <div class="block-item">
+        <div class="fa fa-fire">
+          <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110"
+              height="100"></a>
+        </div>
       </div>
-      <div class="row d-flex justify-content-between row-2">
-        <div class="block-item">
-            <div class="fa fa-fire">
-              <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110" height="100"></a>      
-            </div>
+      <div class="block-item">
+        <div class="fa fa-eye">
+          <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120"
+              height="70"></a>
         </div>
-        <div class="block-item">
-            <div class="fa fa-eye">
-              <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120" height="70"></a>
-            </div>
-        </div>
-        <div class="block-item">
-            <div class="fa fa-fire">
+      </div>
+      <div class="block-item">
+        <div class="fa fa-fire">
 
-            </div>
         </div>
-        <div class="block-item">
-            <div class="fa fa-home">
+      </div>
+      <div class="block-item">
+        <div class="fa fa-home">
 
-            </div>
         </div>
-        <div class="block-item">
-            <div class="fa fa-facebook">
+      </div>
+      <div class="block-item">
+        <div class="fa fa-facebook">
 
-            </div>
         </div>
+      </div>
     </div>
-    </div>
-  
-    <script src="./js/tech.js"></script>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        
-    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-  </body>
+  <script src="./js/tech.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+</body>
+
 </html>

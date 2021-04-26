@@ -1,431 +1,402 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>services</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/utils/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script>
-      // init controller
-      var controller = new ScrollMagic.Controller();
-    </script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>services</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/utils/Draggable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script>
+    // init controller
+    var controller = new ScrollMagic.Controller();
+  </script>
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+  <!-- Bootstrap core CSS -->
+  <link href="./css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-      
-    <!-- Custom styles for this template -->
-    <link href="./css/about.css" rel="stylesheet">
-    <link href="./css/service.css" rel="stylesheet">
-    <link href="product.css" rel="stylesheet">
-    <link href="tech-rpnweb.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="site-header sticky-top py-1 navbar">
-      <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%; color: white;">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
-        <img src="logo.png" alt="RPN" width="25" height="25">
-        REPAIR AND PERSERVATION NETWORK
-      </a>
-      <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block nav-item" href="services.html">Services</a>
-        <!-- <a class="py-2 d-none d-md-inline-block nav-item" href="pricing.html">Pricing</a> -->
-        <a class="py-2 d-none d-md-inline-block nav-item" href="technologies.html">Technology</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="resources.html">Resources</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="about.html">About</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="contact.html">Contact</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a> 
-        <!-- need employee equality system -->
-        <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
-        <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
-      </div>
-    </nav>
+  <!-- Custom styles for this template -->
+  <link href="./css/about.css" rel="stylesheet">
+  <link href="./css/service.css" rel="stylesheet">
+  <link href="product.css" rel="stylesheet">
+  <link href="tech-rpnweb.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="site-header sticky-top py-1 navbar">
+    <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%; color: white;">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
+      <img src="logo.png" alt="RPN" width="25" height="25">
+      REPAIR AND PERSERVATION NETWORK
+    </a>
+    <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block nav-item" href="services.html">Services</a>
+      <!-- <a class="py-2 d-none d-md-inline-block nav-item" href="pricing.html">Pricing</a> -->
+      <a class="py-2 d-none d-md-inline-block nav-item" href="technology.html">Technology</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="resources.html">Resources</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="about.html">About</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="contact.html">Contact</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a>
+      <!-- need employee equality system -->
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
+      <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign
+        up</button>
+    </div>
+  </nav>
 
 
-    <div id="container">
-      <div class="content">
-        <div class="box-1">
-          <div class="web-animation">
-            <div class="web-display web-pos1 web-dis-color1">
-              <div class="web-content">
+  <div id="container">
+    <div class="content">
+      <div class="box-1">
+        <div class="web-animation">
+          <div class="web-display web-pos1 web-dis-color1">
+            <div class="web-content">
 
-                <div class="ecosystem-infographic__tradegecko ecosystem-infographic__transform ecosystem-infographic__transform--half">
-                  <!-- <p class="ecosystem-infographic__tradegecko-text ecosystem-infographic__transform-fade">TradeGecko Desktop</p> -->
-                  
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295 346">
-                    <use xlink:href="#ecosystem__tradegecko" />
-                  </svg>
-                </div>
-                <div class="ecosystem-infographic__mobile ecosystem-infographic__transform">
-                
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147 97">
-                    <use xlink:href="#ecosystem__mobile" />
-                  </svg>
-                </div>
-            
-                <div class="ecosystem-infographic__payment ecosystem-infographic__transform ecosystem-infographic__transform--iso">
-                  <!-- <p class="ecosystem-infographic__payment-text ecosystem-infographic__transform-fade">TradeGecko<br>Payments</p> -->
-                
-                  <svg class="ecosystem-infographic__payment-screen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 130">
-                    <use xlink:href="#ecosystem__payment-screen" />
-                  </svg>
-            
-                  <svg class="ecosystem-infographic__payment-card" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 53">
-                    <use xlink:href="#ecosystem__payment-card" />
-                  </svg>
-                  <svg class="ecosystem-infographic__accounting-screen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 130">
-                    <use xlink:href="#ecosystem__accounting" />
-                  </svg>
-  
-                </div>
-      
-                <div class="ecosystem-infographic__arrows">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 608">
-                    <use xlink:href="#ecosystem__arrows" />
-                  </svg>
-                </div>
+              <div
+                class="ecosystem-infographic__tradegecko ecosystem-infographic__transform ecosystem-infographic__transform--half">
+                <!-- <p class="ecosystem-infographic__tradegecko-text ecosystem-infographic__transform-fade">TradeGecko Desktop</p> -->
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295 346">
+                  <use xlink:href="#ecosystem__tradegecko" />
+                </svg>
+              </div>
+              <div class="ecosystem-infographic__mobile ecosystem-infographic__transform">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147 97">
+                  <use xlink:href="#ecosystem__mobile" />
+                </svg>
+              </div>
+
+              <div
+                class="ecosystem-infographic__payment ecosystem-infographic__transform ecosystem-infographic__transform--iso">
+                <!-- <p class="ecosystem-infographic__payment-text ecosystem-infographic__transform-fade">TradeGecko<br>Payments</p> -->
+
+                <svg class="ecosystem-infographic__payment-screen" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 175 130">
+                  <use xlink:href="#ecosystem__payment-screen" />
+                </svg>
+
+                <svg class="ecosystem-infographic__payment-card" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 53">
+                  <use xlink:href="#ecosystem__payment-card" />
+                </svg>
+                <svg class="ecosystem-infographic__accounting-screen" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 175 130">
+                  <use xlink:href="#ecosystem__accounting" />
+                </svg>
+
+              </div>
+
+              <div class="ecosystem-infographic__arrows">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 608">
+                  <use xlink:href="#ecosystem__arrows" />
+                </svg>
               </div>
             </div>
           </div>
         </div>
-        <div id="box2" class="box-2">
-          <div class="phone-animation">
-            <div class="phone-display phone-pos1 phone-dis-color1">
-              <div class="display-content">
-                <div class="notifications-bar">
-                  <div class="time">9:41</div>
-                  <div class="range"></div>
-                  <div class="wifi"></div>
-                  <div class="battery"></div>
-                </div>
-                <div class="nav">
-                  <div class="messages"></div>
-                  <div class="phone-number">RPN Tech</div>
-                  <div class="menu"></div>
-                </div>
-                <div id="text1" class="plan-box1">
-                  <div class="plan-text">Help! Login doesn't work for me!</div>
-                </div>
-                <div id="text2" class="plan-box">
-                  <div class="plan-text"> Hi there, we are sorry about that. There was an unscheduled problem that affected login temporally. We are currently working on it.</div>
-                </div>
-                <div id="text3" class="plan-box2">
-                  <div class="plan-text"> Got it! Thanks.</div>
-                </div>
-                <div class="bottom-icons">
-                  <div class="chart"><div></div></div>
-                  <div class="eye"><div></div></div>
-                  <div class="equalizer"><div></div><div></div><div></div></div>
-                </div>
-                <div class="home-button"></div>
+      </div>
+      <div id="box2" class="box-2">
+        <div class="phone-animation">
+          <div class="phone-display phone-pos1 phone-dis-color1">
+            <div class="display-content">
+              <div class="notifications-bar">
+                <div class="time">9:41</div>
+                <div class="range"></div>
+                <div class="wifi"></div>
+                <div class="battery"></div>
               </div>
-            </div>
-            <div class="phone-reflections phone-refl-pos1">
-              <div class="reflection-1"></div>
-            </div>
-          </div>      
-          <div class="phone-animation">
-            <div class="phone-display phone-pos2 phone-dis-color2">
-              <div class="display-content2">
-                <div class="search-title">
-                  <div class="text">Welcome to the Help Center</div>
-                </div>
-                <div id="search-bar" class="search-box">
-                  <div class="text-holder">
-                    <div>
-                      <div>Find help and services</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="help-list">
-                  <div class="plan-limit">
-                    <div class="limit-text">
-                      <div><strong>Get IT help</strong></div>
-                      <div class="limit-subtext">Get assiance for general IT problems and questions</div>
-                    </div>
-                  </div>
-                  <div class="plan-limit">
-                    <div class="limit-text">
-                      <div><strong>Request a new account</strong></div>
-                      <div class="limit-subtext">Request a new account for a system</div>
-                    </div>
-                  </div>
-                  <div class="plan-limit">
-                    <div class="limit-text">
-                      <div><strong>Report a system problem</strong></div>
-                      <div class="limit-subtext">Having trouble with system?</div>
-                    </div>
-                  </div>
-                  <div class="plan-limit">
-                    <div class="limit-text">
-                      <div><strong>Fix an account problem</strong></div>
-                      <div class="limit-subtext">Having trouble accessing certain websites or systems?</div>
-                    </div>
-                  </div>
-                  <div class="plan-limit">
-                    <div class="limit-text">
-                      <div><strong>Onboard new employees</strong></div>
-                      <div class="limit-subtext">Request a new access for new employee</div>
-                    </div>
-                  </div>
-                </div>      
+              <div class="nav">
+                <div class="messages"></div>
+                <div class="phone-number">RPN Tech</div>
+                <div class="menu"></div>
               </div>
+              <div id="text1" class="plan-box1">
+                <div class="plan-text">Help! Login doesn't work for me!</div>
+              </div>
+              <div id="text2" class="plan-box">
+                <div class="plan-text"> Hi there, we are sorry about that. There was an unscheduled problem that
+                  affected login temporally. We are currently working on it.</div>
+              </div>
+              <div id="text3" class="plan-box2">
+                <div class="plan-text"> Got it! Thanks.</div>
+              </div>
+              <div class="bottom-icons">
+                <div class="chart">
+                  <div></div>
+                </div>
+                <div class="eye">
+                  <div></div>
+                </div>
+                <div class="equalizer">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="home-button"></div>
             </div>
-            <div class="phone-reflections phone-refl-pos2">
-              <div class="reflection-1"></div>
-            </div>
-          </div>      
+          </div>
+          <div class="phone-reflections phone-refl-pos1">
+            <div class="reflection-1"></div>
+          </div>
         </div>
-        <div class="box-3"></div>
-        <div class="box-4">
-          <div class="web-animation">
-            <div class="web-display web-pos1 web-dis-color1">
-              <div class="web-content">
-                <div class="notifications-bar">
-                  <div class="btn"></div>
-                  <div class="btn2"></div>
-                  <div class="btn3"></div>
+        <div class="phone-animation">
+          <div class="phone-display phone-pos2 phone-dis-color2">
+            <div class="display-content2">
+              <div class="search-title">
+                <div class="text">Welcome to the Help Center</div>
+              </div>
+              <div id="search-bar" class="search-box">
+                <div class="text-holder">
+                  <div>
+                    <div>Find help and services</div>
+                  </div>
                 </div>
-                <div class="nav nav-pos2">
-                  <div class="phone-number"> <strong>RPN Vendor</strong></div>
-                  <div class="menu"></div>
+              </div>
+              <div class="help-list">
+                <div class="plan-limit">
+                  <div class="limit-text">
+                    <div><strong>Get IT help</strong></div>
+                    <div class="limit-subtext">Get assiance for general IT problems and questions</div>
+                  </div>
                 </div>
-                <!-- <div class="divider"></div>
+                <div class="plan-limit">
+                  <div class="limit-text">
+                    <div><strong>Request a new account</strong></div>
+                    <div class="limit-subtext">Request a new account for a system</div>
+                  </div>
+                </div>
+                <div class="plan-limit">
+                  <div class="limit-text">
+                    <div><strong>Report a system problem</strong></div>
+                    <div class="limit-subtext">Having trouble with system?</div>
+                  </div>
+                </div>
+                <div class="plan-limit">
+                  <div class="limit-text">
+                    <div><strong>Fix an account problem</strong></div>
+                    <div class="limit-subtext">Having trouble accessing certain websites or systems?</div>
+                  </div>
+                </div>
+                <div class="plan-limit">
+                  <div class="limit-text">
+                    <div><strong>Onboard new employees</strong></div>
+                    <div class="limit-subtext">Request a new access for new employee</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-reflections phone-refl-pos2">
+            <div class="reflection-1"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box-3"></div>
+      <div class="box-4">
+        <div class="web-animation">
+          <div class="web-display web-pos1 web-dis-color1">
+            <div class="web-content">
+              <div class="notifications-bar">
+                <div class="btn"></div>
+                <div class="btn2"></div>
+                <div class="btn3"></div>
+              </div>
+              <div class="nav nav-pos2">
+                <div class="phone-number"> <strong>RPN Vendor</strong></div>
+                <div class="menu"></div>
+              </div>
+              <!-- <div class="divider"></div>
                 <div class="divider-vertical"></div> -->
 
-                <div class="vendor-company-title">
-                  Vendor Company
-                </div>
-                <div class="check"><svg viewBox="64 64 896 896" focusable="false" data-icon="check-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z"></path></svg></div>
-                <div class="vendor-info">
-                  <div>
-                    <span style="font-size: 15px;">Background Check:</span><br/>
-                    <div style="display: flex; flex-direction: row; justify-content:space-between;">
-                      <span style="font-size: 13px;">Aspen Grove</span>
-                      <span style="font-size: 13px;">ABC# 123456</span>
-                      <span style="font-size: 13px;">IC01</span>
-                      <div class="small-check"><svg viewBox="64 64 896 896" focusable="false" data-icon="check-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z"></path></svg></div>
-                    </div>
-                  </div>
-                  <div style="margin-top: 2%;">
-                    <span style="font-size: 15px;">Licenses:</span><br/>
-                    <div style="display: flex; flex-direction: row; justify-content:space-between;">
-                      <span style="font-size: 13px;">Business License</span>
-                      <span style="font-size: 13px;">#12345678</span>
-                      <span style="font-size: 13px;">Iowa</span>
-                      <div class="small-check"><svg viewBox="64 64 896 896" focusable="false" data-icon="check-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z"></path></svg></div>
-                    </div>
-                    <div style="display: flex; flex-direction: row; justify-content:space-between;">
-                      <span style="font-size: 13px;">Insurance</span>
-                      <span style="font-size: 13px;">#2345678</span>
-                      <span style="font-size: 13px;">Iowa</span>
-                      <div class="small-check"><svg viewBox="64 64 896 896" focusable="false" data-icon="check-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z"></path></svg></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="wallet-title">
-                  Wallet
-                </div>
-                <div class="wallet-box">
-                  <div class="wallet-title2">
-                    Available Balance
-                  </div>  
-                  <div class="wallet-amount">
-                    $5209.10
-                  </div>  
-                  <div class="wallet-withdraw">
-                    Withdraw
-                  </div>  
-                </div>
-
-                <div class="wallet-info">
-                  <div style="margin-top: 0;">
-                    <span style="font-size: 15px;">Wallet Histories:</span><br/>
-                    <div style="display: flex; flex-direction: row; justify-content:space-between;">
-                      <span style="font-size: 13px;">Payment</span>
-                      <span style="font-size: 13px; color: green; font-weight: bold;">+$200.32</span>
-                      <span style="font-size: 13px;">12/14/2020, 4:31:40 PM</span>
-                    </div>
-                    <div style="display: flex; flex-direction: row; justify-content:space-between;">
-                      <span style="font-size: 13px;">Payment</span>
-                      <span style="font-size: 13px; color: green; font-weight: bold;">+$631.94</span>
-                      <span style="font-size: 13px;">12/14/2020, 1:13:08 PM</span>
-                    </div>
-                    <div style="display: flex; flex-direction: row; justify-content:space-between;">
-                      <span style="font-size: 13px;">Withdraw</span>
-                      <span style="font-size: 13px; color: red; font-weight: bold;">-$1309.00</span>
-                      <span style="font-size: 13px;">12/11/2020, 9:12:52 AM</span>
-                    </div>
-                    <div style="display: flex; flex-direction: row; justify-content:space-between;">
-                      <span style="font-size: 13px;">Payment</span>
-                      <span style="font-size: 13px; color: green; font-weight: bold;">+$59.81</span>
-                      <span style="font-size: 13px;">12/10/2020, 11:22:17 AM</span>
-                    </div>
-                    <div style="display: flex; flex-direction: row; justify-content:space-between;">
-                      <span style="font-size: 13px;">Payment</span>
-                      <span style="font-size: 13px; color: green; font-weight: bold;">+$2091.23</span>
-                      <span style="font-size: 13px;">12/09/2020, 4:31:18 PM</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="coverage-title">
-                  Coverage
-                </div>
-
-                <div class="coverage-img">
-                </div>
-
-                <div class="accounts-title">
-                  Accounts
-                </div>
-                <div class="accounts-title2">
-                  Account Management
-                  <div class="wallet-withdraw">
-                    Create Account
-                  </div>  
-                </div>
-                <div class="accounts-title3">
-                  <div class="accounts-active">
-                    Active
-                  </div>
-                  <div>
-                    Inactive
-                  </div>
-                </div>
-                <div class="accounts-title4">
-                  <div>
-                    Username
-                  </div>
-                  <div>
-                    Display Name
-                  </div>
-                  <div>
-                    Groups
-                  </div>
-                  <div>
-                    Actions
-                  </div>
-                </div>
-
-                <div class="vendor-box1"></div>
-                <div class="vendor-box2"></div>
+              <div class="vendor-company-title">
+                Vendor Company
               </div>
+              <div class="check"><svg viewBox="64 64 896 896" focusable="false" data-icon="check-circle" width="1em"
+                  height="1em" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z">
+                  </path>
+                </svg></div>
+              <div class="vendor-info">
+                <div>
+                  <span style="font-size: 15px;">Background Check:</span><br />
+                  <div style="display: flex; flex-direction: row; justify-content:space-between;">
+                    <span style="font-size: 13px;">Aspen Grove</span>
+                    <span style="font-size: 13px;">ABC# 123456</span>
+                    <span style="font-size: 13px;">IC01</span>
+                    <div class="small-check"><svg viewBox="64 64 896 896" focusable="false" data-icon="check-circle"
+                        width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                        <path
+                          d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z">
+                        </path>
+                      </svg></div>
+                  </div>
+                </div>
+                <div style="margin-top: 2%;">
+                  <span style="font-size: 15px;">Licenses:</span><br />
+                  <div style="display: flex; flex-direction: row; justify-content:space-between;">
+                    <span style="font-size: 13px;">Business License</span>
+                    <span style="font-size: 13px;">#12345678</span>
+                    <span style="font-size: 13px;">Iowa</span>
+                    <div class="small-check"><svg viewBox="64 64 896 896" focusable="false" data-icon="check-circle"
+                        width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                        <path
+                          d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z">
+                        </path>
+                      </svg></div>
+                  </div>
+                  <div style="display: flex; flex-direction: row; justify-content:space-between;">
+                    <span style="font-size: 13px;">Insurance</span>
+                    <span style="font-size: 13px;">#2345678</span>
+                    <span style="font-size: 13px;">Iowa</span>
+                    <div class="small-check"><svg viewBox="64 64 896 896" focusable="false" data-icon="check-circle"
+                        width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                        <path
+                          d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z">
+                        </path>
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wallet-title">
+                Wallet
+              </div>
+              <div class="wallet-box">
+                <div class="wallet-title2">
+                  Available Balance
+                </div>
+                <div class="wallet-amount">
+                  $5209.10
+                </div>
+                <div class="wallet-withdraw">
+                  Withdraw
+                </div>
+              </div>
+
+              <div class="wallet-info">
+                <div style="margin-top: 0;">
+                  <span style="font-size: 15px;">Wallet Histories:</span><br />
+                  <div style="display: flex; flex-direction: row; justify-content:space-between;">
+                    <span style="font-size: 13px;">Payment</span>
+                    <span style="font-size: 13px; color: green; font-weight: bold;">+$200.32</span>
+                    <span style="font-size: 13px;">12/14/2020, 4:31:40 PM</span>
+                  </div>
+                  <div style="display: flex; flex-direction: row; justify-content:space-between;">
+                    <span style="font-size: 13px;">Payment</span>
+                    <span style="font-size: 13px; color: green; font-weight: bold;">+$631.94</span>
+                    <span style="font-size: 13px;">12/14/2020, 1:13:08 PM</span>
+                  </div>
+                  <div style="display: flex; flex-direction: row; justify-content:space-between;">
+                    <span style="font-size: 13px;">Withdraw</span>
+                    <span style="font-size: 13px; color: red; font-weight: bold;">-$1309.00</span>
+                    <span style="font-size: 13px;">12/11/2020, 9:12:52 AM</span>
+                  </div>
+                  <div style="display: flex; flex-direction: row; justify-content:space-between;">
+                    <span style="font-size: 13px;">Payment</span>
+                    <span style="font-size: 13px; color: green; font-weight: bold;">+$59.81</span>
+                    <span style="font-size: 13px;">12/10/2020, 11:22:17 AM</span>
+                  </div>
+                  <div style="display: flex; flex-direction: row; justify-content:space-between;">
+                    <span style="font-size: 13px;">Payment</span>
+                    <span style="font-size: 13px; color: green; font-weight: bold;">+$2091.23</span>
+                    <span style="font-size: 13px;">12/09/2020, 4:31:18 PM</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="coverage-title">
+                Coverage
+              </div>
+
+              <div class="coverage-img">
+              </div>
+
+              <div class="accounts-title">
+                Accounts
+              </div>
+              <div class="accounts-title2">
+                Account Management
+                <div class="wallet-withdraw">
+                  Create Account
+                </div>
+              </div>
+              <div class="accounts-title3">
+                <div class="accounts-active">
+                  Active
+                </div>
+                <div>
+                  Inactive
+                </div>
+              </div>
+              <div class="accounts-title4">
+                <div>
+                  Username
+                </div>
+                <div>
+                  Display Name
+                </div>
+                <div>
+                  Groups
+                </div>
+                <div>
+                  Actions
+                </div>
+              </div>
+
+              <div class="vendor-box1"></div>
+              <div class="vendor-box2"></div>
             </div>
-          </div> 
+          </div>
         </div>
-        <div class="box-5">
-          <div class="web-animation">
-            <div class="web-display web-pos1 web-dis-color1">
-              <div class="web-content">
-                <div class="notifications-bar">
-                  <div class="btn"></div>
-                  <div class="btn2"></div>
-                  <div class="btn3"></div>
-                </div>
-                <div class="nav nav-pos2">
-                  <div class="phone-number"> <strong>Reports</strong></div>
-                  <div class="menu"></div>
-                </div>
-                <div class="web-title">
-                  <div class="title">Real-Time Reports</div>
-                </div>
-                <div id="report1" class="report-box report-pos1">
-                  <div class="plan-options">
-                    <div>
-                      <div>Pending Payment</div>
-                    </div>
-                  </div>
-                  <div class="plan-text">
-                    Generate a report that contains all tasks that at Billing, Record Keeping or Payment stage.
-                  </div>
-                  <a class="generate" href="">Generate</a>
-                </div>
-                <div id="report2" class="report-box report-pos2">
-                  <div class="plan-options">
-                    <div>
-                      <div>Advanced Pending Payment</div>
-                    </div>
-                  </div>
-                  <div class="plan-text">
-                    This Report also includes Vendor Total and Work Order Amount.
-                  </div>
-                  <a class="generate" href="">Generate</a>
-                </div>
-
-                <div class="web-title web-title-pos2">
-                  <div class="title">Daily Reports</div>
-                </div>
-                <div class="report-box2">
-                  <div class="plan-text">
-                    <strong>Showing 10 latest</strong>
-                  </div>
-                  <div class="plan-text">
-                    &cir;&nbsp; Download 6/14/2020, 8:15:21PM
-                  </div>
-                  <div class="plan-text">
-                    &cir;&nbsp; Download 6/13/2020, 8:15:24PM
-                  </div>
-                  <div class="plan-text">
-                    &cir;&nbsp;  Download 6/12/2020, 8:15:28PM
-                  </div>
-                  <div class="plan-text">
-                    &cir;&nbsp;  Download 6/11/2020, 8:15:22PM
-                  </div>
-                  <div class="plan-text">
-                    &cir;&nbsp;  Download 6/10/2020, 8:15:26PM
-                  </div>
-                  <div class="plan-text">
-                    &cir;&nbsp;  Download 6/09/2020, 8:15:21PM
-                  </div>
-                  <div class="plan-text">
-                    &cir;&nbsp;  Download 6/08/2020, 8:15:23PM
-                  </div>
-                  <div class="plan-text">
-                    &cir;&nbsp;  Download 6/07/2020, 8:15:26PM
-                  </div>
-                  <div class="plan-text">
-                    &cir;&nbsp;  Download 6/06/2020, 8:15:23PM
-                  </div>
-                  <div class="plan-text">
-                    &cir;&nbsp;  Download 6/05/2020, 8:15:26PM
-                  </div>
-                </div>
-                <div class="report-box3">
-                  <pie class="fifty"></pie>
-                </div>
+      </div>
+      <div class="box-5">
+        <div class="web-animation">
+          <div class="web-display web-pos1 web-dis-color1">
+            <div class="web-content">
+              <div class="notifications-bar">
+                <div class="btn"></div>
+                <div class="btn2"></div>
+                <div class="btn3"></div>
               </div>
-              <div id="report3" class="report-box report-pos3">
+              <div class="nav nav-pos2">
+                <div class="phone-number"> <strong>Reports</strong></div>
+                <div class="menu"></div>
+              </div>
+              <div class="web-title">
+                <div class="title">Real-Time Reports</div>
+              </div>
+              <div id="report1" class="report-box report-pos1">
                 <div class="plan-options">
                   <div>
-                    <div>Unassigned</div>
+                    <div>Pending Payment</div>
                   </div>
                 </div>
                 <div class="plan-text">
@@ -433,244 +404,319 @@
                 </div>
                 <a class="generate" href="">Generate</a>
               </div>
-            </div>
-            <div class="phone-reflections phone-refl-pos1">
-              <div class="reflection-1"></div>
-            </div>
-          </div> 
-        </div> 
-        <div class="box-6">
-          <div class="web-animation">
-            <div class="web-display web-pos1 web-dis-color2">
-              <div class="web-content">
-                <div class="notifications-bar">
-                  <div class="btn"></div>
-                  <div class="btn2"></div>
-                  <div class="btn3"></div>
+              <div id="report2" class="report-box report-pos2">
+                <div class="plan-options">
+                  <div>
+                    <div>Advanced Pending Payment</div>
+                  </div>
                 </div>
-                <img class="us-map" src="img/usmap.svg" alt="">
-                <div class="circlePulse position1"></div>
-                <div class="bounceDrop position1"></div>
-                <div class="circlePulse-red position2"></div>
-                <div class="bounceDrop-red position2"></div>
-                <div class="circlePulse position3"></div>
-                <div class="bounceDrop position3"></div>
-                <div class="circlePulse-red position4"></div>
-                <div class="bounceDrop-red position4"></div>
-                <div class="circlePulse-green position5"></div>
-                <div class="bounceDrop-green position5"></div>
-                <div class="circlePulse-green position6"></div>
-                <div class="bounceDrop-green position6"></div>
+                <div class="plan-text">
+                  This Report also includes Vendor Total and Work Order Amount.
+                </div>
+                <a class="generate" href="">Generate</a>
+              </div>
+
+              <div class="web-title web-title-pos2">
+                <div class="title">Daily Reports</div>
+              </div>
+              <div class="report-box2">
+                <div class="plan-text">
+                  <strong>Showing 10 latest</strong>
+                </div>
+                <div class="plan-text">
+                  &cir;&nbsp; Download 6/14/2020, 8:15:21PM
+                </div>
+                <div class="plan-text">
+                  &cir;&nbsp; Download 6/13/2020, 8:15:24PM
+                </div>
+                <div class="plan-text">
+                  &cir;&nbsp; Download 6/12/2020, 8:15:28PM
+                </div>
+                <div class="plan-text">
+                  &cir;&nbsp; Download 6/11/2020, 8:15:22PM
+                </div>
+                <div class="plan-text">
+                  &cir;&nbsp; Download 6/10/2020, 8:15:26PM
+                </div>
+                <div class="plan-text">
+                  &cir;&nbsp; Download 6/09/2020, 8:15:21PM
+                </div>
+                <div class="plan-text">
+                  &cir;&nbsp; Download 6/08/2020, 8:15:23PM
+                </div>
+                <div class="plan-text">
+                  &cir;&nbsp; Download 6/07/2020, 8:15:26PM
+                </div>
+                <div class="plan-text">
+                  &cir;&nbsp; Download 6/06/2020, 8:15:23PM
+                </div>
+                <div class="plan-text">
+                  &cir;&nbsp; Download 6/05/2020, 8:15:26PM
+                </div>
+              </div>
+              <div class="report-box3">
+                <pie class="fifty"></pie>
               </div>
             </div>
-            <div class="phone-reflections phone-refl-pos1">
-              <div class="reflection-1"></div>
-            </div>
-          </div> 
-        </div> 
-      </div>
-      <!-- macbook -->
-      <div id="laptop" class="laptop">
-        <div class="css-mb with-glare size1">
-          <div class="mb-display-position">
-            <div class="mb-display">
-              <div class="mb-screen-position">
-                <div class="mb-screen">
-                
-                  <!-- Image (aspect 16:10 recommended, but not required). You might also want to change or remove the background color, in case the picture is not big enough, or rendering is off  -->
-                  <img src="img/rpngo/web1.png" alt="example image" />              
+            <div id="report3" class="report-box report-pos3">
+              <div class="plan-options">
+                <div>
+                  <div>Unassigned</div>
                 </div>
               </div>
+              <div class="plan-text">
+                Generate a report that contains all tasks that at Billing, Record Keeping or Payment stage.
+              </div>
+              <a class="generate" href="">Generate</a>
             </div>
           </div>
-          <div class="mb-body"></div>
-          <div class="mb-bottom-cover"></div>
-        </div>  
-      </div>
-      <div class="phone">
-        <figure id="iphone" class='iphone'></figure>
-      </div>
-      <div class="pad">
-        <figure id="ipad" class='ipad'></figure>
-      </div>
-      <div class="footer-text">
-        <div class="ft-text text-center">
-          <div id="go-to-web">
-            <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
-          </div>
-          <div id="go-to-app">
-            <a href="./tech-rpngo.html" class="btn btn-outline-info" target="_blank">Learn More About Mobile App</a>
+          <div class="phone-reflections phone-refl-pos1">
+            <div class="reflection-1"></div>
           </div>
         </div>
       </div>
-      <div id="t1" class="title1">
-        <div class="left-side">
-          <div class="head mx-auto">
-            <h1>Comprehensive Maintenance</h1>
-          </div>
-          <div class="cont mx-lg-5 text-center">
-            <div>
-              You can require all maintenance services online. And our RPN GO make Maintenance Management easy, from a single work order to multiple work orders with multiple vendors, all together in one Service Request. You have the flexibility to handle any size project.
-              (from https://www.appfolio.com/features/maintenance).
-            </div>
-            <div class="inner-btn mx-auto">
-              <div class="row">
-                <div class="col">
-                  <a href="./rpnweb/rpnweb-1.html" class="btn btn-outline-info" target="_blank">Learn More</a>
-                </div>
-                <div class="col">
-                  <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
-                </div>
+      <div class="box-6">
+        <div class="web-animation">
+          <div class="web-display web-pos1 web-dis-color2">
+            <div class="web-content">
+              <div class="notifications-bar">
+                <div class="btn"></div>
+                <div class="btn2"></div>
+                <div class="btn3"></div>
               </div>
+              <img class="us-map" src="img/usmap.svg" alt="">
+              <div class="circlePulse position1"></div>
+              <div class="bounceDrop position1"></div>
+              <div class="circlePulse-red position2"></div>
+              <div class="bounceDrop-red position2"></div>
+              <div class="circlePulse position3"></div>
+              <div class="bounceDrop position3"></div>
+              <div class="circlePulse-red position4"></div>
+              <div class="bounceDrop-red position4"></div>
+              <div class="circlePulse-green position5"></div>
+              <div class="bounceDrop-green position5"></div>
+              <div class="circlePulse-green position6"></div>
+              <div class="bounceDrop-green position6"></div>
             </div>
+          </div>
+          <div class="phone-reflections phone-refl-pos1">
+            <div class="reflection-1"></div>
           </div>
         </div>
       </div>
-      <div id="t2" class="title1">
-        <div class="left-side">
-          <div class="head mx-auto">
-            <h1>Customer Support</h1>
-          </div>
-          <div class="cont text-center mx-lg-5">
-            <div>
-              When you become an RPN customer, you get all of the training and onboarding help you need to get started, as well as easy access to online resources to guarantee a great support experience. (from https://www.appfolio.com/features/support)
-            </div>
-            <div class="inner-btn mx-auto">
-              <div class="row">
-                <div class="col">
-                  <a href="./rpnweb/rpnweb-2.html" class="btn btn-outline-info" target="_blank">Learn More</a>
-                </div>
-                <div class="col">
-                  <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="t3" class="title1">
-        <div class="left-side">
-          <div class="head mx-auto">
-            <h1 >Roles & Markets</h1>
-          </div>
-          <div class="cont text-center  mx-lg-3">
-            <div>
-              Easy CommunicationEasy CommunicationEasy CommunicationEasy Communication
-            </div>
-            <div class="inner-btn mx-auto">
-              <div class="row">
-                <div class="col">
-                  <a href="./rpnweb/rpnweb-3.html" class="btn btn-outline-info" target="_blank">Learn More</a>
-                </div>
-                <div class="col">
-                  <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
-                </div>
+    </div>
+    <!-- macbook -->
+    <div id="laptop" class="laptop">
+      <div class="css-mb with-glare size1">
+        <div class="mb-display-position">
+          <div class="mb-display">
+            <div class="mb-screen-position">
+              <div class="mb-screen">
+
+                <!-- Image (aspect 16:10 recommended, but not required). You might also want to change or remove the background color, in case the picture is not big enough, or rendering is off  -->
+                <img src="img/rpngo/web1.png" alt="example image" />
               </div>
             </div>
           </div>
         </div>
+        <div class="mb-body"></div>
+        <div class="mb-bottom-cover"></div>
       </div>
-      <div id="t4" class="title1">
-        <div class="left-side">
-          <div class="head mx-auto">
-            <h1 >Vendor Management</h1>
-          </div>
-          <div class="cont text-center  mx-lg-3">
-            <div>
-              Vendors can communicate with us easily through RPN Vendor. Also, all the payments can be finish online via eCheck quickly. 
-            </div>
-            <div class="inner-btn mx-auto">
-              <div class="row">
-                <div class="col">
-                  <a href="./rpnweb/rpnweb-4.html" class="btn btn-outline-info" target="_blank">Learn More</a>
-                </div>
-                <div class="col">
-                  <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    </div>
+    <div class="phone">
+      <figure id="iphone" class='iphone'></figure>
+    </div>
+    <div class="pad">
+      <figure id="ipad" class='ipad'></figure>
+    </div>
+    <div class="footer-text">
+      <div class="ft-text text-center">
+        <div id="go-to-web">
+          <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
+        </div>
+        <div id="go-to-app">
+          <a href="./tech-rpngo.html" class="btn btn-outline-info" target="_blank">Learn More About Mobile App</a>
         </div>
       </div>
-      <div id="t5" class="title1">
-        <div class="left-side">
-          <div class="head mx-auto">
-            <h1>Comprehensive Reporting</h1>
-          </div>
-          <div class="cont text-center  mx-lg-3">
-            <div>
-              Real-Time, Customizable Reporting for How You Do Business. from(https://www.appfolio.com/features/accounting-and-reporting)
-            </div>
-            <div class="inner-btn mx-auto">
-              <div class="row">
-                <div class="col">
-                  <a href="./rpnweb/rpnweb-5.html" class="btn btn-outline-info" target="_blank">Learn More</a>
-                </div>
-                <div class="col">
-                  <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    </div>
+    <div id="t1" class="title1">
+      <div class="left-side">
+        <div class="head mx-auto">
+          <h1>Comprehensive Maintenance</h1>
         </div>
-      </div>
-      <div id="t6" class="title1">
-        <div class="left-side">
-          <div class="head mx-auto">
-            <h1>Predictive Intelligence</h1>
+        <div class="cont mx-lg-5 text-center">
+          <div>
+            You can require all maintenance services online. And our RPN GO make Maintenance Management easy, from a
+            single work order to multiple work orders with multiple vendors, all together in one Service Request. You
+            have the flexibility to handle any size project.
+            (from https://www.appfolio.com/features/maintenance).
           </div>
-          <div class="cont text-center  mx-lg-3">
-            <div>
-              Eliminate time compiling data, and gain valuable daily insights into performance across your portfolio with precision multifamily intelligence.
-            </div>
-            <div class="inner-btn mx-auto">
-              <div class="row">
-                <div class="col">
-                  <a href="./rpnweb/rpnweb-6.html" class="btn btn-outline-info" target="_blank">Learn More</a>
-                </div>
-                <div class="col">
-                  <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
-                </div>
+          <div class="inner-btn mx-auto">
+            <div class="row">
+              <div class="col">
+                <a href="./rpnweb/rpnweb-1.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+              </div>
+              <div class="col">
+                <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div id="t2" class="title1">
+      <div class="left-side">
+        <div class="head mx-auto">
+          <h1>Customer Support</h1>
+        </div>
+        <div class="cont text-center mx-lg-5">
+          <div>
+            When you become an RPN customer, you get all of the training and onboarding help you need to get started, as
+            well as easy access to online resources to guarantee a great support experience. (from
+            https://www.appfolio.com/features/support)
+          </div>
+          <div class="inner-btn mx-auto">
+            <div class="row">
+              <div class="col">
+                <a href="./rpnweb/rpnweb-2.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+              </div>
+              <div class="col">
+                <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="t3" class="title1">
+      <div class="left-side">
+        <div class="head mx-auto">
+          <h1>Roles & Markets</h1>
+        </div>
+        <div class="cont text-center  mx-lg-3">
+          <div>
+            Easy CommunicationEasy CommunicationEasy CommunicationEasy Communication
+          </div>
+          <div class="inner-btn mx-auto">
+            <div class="row">
+              <div class="col">
+                <a href="./rpnweb/rpnweb-3.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+              </div>
+              <div class="col">
+                <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="t4" class="title1">
+      <div class="left-side">
+        <div class="head mx-auto">
+          <h1>Vendor Management</h1>
+        </div>
+        <div class="cont text-center  mx-lg-3">
+          <div>
+            Vendors can communicate with us easily through RPN Vendor. Also, all the payments can be finish online via
+            eCheck quickly.
+          </div>
+          <div class="inner-btn mx-auto">
+            <div class="row">
+              <div class="col">
+                <a href="./rpnweb/rpnweb-4.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+              </div>
+              <div class="col">
+                <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="t5" class="title1">
+      <div class="left-side">
+        <div class="head mx-auto">
+          <h1>Comprehensive Reporting</h1>
+        </div>
+        <div class="cont text-center  mx-lg-3">
+          <div>
+            Real-Time, Customizable Reporting for How You Do Business.
+            from(https://www.appfolio.com/features/accounting-and-reporting)
+          </div>
+          <div class="inner-btn mx-auto">
+            <div class="row">
+              <div class="col">
+                <a href="./rpnweb/rpnweb-5.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+              </div>
+              <div class="col">
+                <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="t6" class="title1">
+      <div class="left-side">
+        <div class="head mx-auto">
+          <h1>Predictive Intelligence</h1>
+        </div>
+        <div class="cont text-center  mx-lg-3">
+          <div>
+            Eliminate time compiling data, and gain valuable daily insights into performance across your portfolio with
+            precision multifamily intelligence.
+          </div>
+          <div class="inner-btn mx-auto">
+            <div class="row">
+              <div class="col">
+                <a href="./rpnweb/rpnweb-6.html" class="btn btn-outline-info" target="_blank">Learn More</a>
+              </div>
+              <div class="col">
+                <a href="https://rpngo.com/" class="btn btn-info" target="_blank">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" class="svg-defs">
-      <defs>
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-defs">
+    <defs>
       <linearGradient id="lg--ecosystem-b2b" x1="87.5" x2="87.5" y1="130" gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#e4b462" />
         <stop offset="1" stop-color="#f0cbed" />
       </linearGradient>
-    
+
       <linearGradient id="lg--ecosystem-ecommerce" x1="87.5" x2="87.5" y1="130" gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#70cf32" />
         <stop offset="1" stop-color="#9ae7eb" />
       </linearGradient>
-    
+
       <linearGradient id="lg--ecosystem-payment-screen" x1="87.5" x2="87.5" y1="130" gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#f65b86" />
         <stop offset="1" stop-color="#ffce6c" />
       </linearGradient>
-    
-      <linearGradient id="lg--ecosystem-purchase-orders" x1="366.8" x2="370.9" y1="-11.6" y2="-122" gradientTransform="matrix(1 0 -.58 1 -364.95 121.79)" gradientUnits="userSpaceOnUse">
+
+      <linearGradient id="lg--ecosystem-purchase-orders" x1="366.8" x2="370.9" y1="-11.6" y2="-122"
+        gradientTransform="matrix(1 0 -.58 1 -364.95 121.79)" gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#c4ced1" />
         <stop offset="1" stop-color="#f4f4f5" />
       </linearGradient>
-    
-      <linearGradient id="lg--ecosystem-sales-orders" x1="81.7" x2="85.8" y1="-130.4" y2="-240.8" gradientTransform="matrix(1 0 -.58 1 -148.42 240.62)" gradientUnits="userSpaceOnUse">
+
+      <linearGradient id="lg--ecosystem-sales-orders" x1="81.7" x2="85.8" y1="-130.4" y2="-240.8"
+        gradientTransform="matrix(1 0 -.58 1 -148.42 240.62)" gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#c4ced1" />
         <stop offset="1" stop-color="#f4f4f5" />
       </linearGradient>
-    
+
       <linearGradient id="lg--ecosystem-accounting" x1="87.5" x2="87.5" y1="130" gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#5eb8e9" />
         <stop offset="1" stop-color="#c0f6e8" />
       </linearGradient>
-    
-      <linearGradient id="lg--ecosystem-suppliers" x1="96.7" x2="96.7" y1="47.3" y2="113" gradientUnits="userSpaceOnUse">
+
+      <linearGradient id="lg--ecosystem-suppliers" x1="96.7" x2="96.7" y1="47.3" y2="113"
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#beb1a7" />
         <stop offset="1" stop-color="#a7978c" />
       </linearGradient>
@@ -678,82 +724,175 @@
         <stop offset="0" stop-color="#f4f4f5" stop-opacity="0" />
         <stop offset="1" stop-color="#a4aeb3" stop-opacity=".5" />
       </linearGradient>
-      <linearGradient id="lg--ecosystem-suppliers-3" x1="90" x2="74.6" y1="78.7" y2="111.8" gradientUnits="userSpaceOnUse">
+      <linearGradient id="lg--ecosystem-suppliers-3" x1="90" x2="74.6" y1="78.7" y2="111.8"
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#f2e8d9" />
         <stop offset="1" stop-color="#dbc7b6" />
       </linearGradient>
-      
-      <linearGradient id="lg--ecosystem-shipping" x1="92.6" x2="114.2" y1="47.7" y2="107.1" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#f9908a"/>
-        <stop offset=".3" stop-color="#f58b86"/>
-        <stop offset=".7" stop-color="#e87b79"/>
-        <stop offset="1" stop-color="#dd6d6d"/>
+
+      <linearGradient id="lg--ecosystem-shipping" x1="92.6" x2="114.2" y1="47.7" y2="107.1"
+        gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#f9908a" />
+        <stop offset=".3" stop-color="#f58b86" />
+        <stop offset=".7" stop-color="#e87b79" />
+        <stop offset="1" stop-color="#dd6d6d" />
       </linearGradient>
-      
-      <linearGradient id="lg--ecosystem--warehouses" x1="26.9" x2="118.8" y1="93.2" y2="16.1" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#c091d0"/>
-        <stop offset="1" stop-color="#9396de"/>
+
+      <linearGradient id="lg--ecosystem--warehouses" x1="26.9" x2="118.8" y1="93.2" y2="16.1"
+        gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#c091d0" />
+        <stop offset="1" stop-color="#9396de" />
       </linearGradient>
-      
-      <linearGradient id="lg--ecosystem-tradegecko-1" x1="76.6" x2="154.2" y1="295" y2="82" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 0 346)">
+
+      <linearGradient id="lg--ecosystem-tradegecko-1" x1="76.6" x2="154.2" y1="295" y2="82"
+        gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 0 346)">
         <stop offset="0" stop-color="#C4CED1" />
         <stop offset="1" stop-color="#A4AEB3" />
       </linearGradient>
-      <linearGradient id="lg--ecosystem-tradegecko-2" x1="94.1" x2="165.4" y1="257.8" y2="257.8" gradientUnits="userSpaceOnUse">
+      <linearGradient id="lg--ecosystem-tradegecko-2" x1="94.1" x2="165.4" y1="257.8" y2="257.8"
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#F4F4F5" />
         <stop offset="1" stop-color="#E2E6E8" />
       </linearGradient>
-      <linearGradient id="lg--ecosystem-tradegecko-3" x1="96.7" x2="259.9" y1="294.5" y2="294.5" gradientUnits="userSpaceOnUse">
+      <linearGradient id="lg--ecosystem-tradegecko-3" x1="96.7" x2="259.9" y1="294.5" y2="294.5"
+        gradientUnits="userSpaceOnUse">
         <stop offset="0" stop-color="#F4F4F5" />
         <stop offset="1" stop-color="#E2E6E8" />
       </linearGradient>
-      <linearGradient id="lg--ecosystem-tradegecko-4" x1="313.7" x2="311.8" y1="105.9" y2="61.3" gradientUnits="userSpaceOnUse" gradientTransform="rotate(-2 7679.784 1106.536)">
+      <linearGradient id="lg--ecosystem-tradegecko-4" x1="313.7" x2="311.8" y1="105.9" y2="61.3"
+        gradientUnits="userSpaceOnUse" gradientTransform="rotate(-2 7679.784 1106.536)">
         <stop offset="0" stop-color="#F4F4F5" />
         <stop offset="1" stop-color="#E2E6E8" />
       </linearGradient>
       <pattern id='img1' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <image xlink:href='http://dummyimage.com/600x400/abc/333' width="100" height="100" preserveAspectRatio="none"></image>
-      </pattern>  
+        <image xlink:href='http://dummyimage.com/600x400/abc/333' width="100" height="100" preserveAspectRatio="none">
+        </image>
+      </pattern>
 
       <symbol id="ecosystem__tradegecko" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295 346">
         <style>
-          .ecosystem__tradegecko-0{fill:#C4CED1;}
-          .ecosystem__tradegecko-1{fill:url(#lg--ecosystem-tradegecko-1);}
-          .ecosystem__tradegecko-2{fill:url(#lg--ecosystem-tradegecko-2);}
-          .ecosystem__tradegecko-3{fill:url(#lg--ecosystem-tradegecko-3);}
-          .ecosystem__tradegecko-4{fill:url(#lg--ecosystem-tradegecko-4);}
-          .ecosystem__tradegecko-5{fill:#E2E6EB;}
-          .ecosystem__tradegecko-6{fill:#BCC2D2;}
-          .ecosystem__tradegecko-7{fill:#2D3033;}
-          .ecosystem__tradegecko-8{fill:#1C4561;}
-          .ecosystem__tradegecko-9{fill:#18799B;}
-          .ecosystem__tradegecko-10{fill:#F6574D;}
-          .ecosystem__tradegecko-11{fill:#FBB207;}
-          .ecosystem__tradegecko-12{fill:#B463D6;}
-          .ecosystem__tradegecko-13{fill:#ED50A2;}
-          .ecosystem__tradegecko-14{fill:#5867ED;}
-          .ecosystem__tradegecko-15{fill:#429BCE;}
-          .ecosystem__tradegecko-16{fill:#7BE3BD;}
-          .ecosystem__tradegecko-17{opacity:0.1;fill:#292933;enable-background:new;}
-          .ecosystem__tradegecko-18{fill:#70CF32;}
-          .ecosystem__tradegecko-19{opacity:0.15;fill:#68BEFF;enable-background:new ;}
-          .ecosystem__tradegecko-20{fill:#FFFFFF;}
-          .ecosystem__tradegecko-21{fill:#6FD5D9;}
+          .ecosystem__tradegecko-0 {
+            fill: #C4CED1;
+          }
+
+          .ecosystem__tradegecko-1 {
+            fill: url(#lg--ecosystem-tradegecko-1);
+          }
+
+          .ecosystem__tradegecko-2 {
+            fill: url(#lg--ecosystem-tradegecko-2);
+          }
+
+          .ecosystem__tradegecko-3 {
+            fill: url(#lg--ecosystem-tradegecko-3);
+          }
+
+          .ecosystem__tradegecko-4 {
+            fill: url(#lg--ecosystem-tradegecko-4);
+          }
+
+          .ecosystem__tradegecko-5 {
+            fill: #E2E6EB;
+          }
+
+          .ecosystem__tradegecko-6 {
+            fill: #BCC2D2;
+          }
+
+          .ecosystem__tradegecko-7 {
+            fill: #2D3033;
+          }
+
+          .ecosystem__tradegecko-8 {
+            fill: #1C4561;
+          }
+
+          .ecosystem__tradegecko-9 {
+            fill: #18799B;
+          }
+
+          .ecosystem__tradegecko-10 {
+            fill: #F6574D;
+          }
+
+          .ecosystem__tradegecko-11 {
+            fill: #FBB207;
+          }
+
+          .ecosystem__tradegecko-12 {
+            fill: #B463D6;
+          }
+
+          .ecosystem__tradegecko-13 {
+            fill: #ED50A2;
+          }
+
+          .ecosystem__tradegecko-14 {
+            fill: #5867ED;
+          }
+
+          .ecosystem__tradegecko-15 {
+            fill: #429BCE;
+          }
+
+          .ecosystem__tradegecko-16 {
+            fill: #7BE3BD;
+          }
+
+          .ecosystem__tradegecko-17 {
+            opacity: 0.1;
+            fill: #292933;
+            enable-background: new;
+          }
+
+          .ecosystem__tradegecko-18 {
+            fill: #70CF32;
+          }
+
+          .ecosystem__tradegecko-19 {
+            opacity: 0.15;
+            fill: #68BEFF;
+            enable-background: new;
+          }
+
+          .ecosystem__tradegecko-20 {
+            fill: #FFFFFF;
+          }
+
+          .ecosystem__tradegecko-21 {
+            fill: #6FD5D9;
+          }
         </style>
-        <path d="M165.5 263s-71 1.2-71.3 4.6c-1 9 8.8 14.6 8.8 14.6l14 7.6c3.5 2 7.7 2 11.2 0l35.3-20.6c1.3-.7 2-2 2-3.5V263z" class="ecosystem__tradegecko-0"/>
-        <path d="M229 5.4l-1-.4-9.5-5c-1 0-2.2 0-3 .6L7 121c-4.3 2.5-7 7-7 12v171c0 .7 0 1.4.3 2 .6 1.6 1.8 3 3.3 3.6l9.7 5.7L229 5.3z" class="ecosystem__tradegecko-1"/>
-        <path d="M260 275.2v-3L96.6 317v3c0 1 .6 2 1.5 2.7l37.6 21.6c2.4 1.4 5.3 1.4 7.7 0l115-66.3c1-.6 1.5-1.7 1.5-2.8z" class="ecosystem__tradegecko-0"/>
-        <path d="M94.2 267.6c.8 7.4 8.8 12 8.8 12l3.2 1.6 11 6c3.4 1.8 7.7 1.7 11-.3l35.4-20.7 1-.7c.6-.7 1-1.6 1-2.5 0-1.5-.8-2.7-2-3.3l-10.3-5.6-3.3-1.7s-8-4.5-8.8-12c.4-3.3 2.4-7.3 7.3-11.6l-5 3c1-1.7 2.3-3 3.7-4.5l-.4-.2-45.2 26.3c-6.3 5.4-8 10.3-7.4 14.3z" class="ecosystem__tradegecko-2"/>
-        <path d="M98.2 314.2l115-66.4c2.3-1.4 5.2-1.4 7.6 0l37.5 21.6c1.5 1 2 2.7 1 4.2-.2.5-.6 1-1 1l-115 66.5c-2.3 1.6-5.2 1.6-7.6 0l-37.5-21.4c-1.5-1-2-2.7-1-4.2.2-.4.6-.8 1-1z" class="ecosystem__tradegecko-3"/>
-        <path d="M280.4 221.5c11.6 8.7 19.8 24 8.6 31.7-11.6 8-24.8 7.2-35-3.4s-16.5-21.3-7.4-30 22-7 33.8 1.7z" class="ecosystem__tradegecko-4"/>
-        <path d="M147 227.3l-.3-.2 1.6-.7-1.2 1z" class="ecosystem__tradegecko-5"/>
-        <path d="M148.3 228.8c-5 4.3-7 8.2-7.3 11.6-.3-3 .5-6.2 2.4-8.8l5-2.8z" class="ecosystem__tradegecko-6"/>
-        <path d="M231.6 9.4v172.3c0 6.4-3.2 12.4-8.5 16l-1 .7-27 15.8L20 315.4c-3 1.7-7 .7-8.6-2.3-.6-1-.8-2-.8-3V137.5c0-5 2.7-9.6 7-12L225 5.4l1-.3c2.2-.6 4.7.8 5.3 3l.3 1.3z" class="ecosystem__tradegecko-7"/>
-        <path d="M23.7 163.5v132.7c0 1.7 1.2 2.4 2.6 1.5L216 188.2c1.6-1 2.5-2.7 2.6-4.6V51l-195 112.5z" class="ecosystem__tradegecko-8"/>
+        <path
+          d="M165.5 263s-71 1.2-71.3 4.6c-1 9 8.8 14.6 8.8 14.6l14 7.6c3.5 2 7.7 2 11.2 0l35.3-20.6c1.3-.7 2-2 2-3.5V263z"
+          class="ecosystem__tradegecko-0" />
+        <path
+          d="M229 5.4l-1-.4-9.5-5c-1 0-2.2 0-3 .6L7 121c-4.3 2.5-7 7-7 12v171c0 .7 0 1.4.3 2 .6 1.6 1.8 3 3.3 3.6l9.7 5.7L229 5.3z"
+          class="ecosystem__tradegecko-1" />
+        <path
+          d="M260 275.2v-3L96.6 317v3c0 1 .6 2 1.5 2.7l37.6 21.6c2.4 1.4 5.3 1.4 7.7 0l115-66.3c1-.6 1.5-1.7 1.5-2.8z"
+          class="ecosystem__tradegecko-0" />
+        <path
+          d="M94.2 267.6c.8 7.4 8.8 12 8.8 12l3.2 1.6 11 6c3.4 1.8 7.7 1.7 11-.3l35.4-20.7 1-.7c.6-.7 1-1.6 1-2.5 0-1.5-.8-2.7-2-3.3l-10.3-5.6-3.3-1.7s-8-4.5-8.8-12c.4-3.3 2.4-7.3 7.3-11.6l-5 3c1-1.7 2.3-3 3.7-4.5l-.4-.2-45.2 26.3c-6.3 5.4-8 10.3-7.4 14.3z"
+          class="ecosystem__tradegecko-2" />
+        <path
+          d="M98.2 314.2l115-66.4c2.3-1.4 5.2-1.4 7.6 0l37.5 21.6c1.5 1 2 2.7 1 4.2-.2.5-.6 1-1 1l-115 66.5c-2.3 1.6-5.2 1.6-7.6 0l-37.5-21.4c-1.5-1-2-2.7-1-4.2.2-.4.6-.8 1-1z"
+          class="ecosystem__tradegecko-3" />
+        <path d="M280.4 221.5c11.6 8.7 19.8 24 8.6 31.7-11.6 8-24.8 7.2-35-3.4s-16.5-21.3-7.4-30 22-7 33.8 1.7z"
+          class="ecosystem__tradegecko-4" />
+        <path d="M147 227.3l-.3-.2 1.6-.7-1.2 1z" class="ecosystem__tradegecko-5" />
+        <path d="M148.3 228.8c-5 4.3-7 8.2-7.3 11.6-.3-3 .5-6.2 2.4-8.8l5-2.8z" class="ecosystem__tradegecko-6" />
+        <path
+          d="M231.6 9.4v172.3c0 6.4-3.2 12.4-8.5 16l-1 .7-27 15.8L20 315.4c-3 1.7-7 .7-8.6-2.3-.6-1-.8-2-.8-3V137.5c0-5 2.7-9.6 7-12L225 5.4l1-.3c2.2-.6 4.7.8 5.3 3l.3 1.3z"
+          class="ecosystem__tradegecko-7" />
+        <path d="M23.7 163.5v132.7c0 1.7 1.2 2.4 2.6 1.5L216 188.2c1.6-1 2.5-2.7 2.6-4.6V51l-195 112.5z"
+          class="ecosystem__tradegecko-8" />
         <!-- <path d="M216 25.5L26.3 135c-1.6 1-2.5 2.7-2.6 4.6v26l195-112.8V27c0-1.7-1.3-2.4-2.7-1.5zm-46.2 136l-65 37.5c-1 .6-2 0-2-1 .2-1.4 1-2.6 2-3.4l65-37.6c1-.6 2 0 2 1-.2 1.5-1 2.7-2 3.5zm-23.4 6.5l-41.7 24c-1 .5-2 0-2-1.2.2-1.3 1-2.5 2-3.3l41.7-24c1-.6 2 0 2 1-.2 1.5-1 2.7-2 3.4zm13.6 20.8l-55.3 32c-1 .6-2 0-2-1 .2-1.4 1-2.6 2-3.4l55.4-32c1-.6 2 0 2 1 0 1.4-.7 2.6-2 3.4zm-24.4 7.2l-30.8 17.7c-1 .6-2 0-2-1 .2-1.4 1-2.6 2-3.4l30.8-17.8c1-.6 2 0 2 1-.2 1.5-1 2.7-2 3.4zm35 8.5l-66 38c-1 .6-2 0-2-1 .3-1.4 1-2.6 2-3.4l66-38c1-.4 2 0 2 1.3-.3 1.3-1 2.5-2 3.3zm-14.8 1.5l-51 29.4c-1 .6-2 0-2-1 0-1.4.8-2.6 2-3.4l51-29.5c1-.6 2 0 2 1-.2 1.5-1 2.7-2 3.4zM38 230.3c-.2 1.5-1 3-2.2 3.7-1.2.7-2 0-2-1.2 0-1.5.8-3 2-3.7 1.2-.5 2 0 2 1.4zm5.7-3.3c0 1.5-1 3-2 3.7-1.3.7-2.2 0-2.2-1.2 0-1.5 1-3 2-3.7 1.3-.8 2.2-.2 2.2 1.2zm5.8-3.4c0 1.5-1 3-2 3.7-1.3.7-2.2 0-2.2-1.2 0-1.3 1-2.7 2-3.5 1.3-.7 2.2-.2 2.2 1.2zm5.8-3.3c0 1.5-1 3-2 3.7-1.3.7-2.2 0-2.2-1.2.3-1.5 1-3 2.3-3.8 1-.6 2 0 2 1.3zM38 246c-.2 1.4-1 2.8-2.2 3.6-1.2.7-2 0-2-1.2 0-1.5.8-3 2-3.7 1.2-.7 2 0 2 1.2zm5.7-3.4c0 1.5-1 3-2 3.7-1.3.7-2.2 0-2.2-1.2 0-1.3 1-2.7 2-3.5 1.3-.7 2.2-.2 2.2 1.2zm5.8-3.3c0 1.5-1 3-2 3.7-1.3.7-2.2 0-2.2-1.2 0-1.5 1-3 2-3.7 1.3-.5 2.2 0 2.2 1.4zm5.8-3.3c0 1.4-1 2.8-2 3.6-1.3.7-2.2 0-2.2-1.2.3-1.5 1-3 2.3-3.7 1-.7 2 0 2 1.2zm5.7-3.4c0 1.5-.8 3-2 3.7-1.2.7-2 0-2-1.2 0-1.3.8-2.7 2-3.5 1-.7 2-.2 2 1.2zm-23 29c-.2 1.5-1 3-2.2 3.7-1.2.7-2 0-2-1.2 0-1.3.8-2.7 2-3.5 1.2-.7 2-.2 2 1.2zm5.7-3.3c0 1.5-1 3-2 3.7-1.3.7-2.2 0-2.2-1.2 0-1.5 1-3 2-3.7 1.3-.5 2.2 0 2.2 1.4zm5.8-3.3c0 1.4-1 2.8-2 3.6-1.3.7-2.2 0-2.2-1.2 0-1.5 1-3 2-3.7 1.3-.7 2.2 0 2.2 1.2zM38 277.2c-.2 1.5-1 3-2.2 3.7-1.2.5-2 0-2-1.4 0-1.5.8-3 2-3.7 1.2-.7 2 0 2 1zm5.7-3.2c0 1.4-1 2.8-2 3.6-1.3.7-2.2 0-2.2-1.2 0-1.5 1-3 2-3.7 1.3-.7 2.2 0 2.2 1.2zm5.8-3.4c0 1.5-1 3-2 3.7-1.3.7-2.2 0-2.2-1.2 0-1.3 1-2.7 2-3.5 1.3-.7 2.2-.2 2.2 1.2zm5.8-3.4c0 1.5-1 3-2 3.7-1.3.5-2.3 0-2.3-1.4 0-1.5 1-3 2.2-3.7 1-.8 2 0 2 1zM90 164.6l-10.5 6v20l10.4-6zm80.8-38.4h-.3l-21.2 5.4c-.6 0-1-.4-.8-1 0-.8.7-1.5 1.4-1.7l20-5 16-29.4c.2-.7 1.2-1.5 1.6-1.4l18.2 3.4c.4 0 .5.8.2 1.6s-1 1.3-1.5 1.2L187 96l-15.5 29c-.3.6-.6 1-1 1z" class="ecosystem__tradegecko-9"/> -->
-        <path d="M39.2 142c0 2.2-1.3 4.2-3.2 5.5-1.8 1-3.2.2-3.2-1.8 0-2.3 1.3-4.3 3.2-5.6 1.7-1 3.2 0 3.2 2z" class="ecosystem__tradegecko-10"/>
-        <path d="M50 135.6c0 2.3-1.2 4.3-3 5.6-2 1-3.3.2-3.3-1.8 0-2.3 1.3-4.3 3.2-5.6 1.5-1 3-.3 3 1.8z" class="ecosystem__tradegecko-11"/>
-        
+        <path d="M39.2 142c0 2.2-1.3 4.2-3.2 5.5-1.8 1-3.2.2-3.2-1.8 0-2.3 1.3-4.3 3.2-5.6 1.7-1 3.2 0 3.2 2z"
+          class="ecosystem__tradegecko-10" />
+        <path d="M50 135.6c0 2.3-1.2 4.3-3 5.6-2 1-3.3.2-3.3-1.8 0-2.3 1.3-4.3 3.2-5.6 1.5-1 3-.3 3 1.8z"
+          class="ecosystem__tradegecko-11" />
+
         <!-- <path d="M90 194l-2.5 1.5c0 4-4.6 6.6-4.6 2.7l-2.8 1.4-3.6 6.3 2 1 1.6-2.5V215c0 .3.2.4.4.3l9-5.3c.2 0 .4-.4.4-.6V199l1.7.7 2-3.5L90 194z" class="ecosystem__tradegecko-12"/> -->
         <!-- <path d="M90 215.6l-2.5 1.6c0 4-4.6 6.6-4.6 2.7L80 221l-3.6 6.3 2 1.3 1.6-2.7v10.6c0 .2.2.3.4.2l9-5.2c.3 0 .5-.4.5-.6v-10.5l1.7.8 2-3.5-3.7-2.4z" class="ecosystem__tradegecko-13"/> -->
         <!-- <path d="M90 237.3l-2.5 1.6c0 3.7-4.6 6.4-4.6 2.5L80 243l-3.6 6.2 2 1.3 1.6-2.6v10.4c0 .2.2.3.4.2l9-5.2c.3 0 .5-.4.5-.6V242l1.7 1 2-3.5-3.7-2.3z" class="ecosystem__tradegecko-14"/> -->
@@ -780,47 +919,119 @@
                            z"
                    keySplines="0.5 0 .5 1; 0.5 0 .5 1" />
         </path> -->
-        <path d="M205.6 224.2c1-.6 1.4-2 .8-3l-.8-.7L186 209 32 302.7l14.3 8.3c2.2 1.3 5 1.3 7.2 0l152-86.8z" class="ecosystem__tradegecko-17"/>
+        <path d="M205.6 224.2c1-.6 1.4-2 .8-3l-.8-.7L186 209 32 302.7l14.3 8.3c2.2 1.3 5 1.3 7.2 0l152-86.8z"
+          class="ecosystem__tradegecko-17" />
         <!-- <path d="M61 129.3c0 2.3-1.3 4.3-3.2 5.6-1.8 1-3.2 0-3.2-2 0-2.3 1.3-4.3 3.2-5.6 1.7-1 3.2-.3 3.2 1.8zM39.8 196c-4.3-6.8 1-18.6 5.7-24 7-8.2 22.5-14.8 26-.6 0-12.5-9-17.6-20-11.3-3.4 2.3-6.6 5-9 8-10 12-8 27.7-2.7 28zM206 137.7l-13.3 7.6c-1.3.8-2.4 0-2.4-1.4 0-2 1-3.4 2.4-4.3L206 132c1-.7 2.2 0 2.2 1.5-.2 1.7-1 3.2-2.4 4zm0 21.7l-13.3 7.6c-1.3.8-2.4 0-2.4-1.4 0-1.7 1-3.2 2.4-4L206 154c1-1 2.2-.3 2.2 1.2-.2 1.7-1 3.2-2.4 4zm0 21.6l-13.3 7.6c-1.3.8-2.4 0-2.4-1.4 0-1.7 1-3.2 2.4-4l13.2-7.7c1-.8 2.2 0 2.2 1.4-.2 1.5-1 3-2.4 4z" class="ecosystem__tradegecko-18"/> -->
         <!-- <path d="M64 168.5c-2.6-1.5-8 1.7-12 5.6-1-.2-3.5 2.3-4 4.4-4 4.6-7 9.4-7.2 12.7 0 4 14.3-1.5 18.5-7.2 0-1 1-3 2.6-3.2 1 0 1.2.8.6 2.3s-2.2 2.5-3 2.3c-1.2 1-2.4 2-3.7 2.8-2.4 1.7-3.3 4-.4 3.6l4-.8c.4-.6 1-1 1.8-1.2 1 0 1.5 1 1 2.3-.5 1.2-1.6 2.3-3 2.7-.6 0-1-.3-1-1h-3.7c-2.6.4-3.4 3-3 5 .2.7.5 1.5 1 2.2 1.5-.6 1.3 1.6.2 3-1.8 1.6-3.4 1-2-1.7l-.3-1.4c-1-4-5.4-.5-5-5-10.8 6-14-5-9.6-18-2.5 5-4 10.7-4.2 16.4 0 11.8 7.6 17 17.6 12.4 2-1 4-2.3 6-3.8 7.6-6.5 13-15.3 15.2-25 1.6-8.5-4.8-10.2-7-9.5zM56.5 181c-.4 1.6-1.5 3-3 4-1.5.8-2.5.3-2.3-1.2.4-1.7 1.5-3.2 3-4 1.5-1 2.5-.4 2.3 1z" class="ecosystem__tradegecko-18"/> -->
-        <path d="M74.6 92.4L44 301.4l58.5-34L134 58zm77.7-45L120.6 257l29-16.7 26.7-206.6z" class="ecosystem__tradegecko-19"/>
-        <path d="M209.7 257l4.2-2.5c.5-.4 1.3-.4 2 0l4.2 2.4c1 .4 1.4 2 .8 3 0 .2-.4.5-.7.7L216 263c-.5.5-1.3.5-2 0l-4.2-2.3c-1-.6-1.4-2-.8-3 0-.4.3-.7.7-1zm12.3 7l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0L222 268c-1-.7-1.5-2-.8-3.2.2-.3.4-.6.8-.8zm12.5 7.2l4.2-2.4c.7-.4 1.5-.4 2.2 0l4 2.4c1 .6 1.4 2 1 3l-1 1-4 2.3c-1 .4-1.7.4-2.4 0l-4.2-2.4c-1-.4-1.4-2-.8-3 .2-.2.4-.5.8-.7zm-37-7.2l4-2.4c.8-.4 1.6-.4 2.3 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.8-1.4-2-.8-3.3.2-.4.5-.6.8-.8zm12.3 7l4.2-2.3c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .8 1.4 2 .8 3.3l-.8.8-4.2 2.5c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.5-1.4-2-.8-3 0-.3.4-.6.8-1zm12.4 7.3l4.2-2.4c.7-.6 1.5-.6 2.2 0l4.2 2.2c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.5-1.4-2-.8-3l.8-1zM185 271l4.3-2.3c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .8 1.4 2 .8 3.3l-.8.8-4.2 2.5c-.7.4-1.5.4-2.2 0L185 275c-1-.6-1.4-2-.8-3 .2-.4.5-.7 1-1zm12.4 7.2l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.4-1.4-2-.8-3l.8-.7zm-36.6 35.6L214 283c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1L167 320c-.6.5-1.4.5-2 0l-4.3-2.3c-1-.6-1.4-2-.8-3 0-.5.3-.7.7-1zm12-35.6l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.4-1.4-2-.8-3l.8-.7zm12.4 7l4.2-2.3c.7-.6 1.5-.6 2.2 0l4.2 2.2c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.5-1.4-2-.8-3 0-.3.4-.6.8-1zm-24.7 0l4.2-2.3c.7-.6 1.5-.6 2.2 0l4 2.2c1 .6 1.4 2 1 3l-1 1-4 2.3c-1 .4-1.7.4-2.4 0l-4.2-2.4c-1-.5-1.4-2-.8-3l.8-1zm12.5 7.2l4-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.6-1.4-2-.8-3 .3-.4.5-.7 1-1zm-24.8 0l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.6-1.4-2-.8-3 .2-.4.4-.7.8-1zm12.4 7l4.2-2.3c.7-.2 1.5-.2 2.2 0l4.2 2.6c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.3-1.5.3-2.2 0l-4.2-2.5c-1-.6-1.4-2-.8-3 0-.4.4-.7.8-1zm-24.6 0l4-2.3c.8-.2 1.6-.2 2.3 0l4.2 2.6c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.3-1.5.3-2.2 0l-4-2.5c-1-.6-1.4-2-1-3l1-1zm12.3 7.2l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.2 2 .6 3l-.8 1-4.3 2.3c-.7.2-1.5.2-2.2 0l-4.2-2.6c-1-.6-1.3-2-.7-3 0-.4.4-.7.8-1zm-24.7 0l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.2-1.5.2-2.2 0l-4.2-2.6c-1-.6-1.4-2-.8-3 .2-.5.5-.7.8-1zm12.4 7l4.2-2.3c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.6-1.4-2-.8-3l.8-1zm12.4 7.4l4.2-2.5c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .4 1.4 2 .8 3l-.8.7-4.2 2.4c-.7.5-1.5.5-2.2 0l-4.2-2.3c-1-.6-1.4-2-.8-3l.8-1zm-37-7.3l4-2.4c.8-.4 1.6-.4 2.3 0l4.2 2.4c1 .6 1.2 2 .6 3l-.8 1-4.3 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.6-1.3-2-.7-3 .2-.5.5-.7.8-1zm12.3 7l4.2-2.3c.5-.4 1.3-.4 2 0l4.2 2.4c1 .6 1.4 2 .8 3 0 .4-.4.7-.7 1L130 327c-.6.5-1.4.5-2 0l-4.3-2.3c-1-.6-1.4-2-.8-3 0-.4.2-.7.6-1zM136 328l4.3-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0L136 332c-1-.7-1.3-2-.7-3.2l.8-.8zM69.3 121.7v6c0 2.4 1.7 3.4 3.8 2.2l132.4-76.5c2.2-1.5 3.7-4 3.8-6.6v-6c0-2.5-1.6-3.5-3.7-2.3L73 115c-2 1.6-3.5 4-3.7 6.7z" class="ecosystem__tradegecko-20"/>
+        <path d="M74.6 92.4L44 301.4l58.5-34L134 58zm77.7-45L120.6 257l29-16.7 26.7-206.6z"
+          class="ecosystem__tradegecko-19" />
+        <path
+          d="M209.7 257l4.2-2.5c.5-.4 1.3-.4 2 0l4.2 2.4c1 .4 1.4 2 .8 3 0 .2-.4.5-.7.7L216 263c-.5.5-1.3.5-2 0l-4.2-2.3c-1-.6-1.4-2-.8-3 0-.4.3-.7.7-1zm12.3 7l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0L222 268c-1-.7-1.5-2-.8-3.2.2-.3.4-.6.8-.8zm12.5 7.2l4.2-2.4c.7-.4 1.5-.4 2.2 0l4 2.4c1 .6 1.4 2 1 3l-1 1-4 2.3c-1 .4-1.7.4-2.4 0l-4.2-2.4c-1-.4-1.4-2-.8-3 .2-.2.4-.5.8-.7zm-37-7.2l4-2.4c.8-.4 1.6-.4 2.3 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.8-1.4-2-.8-3.3.2-.4.5-.6.8-.8zm12.3 7l4.2-2.3c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .8 1.4 2 .8 3.3l-.8.8-4.2 2.5c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.5-1.4-2-.8-3 0-.3.4-.6.8-1zm12.4 7.3l4.2-2.4c.7-.6 1.5-.6 2.2 0l4.2 2.2c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.5-1.4-2-.8-3l.8-1zM185 271l4.3-2.3c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .8 1.4 2 .8 3.3l-.8.8-4.2 2.5c-.7.4-1.5.4-2.2 0L185 275c-1-.6-1.4-2-.8-3 .2-.4.5-.7 1-1zm12.4 7.2l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.4-1.4-2-.8-3l.8-.7zm-36.6 35.6L214 283c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1L167 320c-.6.5-1.4.5-2 0l-4.3-2.3c-1-.6-1.4-2-.8-3 0-.5.3-.7.7-1zm12-35.6l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.4-1.4-2-.8-3l.8-.7zm12.4 7l4.2-2.3c.7-.6 1.5-.6 2.2 0l4.2 2.2c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.5-1.4-2-.8-3 0-.3.4-.6.8-1zm-24.7 0l4.2-2.3c.7-.6 1.5-.6 2.2 0l4 2.2c1 .6 1.4 2 1 3l-1 1-4 2.3c-1 .4-1.7.4-2.4 0l-4.2-2.4c-1-.5-1.4-2-.8-3l.8-1zm12.5 7.2l4-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.6-1.4-2-.8-3 .3-.4.5-.7 1-1zm-24.8 0l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.6-1.4-2-.8-3 .2-.4.4-.7.8-1zm12.4 7l4.2-2.3c.7-.2 1.5-.2 2.2 0l4.2 2.6c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.3-1.5.3-2.2 0l-4.2-2.5c-1-.6-1.4-2-.8-3 0-.4.4-.7.8-1zm-24.6 0l4-2.3c.8-.2 1.6-.2 2.3 0l4.2 2.6c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.3-1.5.3-2.2 0l-4-2.5c-1-.6-1.4-2-1-3l1-1zm12.3 7.2l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.2 2 .6 3l-.8 1-4.3 2.3c-.7.2-1.5.2-2.2 0l-4.2-2.6c-1-.6-1.3-2-.7-3 0-.4.4-.7.8-1zm-24.7 0l4.2-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.2-1.5.2-2.2 0l-4.2-2.6c-1-.6-1.4-2-.8-3 .2-.5.5-.7.8-1zm12.4 7l4.2-2.3c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.6-1.4-2-.8-3l.8-1zm12.4 7.4l4.2-2.5c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .4 1.4 2 .8 3l-.8.7-4.2 2.4c-.7.5-1.5.5-2.2 0l-4.2-2.3c-1-.6-1.4-2-.8-3l.8-1zm-37-7.3l4-2.4c.8-.4 1.6-.4 2.3 0l4.2 2.4c1 .6 1.2 2 .6 3l-.8 1-4.3 2.3c-.7.4-1.5.4-2.2 0l-4.2-2.4c-1-.6-1.3-2-.7-3 .2-.5.5-.7.8-1zm12.3 7l4.2-2.3c.5-.4 1.3-.4 2 0l4.2 2.4c1 .6 1.4 2 .8 3 0 .4-.4.7-.7 1L130 327c-.6.5-1.4.5-2 0l-4.3-2.3c-1-.6-1.4-2-.8-3 0-.4.2-.7.6-1zM136 328l4.3-2.4c.7-.4 1.5-.4 2.2 0l4.2 2.4c1 .6 1.4 2 .8 3l-.8 1-4.2 2.3c-.7.4-1.5.4-2.2 0L136 332c-1-.7-1.3-2-.7-3.2l.8-.8zM69.3 121.7v6c0 2.4 1.7 3.4 3.8 2.2l132.4-76.5c2.2-1.5 3.7-4 3.8-6.6v-6c0-2.5-1.6-3.5-3.7-2.3L73 115c-2 1.6-3.5 4-3.7 6.7z"
+          class="ecosystem__tradegecko-20" />
         <!-- <path d="M120 130.4l-10.6 6v37l10.5-6zm55-8c0 3-1.7 5.8-4.2 7.4-2.4 1.4-4.3.3-4.3-2.4.2-3 1.8-5.8 4.3-7.4 2.4-1.4 4.3-.3 4.3 2.4zm34.5-26.8c-.2 3-1.8 5.8-4.3 7.4-2.4 1.4-4.3.3-4.3-2.4 0-3 1.6-5.8 4-7.4 2.5-1.4 4.4-.3 4.4 2.4zm-55.7 32.2c-.2 3-1.8 5.8-4.3 7.4-2.4 1.4-4.3.3-4.3-2.4.2-3 1.8-5.8 4.3-7.4 2.4-1.4 4.3-.3 4.3 2.4zm37.5-35.6c-.2 3-1.8 5.8-4.3 7.4-2.4 1.4-4.3.3-4.3-2.4.2-3 1.8-5.8 4.3-7.4 2.4-1.4 4.3-.3 4.3 2.4zM134.5 89l-58.7 34c-1 .6-1.8 0-1.8-1 0-1.2.7-2.3 1.8-3l58.7-34c1-.5 1.8 0 1.8 1 0 1.3-.8 2.5-1.8 3z" class="ecosystem__tradegecko-21"/> -->
       </symbol>
 
       <symbol id="ecosystem__mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147 97">
         <style>
-          .ecosystem__mobile-1{isolation:isolate;}
-          .ecosystem__mobile-2{fill:#292933;opacity:0.1;}
-          .ecosystem__mobile-3{fill:#6c7279;}
-          .ecosystem__mobile-4{fill:#2d3033;}
-          .ecosystem__mobile-5{fill:#1c4561;}
-          .ecosystem__mobile-6{fill:#2b738c;}
-          .ecosystem__mobile-7{fill:#b463d6;}
-          .ecosystem__mobile-8{fill:#ed50a2;}
-          .ecosystem__mobile-9{fill:#393c40;}
-          .ecosystem__mobile-10{fill:#68beff;opacity:0.1;}
-          .ecosystem__mobile-11{fill:#242629}
-          .ecosystem__mobile-12{fill:#7be3bd;}
-          .ecosystem__mobile-text{font-size:16.15px;font-family:OpenSans-Semibold, Open Sans;font-weight:700;}
+          .ecosystem__mobile-1 {
+            isolation: isolate;
+          }
+
+          .ecosystem__mobile-2 {
+            fill: #292933;
+            opacity: 0.1;
+          }
+
+          .ecosystem__mobile-3 {
+            fill: #6c7279;
+          }
+
+          .ecosystem__mobile-4 {
+            fill: #2d3033;
+          }
+
+          .ecosystem__mobile-5 {
+            fill: #1c4561;
+          }
+
+          .ecosystem__mobile-6 {
+            fill: #2b738c;
+          }
+
+          .ecosystem__mobile-7 {
+            fill: #b463d6;
+          }
+
+          .ecosystem__mobile-8 {
+            fill: #ed50a2;
+          }
+
+          .ecosystem__mobile-9 {
+            fill: #393c40;
+          }
+
+          .ecosystem__mobile-10 {
+            fill: #68beff;
+            opacity: 0.1;
+          }
+
+          .ecosystem__mobile-11 {
+            fill: #242629
+          }
+
+          .ecosystem__mobile-12 {
+            fill: #7be3bd;
+          }
+
+          .ecosystem__mobile-text {
+            font-size: 16.15px;
+            font-family: OpenSans-Semibold, Open Sans;
+            font-weight: 700;
+          }
         </style>
-        <path d="M90.7 95l-87-50.3c-6-3.6-4-11.2 1.2-14.3L143 60.6c4.5 2.7 5.8 10.2-1.5 14.5l-33.2 19.2c-5.3 3-13.3 3.4-17.8.7z" class="ecosystem__mobile-2"/>
-        <path d="M90.7 86.5l-87-50.2C-2.2 32.7-.2 25 5 22L143 52.2c4.5 2.6 5.8 10.2-1.5 14.4l-33.2 19c-5.3 3-13.3 3.5-17.8.8z" class="ecosystem__mobile-3"/>
-        <path d="M90.6 81.8L4 31.8C-.4 29 0 24.6 5.4 21.5l33-19C43.6-.5 51.5-1 56 1.7l86.6 50c4.5 2.7 4 7.2-1.3 10.3l-33 19c-5.2 3-13.2 3.4-17.7.8z" class="ecosystem__mobile-4"/>
-        <path d="M85.8 76.6L12.6 34.3a1.3 1.3 0 0 1 0-2.2L57 6.6a3.8 3.8 0 0 1 3.8 0L134 48.8a1.3 1.3 0 0 1 0 2.2L89.6 76.6a3.8 3.8 0 0 1-3.8 0z" class="ecosystem__mobile-5"/>
+        <path
+          d="M90.7 95l-87-50.3c-6-3.6-4-11.2 1.2-14.3L143 60.6c4.5 2.7 5.8 10.2-1.5 14.5l-33.2 19.2c-5.3 3-13.3 3.4-17.8.7z"
+          class="ecosystem__mobile-2" />
+        <path
+          d="M90.7 86.5l-87-50.2C-2.2 32.7-.2 25 5 22L143 52.2c4.5 2.6 5.8 10.2-1.5 14.4l-33.2 19c-5.3 3-13.3 3.5-17.8.8z"
+          class="ecosystem__mobile-3" />
+        <path
+          d="M90.6 81.8L4 31.8C-.4 29 0 24.6 5.4 21.5l33-19C43.6-.5 51.5-1 56 1.7l86.6 50c4.5 2.7 4 7.2-1.3 10.3l-33 19c-5.2 3-13.2 3.4-17.7.8z"
+          class="ecosystem__mobile-4" />
+        <path
+          d="M85.8 76.6L12.6 34.3a1.3 1.3 0 0 1 0-2.2L57 6.6a3.8 3.8 0 0 1 3.8 0L134 48.8a1.3 1.3 0 0 1 0 2.2L89.6 76.6a3.8 3.8 0 0 1-3.8 0z"
+          class="ecosystem__mobile-5" />
         <!-- <path d="M94.3 41.4l-8 4.7a3 3 0 0 1-2.7 0 .8.8 0 0 1 0-1.5l8-4.7a3 3 0 0 1 2.7 0 .8.8 0 0 1 0 1.6zM92.8 37l-11.3 6.5a3 3 0 0 1-2.8 0 .8.8 0 0 1 0-1.6L90 35.2a3 3 0 0 1 2.7 0 .8.8 0 0 1 0 1.6zm17.7 16.6l-5.5 3.2a3 3 0 0 1-2.7 0 .8.8 0 0 1 0-1.5l5.5-3.2a3 3 0 0 1 2.8 0 .8.8 0 0 1 0 1.6zm4-7.7L100.3 54a3 3 0 0 1-2.8 0 .8.8 0 0 1 0-1.5l14.4-8.4a3 3 0 0 1 2.8 0 .8.8 0 0 1 0 1.6z" class="ecosystem__mobile-6"/>
         <path d="M66.7 45l-2.4 1.5c3.2 1.8-1 4.3-4.3 2.5l-2.5 1.3.2 4h3.7v-1.7l8.7 5a.8.8 0 0 0 .8 0l8.4-5a.2.2 0 0 0 0-.3l-8.6-5h3l-.3-2.3z" class="ecosystem__mobile-7"/>
         <path d="M85.3 55.8L83 57.3c3.2 1.8-1 4.3-4.3 2.5L76.2 61l.2 4h3.8v-1.6l8.7 5a.8.8 0 0 0 .6 0l8.4-5a.2.2 0 0 0 0-.3l-8.6-5h3l-.3-2z" class="ecosystem__mobile-8"/> -->
-        <path d="M124 67.3a3.4 3.4 0 0 1-1 2.4 6.6 6.6 0 0 1-8.8 0 3.3 3.3 0 0 1-1-2.4c0-2.2 2.4-4 5.4-4s5.4 1.8 5.4 4z" class="ecosystem__mobile-9"/>
-        <path d="M88 20.3v60l-20.8-12v-60l20.8 12zm54 41.2l-15 9V42.6l15 8.7s3.3 1.5 3.7 4.5-3.6 5.5-3.6 5.5zM54.8 1.2V61L16.5 39V15L38.8 2.4A21 21 0 0 1 47.6 0c5 0 7 1.2 7 1.2z" class="ecosystem__mobile-10"/>
-        <path d="M26.2 17.3l-.4-.3c-.3 0-.3-.4 0-.6l8.7-5a1 1 0 0 1 1 0l.4.3c.2 0 .2.4 0 .6l-8.8 5a1 1 0 0 1-1 0z" class="ecosystem__mobile-11"/>
+        <path d="M124 67.3a3.4 3.4 0 0 1-1 2.4 6.6 6.6 0 0 1-8.8 0 3.3 3.3 0 0 1-1-2.4c0-2.2 2.4-4 5.4-4s5.4 1.8 5.4 4z"
+          class="ecosystem__mobile-9" />
+        <path
+          d="M88 20.3v60l-20.8-12v-60l20.8 12zm54 41.2l-15 9V42.6l15 8.7s3.3 1.5 3.7 4.5-3.6 5.5-3.6 5.5zM54.8 1.2V61L16.5 39V15L38.8 2.4A21 21 0 0 1 47.6 0c5 0 7 1.2 7 1.2z"
+          class="ecosystem__mobile-10" />
+        <path d="M26.2 17.3l-.4-.3c-.3 0-.3-.4 0-.6l8.7-5a1 1 0 0 1 1 0l.4.3c.2 0 .2.4 0 .6l-8.8 5a1 1 0 0 1-1 0z"
+          class="ecosystem__mobile-11" />
         <!-- <path d="M52.4 24.4q3.6 2 4 4T53.8 32a10.2 10.2 0 0 1-1.8.8l-1.7-1a9 9 0 0 0 1.7-.7q2-1 2-2.2t-2.3-2.6a1.5 1.5 0 0 1-.2 1.4 3.6 3.6 0 0 1-1.3 1 6.7 6.7 0 0 1-3.6 1 7.8 7.8 0 0 1-3.8-1q-2-1.2-2-2.5t1.8-2.3a7.6 7.6 0 0 1 3-1 10 10 0 0 1 3.3.2 12.5 12.5 0 0 1 3.3 1.4zm-8 .3q-1 .6-1 1.3t1.3 1.4a4.8 4.8 0 0 0 2.2.7 4 4 0 0 0 2-.5 2 2 0 0 0 1-1.3 1.2 1.2 0 0 0-.6-1.2 6.3 6.3 0 0 0-3.5-.8 3.8 3.8 0 0 0-1.7.5zm17.8-6q3.6 2 4 4t-2.6 3.6a10.2 10.2 0 0 1-1.8.8l-1.6-.8a9 9 0 0 0 1.7-.8q2-1.2 1.8-2.3t-2.4-2.5A1.5 1.5 0 0 1 61 22a3.6 3.6 0 0 1-1.2 1 6.7 6.7 0 0 1-3.6 1 7.8 7.8 0 0 1-3.7-1.2q-2-1-2-2.4t1.8-2.4a7.6 7.6 0 0 1 3-1 10 10 0 0 1 3.2.2 12.5 12.5 0 0 1 3.4 1.5zm-8 .3q-1 .6-1 1.3t1.4 1.4a4.8 4.8 0 0 0 2 .7 4 4 0 0 0 2.3-.6 2 2 0 0 0 1-1.3 1.2 1.2 0 0 0-.7-1.2 6.3 6.3 0 0 0-3.6-.8 3.8 3.8 0 0 0-1.6.5zm-8.6 13q1.3.7 1.2 1.7a3.3 3.3 0 0 1-1.6 2l1.8 1-1 .8-2-1a14.8 14.8 0 0 1-4 1.5l-1.8-1a17 17 0 0 0 2.3-.6 12.3 12.3 0 0 0 2-1l-3.2-1.7-1 .3a11.5 11.5 0 0 1-3.3.4 5.3 5.3 0 0 1-2.4-.7q-1.2-.7-1-1.6a3.3 3.3 0 0 1 1.5-1.8l-1.3-.8 1-.6 1.5.8a16.2 16.2 0 0 1 4-1.5l1 1.3a16.2 16.2 0 0 0-3.2 1.2l3 1.7 1-.2a13.4 13.4 0 0 1 3.5-.5 4.8 4.8 0 0 1 2.3.6zm-11 .5a2.3 2.3 0 0 0 1 .3 7 7 0 0 0 1.8-.3L34.7 31a1.4 1.4 0 0 0-.6.8.7.7 0 0 0 .5.7zm9.2.7a2.2 2.2 0 0 0-1.2-.2 8 8 0 0 0-1.8.3l2.7 1.6q1.3-1 .2-1.7z" class="ecosystem__mobile-12"/> -->
 
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" id="ecosystem__arrows" viewBox="0 0 870 608">
         <style>
-          .ecosystem__arrows-head{fill:none;stroke:#70cf32;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px}
-          .ecosystem__dash{fill:none;stroke:#70cf32;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;stroke-dasharray:3px 6px}
+          .ecosystem__arrows-head {
+            fill: none;
+            stroke: #70cf32;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 3px
+          }
+
+          .ecosystem__dash {
+            fill: none;
+            stroke: #70cf32;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 3px;
+            stroke-dasharray: 3px 6px
+          }
         </style>
         <!-- <path d="M863.6 403.7l-181-104c-6.2-3.7-16.2-3.7-22.4 0l-195.7 112c-5.3 3.7-13.3 2.8-16.2 2M692.7 503L512.3 400c-4.8-2.7-10.5-3.4-15.8-2m21.7 203L339.5 498c-6.2-3.6-6.3-9.4 0-13L441 425c6.2-3.6 4.8-11.5-1-14.7l-5.4-3m145.8-273.5V81.4c0-8.6 3.2-17.3 10.8-21.6l58-34c7.7-4.4 12.4-1 12.4 7.6v20.4" class="ecosystem__dash">
           <animate attributeType="XML" attributeName="stroke-dashoffset" 
@@ -833,12 +1044,10 @@
           m116.8 100
           m81.6 120V150c0-8.6-6-12-13.4-7.7L402 211m127-72.4
           " class="ecosystem__dash ecosystem__dash-alt">
-          <animate attributeType="XML" attributeName="stroke-dashoffset"
-                   dur="6s" repeatCount="indefinite" calcMode="spline"
-                   values="36; 0; 36" 
-                   keySplines="0.5 0 .5 1; 0.5 0 .5 1"/>
+          <animate attributeType="XML" attributeName="stroke-dashoffset" dur="6s" repeatCount="indefinite"
+            calcMode="spline" values="36; 0; 36" keySplines="0.5 0 .5 1; 0.5 0 .5 1" />
         </path>
-        
+
         <!-- <path d="
           M130.4 273l6 3.4-6 10.4
           M5.8 317l6-10.2 6 3.4m112.6 4l6-10.4-6-3.4
@@ -852,15 +1061,33 @@
 
       <symbol id="ecosystem__payment-card" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 61">
         <style>
-          .ecosystem-payment-card-1{fill:#3955af;}
-          .ecosystem-payment-card-2{fill:#e4b462;}
-          .ecosystem-payment-card-3{fill:#f4f4f5;}
-          .ecosystem-payment-card-4{font-size:7.36px;fill:#fff;font-family:OpenSans-Bold, Open Sans;font-weight:700;}
+          .ecosystem-payment-card-1 {
+            fill: #3955af;
+          }
+
+          .ecosystem-payment-card-2 {
+            fill: #e4b462;
+          }
+
+          .ecosystem-payment-card-3 {
+            fill: #f4f4f5;
+          }
+
+          .ecosystem-payment-card-4 {
+            font-size: 7.36px;
+            fill: #fff;
+            font-family: OpenSans-Bold, Open Sans;
+            font-weight: 700;
+          }
         </style>
-        <rect width="82" height="61" class="ecosystem-payment-card-1" rx="4" ry="4"/>
-        <ellipse cx="56.92" cy="17.41" class="ecosystem-payment-card-2" rx="8.9" ry="7.75" transform="rotate(-89.9 56.92 17.41)"/>
-        <ellipse cx="67.12" cy="17.43" class="ecosystem-payment-card-3" rx="8.9" ry="7.75" transform="rotate(-89.9 67.13 17.43)"/>
-        <path d="M24.38 23.07a.6.6 0 1 1 0-1.2H29V19h-4.6a.6.6 0 1 1 0-1.2h4.65v-3.43H24.4a.6.6 0 1 1 0-1.2h4.66v-.8a3.43 3.43 0 0 0-3.16-3.65H12.25a3.43 3.43 0 0 0-3.18 3.64v.8h5.12a.6.6 0 1 1 0 1.2H9.05v3.4h5.12a.6.6 0 1 1 0 1.2H9.05v2.9h5.12a.6.6 0 1 1 0 1.2h-5.1v.42a3.43 3.43 0 0 0 3.16 3.64h13.65A3.43 3.43 0 0 0 29 23.5v-.42zm-5.1-1A3.8 3.8 0 0 1 15.75 18a3.8 3.8 0 0 1 3.52-4 3.8 3.8 0 0 1 3.5 4 3.8 3.8 0 0 1-3.5 4.07z" class="ecosystem-payment-card-2"/>
+        <rect width="82" height="61" class="ecosystem-payment-card-1" rx="4" ry="4" />
+        <ellipse cx="56.92" cy="17.41" class="ecosystem-payment-card-2" rx="8.9" ry="7.75"
+          transform="rotate(-89.9 56.92 17.41)" />
+        <ellipse cx="67.12" cy="17.43" class="ecosystem-payment-card-3" rx="8.9" ry="7.75"
+          transform="rotate(-89.9 67.13 17.43)" />
+        <path
+          d="M24.38 23.07a.6.6 0 1 1 0-1.2H29V19h-4.6a.6.6 0 1 1 0-1.2h4.65v-3.43H24.4a.6.6 0 1 1 0-1.2h4.66v-.8a3.43 3.43 0 0 0-3.16-3.65H12.25a3.43 3.43 0 0 0-3.18 3.64v.8h5.12a.6.6 0 1 1 0 1.2H9.05v3.4h5.12a.6.6 0 1 1 0 1.2H9.05v2.9h5.12a.6.6 0 1 1 0 1.2h-5.1v.42a3.43 3.43 0 0 0 3.16 3.64h13.65A3.43 3.43 0 0 0 29 23.5v-.42zm-5.1-1A3.8 3.8 0 0 1 15.75 18a3.8 3.8 0 0 1 3.52-4 3.8 3.8 0 0 1 3.5 4 3.8 3.8 0 0 1-3.5 4.07z"
+          class="ecosystem-payment-card-2" />
         <text class="ecosystem-payment-card-4" transform="matrix(.84 0 0 1 8.9 49.05)">
           <tspan>6723 7493 6723 7493</tspan>
         </text>
@@ -868,20 +1095,56 @@
 
       <symbol id="ecosystem__payment-screen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 130">
         <style>
-          .ecosystem-payment-screen-1{fill:url(#lg--ecosystem-payment-screen);}
-          .ecosystem-payment-screen-2{fill:#fff;}
-          .ecosystem-payment-screen-3,.ecosystem-payment-screen-6{fill:#4d83f6;}
-          .ecosystem-payment-screen-4{fill:#e2e6e8;}
-          .ecosystem-payment-screen-5,.ecosystem-payment-screen-6,.ecosystem-payment-screen-7{font-size:16.15px;font-family:OpenSans-Semibold, Open Sans;font-weight:700;}
-          .ecosystem-payment-screen-5{fill:#873030;}
-          .ecosystem-payment-screen-7{fill:#ffaa64;}
-          .ecosystem-payment-screen-8{font-size:15.76px;fill:#3264cf;font-family:FontAwesome, FontAwesome;}
+          .ecosystem-payment-screen-1 {
+            fill: url(#lg--ecosystem-payment-screen);
+          }
+
+          .ecosystem-payment-screen-2 {
+            fill: #fff;
+          }
+
+          .ecosystem-payment-screen-3,
+          .ecosystem-payment-screen-6 {
+            fill: #4d83f6;
+          }
+
+          .ecosystem-payment-screen-4 {
+            fill: #e2e6e8;
+          }
+
+          .ecosystem-payment-screen-5,
+          .ecosystem-payment-screen-6,
+          .ecosystem-payment-screen-7 {
+            font-size: 16.15px;
+            font-family: OpenSans-Semibold, Open Sans;
+            font-weight: 700;
+          }
+
+          .ecosystem-payment-screen-5 {
+            fill: #873030;
+          }
+
+          .ecosystem-payment-screen-7 {
+            fill: #ffaa64;
+          }
+
+          .ecosystem-payment-screen-8 {
+            font-size: 15.76px;
+            fill: #3264cf;
+            font-family: FontAwesome, FontAwesome;
+          }
         </style>
-        <rect width="175" height="130" class="ecosystem-payment-screen-1" rx="4" ry="4"/>
-        <rect width="154.41" height="92.16" x="10" y="28.35" class="ecosystem-payment-screen-2" rx="4" ry="4"/>
-        <path d="M163.58 20.73h-8.48a1.63 1.63 0 0 1-1.5-1.73v-1.1a1.63 1.63 0 0 1 1.5-1.73h8.47a1.63 1.63 0 0 1 1.5 1.74V19a1.63 1.63 0 0 1-1.5 1.73zm-14.26 0H129a1.63 1.63 0 0 1-1.45-1.73v-1.1a1.63 1.63 0 0 1 1.45-1.73h20.28a1.63 1.63 0 0 1 1.5 1.74V19a1.63 1.63 0 0 1-1.46 1.73z" class="ecosystem-payment-screen-3"/>
-        <path d="M72.8 46.15H21.15a1.58 1.58 0 1 1 0-3.15H72.8a1.58 1.58 0 0 1 0 3.15zm-10 6H21.15a1.58 1.58 0 1 1 0-3.15H62.8a1.58 1.58 0 1 1 0 3.15zm-10 22H21.15a1.58 1.58 0 1 1 0-3.16H52.8a1.58 1.58 0 1 1 0 3.12zm30 6H21.15a1.58 1.58 0 1 1 0-3.16H82.8a1.58 1.58 0 0 1 0 3.12zm0 21.97H21.15a1.58 1.58 0 0 1 0-3.15H82.8a1.58 1.58 0 0 1 0 3.15zm-20 6H21.15a1.58 1.58 0 0 1 0-3.15H62.8a1.58 1.58 0 0 1 0 3.15z" class="ecosystem-payment-screen-4"/>
-        <path d="M123.26 20.72h-12A1.63 1.63 0 0 1 109.8 19v-1.1a1.63 1.63 0 0 1 1.5-1.74h12a1.63 1.63 0 0 1 1.48 1.74V19a1.63 1.63 0 0 1-1.52 1.72z" class="ecosystem-payment-screen-2"/>
+        <rect width="175" height="130" class="ecosystem-payment-screen-1" rx="4" ry="4" />
+        <rect width="154.41" height="92.16" x="10" y="28.35" class="ecosystem-payment-screen-2" rx="4" ry="4" />
+        <path
+          d="M163.58 20.73h-8.48a1.63 1.63 0 0 1-1.5-1.73v-1.1a1.63 1.63 0 0 1 1.5-1.73h8.47a1.63 1.63 0 0 1 1.5 1.74V19a1.63 1.63 0 0 1-1.5 1.73zm-14.26 0H129a1.63 1.63 0 0 1-1.45-1.73v-1.1a1.63 1.63 0 0 1 1.45-1.73h20.28a1.63 1.63 0 0 1 1.5 1.74V19a1.63 1.63 0 0 1-1.46 1.73z"
+          class="ecosystem-payment-screen-3" />
+        <path
+          d="M72.8 46.15H21.15a1.58 1.58 0 1 1 0-3.15H72.8a1.58 1.58 0 0 1 0 3.15zm-10 6H21.15a1.58 1.58 0 1 1 0-3.15H62.8a1.58 1.58 0 1 1 0 3.15zm-10 22H21.15a1.58 1.58 0 1 1 0-3.16H52.8a1.58 1.58 0 1 1 0 3.12zm30 6H21.15a1.58 1.58 0 1 1 0-3.16H82.8a1.58 1.58 0 0 1 0 3.12zm0 21.97H21.15a1.58 1.58 0 0 1 0-3.15H82.8a1.58 1.58 0 0 1 0 3.15zm-20 6H21.15a1.58 1.58 0 0 1 0-3.15H62.8a1.58 1.58 0 0 1 0 3.15z"
+          class="ecosystem-payment-screen-4" />
+        <path
+          d="M123.26 20.72h-12A1.63 1.63 0 0 1 109.8 19v-1.1a1.63 1.63 0 0 1 1.5-1.74h12a1.63 1.63 0 0 1 1.48 1.74V19a1.63 1.63 0 0 1-1.52 1.72z"
+          class="ecosystem-payment-screen-2" />
         <text class="ecosystem-payment-screen-5" transform="translate(96.95 52.71)">$299</text>
         <text class="ecosystem-payment-screen-6" transform="translate(106.11 80.64)">$185</text>
         <text class="ecosystem-payment-screen-7" transform="translate(106.11 108.56)">$99</text>
@@ -892,149 +1155,195 @@
 
       <symbol id="ecosystem__accounting" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 130">
         <style>
-          .ecosystem-accounting-1{fill:url(#lg--ecosystem-accounting);}
-          .ecosystem-accounting-2{fill:#fff;}
-          .ecosystem-accounting-3{fill:#00b7e3;}
-          .ecosystem-accounting-4{fill:#e2e6e8;}
-          .ecosystem-accounting-5{fill:#6fd5d9;opacity:0.3;}
+          .ecosystem-accounting-1 {
+            fill: url(#lg--ecosystem-accounting);
+          }
+
+          .ecosystem-accounting-2 {
+            fill: #fff;
+          }
+
+          .ecosystem-accounting-3 {
+            fill: #00b7e3;
+          }
+
+          .ecosystem-accounting-4 {
+            fill: #e2e6e8;
+          }
+
+          .ecosystem-accounting-5 {
+            fill: #6fd5d9;
+            opacity: 0.3;
+          }
         </style>
-        <rect width="175" height="130" class="ecosystem-accounting-1" rx="4" ry="4"/>
-        <rect width="112.6" height="59.1" x="10.3" y="28.1" class="ecosystem-accounting-2" rx="4" ry="4"/>
-        <rect width="35.7" height="59.1" x="129.1" y="28.1" class="ecosystem-accounting-2" rx="4" ry="4"/>
-        <rect width="113" height="26.9" x="9.8" y="93.4" class="ecosystem-accounting-2" rx="4" ry="4"/>
-        <path d="M164 21.5h-8.6a1.6 1.6 0 0 1-1.5-1.7v-1a1.6 1.6 0 0 1 1-1.8h8.2a1.6 1.6 0 0 1 1.4 1.7v1a1.6 1.6 0 0 1-1.5 1.8zm-14.3 0h-20.3a1.6 1.6 0 0 1-1.5-1.7v-1a1.6 1.6 0 0 1 1-1.8h20a1.6 1.6 0 0 1 1.3 1.7v1a1.6 1.6 0 0 1-1.4 1.8z" class="ecosystem-accounting-3"/>
-        <path d="M123.6 21.5h-12a1.6 1.6 0 0 1-1.5-1.7v-1a1.6 1.6 0 0 1 2-1.8h12a1.6 1.6 0 0 1 1.8 1.7v1a1.6 1.6 0 0 1-1.4 1.8z" class="ecosystem-accounting-2"/><path d="M35.5 21.5h-24a1.6 1.6 0 0 1-1.6-1.7v-1a1.6 1.6 0 0 1 1-1.8h24a1.6 1.6 0 0 1 1.3 1.7v1a1.6 1.6 0 0 1-1.6 1.8z" class="ecosystem-accounting-3"/>
-        <path d="M102 105.4H20a1.6 1.6 0 0 1 0-3h82a1.6 1.6 0 0 1 0 3zm-40 6H20a1.6 1.6 0 0 1 0-3h42a1.6 1.6 0 0 1 0 3zm85.6-74.8H136a1.6 1.6 0 0 1 0-3h11.6a1.6 1.6 0 0 1 0 3zm10 11H136a1.6 1.6 0 0 1 0-3h21.6a1.6 1.6 0 0 1 0 3zm-6 6H136a1.6 1.6 0 0 1 0-3h15.6a1.6 1.6 0 0 1 0 3zm-8 6H136a1.6 1.6 0 0 1 0-3h7.6a1.6 1.6 0 0 1 0 3zm10 6H136a1.6 1.6 0 0 1 0-3h17.6a1.6 1.6 0 0 1 0 3z" class="ecosystem-accounting-4"/>
-        <path d="M119 87H14a4 4 0 0 1-4-4V69.6l12 1.2 10.5-16.4 6 10.2 16-23.6 21.2 31.3 47.2-8.7V83a4 4 0 0 1-4 4z" class="ecosystem-accounting-5"/>
+        <rect width="175" height="130" class="ecosystem-accounting-1" rx="4" ry="4" />
+        <rect width="112.6" height="59.1" x="10.3" y="28.1" class="ecosystem-accounting-2" rx="4" ry="4" />
+        <rect width="35.7" height="59.1" x="129.1" y="28.1" class="ecosystem-accounting-2" rx="4" ry="4" />
+        <rect width="113" height="26.9" x="9.8" y="93.4" class="ecosystem-accounting-2" rx="4" ry="4" />
+        <path
+          d="M164 21.5h-8.6a1.6 1.6 0 0 1-1.5-1.7v-1a1.6 1.6 0 0 1 1-1.8h8.2a1.6 1.6 0 0 1 1.4 1.7v1a1.6 1.6 0 0 1-1.5 1.8zm-14.3 0h-20.3a1.6 1.6 0 0 1-1.5-1.7v-1a1.6 1.6 0 0 1 1-1.8h20a1.6 1.6 0 0 1 1.3 1.7v1a1.6 1.6 0 0 1-1.4 1.8z"
+          class="ecosystem-accounting-3" />
+        <path
+          d="M123.6 21.5h-12a1.6 1.6 0 0 1-1.5-1.7v-1a1.6 1.6 0 0 1 2-1.8h12a1.6 1.6 0 0 1 1.8 1.7v1a1.6 1.6 0 0 1-1.4 1.8z"
+          class="ecosystem-accounting-2" />
+        <path
+          d="M35.5 21.5h-24a1.6 1.6 0 0 1-1.6-1.7v-1a1.6 1.6 0 0 1 1-1.8h24a1.6 1.6 0 0 1 1.3 1.7v1a1.6 1.6 0 0 1-1.6 1.8z"
+          class="ecosystem-accounting-3" />
+        <path
+          d="M102 105.4H20a1.6 1.6 0 0 1 0-3h82a1.6 1.6 0 0 1 0 3zm-40 6H20a1.6 1.6 0 0 1 0-3h42a1.6 1.6 0 0 1 0 3zm85.6-74.8H136a1.6 1.6 0 0 1 0-3h11.6a1.6 1.6 0 0 1 0 3zm10 11H136a1.6 1.6 0 0 1 0-3h21.6a1.6 1.6 0 0 1 0 3zm-6 6H136a1.6 1.6 0 0 1 0-3h15.6a1.6 1.6 0 0 1 0 3zm-8 6H136a1.6 1.6 0 0 1 0-3h7.6a1.6 1.6 0 0 1 0 3zm10 6H136a1.6 1.6 0 0 1 0-3h17.6a1.6 1.6 0 0 1 0 3z"
+          class="ecosystem-accounting-4" />
+        <path d="M119 87H14a4 4 0 0 1-4-4V69.6l12 1.2 10.5-16.4 6 10.2 16-23.6 21.2 31.3 47.2-8.7V83a4 4 0 0 1-4 4z"
+          class="ecosystem-accounting-5" />
       </symbol>
-      </defs>
-    </svg>
+    </defs>
+  </svg>
 
-    <div class="title">
-      <div class="title-1 mx-auto">
-        <h1>Complete, Cloud-Based Management Platform</h1>
+  <div class="title">
+    <div class="title-1 mx-auto">
+      <h1>Complete, Cloud-Based Management Platform</h1>
+    </div>
+    <div class="title-2">
+      <h1>RPN GO&reg;</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid mx-auto">
+    <div class="row d-flex pb- px-4">
+      <div class="col-md-8">
+        <div class="row d-flex justify-content-between">
+          <div class="d-flex flex-column block-footer text-center">
+            <h5 class="footer-headings">
+              <img src="logo.png" alt="RPN" width="90" height="90">
+            </h5>
+            <p class="list-items">Copyright &copy; 2021 </p>
+            <p class="list-items">REPAIR AND </p>
+            <p class="list-items">PRESERVATION </p>
+            <p class="list-items">NETWORK</p>
+            <p class="list-items"> All rights reserved.</p>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Site Map</h5>
+            <a href="services.html">
+              <p class="list-items">Services</p>
+            </a>
+            <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
+            <a href="technology.html">
+              <p class="list-items">Technology</p>
+            </a>
+            <a href="resources.html">
+              <p class="list-items">Resources</p>
+            </a>
+            <a href="about.html">
+              <p class="list-items">About</p>
+            </a>
+            <a href="contact.html">
+              <p class="list-items">Contact</p>
+            </a>
+            <!-- <a href="technology.html">
+              <p class="list-items">RPN GO&reg;</p>
+            </a> -->
+            <!-- <a href="tech-rpngo.html">
+              <p class="list-items">RPN GO&reg; Mobile App</p>
+            </a> -->
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Coroprate Address</h5>
+            <p class="list-items">10 Old Mamaroneck Road</p>
+            <p class="list-items">Unit 1A</p>
+            <p class="list-items">White Plains, NY, 10605</p>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Regional Address</h5>
+            <p class="list-items">1820 NW 118th Street #220</p>
+            <p class="list-items">Clive, IA, 50325</p>
+            <p class="list-items"></p>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Contact</h5>
+            <p class="list-items">Tel: (866)776-8880</p>
+            <p class="list-items">Fax: (866)968-6156</p>
+            <a href="mailto: info@rpncompany.com">
+              <p class="list-items">Email: info@rpncompany.com</p>
+            </a>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Legal</h5>
+            <p class="list-items">Terms of Use</p>
+            <p class="list-items">Privacy Policy</p>
+          </div>
+        </div>
       </div>
-      <div class="title-2">
-        <h1 >RPN GO&reg;</h1>
+      <div class="col-md-4">
+        <div class="d-flex flex-column pl-md-5 px-4">
+          <h5 class="footer-headings pl-md-2">Download App</h5>
+          <div class="g-play pb-5 border-left">
+            <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img
+                src="google-play-badge.png" width="125" height="52"></a>
+            <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png"
+                width="110" height="35"></a>
+          </div>
+          <div class="d-flex flex-column pl-md-2 border-left pb-3">
+            <h5 class="footer-headings mb-3">Follow Us</h5>
+            <div class="row d-flex pl-2">
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/facebook1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/twitter1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/ins1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="https://www.linkedin.com/company/repair-and-preservation-network/">
+                  <img src="img/social-media/linkedin1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/YouTube.svg" width="25" height="25">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="container-fluid mx-auto">
-      <div class="row d-flex pb- px-4">
-          <div class="col-md-8">
-              <div class="row d-flex justify-content-between">
-                  <div class="d-flex flex-column block-footer text-center">
-                      <h5 class="footer-headings">
-                        <img src="logo.png" alt="RPN" width="90" height="90">
-                      </h5>
-                      <p class="list-items">Copyright &copy; 2021  </p>
-                      <p class="list-items">REPAIR AND  </p>
-                      <p class="list-items">PRESERVATION </p>
-                      <p class="list-items">NETWORK</p>
-                      <p class="list-items"> All rights reserved.</p>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                    <h5 class="footer-headings">Site Map</h5>          
-                    <a href="services.html"><p class="list-items">Services</p></a>
-                    <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
-                    <a href="technologies.html"><p class="list-items">Technology</p></a>
-                    <a href="resources.html"><p class="list-items">Resources</p></a>
-                    <a href="about.html"><p class="list-items">About</p></a>
-                    <a href="contact.html"><p class="list-items">Contact</p></a>
-                    <a href="tech-rpnweb.html"><p class="list-items">RPN GO&reg;</p></a>
-                    <a href="tech-rpngo.html"><p class="list-items">RPN GO&reg; Mobile App</p></a>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                      <h5 class="footer-headings">Coroprate Address</h5>
-                      <p class="list-items">10 Old Mamaroneck Road</p>
-                      <p class="list-items">Unit 1A</p>
-                      <p class="list-items">White Plains, NY, 10605</p>
-                      <p class="list-items"><br/></p>
-                      <h5 class="footer-headings">Regional Address</h5>
-                      <p class="list-items">1820 NW 118th Street #220</p>
-                      <p class="list-items">Clive, IA, 50325</p>
-                      <p class="list-items"></p>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                      <h5 class="footer-headings">Contact</h5>          
-                      <p class="list-items">Tel: (866)776-8880</p>
-                      <p class="list-items">Fax: (866)968-6156</p>
-                      <a href="mailto: info@rpncompany.com"><p class="list-items">Email: info@rpncompany.com</p></a>
-                      <p class="list-items"><br/></p>
-                      <h5 class="footer-headings">Legal</h5>
-                      <p class="list-items">Terms of Use</p>
-                      <p class="list-items">Privacy Policy</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="d-flex flex-column pl-md-5 px-4">
-                  <h5 class="footer-headings pl-md-2">Download App</h5>
-                  <div class="g-play pb-5 border-left">
-                    <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img src="google-play-badge.png" width="125" height="52"></a>
-                    <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png" width="110" height="35"></a>
-                  </div>
-                  <div class="d-flex flex-column pl-md-2 border-left pb-3">
-                      <h5 class="footer-headings mb-3">Follow Us</h5>
-                      <div class="row d-flex pl-2">
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/facebook1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/twitter1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/ins1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="https://www.linkedin.com/company/repair-and-preservation-network/">
-                              <img src="img/social-media/linkedin1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/YouTube.svg" width="25" height="25">
-                            </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+    <div class="row d-flex justify-content-between row-2">
+      <div class="block-item">
+        <div class="fa fa-fire">
+          <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110"
+              height="100"></a>
+        </div>
       </div>
-      <div class="row d-flex justify-content-between row-2">
-        <div class="block-item">
-            <div class="fa fa-fire">
-              <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110" height="100"></a>      
-            </div>
+      <div class="block-item">
+        <div class="fa fa-eye">
+          <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120"
+              height="70"></a>
         </div>
-        <div class="block-item">
-            <div class="fa fa-eye">
-              <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120" height="70"></a>
-            </div>
-        </div>
-        <div class="block-item">
-            <div class="fa fa-fire">
+      </div>
+      <div class="block-item">
+        <div class="fa fa-fire">
 
-            </div>
         </div>
-        <div class="block-item">
-            <div class="fa fa-home">
+      </div>
+      <div class="block-item">
+        <div class="fa fa-home">
 
-            </div>
         </div>
-        <div class="block-item">
-            <div class="fa fa-facebook">
+      </div>
+      <div class="block-item">
+        <div class="fa fa-facebook">
 
-            </div>
         </div>
+      </div>
     </div>
-    </div>    
-    <script src="./js/tech-rpnweb.js"></script>
-  </body>
+  </div>
+  <script src="./js/tech-rpnweb.js"></script>
+</body>
+
 </html>

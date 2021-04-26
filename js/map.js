@@ -12582,12 +12582,12 @@ var map = {
     ],
 };
 
-
 console.log(map.locations.length);
 var svgNS = "http://www.w3.org/2000/svg";
-var svg = document.getElementById("mapSvg");
-// var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+var div = document.getElementById("svg_wrapper");
 
+// var svg = document.getElementById("mapSvg");
+var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 function drawMap() {
     for (let i = 0; i < map.locations.length; ++i) {
         p = map.locations[i];
@@ -12654,16 +12654,16 @@ function drawMap() {
 
     document.body.appendChild(svg);
 }
-
 var request = new XMLHttpRequest();
 var data = null;
 // Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'http://localhost:8080/api/server/general/public/PR_P', true)
+request.open('GET', 'https://devl.api.vendor.rpngo.com/api/server/general/public/PR_P', true)
+
 request.onload = function () {
     // Begin accessing JSON data here
     data = JSON.parse(this.response)
     if (request.status >= 200 && request.status < 400) {
-        console.log(data);
+        // console.log(data);
         drawMap();
     } else {
         console.log('error')
@@ -12671,3 +12671,5 @@ request.onload = function () {
 }
 // Send request
 request.send();
+
+div.appendChild(svg);

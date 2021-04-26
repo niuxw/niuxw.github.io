@@ -1,462 +1,508 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>services</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
-    <script>
-      // init controller
-      var controller = new ScrollMagic.Controller();
-    </script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>services</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+  <script>
+    // init controller
+    var controller = new ScrollMagic.Controller();
+  </script>
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="../css/about.css" rel="stylesheet">
+  <link href="../css/service.css" rel="stylesheet">
+  <link href="../product.css" rel="stylesheet">
+  <link href="../tech-rpnweb.css" rel="stylesheet">
+  <link href="../rpnweb.css" rel="stylesheet">
+</head>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="../css/about.css" rel="stylesheet">
-    <link href="../css/service.css" rel="stylesheet">
-    <link href="../product.css" rel="stylesheet">
-    <link href="../tech-rpnweb.css" rel="stylesheet">
-    <link href="../rpnweb.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="site-header sticky-top py-1 navbar">
-        <a class="py-2 navbar-brand" href="../index.html" aria-label="Product" style="left: 10%; color: white;">
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
-          <img src="../logo.png" alt="RPN" width="25" height="25">
-          REPAIR AND PERSERVATION NETWORK
-        </a>
-        <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
-          <a class="py-2 d-none d-md-inline-block nav-item" href="../services.html">Services</a>
-          <a class="py-2 d-none d-md-inline-block nav-item" href="../pricing.html">Pricing</a>
-          <a class="py-2 d-none d-md-inline-block nav-item" href="../technologies.html">Technology</a>
-          <a class="py-2 d-none d-md-inline-block nav-item" href="../resources.html">Resources</a>
-          <a class="py-2 d-none d-md-inline-block nav-item" href="../about.html">About</a>
-          <a class="py-2 d-none d-md-inline-block nav-item" href="../contact.html">Contact</a>
-          <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a> 
-          <!-- need employee equality system -->
-          <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
-          <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
-        </div>
-      </nav>
-  
-    <section id="property-inspection-header" class="jumbotron text-center">
-      <div class="container">
-        <h1 style="color: white;">Predictive Intelligence</h1>
-        <!-- <div style="margin-top: 7%;">
+<body>
+  <nav class="site-header sticky-top py-1 navbar">
+    <a class="py-2 navbar-brand" href="../index.html" aria-label="Product" style="left: 10%; color: white;">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
+      <img src="../logo.png" alt="RPN" width="25" height="25">
+      REPAIR AND PERSERVATION NETWORK
+    </a>
+    <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block nav-item" href="../services.html">Services</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="../pricing.html">Pricing</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="../technology.html">Technology</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="../resources.html">Resources</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="../about.html">About</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="../contact.html">Contact</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a>
+      <!-- need employee equality system -->
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
+      <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign
+        up</button>
+    </div>
+  </nav>
+
+  <section id="property-inspection-header" class="jumbotron text-center">
+    <div class="container">
+      <h1 style="color: white;">Predictive Intelligence</h1>
+      <!-- <div style="margin-top: 7%;">
             <a href="pricing.html#p-inspection" class="btn btn-warning" target="_blank">Comparsion & Pricing</a>
         </div> -->
-    </section>
-    <div class="spacer s0"></div>
-  
-    <div class="row2">
-        <div class="large-12 medium-12 small-12 column2">
-            <p class="para-space text-center">
-                RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals. Our nationwide network of professional,                 RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and business goals. Our nationwide network of professional...
-                ...
-            </p>
-        </div>
-    </div>
+  </section>
+  <div class="spacer s0"></div>
 
-    <div class="d-flex flex-column pl-md-2 border-left pb-3 align-items-center">
-      <div class="row d-flex pl-2">
-        <a href="#p1" style="text-decoration: none; color: black;">
-          <div class="fa fa-sm text-center">
-            <div class="element-animate mb-4">
-              <div class="media block-6 d-block text-center">
-                  <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
-                      <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z"/>
-                          <path fill-rule="evenodd" d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
-                      </svg>
-                  </div>
-                      <div class="media-body">
-                          <h4>Exterior inspection</h4>
-                          <p>Example Description</p>
-                      </div>
-                </div>  
-            </div>
-        </a>
-      </div>
-      <div class="fa fa-sm">
-        <a href="#p2" style="text-decoration: none; color: black;">
-          <div class=" element-animate mb-4">
+  <div class="row2">
+    <div class="large-12 medium-12 small-12 column2">
+      <p class="para-space text-center">
+        RPN provides a full range of regulatory-compliant residential and commercial inspection services to meet each
+        client’s operating needs and business goals. Our nationwide network of professional, RPN provides a full range
+        of regulatory-compliant residential and commercial inspection services to meet each client’s operating needs and
+        business goals. Our nationwide network of professional...
+        ...
+      </p>
+    </div>
+  </div>
+
+  <div class="d-flex flex-column pl-md-2 border-left pb-3 align-items-center">
+    <div class="row d-flex pl-2">
+      <a href="#p1" style="text-decoration: none; color: black;">
+        <div class="fa fa-sm text-center">
+          <div class="element-animate mb-4">
             <div class="media block-6 d-block text-center">
-                <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
-                    <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z"/>
-                        <path fill-rule="evenodd" d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
-                    </svg>
-                </div>
-                    <div class="media-body">
-                        <h4>Exterior inspection</h4>
-                        <p>Example Description</p>
-                    </div>
-                </div>  
+              <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
+                <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z" />
+                  <path fill-rule="evenodd"
+                    d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+                </svg>
+              </div>
+              <div class="media-body">
+                <h4>Exterior inspection</h4>
+                <p>Example Description</p>
+              </div>
             </div>
-          </a>
-       </div>
-      <div class="fa fa-sm">
-        <a href="#p3" style="text-decoration: none; color: black;">
-          <div class="  element-animate mb-4">
-            <div class="media block-6 d-block text-center">
-                <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
-                    <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z"/>
-                        <path fill-rule="evenodd" d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
-                    </svg>
-                </div>
-                    <div class="media-body">
-                        <h4>Exterior inspection</h4>
-                        <p>Example Description</p>
-                    </div>
-                </div>  
-            </div>
-          </a>
-      </div>
-      <div class="fa fa-sm">
-        <a href="#p4" style="text-decoration: none; color: black;">
-          <div class="  element-animate mb-4">
-            <div class="media block-6 d-block text-center">
-                <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
-                    <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z"/>
-                        <path fill-rule="evenodd" d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
-                    </svg>
-                </div>
-                    <div class="media-body">
-                        <h4>Exterior inspection</h4>
-                        <p>Example Description</p>
-                    </div>
-                </div>  
-            </div>
-        </a>
-      </div>
-      <div class="fa fa-sm">
-        <a href="#p5" style="text-decoration: none; color: black;">
-          <div class="  element-animate mb-4">
-            <div class="media block-6 d-block text-center">
-                <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
-                    <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z"/>
-                        <path fill-rule="evenodd" d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
-                    </svg>
-                </div>
-                    <div class="media-body">
-                        <h4>Exterior inspection</h4>
-                        <p>Example Description</p>
-                    </div>
-            </div>  
           </div>
-        </a>
-      </div>
+      </a>
     </div>
+    <div class="fa fa-sm">
+      <a href="#p2" style="text-decoration: none; color: black;">
+        <div class=" element-animate mb-4">
+          <div class="media block-6 d-block text-center">
+            <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
+              <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z" />
+                <path fill-rule="evenodd"
+                  d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+              </svg>
+            </div>
+            <div class="media-body">
+              <h4>Exterior inspection</h4>
+              <p>Example Description</p>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
+    <div class="fa fa-sm">
+      <a href="#p3" style="text-decoration: none; color: black;">
+        <div class="  element-animate mb-4">
+          <div class="media block-6 d-block text-center">
+            <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
+              <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z" />
+                <path fill-rule="evenodd"
+                  d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+              </svg>
+            </div>
+            <div class="media-body">
+              <h4>Exterior inspection</h4>
+              <p>Example Description</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="fa fa-sm">
+      <a href="#p4" style="text-decoration: none; color: black;">
+        <div class="  element-animate mb-4">
+          <div class="media block-6 d-block text-center">
+            <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
+              <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z" />
+                <path fill-rule="evenodd"
+                  d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+              </svg>
+            </div>
+            <div class="media-body">
+              <h4>Exterior inspection</h4>
+              <p>Example Description</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="fa fa-sm">
+      <a href="#p5" style="text-decoration: none; color: black;">
+        <div class="  element-animate mb-4">
+          <div class="media block-6 d-block text-center">
+            <div class="icon mb-3 mx-auto" style="width: 7vw; height: 7vh;">
+              <svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z" />
+                <path fill-rule="evenodd"
+                  d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+              </svg>
+            </div>
+            <div class="media-body">
+              <h4>Exterior inspection</h4>
+              <p>Example Description</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  </div>
 
-    <!-- <section class="row2">
+  <!-- <section class="row2">
         <div class="separator columns 2"><h2>Our Inspections Support </h2></div>
     </section> -->
-    <div class="large-12 medium-12 small-12 columns" style="margin-top: 5vh; margin-bottom: 5vh;">
-        <hr/>
-    </div>
-  
-    <div id="p1" class="">
-        <div class="rpn-story-1">
-          <div class="text-center">
-            <h1>....</h1>
-          </div>
-          <div class="laptop-wrapper-1">
-            <div class="laptop2">
-              <div class="css-mb with-glare size1">
-                <div class="mb-display-position">
-                  <div class="mb-display">
-                    <div class="mb-screen-position">
-                      <div class="mb-screen">
-                        <img src="../img/rpngo/web1.png" alt="example image" />              
-                      </div>
-                    </div>
+  <div class="large-12 medium-12 small-12 columns" style="margin-top: 5vh; margin-bottom: 5vh;">
+    <hr />
+  </div>
+
+  <div id="p1" class="">
+    <div class="rpn-story-1">
+      <div class="text-center">
+        <h1>....</h1>
+      </div>
+      <div class="laptop-wrapper-1">
+        <div class="laptop2">
+          <div class="css-mb with-glare size1">
+            <div class="mb-display-position">
+              <div class="mb-display">
+                <div class="mb-screen-position">
+                  <div class="mb-screen">
+                    <img src="../img/rpngo/web1.png" alt="example image" />
                   </div>
                 </div>
-                <div class="mb-body"></div>
-                <div class="mb-bottom-cover"></div>
-              </div>  
+              </div>
             </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh; margin-bottom: 5vh;">
-      <hr/>
-    </div>
-
-    <div id="p2" class="">
-      <div class="rpn-story-1">
-        <div class="text-center">
-          <h1>Forecast future emergency</h1>
-        </div>
-        <div class="laptop-wrapper-1">
-          <div class="laptop2">
-            <div class="css-mb with-glare size1">
-              <div class="mb-display-position">
-                <div class="mb-display">
-                  <div class="mb-screen-position">
-                    <div class="mb-screen">
-                      <img src="img/rpngo/web1.png" alt="example image" />              
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-body"></div>
-              <div class="mb-bottom-cover"></div>
-            </div>  
+            <div class="mb-body"></div>
+            <div class="mb-bottom-cover"></div>
           </div>
         </div>
       </div>
-  </div>
-
-    <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh; margin-bottom: 5vh;">
-      <hr/>
     </div>
-
-    <div id="p3" class="">
-      <div class="rpn-story-1">
-        <div class="text-center">
-          <h1>...</h1>
-        </div>
-        <div class="laptop-wrapper-1">
-          <div class="laptop2">
-            <div class="css-mb with-glare size1">
-              <div class="mb-display-position">
-                <div class="mb-display">
-                  <div class="mb-screen-position">
-                    <div class="mb-screen">
-                      <img src="img/rpngo/web1.png" alt="example image" />              
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-body"></div>
-              <div class="mb-bottom-cover"></div>
-            </div>  
-          </div>
-        </div>
-      </div>
-  </div>
-
-    <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh; margin-bottom: 5vh;">
-      <hr/>
-    </div>
-
-    <div id="p4" class="">
-      <div class="rpn-story-1">
-        <div class="text-center">
-          <h1>...</h1>
-        </div>
-        <div class="laptop-wrapper-1">
-          <div class="laptop2">
-            <div class="css-mb with-glare size1">
-              <div class="mb-display-position">
-                <div class="mb-display">
-                  <div class="mb-screen-position">
-                    <div class="mb-screen">
-                      <img src="img/rpngo/web1.png" alt="example image" />              
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-body"></div>
-              <div class="mb-bottom-cover"></div>
-            </div>  
-          </div>
-        </div>
-      </div>
   </div>
 
   <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh; margin-bottom: 5vh;">
-    <hr/>
+    <hr />
   </div>
 
-    <div class="sec-example">
-        <div class="sec-ct">
-            <div class="position-relative overflow-hidden p-3 m-md-3 text-center site-section1" style="background-color: #0c3f72">
-              <div class="col-md-8 p-lg-4 mx-auto">
-                <h1 class="display-4 font-weight-normal" style="margin-top: 20px;color: white;">Ask Our Expert</h1>
-                <!-- <input type="email" class="form-control my-5" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
-                <form style="margin-top: 50px">
-                    <div class="row">
-                      <div class="col">
-                        <input type="text" class="form-control" placeholder="First name">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name">
-                      </div>
-                    </div>
-                </form>
-                <form style="margin-top: 20px">
-                    <div class="row">
-                      <div class="col">
-                        <input type="email" class="form-control" placeholder="Enter Email">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" placeholder="Phone Number">
-                      </div>
-                    </div>
-                </form>
-                <button type="button" class="btn btn-warning" style="margin-top: 50px;">Ask Us</button>
-                <div>
-                    <p style="color: white;">
-                        Your personal information will be kept confidential according to our <a href="#">Privacy Policy</a>.
-                    </p>
+  <div id="p2" class="">
+    <div class="rpn-story-1">
+      <div class="text-center">
+        <h1>Forecast future emergency</h1>
+      </div>
+      <div class="laptop-wrapper-1">
+        <div class="laptop2">
+          <div class="css-mb with-glare size1">
+            <div class="mb-display-position">
+              <div class="mb-display">
+                <div class="mb-screen-position">
+                  <div class="mb-screen">
+                    <img src="img/rpngo/web1.png" alt="example image" />
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="mb-body"></div>
+            <div class="mb-bottom-cover"></div>
+          </div>
         </div>
       </div>
-    
-      <div class="container-fluid mx-auto">
-        <div class="row d-flex pb- px-4">
-            <div class="col-md-8">
-                <div class="row d-flex justify-content-between">
-                    <div class="d-flex flex-column block-footer text-center">
-                        <h5 class="footer-headings">
-                          <img src="logo.png" alt="RPN" width="90" height="90">
-                        </h5>
-                        <p class="list-items">Copyright &copy; 2021  </p>
-                        <p class="list-items">REPAIR AND  </p>
-                        <p class="list-items">PRESERVATION </p>
-                        <p class="list-items">NETWORK</p>
-                        <p class="list-items"> All rights reserved.</p>
-                    </div>
-                    <div class="d-flex flex-column block-footer">
-                      <h5 class="footer-headings">Site Map</h5>          
-                      <a href="services.html"><p class="list-items">Services</p></a>
-                      <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
-                      <a href="technologies.html"><p class="list-items">Technology</p></a>
-                      <a href="resources.html"><p class="list-items">Resources</p></a>
-                      <a href="about.html"><p class="list-items">About</p></a>
-                      <a href="contact.html"><p class="list-items">Contact</p></a>
-                      <a href="tech-rpnweb.html"><p class="list-items">RPN GO&reg;</p></a>
-                      <a href="tech-rpngo.html"><p class="list-items">RPN GO&reg; Mobile App</p></a>
-                    </div>
-                    <div class="d-flex flex-column block-footer">
-                        <h5 class="footer-headings">Coroprate Address</h5>
-                        <p class="list-items">10 Old Mamaroneck Road</p>
-                        <p class="list-items">Unit 1A</p>
-                        <p class="list-items">White Plains, NY, 10605</p>
-                        <p class="list-items"><br/></p>
-                        <h5 class="footer-headings">Regional Address</h5>
-                        <p class="list-items">1820 NW 118th Street #220</p>
-                        <p class="list-items">Clive, IA, 50325</p>
-                        <p class="list-items"></p>
-                    </div>
-                    <div class="d-flex flex-column block-footer">
-                        <h5 class="footer-headings">Contact</h5>          
-                        <p class="list-items">Tel: (866)776-8880</p>
-                        <p class="list-items">Fax: (866)968-6156</p>
-                        <a href="mailto: info@rpncompany.com"><p class="list-items">Email: info@rpncompany.com</p></a>
-                        <p class="list-items"><br/></p>
-                        <h5 class="footer-headings">Legal</h5>
-                        <p class="list-items">Terms of Use</p>
-                        <p class="list-items">Privacy Policy</p>
-                    </div>
+    </div>
+  </div>
+
+  <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh; margin-bottom: 5vh;">
+    <hr />
+  </div>
+
+  <div id="p3" class="">
+    <div class="rpn-story-1">
+      <div class="text-center">
+        <h1>...</h1>
+      </div>
+      <div class="laptop-wrapper-1">
+        <div class="laptop2">
+          <div class="css-mb with-glare size1">
+            <div class="mb-display-position">
+              <div class="mb-display">
+                <div class="mb-screen-position">
+                  <div class="mb-screen">
+                    <img src="img/rpngo/web1.png" alt="example image" />
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="col-md-4">
-                <div class="d-flex flex-column pl-md-5 px-4">
-                    <h5 class="footer-headings pl-md-2">Download App</h5>
-                    <div class="g-play pb-5 border-left">
-                      <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img src="google-play-badge.png" width="125" height="52"></a>
-                      <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png" width="110" height="35"></a>
-                    </div>
-                    <div class="d-flex flex-column pl-md-2 border-left pb-3">
-                        <h5 class="footer-headings mb-3">Follow Us</h5>
-                        <div class="row d-flex pl-2">
-                            <div class="fa fa-sm">
-                              <a class="text-muted" href="#">
-                                <img src="img/social-media/facebook1.svg" width="25" height="25">
-                              </a>
-                            </div>
-                            <div class="fa fa-sm">
-                              <a class="text-muted" href="#">
-                                <img src="img/social-media/twitter1.svg" width="25" height="25">
-                              </a>
-                            </div>
-                            <div class="fa fa-sm">
-                              <a class="text-muted" href="#">
-                                <img src="img/social-media/ins1.svg" width="25" height="25">
-                              </a>
-                            </div>
-                            <div class="fa fa-sm">
-                              <a class="text-muted" href="#">
-                                <img src="img/social-media/linkedin1.svg" width="25" height="25">
-                              </a>
-                            </div>
-                            <div class="fa fa-sm">
-                              <a class="text-muted" href="#">
-                                <img src="img/social-media/YouTube.svg" width="25" height="25">
-                              </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="mb-body"></div>
+            <div class="mb-bottom-cover"></div>
+          </div>
         </div>
-        <div class="row d-flex justify-content-between row-2">
-          <div class="block-item">
-              <div class="fa fa-fire">
-                <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110" height="100"></a>      
-              </div>
-          </div>
-          <div class="block-item">
-              <div class="fa fa-eye">
-                <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120" height="70"></a>
-              </div>
-          </div>
-          <div class="block-item">
-              <div class="fa fa-fire">
-  
-              </div>
-          </div>
-          <div class="block-item">
-              <div class="fa fa-home">
-  
-              </div>
-          </div>
-          <div class="block-item">
-              <div class="fa fa-facebook">
-  
-              </div>
-          </div>
       </div>
+    </div>
+  </div>
+
+  <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh; margin-bottom: 5vh;">
+    <hr />
+  </div>
+
+  <div id="p4" class="">
+    <div class="rpn-story-1">
+      <div class="text-center">
+        <h1>...</h1>
       </div>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        
-    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
-    
-  </body>
+      <div class="laptop-wrapper-1">
+        <div class="laptop2">
+          <div class="css-mb with-glare size1">
+            <div class="mb-display-position">
+              <div class="mb-display">
+                <div class="mb-screen-position">
+                  <div class="mb-screen">
+                    <img src="img/rpngo/web1.png" alt="example image" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-body"></div>
+            <div class="mb-bottom-cover"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="large-12 medium-12 small-12 columns" style="margin-top: 15vh; margin-bottom: 5vh;">
+    <hr />
+  </div>
+
+  <div class="sec-example">
+    <div class="sec-ct">
+      <div class="position-relative overflow-hidden p-3 m-md-3 text-center site-section1"
+        style="background-color: #0c3f72">
+        <div class="col-md-8 p-lg-4 mx-auto">
+          <h1 class="display-4 font-weight-normal" style="margin-top: 20px;color: white;">Ask Our Expert</h1>
+          <!-- <input type="email" class="form-control my-5" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+          <form style="margin-top: 50px">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+          </form>
+          <form style="margin-top: 20px">
+            <div class="row">
+              <div class="col">
+                <input type="email" class="form-control" placeholder="Enter Email">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+            </div>
+          </form>
+          <button type="button" class="btn btn-warning" style="margin-top: 50px;">Ask Us</button>
+          <div>
+            <p style="color: white;">
+              Your personal information will be kept confidential according to our <a href="#">Privacy Policy</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mx-auto">
+    <div class="row d-flex pb- px-4">
+      <div class="col-md-8">
+        <div class="row d-flex justify-content-between">
+          <div class="d-flex flex-column block-footer text-center">
+            <h5 class="footer-headings">
+              <img src="logo.png" alt="RPN" width="90" height="90">
+            </h5>
+            <p class="list-items">Copyright &copy; 2021 </p>
+            <p class="list-items">REPAIR AND </p>
+            <p class="list-items">PRESERVATION </p>
+            <p class="list-items">NETWORK</p>
+            <p class="list-items"> All rights reserved.</p>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Site Map</h5>
+            <a href="services.html">
+              <p class="list-items">Services</p>
+            </a>
+            <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
+            <a href="technology.html">
+              <p class="list-items">Technology</p>
+            </a>
+            <a href="resources.html">
+              <p class="list-items">Resources</p>
+            </a>
+            <a href="about.html">
+              <p class="list-items">About</p>
+            </a>
+            <a href="contact.html">
+              <p class="list-items">Contact</p>
+            </a>
+            <!-- <a href="technology.html">
+              <p class="list-items">RPN GO&reg;</p>
+            </a> -->
+            <!-- <a href="tech-rpngo.html">
+              <p class="list-items">RPN GO&reg; Mobile App</p>
+            </a> -->
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Coroprate Address</h5>
+            <p class="list-items">10 Old Mamaroneck Road</p>
+            <p class="list-items">Unit 1A</p>
+            <p class="list-items">White Plains, NY, 10605</p>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Regional Address</h5>
+            <p class="list-items">1820 NW 118th Street #220</p>
+            <p class="list-items">Clive, IA, 50325</p>
+            <p class="list-items"></p>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Contact</h5>
+            <p class="list-items">Tel: (866)776-8880</p>
+            <p class="list-items">Fax: (866)968-6156</p>
+            <a href="mailto: info@rpncompany.com">
+              <p class="list-items">Email: info@rpncompany.com</p>
+            </a>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Legal</h5>
+            <p class="list-items">Terms of Use</p>
+            <p class="list-items">Privacy Policy</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="d-flex flex-column pl-md-5 px-4">
+          <h5 class="footer-headings pl-md-2">Download App</h5>
+          <div class="g-play pb-5 border-left">
+            <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img
+                src="google-play-badge.png" width="125" height="52"></a>
+            <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png"
+                width="110" height="35"></a>
+          </div>
+          <div class="d-flex flex-column pl-md-2 border-left pb-3">
+            <h5 class="footer-headings mb-3">Follow Us</h5>
+            <div class="row d-flex pl-2">
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/facebook1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/twitter1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/ins1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/linkedin1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/YouTube.svg" width="25" height="25">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-between row-2">
+      <div class="block-item">
+        <div class="fa fa-fire">
+          <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110"
+              height="100"></a>
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-eye">
+          <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120"
+              height="70"></a>
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-fire">
+
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-home">
+
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-facebook">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+
 </html>

@@ -1,276 +1,286 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>index</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>index</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script> -->
-    <script>
-      // init controller
-      var controller = new ScrollMagic.Controller();
-    </script>
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="./js/bootstrap.js"></script>
-  
-    <link href="./css/bootstrap.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script> -->
+  <script>
+    // init controller
+    var controller = new ScrollMagic.Controller();
+  </script>
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+  <script src="./js/bootstrap.js"></script>
+
+  <link href="./css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="product.css" rel="stylesheet">
+  <link href="css/resources.css" rel="stylesheet">
+</head>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="product.css" rel="stylesheet">
-    <link href="css/resources.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="site-header sticky-top py-1 navbar">
-      <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%; color: white;">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
-        <img src="logo.png" alt="RPN" width="25" height="25">
-        REPAIR AND PERSERVATION NETWORK
-      </a>
-      <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block nav-item" href="services.html">Services</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="pricing.html">Pricing</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="technologies.html">Technology</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" style="color: white;" href="resources.html">Resources</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="about.html">About</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="contact.html">Contact</a>
-        <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a> 
-        <!-- need employee equality system -->
-        <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
-        <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign up</button>
-      </div>
-    </nav>
+<body>
+  <nav class="site-header sticky-top py-1 navbar">
+    <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%; color: white;">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
+      <img src="logo.png" alt="RPN" width="25" height="25">
+      REPAIR AND PERSERVATION NETWORK
+    </a>
+    <div class="container-nav d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block nav-item" href="services.html">Services</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="pricing.html">Pricing</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="technology.html">Technology</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" style="color: white;" href="resources.html">Resources</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="about.html">About</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="contact.html">Contact</a>
+      <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a>
+      <!-- need employee equality system -->
+      <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
+      <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign
+        up</button>
+    </div>
+  </nav>
 
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-            <div class="box-singup">
-              <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to vendor</a></h2>
-            </div>
-            <div class="box-singup">
-              <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to client</a></h2>
-            </div>
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+          <div class="box-singup">
+            <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to vendor</a></h2>
+          </div>
+          <div class="box-singup">
+            <h2 class="singup-text"><a href="#" style="text-decoration: none; color: black;">Sign up to client</a></h2>
           </div>
         </div>
       </div>
     </div>
-  
-    <div class="container1">
-      <div class="svg-container">
-          <div class="text-center" style="flex-direction: row;">
-            <div id="inside2" class="text-center">
-              <h1 class="mb-4 ">Resources for COVID-19 </h1>
-              <p class="">The latest information, articles, and tools;
-              <p class="">to support your business, team, and
-              <p class="">customers during the COVID­-19 crisis.</p>
-            </div>  
-          </div>
-      </div>
-    </div>
+  </div>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
-        <a href="#" class="card card-left">
-          <div class="card__head">
-            <div class="card__image"></div>
-            <div class="card__author">
-              <div class="author">
-                <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
-                <div class="author__content">
-                  <p class="author__header">News News ..</p>
-                  <p class="author__subheader">By Author</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__body">
-            <h2 class="card__headline">Quicken Loans files for IPO</h2>
-            <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
-          </div>
-          <div class="card__foot">
-            <span class="card__link">Read more</span>
-          </div>
-          <div class="card__border"></div>
-        </a>
-      </div>
-      <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
-        <a href="#" class="card card-right">
-          <div class="card__head">
-            <div class="card__image"></div>
-            <div class="card__author">
-              <div class="author">
-                <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
-                <div class="author__content">
-                  <p class="author__header">News News ..</p>
-                  <p class="author__subheader">By Author</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__body">
-            <h2 class="card__headline">News Title</h2>
-            <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
-          </div>
-          <div class="card__foot">
-            <span class="card__link">Read more</span>
-          </div>
-          <div class="card__border"></div>
-        </a>
+  <div class="container1">
+    <div class="svg-container">
+      <div class="text-center" style="flex-direction: row;">
+        <div id="inside2" class="text-center">
+          <h1 class="mb-4 ">Resources for COVID-19 </h1>
+          <p class="">The latest information, articles, and tools;
+          <p class="">to support your business, team, and
+          <p class="">customers during the COVID­-19 crisis.</p>
+        </div>
       </div>
     </div>
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
-        <a href="#" class="card card-left">
-          <div class="card__head">
-            <div class="card__image"></div>
-            <div class="card__author">
-              <div class="author">
-                <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
-                <div class="author__content">
-                  <p class="author__header">News News ..</p>
-                  <p class="author__subheader">By Author</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__body">
-            <h2 class="card__headline">News Title</h2>
-            <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
-          </div>
-          <div class="card__foot">
-            <span class="card__link">Read more</span>
-          </div>
-          <div class="card__border"></div>
-        </a>
-      </div>
-      <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
-        <a href="#" class="card card-right">
-          <div class="card__head">
-            <div class="card__image"></div>
-            <div class="card__author">
-              <div class="author">
-                <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
-                <div class="author__content">
-                  <p class="author__header">News News ..</p>
-                  <p class="author__subheader">By Author</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__body">
-            <h2 class="card__headline">News Title</h2>
-            <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
-          </div>
-          <div class="card__foot">
-            <span class="card__link">Read more</span>
-          </div>
-          <div class="card__border"></div>
-        </a>
-      </div>
-    </div>
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
-        <a href="#" class="card card-left">
-          <div class="card__head">
-            <div class="card__image"></div>
-            <div class="card__author">
-              <div class="author">
-                <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
-                <div class="author__content">
-                  <p class="author__header">News News ..</p>
-                  <p class="author__subheader">By Author</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__body">
-            <h2 class="card__headline">News Title</h2>
-            <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
-          </div>
-          <div class="card__foot">
-            <span class="card__link">Read more</span>
-          </div>
-          <div class="card__border"></div>
-        </a>
-      </div>
-      <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
-        <a href="#" class="card card-right">
-          <div class="card__head">
-            <div class="card__image"></div>
-            <div class="card__author">
-              <div class="author">
-                <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
-                <div class="author__content">
-                  <p class="author__header">News News ..</p>
-                  <p class="author__subheader">By Author</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__body">
-            <h2 class="card__headline">News Title</h2>
-            <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
-          </div>
-          <div class="card__foot">
-            <span class="card__link">Read more</span>
-          </div>
-          <div class="card__border"></div>
-        </a>
-      </div>
-    </div>
+  </div>
 
-    <script>
-      const height = (elem) => {
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+    <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
+      <a href="#" class="card card-left">
+        <div class="card__head">
+          <div class="card__image"></div>
+          <div class="card__author">
+            <div class="author">
+              <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
+              <div class="author__content">
+                <p class="author__header">News News ..</p>
+                <p class="author__subheader">By Author</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__body">
+          <h2 class="card__headline">Quicken Loans files for IPO</h2>
+          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore.</p>
+        </div>
+        <div class="card__foot">
+          <span class="card__link">Read more</span>
+        </div>
+        <div class="card__border"></div>
+      </a>
+    </div>
+    <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
+      <a href="#" class="card card-right">
+        <div class="card__head">
+          <div class="card__image"></div>
+          <div class="card__author">
+            <div class="author">
+              <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
+              <div class="author__content">
+                <p class="author__header">News News ..</p>
+                <p class="author__subheader">By Author</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__body">
+          <h2 class="card__headline">News Title</h2>
+          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore.</p>
+        </div>
+        <div class="card__foot">
+          <span class="card__link">Read more</span>
+        </div>
+        <div class="card__border"></div>
+      </a>
+    </div>
+  </div>
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+    <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
+      <a href="#" class="card card-left">
+        <div class="card__head">
+          <div class="card__image"></div>
+          <div class="card__author">
+            <div class="author">
+              <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
+              <div class="author__content">
+                <p class="author__header">News News ..</p>
+                <p class="author__subheader">By Author</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__body">
+          <h2 class="card__headline">News Title</h2>
+          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore.</p>
+        </div>
+        <div class="card__foot">
+          <span class="card__link">Read more</span>
+        </div>
+        <div class="card__border"></div>
+      </a>
+    </div>
+    <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
+      <a href="#" class="card card-right">
+        <div class="card__head">
+          <div class="card__image"></div>
+          <div class="card__author">
+            <div class="author">
+              <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
+              <div class="author__content">
+                <p class="author__header">News News ..</p>
+                <p class="author__subheader">By Author</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__body">
+          <h2 class="card__headline">News Title</h2>
+          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore.</p>
+        </div>
+        <div class="card__foot">
+          <span class="card__link">Read more</span>
+        </div>
+        <div class="card__border"></div>
+      </a>
+    </div>
+  </div>
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+    <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
+      <a href="#" class="card card-left">
+        <div class="card__head">
+          <div class="card__image"></div>
+          <div class="card__author">
+            <div class="author">
+              <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
+              <div class="author__content">
+                <p class="author__header">News News ..</p>
+                <p class="author__subheader">By Author</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__body">
+          <h2 class="card__headline">News Title</h2>
+          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore.</p>
+        </div>
+        <div class="card__foot">
+          <span class="card__link">Read more</span>
+        </div>
+        <div class="card__border"></div>
+      </a>
+    </div>
+    <div class="position-relative overflow-hidden m-md-3" style="flex-direction: row;">
+      <a href="#" class="card card-right">
+        <div class="card__head">
+          <div class="card__image"></div>
+          <div class="card__author">
+            <div class="author">
+              <!-- <img src="https://s.gravatar.com/avatar/7ff9e93ff25e002bc49f4d69c0c3eac7?s=80" alt="Author of Tobias Reich" class="author__image"> -->
+              <div class="author__content">
+                <p class="author__header">News News ..</p>
+                <p class="author__subheader">By Author</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__body">
+          <h2 class="card__headline">News Title</h2>
+          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore.</p>
+        </div>
+        <div class="card__foot">
+          <span class="card__link">Read more</span>
+        </div>
+        <div class="card__border"></div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const height = (elem) => {
 
       return elem.getBoundingClientRect().height
 
-      }
+    }
 
-      const distance = (elemA, elemB, prop) => {
+    const distance = (elemA, elemB, prop) => {
 
       const sizeA = elemA.getBoundingClientRect()[prop]
       const sizeB = elemB.getBoundingClientRect()[prop]
 
       return sizeB - sizeA
 
-      }
+    }
 
-      const factor = (elemA, elemB, prop) => {
+    const factor = (elemA, elemB, prop) => {
 
       const sizeA = elemA.getBoundingClientRect()[prop]
       const sizeB = elemB.getBoundingClientRect()[prop]
 
       return sizeB / sizeA
 
-      }
+    }
 
-      document.querySelectorAll('.card').forEach((elem) => {
+    document.querySelectorAll('.card').forEach((elem) => {
 
       const head = elem.querySelector('.card__head')
       const image = elem.querySelector('.card__image')
@@ -283,13 +293,13 @@
         elem.classList.add('hover')
 
         const imageScale = 1 + factor(head, body, 'height')
-        image.style.transform = `scale(${ imageScale })`
+        image.style.transform = `scale(${imageScale})`
 
         const bodyDistance = height(foot) * -1
-        body.style.transform = `translateY(${ bodyDistance }px)`
+        body.style.transform = `translateY(${bodyDistance}px)`
 
         const authorDistance = distance(head, author, 'height')
-        author.style.transform = `translateY(${ authorDistance }px)`
+        author.style.transform = `translateY(${authorDistance}px)`
 
       }
 
@@ -303,136 +313,161 @@
 
       }
 
-      })
-    </script>
+    })
+  </script>
 
 
 
-    <div id='tawk_5ed82adb4a7c62581799ddf4' style="width: 100px; height: 100px;"></div>
-    <!-- Start of rpndevl Zendesk Widget script -->
-    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ee2deab5-2eeb-48ae-b95c-bfd05c97a16f"> </script>
-    <!-- End of rpndevl Zendesk Widget script -->
-    <div class="container-fluid mx-auto">
-      <div class="row d-flex pb- px-4">
-          <div class="col-md-8">
-              <div class="row d-flex justify-content-between">
-                  <div class="d-flex flex-column block-footer text-center">
-                      <h5 class="footer-headings">
-                        <img src="logo.png" alt="RPN" width="90" height="90">
-                      </h5>
-                      <p class="list-items">Copyright &copy; 2021  </p>
-                      <p class="list-items">REPAIR AND  </p>
-                      <p class="list-items">PRESERVATION </p>
-                      <p class="list-items">NETWORK</p>
-                      <p class="list-items"> All rights reserved.</p>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                    <h5 class="footer-headings">Site Map</h5>          
-                    <a href="services.html"><p class="list-items">Services</p></a>
-                    <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
-                    <a href="technologies.html"><p class="list-items">Technology</p></a>
-                    <a href="resources.html"><p class="list-items">Resources</p></a>
-                    <a href="about.html"><p class="list-items">About</p></a>
-                    <a href="contact.html"><p class="list-items">Contact</p></a>
-                    <a href="tech-rpnweb.html"><p class="list-items">RPN GO&reg;</p></a>
-                    <a href="tech-rpngo.html"><p class="list-items">RPN GO&reg; Mobile App</p></a>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                      <h5 class="footer-headings">Coroprate Address</h5>
-                      <p class="list-items">10 Old Mamaroneck Road</p>
-                      <p class="list-items">Unit 1A</p>
-                      <p class="list-items">White Plains, NY, 10605</p>
-                      <p class="list-items"><br/></p>
-                      <h5 class="footer-headings">Regional Address</h5>
-                      <p class="list-items">1820 NW 118th Street #220</p>
-                      <p class="list-items">Clive, IA, 50325</p>
-                      <p class="list-items"></p>
-                  </div>
-                  <div class="d-flex flex-column block-footer">
-                      <h5 class="footer-headings">Contact</h5>          
-                      <p class="list-items">Tel: (866)776-8880</p>
-                      <p class="list-items">Fax: (866)968-6156</p>
-                      <a href="mailto: info@rpncompany.com"><p class="list-items">Email: info@rpncompany.com</p></a>
-                      <p class="list-items"><br/></p>
-                      <h5 class="footer-headings">Legal</h5>
-                      <p class="list-items">Terms of Use</p>
-                      <p class="list-items">Privacy Policy</p>
-                  </div>
-              </div>
+  <div id='tawk_5ed82adb4a7c62581799ddf4' style="width: 100px; height: 100px;"></div>
+  <!-- Start of rpndevl Zendesk Widget script -->
+  <script id="ze-snippet"
+    src="https://static.zdassets.com/ekr/snippet.js?key=ee2deab5-2eeb-48ae-b95c-bfd05c97a16f"> </script>
+  <!-- End of rpndevl Zendesk Widget script -->
+  <div class="container-fluid mx-auto">
+    <div class="row d-flex pb- px-4">
+      <div class="col-md-8">
+        <div class="row d-flex justify-content-between">
+          <div class="d-flex flex-column block-footer text-center">
+            <h5 class="footer-headings">
+              <img src="logo.png" alt="RPN" width="90" height="90">
+            </h5>
+            <p class="list-items">Copyright &copy; 2021 </p>
+            <p class="list-items">REPAIR AND </p>
+            <p class="list-items">PRESERVATION </p>
+            <p class="list-items">NETWORK</p>
+            <p class="list-items"> All rights reserved.</p>
           </div>
-          <div class="col-md-4">
-              <div class="d-flex flex-column pl-md-5 px-4">
-                  <h5 class="footer-headings pl-md-2">Download App</h5>
-                  <div class="g-play pb-5 border-left">
-                    <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img src="google-play-badge.png" width="125" height="52"></a>
-                    <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png" width="110" height="35"></a>
-                  </div>
-                  <div class="d-flex flex-column pl-md-2 border-left pb-3">
-                      <h5 class="footer-headings mb-3">Follow Us</h5>
-                      <div class="row d-flex pl-2">
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/facebook1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/twitter1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/ins1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/linkedin1.svg" width="25" height="25">
-                            </a>
-                          </div>
-                          <div class="fa fa-sm">
-                            <a class="text-muted" href="#">
-                              <img src="img/social-media/YouTube.svg" width="25" height="25">
-                            </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Site Map</h5>
+            <a href="services.html">
+              <p class="list-items">Services</p>
+            </a>
+            <!-- <a href="pricing.html"><p class="list-items">Pricing</p></a> -->
+            <a href="technology.html">
+              <p class="list-items">Technology</p>
+            </a>
+            <a href="resources.html">
+              <p class="list-items">Resources</p>
+            </a>
+            <a href="about.html">
+              <p class="list-items">About</p>
+            </a>
+            <a href="contact.html">
+              <p class="list-items">Contact</p>
+            </a>
+            <!-- <a href="technology.html">
+              <p class="list-items">RPN GO&reg;</p>
+            </a> -->
+            <!-- <a href="tech-rpngo.html">
+              <p class="list-items">RPN GO&reg; Mobile App</p>
+            </a> -->
           </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Coroprate Address</h5>
+            <p class="list-items">10 Old Mamaroneck Road</p>
+            <p class="list-items">Unit 1A</p>
+            <p class="list-items">White Plains, NY, 10605</p>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Regional Address</h5>
+            <p class="list-items">1820 NW 118th Street #220</p>
+            <p class="list-items">Clive, IA, 50325</p>
+            <p class="list-items"></p>
+          </div>
+          <div class="d-flex flex-column block-footer">
+            <h5 class="footer-headings">Contact</h5>
+            <p class="list-items">Tel: (866)776-8880</p>
+            <p class="list-items">Fax: (866)968-6156</p>
+            <a href="mailto: info@rpncompany.com">
+              <p class="list-items">Email: info@rpncompany.com</p>
+            </a>
+            <p class="list-items"><br /></p>
+            <h5 class="footer-headings">Legal</h5>
+            <p class="list-items">Terms of Use</p>
+            <p class="list-items">Privacy Policy</p>
+          </div>
+        </div>
       </div>
-      <div class="row d-flex justify-content-between row-2">
-        <div class="block-item">
-            <div class="fa fa-fire">
-              <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110" height="100"></a>      
+      <div class="col-md-4">
+        <div class="d-flex flex-column pl-md-5 px-4">
+          <h5 class="footer-headings pl-md-2">Download App</h5>
+          <div class="g-play pb-5 border-left">
+            <a href="https://play.google.com/store/apps/details?id=com.rpncompany.go_mobile_1&hl=en_US"><img
+                src="google-play-badge.png" width="125" height="52"></a>
+            <a href="https://apps.apple.com/us/app/rpn-go/id1476451622"><img src="download-on-the-app-store.png"
+                width="110" height="35"></a>
+          </div>
+          <div class="d-flex flex-column pl-md-2 border-left pb-3">
+            <h5 class="footer-headings mb-3">Follow Us</h5>
+            <div class="row d-flex pl-2">
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/facebook1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/twitter1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/ins1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/linkedin1.svg" width="25" height="25">
+                </a>
+              </div>
+              <div class="fa fa-sm">
+                <a class="text-muted" href="#">
+                  <img src="img/social-media/YouTube.svg" width="25" height="25">
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="block-item">
-            <div class="fa fa-eye">
-              <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120" height="70"></a>
-            </div>
-        </div>
-        <div class="block-item">
-            <div class="fa fa-fire">
-
-            </div>
-        </div>
-        <div class="block-item">
-            <div class="fa fa-home">
-
-            </div>
-        </div>
-        <div class="block-item">
-            <div class="fa fa-facebook">
-
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="row d-flex justify-content-between row-2">
+      <div class="block-item">
+        <div class="fa fa-fire">
+          <a href="https://nmsdc.org/"><img src="img/cert-img/NMSDC_Logo_Pack/CERIFIED_2020.png" width="110"
+              height="100"></a>
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-eye">
+          <a href="https://www.wbenc.org/"><img src="img/cert-img/WBE_Seal_RGB/WBE_Seal_RGB.jpg" width="120"
+              height="70"></a>
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-fire">
+
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-home">
+
+        </div>
+      </div>
+      <div class="block-item">
+        <div class="fa fa-facebook">
+
+        </div>
+      </div>
     </div>
-  
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        
-    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-  
-  </body>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+</body>
+
 </html>
