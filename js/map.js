@@ -12582,12 +12582,10 @@ var map = {
     ],
 };
 
-console.log(map.locations.length);
 var svgNS = "http://www.w3.org/2000/svg";
-var div = document.getElementById("svg_wrapper");
-
-// var svg = document.getElementById("mapSvg");
 var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svg.setAttributeNS(null, "viewBox", "0 0 990 627");
+
 function drawMap() {
     for (let i = 0; i < map.locations.length; ++i) {
         p = map.locations[i];
@@ -12652,7 +12650,8 @@ function drawMap() {
 
     svg.appendChild(path2);
 
-    document.body.appendChild(svg);
+    var div = document.getElementById("svg_wrapper");
+    div.appendChild(svg);
 }
 var request = new XMLHttpRequest();
 var data = null;
@@ -12671,5 +12670,3 @@ request.onload = function () {
 }
 // Send request
 request.send();
-
-div.appendChild(svg);
