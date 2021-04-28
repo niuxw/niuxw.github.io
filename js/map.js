@@ -12595,6 +12595,7 @@ function drawMap() {
         const path = document.createElementNS(svgNS, "path");
         path.setAttributeNS(null, "id", p.name);
         path.setAttributeNS(null, "d", p.path);
+        path.setAttributeNS(null, "class", "zip_path");
         // path.setAttributeNS(null,"fill","#005b96");
         // path.setAttributeNS(null,"stroke","none");
 
@@ -12653,6 +12654,41 @@ function drawMap() {
     var div = document.getElementById("svg_wrapper");
     div.appendChild(svg);
 }
+
+function addListener() {
+    var svgStates = document.querySelectorAll(".zip_path");
+
+    svgStates.forEach(function (el) {
+
+        el.addEventListener("mouseenter", function (e) {
+            var stateId = el.getAttribute("id");
+            var color = el.getAttribute("fill");
+            let x = e.offsetX;
+            let y = e.offsetY;
+            const tooltip = document.createElement('div');
+            tooltip.setAttribute("class", "zipcode");
+            tooltip.setAttribute("id", "zipzip");
+            const div = document.getElementById("svg_wrapper");
+            div.appendChild(tooltip);
+            tooltip.style.left = x + 'px';
+            tooltip.style.top = y + 'px';
+
+            const county = stateId.split("__")[0].toUpperCase().replace(/_/g, " ");
+            const state = stateId.split("__")[1].toUpperCase();
+
+            const cover = color === "#005b96" ? "Covered" : color === "#7df9ff" ? "Partially Covered" : "Uncovered";
+            tooltip.innerHTML = "<div style='text-align: center;'>" + county + "," + state + "</div><div>" + cover + "</div>";
+        });
+
+        el.addEventListener("mouseleave", function () {
+            document.getElementById("zipzip").remove();
+
+            // var wordState = document.querySelector("[data-state='" + stateId + "']");
+            // el.classList.remove("on");
+            // wordState.classList.remove("on");
+        });
+    });
+}
 var request = new XMLHttpRequest();
 var data = null;
 // Open a new connection, using the GET request on the URL endpoint
@@ -12664,6 +12700,7 @@ request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
         // console.log(data);
         drawMap();
+        addListener();
     } else {
         console.log('error')
     }
