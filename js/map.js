@@ -12616,20 +12616,23 @@ function drawMap() {
 
         if (current.c === current.t) {
             path.setAttributeNS(null, "fill", "#005b96");
-            path.setAttributeNS(null, "stroke", "none");
+            path.setAttributeNS(null, "stroke", "#000");
+            path.setAttributeNS(null, "stroke-width", "0.178");
             svg.appendChild(path);
             continue;
         }
 
         if (current.c === 0) {
             path.setAttributeNS(null, "fill", "grey");
-            path.setAttributeNS(null, "stroke", "none");
+            path.setAttributeNS(null, "stroke", "#000");
+            path.setAttributeNS(null, "stroke-width", "0.178");
             svg.appendChild(path);
             continue;
         }
 
         path.setAttributeNS(null, "fill", "#7df9ff");
-        path.setAttributeNS(null, "stroke", "none");
+        path.setAttributeNS(null, "stroke", "#000");
+        path.setAttributeNS(null, "stroke-width", "0.178");
         svg.appendChild(path);
     }
 
@@ -12677,7 +12680,7 @@ function addListener() {
             const state = stateId.split("__")[1].toUpperCase();
 
             const cover = color === "#005b96" ? "Covered" : color === "#7df9ff" ? "Partially Covered" : "Uncovered";
-            tooltip.innerHTML = "<div style='text-align: center;'>" + county + "," + state + "</div><div>" + cover + "</div>";
+            tooltip.innerHTML = "<div style='text-align: center;'>" + county + ", " + state + "</div><div>" + cover + "</div>";
         });
 
         el.addEventListener("mouseleave", function () {
@@ -12692,6 +12695,7 @@ function addListener() {
 var request = new XMLHttpRequest();
 var data = null;
 // Open a new connection, using the GET request on the URL endpoint
+// request.open('GET', 'http://localhost:8080/api/server/general/public/PR_P', true)
 request.open('GET', 'https://devl.api.vendor.rpngo.com/api/server/general/public/PR_P', true)
 
 request.onload = function () {
