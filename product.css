@@ -201,38 +201,12 @@
   transform: all 1s ease-in;
 }
 
-#service-inspection {
-  background-image: url(img/service/index-preservation.jpg);
-  /* background-image: url(img/service/index-inspection.jpg); */
-  background-size: 100% 100%;
-}
-#service-repair {
-  background-image: url(img/service/index-preservation.jpg);
-  /* background-image: url(img/service/index-repair.jpg); */
-  background-size: 100% 100%;
-}
-#service-preservation {
-  background-image: url(img/service/index-preservation.jpg);
-  background-size: 100% 100%;
-}
-#service-reo {
-  background-image: url(img/service/index-preservation.jpeg);
-  /* background-image: url(img/service/index-reo.jpeg); */
-  background-size: 100% 100%;
-}
-
 .container123 {
   height: 100vh;
   width: 100%;
   position: relative;
   overflow: hidden;
   background-color: transparent;
-}
-
-.video-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 
 .svg-container {
@@ -243,16 +217,6 @@
   background-color: transparent;
   /* justify-content: center; */
   /* align-items: center; */
-  display: flex;
-}
-.img-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background-color: transparent;
-  justify-content: center;
-  align-items: center;
   display: flex;
 }
 
@@ -275,25 +239,66 @@ svg > rect {
   mask: url(#mask);
 }
 
-.video-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  /*  border: 10px solid black; */
-  overflow: hidden;
+.rpn_button_style {
+  position: relative;
+  margin: 0px 0px 10px calc((100% - 980px) * 0.5);
+  left: 408px;
+  grid-area: 5 / 1 / 6 / 2;
+  justify-self: start;
+  align-self: start;
+
+  width: 163px;
+  height: 40px;
 }
 
-video {
-  min-height: 100%;
-  min-width: 100%;
-  height: 150%;
-  width: 150%;
+.rpn_button_style a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.rpn_button_style a:hover {
+  background-color: #fd3c38;
+}
+
+.rpn_button_style .rpn_link_style_black {
+  background-color: #201c1c;
+  border: solid #201c1c;
+  cursor: pointer !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+.rpn_button_style .rpn_link_style_white {
+  background-color: #e8e9eb;
+  border: solid #e8e9eb;
+  cursor: pointer !important;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.6);
+  color: #000;
+}
+
+.rpn_button_style .rpn_link_style:link,
+.rpn_button_style .rpn_link_style:visited {
+  border-color: transparent;
+}
+
+.rpn_button_style .rpn_link_style {
   position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
+  border-radius: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+}
+
+.rpn_button_style .rpn_link_style {
+  text-align: initial;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  justify-content: center;
+  min-width: 100%;
 }
 
 #all {
@@ -301,29 +306,17 @@ video {
   /* background-image: url(img/service/index-inspection.jpg);
   background-repeat: no-repeat;
   background-size: cover; */
-  width: 88vw;
+  margin-top: 5rem;
+  width: 92vw;
   height: 80vh;
-}
-.bg-img {
-  position: absolute;
-  background-image: url(img/service/index-preservation.jpg);
-  /* background-image: url(img/service/index-inspection.jpg); */
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 88vw;
-  height: 80vh;
-  left: 0;
-  top: 0;
-  z-index: -5;
 }
 
 .view {
-  margin: 1px;
   float: left;
   overflow: hidden;
   position: relative;
   text-align: center;
-  cursor: default;
+  cursor: pointer;
   background-color: transparent;
 }
 
@@ -346,7 +339,6 @@ video {
   overflow: hidden;
 }
 .view .mask4 {
-  /* width: auto; */
   width: 100%;
   height: 100%;
   position: absolute;
@@ -358,105 +350,66 @@ video {
   color: #fff;
   text-align: center;
   position: relative;
-  font-size: 20px;
+  font-size: 22px;
   font-family: Arial, Helvetica, serif;
-  padding: 10px;
+  /* padding: 10px; */
   margin: 20px 0 0 0;
-  top: 60%;
-}
-
-.view p {
-  font-family: Arial, Helvetica, serif;
-  font-size: 14px;
-  position: relative;
-  color: #fff;
-  padding: 0px 20px 0px;
-  text-align: center;
-  top: 60%;
-}
-
-.view a.info {
-  display: inline-block;
-  text-decoration: none;
-  padding: 7px 14px;
-  background: #fff;
-  color: #000;
-  font-family: Raleway, serif;
-  text-transform: uppercase;
-  box-shadow: 0 0 1px #fff;
-}
-
-.view a.info:hover {
-  box-shadow: 0 0 5px #fff;
+  /* margin: auto; */
+  /* vertical-align: middle; */
+  top: 50%;
 }
 
 .view-first {
-  transition: all 0.2s linear;
-  width: 25%;
+  /* transition: all 0.2s linear; */
+  width: 23%;
   height: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
   top: 0;
   left: 0;
+  background-image: url(img/service/index-inspection.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .view-2 {
-  transition: all 0.2s linear;
-  width: 25%;
+  /* transition: all 0.2s linear; */
+  width: 23%;
   height: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-image: url(img/service/index-repair.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 75% 50%;
 }
 .view-3 {
-  transition: all 0.2s linear;
-  width: 25%;
+  /* transition: all 0.2s linear; */
+  width: 23%;
   height: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-image: url(img/service/index-preservation.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .view-4 {
-  transition: all 0.2s linear;
-  width: calc(25% - 8px);
+  /* transition: all 0.2s linear; */
+  width: calc(23% - 8px);
   height: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-image: url(img/service/index-reo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 75% 50%;
 }
 
 .mask {
   opacity: 1;
   /* background-color: rgba(1, 1, 1, 0.2); */
-  transition: all 0.4s ease-in-out;
-}
-.mask-cover {
-  background-color: rgba(1, 1, 1, 0.6);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 25%;
-}
-
-.mask h2 {
-  transform: translateY(100px);
-  opacity: 1;
-  transition: all 0.2s ease-in-out;
-}
-
-.mask p {
-  transform: translateY(100px);
-  opacity: 0;
-  transition: all 0.2s linear;
-}
-
-.mask a.info {
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-}
-
-.view-first:hover ~ #bg {
-  /* background-image: url(img/service/index-inspection.jpg); */
-  background-image: url(img/service/index-preservation.jpg);
-}
-.view-2:hover ~ #bg {
-  /* background-image: url(img/service/index-repair.jpg); */
-  background-image: url(img/service/index-preservation.jpg);
-}
-.view-3:hover ~ #bg {
-  background-image: url(img/service/index-preservation.jpg);
-}
-.view-4:hover ~ #bg {
-  /* background-image: url(img/service/index-reo.jpeg); */
-  background-image: url(img/service/index-preservation.jpg);
+  /* transition: all 0.4s ease-in-out; */
 }
 
 .view-first:hover .mask,
@@ -464,44 +417,7 @@ video {
 .view-3:hover .mask,
 .view-4:hover .mask {
   opacity: 1;
-  background-color: rgba(1, 1, 1, 0.6);
-}
-.view-first:hover .mask-cover,
-.view-2:hover .mask-cover,
-.view-3:hover .mask-cover,
-.view-4:hover .mask-cover {
-  /* opacity: 1; */
-  background-color: rgba(1, 1, 1, 0);
-}
-
-.view-first:hover h2,
-.view-first:hover p,
-.view-first:hover a.info,
-.view-2:hover h2,
-.view-2:hover p,
-.view-2:hover a.info,
-.view-3:hover h2,
-.view-3:hover p,
-.view-3:hover a.info,
-.view-4:hover h2,
-.view-4:hover p,
-.view-4:hover a.info {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.view-first:hover p,
-.view-2:hover p,
-.view-3:hover p,
-.view-4:hover p {
-  transition-delay: 0.1s;
-}
-
-.view-first:hover a.info,
-.view-2:hover a.info,
-.view-3:hover a.info,
-.view-4:hover a.info {
-  transition-delay: 0.2s;
+  background-color: rgba(1, 1, 1, 0.2);
 }
 
 .leftpart-app {
@@ -1101,4 +1017,30 @@ svg {
     height: 13px;
     width: 13px;
   }
+}
+
+.page-title {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 73px;
+  margin-bottom: 0px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: start;
+  pointer-events: none;
+}
+
+.page-sub-title {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: start;
+  pointer-events: none;
 }
