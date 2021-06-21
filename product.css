@@ -15,16 +15,21 @@
   font-size: 1.1rem;
 }
 .site-header {
-  background-color: rgba(0, 0, 0, 0.67);
+  background-color: rgba(245, 245, 245, 0.67);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 .site-header a {
-  color: #999;
+  color: #000;
   transition: ease-in-out color 0.15s;
 }
+
+.site-header .navbar-brand {
+  font-weight: 700;
+}
+
 .site-header a:hover {
-  color: #fff;
+  color: #fd3c38;
   text-decoration: none;
 }
 .site-section1-bg-img {
@@ -303,9 +308,6 @@ svg > rect {
 
 #all {
   position: relative;
-  /* background-image: url(img/service/index-inspection.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; */
   margin-top: 5rem;
   width: 92vw;
   height: 80vh;
@@ -352,15 +354,11 @@ svg > rect {
   position: relative;
   font-size: 22px;
   font-family: Arial, Helvetica, serif;
-  /* padding: 10px; */
   margin: 20px 0 0 0;
-  /* margin: auto; */
-  /* vertical-align: middle; */
   top: 50%;
 }
 
 .view-first {
-  /* transition: all 0.2s linear; */
   width: 23%;
   height: 100%;
   margin-left: 1%;
@@ -373,7 +371,6 @@ svg > rect {
   background-position: center;
 }
 .view-2 {
-  /* transition: all 0.2s linear; */
   width: 23%;
   height: 100%;
   margin-left: 1%;
@@ -384,7 +381,6 @@ svg > rect {
   background-position: 75% 50%;
 }
 .view-3 {
-  /* transition: all 0.2s linear; */
   width: 23%;
   height: 100%;
   margin-left: 1%;
@@ -395,7 +391,6 @@ svg > rect {
   background-position: center;
 }
 .view-4 {
-  /* transition: all 0.2s linear; */
   width: calc(23% - 8px);
   height: 100%;
   margin-left: 1%;
@@ -408,8 +403,6 @@ svg > rect {
 
 .mask {
   opacity: 1;
-  /* background-color: rgba(1, 1, 1, 0.2); */
-  /* transition: all 0.4s ease-in-out; */
 }
 
 .view-first:hover .mask,
