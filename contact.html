@@ -65,7 +65,7 @@
   <link href="./css/contract.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: #f5f5f5;">
   <nav class="site-header sticky-top py-1 navbar">
     <a class="py-2 navbar-brand" href="index.html" aria-label="Product" style="left: 10%;">
       <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg> -->
@@ -81,9 +81,11 @@
       <a class="py-2 d-none d-md-inline-block nav-item" style="color: #fd3c38;" href="contact.html">Contact</a>
       <a class="py-2 d-none d-md-inline-block nav-item" href="https://rpngo.com/">Login</a>
       <!-- need employee equality system -->
-      <!-- <a class="py-2 d-none d-md-inline-block" href="#" data-toggle="modal" data-target="#myModal">SignUp</a> -->
-      <button type="button" class="btn btn-signup" data-toggle="modal" data-target=".bd-example-modal-lg">Sign
-        up</button>
+      <div class="rpn_sign_up_button_style">
+        <a data-testid="linkElement" href="#" target="_blank" class="rpn_link_style rpn_link_style_black">
+          <span class="nr31w">Sign up</span>
+        </a>
+      </div>
     </div>
   </nav>
 
@@ -99,14 +101,9 @@
     </h1>
   </div>
 
-  <!-- <div class="page-sub-title">
-    <p style="text-align:center;font-size:15px">News in the industry</p>
-  </div> -->
-
   <div class="all-container">
     <div class="contact-container">
       <form id="contact">
-        <!-- <h2>Get In Touch With Us</h2> -->
         <p>If you’d like more information on our services, please complete the form below and our team will contact you
           soon.</p>
         <fieldset>
@@ -121,10 +118,17 @@
         <fieldset>
           <textarea id="msg" placeholder="Type your message here..." tabindex="4" required></textarea>
         </fieldset>
-        <fieldset>
+        <!-- <fieldset>
           <button id="submit-btn" name="submit" type="button" id="contact-submit" data-submit="...Sending"
             class="btn btn-info" onClick="submitForm()">Submit</button>
-        </fieldset>
+        </fieldset> -->
+
+        <div class="rpn_button_style" style="margin-top: 1vh;">
+          <a onclick="submitForm()" class="rpn_link_style rpn_link_style_black">
+            <span class="nr31w">Submit</span>
+          </a>
+        </div>
+
       </form>
     </div>
 
@@ -178,15 +182,11 @@
           Fax: 866 968-6156<br>
           <a href="mailto:info@rpncompany.com">info@rpncompany.com</a><br>
         </p>
-        <!-- <div class="divider"></div> -->
-        <div class="button-group">
+        <!-- <div class="button-group">
           <form action="https://rpngo.com">
             <button type="submit">RPN GO ▶</button>
           </form>
-
-          <!-- <button type="submit"><a href="pricing.html">RPN GO ▶</a></button> -->
-          <!-- <button type="submit">RPN Vendor ▶</button>   -->
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

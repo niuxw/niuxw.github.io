@@ -244,6 +244,59 @@ svg > rect {
   mask: url(#mask);
 }
 
+.rpn_sign_up_button_style {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  /* margin: 0 auto 0 auto; */
+  align-self: center;
+}
+
+.rpn_sign_up_button_style a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.rpn_sign_up_button_style a:hover {
+  background-color: #fd3c38;
+  color: #fff;
+}
+
+.rpn_sign_up_button_style .rpn_link_style_black {
+  background-color: #201c1c;
+  border: solid #201c1c;
+  cursor: pointer !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+}
+
+.rpn_sign_up_button_style .rpn_link_style:link,
+.rpn_sign_up_button_style .rpn_link_style:visited {
+  border-color: transparent;
+}
+
+.rpn_sign_up_button_style .rpn_link_style {
+  position: absolute;
+  border-radius: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+}
+
+.rpn_sign_up_button_style .rpn_link_style {
+  text-align: initial;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  justify-content: center;
+  min-width: 100%;
+}
+
+/* another button */
 .rpn_button_style {
   position: relative;
   margin: 0px 0px 10px calc((100% - 980px) * 0.5);
@@ -269,7 +322,7 @@ svg > rect {
   border: solid #201c1c;
   cursor: pointer !important;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 .rpn_button_style .rpn_link_style_white {
   background-color: #e8e9eb;
